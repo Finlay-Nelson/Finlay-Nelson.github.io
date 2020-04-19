@@ -1,0 +1,148 @@
+\hypertarget{Server__end_20301__Pong__GUI_20408-emg-read-in-local_2window_8cpp}{}\doxysection{/home/finlay/\+R\+T\+E\+P/\+Server\+\_\+end/0301\+\_\+\+Pong\+\_\+\+G\+U\+I/0408-\/emg-\/read-\/in-\/local/window.cpp File Reference}
+\label{Server__end_20301__Pong__GUI_20408-emg-read-in-local_2window_8cpp}\index{/home/finlay/RTEP/Server\_end/0301\_Pong\_GUI/0408-\/emg-\/read-\/in-\/local/window.cpp@{/home/finlay/RTEP/Server\_end/0301\_Pong\_GUI/0408-\/emg-\/read-\/in-\/local/window.cpp}}
+{\ttfamily \#include \char`\"{}window.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ads1115.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$Iir.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}G\+P\+I\+Olis.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$Q\+Object$>$}\newline
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \mbox{\hyperlink{Server__end_20301__Pong__GUI_20408-emg-read-in-local_2window_8cpp_a1b7ba51c7dba40b32bb78cc0fd8074ca}{order}} = 40
+\item 
+const float \mbox{\hyperlink{Server__end_20301__Pong__GUI_20408-emg-read-in-local_2window_8cpp_a072a980c304a396787f46c29aa3bd5f1}{samplingrate}} = 1000
+\item 
+const quint16 \mbox{\hyperlink{Server__end_20301__Pong__GUI_20408-emg-read-in-local_2window_8cpp_a9c9ab370a04018e645c8edafbf2113f1}{sderprt}} = 1117
+\item 
+const quint16 \mbox{\hyperlink{Server__end_20301__Pong__GUI_20408-emg-read-in-local_2window_8cpp_aa9a1e71de06461b110d2c761035de556}{rscverprt}} = 1112
+\item 
+F\+I\+LE $\ast$ \mbox{\hyperlink{Server__end_20301__Pong__GUI_20408-emg-read-in-local_2window_8cpp_aa4d944473c2ce72052d24e8e4eaa96ce}{florigin}} = N\+U\+LL
+\item 
+F\+I\+LE $\ast$ \mbox{\hyperlink{Server__end_20301__Pong__GUI_20408-emg-read-in-local_2window_8cpp_a89274b7113af845f693045514ab79d06}{flhp1}} = N\+U\+LL
+\item 
+F\+I\+LE $\ast$ \mbox{\hyperlink{Server__end_20301__Pong__GUI_20408-emg-read-in-local_2window_8cpp_a9cdc0952ddae0cb682503cc9b5bb8019}{flpower}} =N\+U\+LL
+\item 
+F\+I\+LE $\ast$ \mbox{\hyperlink{Server__end_20301__Pong__GUI_20408-emg-read-in-local_2window_8cpp_a2bea8430977773b9acad7d3626b17fd2}{florigin2}} = N\+U\+LL
+\item 
+F\+I\+LE $\ast$ \mbox{\hyperlink{Server__end_20301__Pong__GUI_20408-emg-read-in-local_2window_8cpp_af7d49aa4ebb46c5b60b946c73bebba7b}{flhp12}} = N\+U\+LL
+\item 
+F\+I\+LE $\ast$ \mbox{\hyperlink{Server__end_20301__Pong__GUI_20408-emg-read-in-local_2window_8cpp_ad915951f85e635cb83f9cd779245e924}{flpower2}} =N\+U\+LL
+\item 
+Iir\+::\+Butterworth\+::\+High\+Pass$<$ \mbox{\hyperlink{Server__end_20301__Pong__GUI_20408-emg-read-in-local_2window_8cpp_a1b7ba51c7dba40b32bb78cc0fd8074ca}{order}} $>$ \mbox{\hyperlink{Server__end_20301__Pong__GUI_20408-emg-read-in-local_2window_8cpp_aedcba60e51029a554adc10c3097a6af8}{hp1}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{Server__end_20301__Pong__GUI_20408-emg-read-in-local_2window_8cpp_a89274b7113af845f693045514ab79d06}\label{Server__end_20301__Pong__GUI_20408-emg-read-in-local_2window_8cpp_a89274b7113af845f693045514ab79d06}} 
+\index{window.cpp@{window.cpp}!flhp1@{flhp1}}
+\index{flhp1@{flhp1}!window.cpp@{window.cpp}}
+\doxysubsubsection{\texorpdfstring{flhp1}{flhp1}}
+{\footnotesize\ttfamily F\+I\+LE$\ast$ flhp1 = N\+U\+LL}
+
+
+
+Definition at line 29 of file window.\+cpp.
+
+\mbox{\Hypertarget{Server__end_20301__Pong__GUI_20408-emg-read-in-local_2window_8cpp_af7d49aa4ebb46c5b60b946c73bebba7b}\label{Server__end_20301__Pong__GUI_20408-emg-read-in-local_2window_8cpp_af7d49aa4ebb46c5b60b946c73bebba7b}} 
+\index{window.cpp@{window.cpp}!flhp12@{flhp12}}
+\index{flhp12@{flhp12}!window.cpp@{window.cpp}}
+\doxysubsubsection{\texorpdfstring{flhp12}{flhp12}}
+{\footnotesize\ttfamily F\+I\+LE$\ast$ flhp12 = N\+U\+LL}
+
+
+
+Definition at line 32 of file window.\+cpp.
+
+\mbox{\Hypertarget{Server__end_20301__Pong__GUI_20408-emg-read-in-local_2window_8cpp_aa4d944473c2ce72052d24e8e4eaa96ce}\label{Server__end_20301__Pong__GUI_20408-emg-read-in-local_2window_8cpp_aa4d944473c2ce72052d24e8e4eaa96ce}} 
+\index{window.cpp@{window.cpp}!florigin@{florigin}}
+\index{florigin@{florigin}!window.cpp@{window.cpp}}
+\doxysubsubsection{\texorpdfstring{florigin}{florigin}}
+{\footnotesize\ttfamily F\+I\+LE$\ast$ florigin = N\+U\+LL}
+
+
+
+Definition at line 28 of file window.\+cpp.
+
+\mbox{\Hypertarget{Server__end_20301__Pong__GUI_20408-emg-read-in-local_2window_8cpp_a2bea8430977773b9acad7d3626b17fd2}\label{Server__end_20301__Pong__GUI_20408-emg-read-in-local_2window_8cpp_a2bea8430977773b9acad7d3626b17fd2}} 
+\index{window.cpp@{window.cpp}!florigin2@{florigin2}}
+\index{florigin2@{florigin2}!window.cpp@{window.cpp}}
+\doxysubsubsection{\texorpdfstring{florigin2}{florigin2}}
+{\footnotesize\ttfamily F\+I\+LE$\ast$ florigin2 = N\+U\+LL}
+
+
+
+Definition at line 31 of file window.\+cpp.
+
+\mbox{\Hypertarget{Server__end_20301__Pong__GUI_20408-emg-read-in-local_2window_8cpp_a9cdc0952ddae0cb682503cc9b5bb8019}\label{Server__end_20301__Pong__GUI_20408-emg-read-in-local_2window_8cpp_a9cdc0952ddae0cb682503cc9b5bb8019}} 
+\index{window.cpp@{window.cpp}!flpower@{flpower}}
+\index{flpower@{flpower}!window.cpp@{window.cpp}}
+\doxysubsubsection{\texorpdfstring{flpower}{flpower}}
+{\footnotesize\ttfamily F\+I\+LE$\ast$ flpower =N\+U\+LL}
+
+
+
+Definition at line 30 of file window.\+cpp.
+
+\mbox{\Hypertarget{Server__end_20301__Pong__GUI_20408-emg-read-in-local_2window_8cpp_ad915951f85e635cb83f9cd779245e924}\label{Server__end_20301__Pong__GUI_20408-emg-read-in-local_2window_8cpp_ad915951f85e635cb83f9cd779245e924}} 
+\index{window.cpp@{window.cpp}!flpower2@{flpower2}}
+\index{flpower2@{flpower2}!window.cpp@{window.cpp}}
+\doxysubsubsection{\texorpdfstring{flpower2}{flpower2}}
+{\footnotesize\ttfamily F\+I\+LE$\ast$ flpower2 =N\+U\+LL}
+
+
+
+Definition at line 33 of file window.\+cpp.
+
+\mbox{\Hypertarget{Server__end_20301__Pong__GUI_20408-emg-read-in-local_2window_8cpp_aedcba60e51029a554adc10c3097a6af8}\label{Server__end_20301__Pong__GUI_20408-emg-read-in-local_2window_8cpp_aedcba60e51029a554adc10c3097a6af8}} 
+\index{window.cpp@{window.cpp}!hp1@{hp1}}
+\index{hp1@{hp1}!window.cpp@{window.cpp}}
+\doxysubsubsection{\texorpdfstring{hp1}{hp1}}
+{\footnotesize\ttfamily Iir\+::\+Butterworth\+::\+High\+Pass$<$\mbox{\hyperlink{Server__end_20301__Pong__GUI_20408-emg-read-in-local_2window_8cpp_a1b7ba51c7dba40b32bb78cc0fd8074ca}{order}}$>$ hp1}
+
+
+
+Definition at line 34 of file window.\+cpp.
+
+\mbox{\Hypertarget{Server__end_20301__Pong__GUI_20408-emg-read-in-local_2window_8cpp_a1b7ba51c7dba40b32bb78cc0fd8074ca}\label{Server__end_20301__Pong__GUI_20408-emg-read-in-local_2window_8cpp_a1b7ba51c7dba40b32bb78cc0fd8074ca}} 
+\index{window.cpp@{window.cpp}!order@{order}}
+\index{order@{order}!window.cpp@{window.cpp}}
+\doxysubsubsection{\texorpdfstring{order}{order}}
+{\footnotesize\ttfamily const int order = 40}
+
+
+
+Definition at line 20 of file window.\+cpp.
+
+\mbox{\Hypertarget{Server__end_20301__Pong__GUI_20408-emg-read-in-local_2window_8cpp_aa9a1e71de06461b110d2c761035de556}\label{Server__end_20301__Pong__GUI_20408-emg-read-in-local_2window_8cpp_aa9a1e71de06461b110d2c761035de556}} 
+\index{window.cpp@{window.cpp}!rscverprt@{rscverprt}}
+\index{rscverprt@{rscverprt}!window.cpp@{window.cpp}}
+\doxysubsubsection{\texorpdfstring{rscverprt}{rscverprt}}
+{\footnotesize\ttfamily const quint16 rscverprt = 1112}
+
+
+
+Definition at line 26 of file window.\+cpp.
+
+\mbox{\Hypertarget{Server__end_20301__Pong__GUI_20408-emg-read-in-local_2window_8cpp_a072a980c304a396787f46c29aa3bd5f1}\label{Server__end_20301__Pong__GUI_20408-emg-read-in-local_2window_8cpp_a072a980c304a396787f46c29aa3bd5f1}} 
+\index{window.cpp@{window.cpp}!samplingrate@{samplingrate}}
+\index{samplingrate@{samplingrate}!window.cpp@{window.cpp}}
+\doxysubsubsection{\texorpdfstring{samplingrate}{samplingrate}}
+{\footnotesize\ttfamily const float samplingrate = 1000}
+
+
+
+Definition at line 23 of file window.\+cpp.
+
+\mbox{\Hypertarget{Server__end_20301__Pong__GUI_20408-emg-read-in-local_2window_8cpp_a9c9ab370a04018e645c8edafbf2113f1}\label{Server__end_20301__Pong__GUI_20408-emg-read-in-local_2window_8cpp_a9c9ab370a04018e645c8edafbf2113f1}} 
+\index{window.cpp@{window.cpp}!sderprt@{sderprt}}
+\index{sderprt@{sderprt}!window.cpp@{window.cpp}}
+\doxysubsubsection{\texorpdfstring{sderprt}{sderprt}}
+{\footnotesize\ttfamily const quint16 sderprt = 1117}
+
+
+
+Definition at line 25 of file window.\+cpp.
+

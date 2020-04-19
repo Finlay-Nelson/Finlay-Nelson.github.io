@@ -1,0 +1,7 @@
+<map id="GPIOlisten" name="GPIOlisten">
+<area shape="rect" id="node1" title="Is responsible for the data communications and threading involved with conversion and processing." alt="" coords="94,187,181,213"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,96,77,123"/>
+<area shape="rect" id="node3" href="$classads1115.html" title="Allows control over the ADS1115 ADC." alt="" coords="102,96,173,123"/>
+<area shape="rect" id="node4" title=" " alt="" coords="102,5,173,32"/>
+<area shape="rect" id="node5" title=" " alt="" coords="199,5,238,32"/>
+</map>

@@ -1,0 +1,112 @@
+\hypertarget{_rpi__end__unit__tests_20304_01data_01process_09udp_01_01unit_2window_8cpp}{}\doxysection{/home/finlay/\+R\+T\+E\+P/\+Rpi\+\_\+end/\+Rpi\+\_\+end\+\_\+unit\+\_\+tests/0304 data process+udp unit/window.cpp File Reference}
+\label{_rpi__end__unit__tests_20304_01data_01process_09udp_01_01unit_2window_8cpp}\index{/home/finlay/RTEP/Rpi\_end/Rpi\_end\_unit\_tests/0304 data process+udp  unit/window.cpp@{/home/finlay/RTEP/Rpi\_end/Rpi\_end\_unit\_tests/0304 data process+udp  unit/window.cpp}}
+{\ttfamily \#include \char`\"{}window.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Iir.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+Include dependency graph for window.\+cpp\+:
+% FIG 0
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \mbox{\hyperlink{_rpi__end__unit__tests_20304_01data_01process_09udp_01_01unit_2window_8cpp_a1b7ba51c7dba40b32bb78cc0fd8074ca}{order}} = 40
+\item 
+const float \mbox{\hyperlink{_rpi__end__unit__tests_20304_01data_01process_09udp_01_01unit_2window_8cpp_a072a980c304a396787f46c29aa3bd5f1}{samplingrate}} = 200
+\item 
+const quint16 \mbox{\hyperlink{_rpi__end__unit__tests_20304_01data_01process_09udp_01_01unit_2window_8cpp_a9c9ab370a04018e645c8edafbf2113f1}{sderprt}} = 1117
+\item 
+const quint16 \mbox{\hyperlink{_rpi__end__unit__tests_20304_01data_01process_09udp_01_01unit_2window_8cpp_aa9a1e71de06461b110d2c761035de556}{rscverprt}} = 1112
+\item 
+F\+I\+LE $\ast$ \mbox{\hyperlink{_rpi__end__unit__tests_20304_01data_01process_09udp_01_01unit_2window_8cpp_aa4d944473c2ce72052d24e8e4eaa96ce}{florigin}} = N\+U\+LL
+\item 
+F\+I\+LE $\ast$ \mbox{\hyperlink{_rpi__end__unit__tests_20304_01data_01process_09udp_01_01unit_2window_8cpp_a89274b7113af845f693045514ab79d06}{flhp1}} = N\+U\+LL
+\item 
+F\+I\+LE $\ast$ \mbox{\hyperlink{_rpi__end__unit__tests_20304_01data_01process_09udp_01_01unit_2window_8cpp_a9cdc0952ddae0cb682503cc9b5bb8019}{flpower}} =N\+U\+LL
+\item 
+Iir\+::\+Butterworth\+::\+High\+Pass$<$ \mbox{\hyperlink{_rpi__end__unit__tests_20322_01_high__speed__continous__ads1115_01unit_2window_8cpp_a1b7ba51c7dba40b32bb78cc0fd8074ca}{order}} $>$ \mbox{\hyperlink{_rpi__end__unit__tests_20304_01data_01process_09udp_01_01unit_2window_8cpp_aedcba60e51029a554adc10c3097a6af8}{hp1}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_rpi__end__unit__tests_20304_01data_01process_09udp_01_01unit_2window_8cpp_a89274b7113af845f693045514ab79d06}\label{_rpi__end__unit__tests_20304_01data_01process_09udp_01_01unit_2window_8cpp_a89274b7113af845f693045514ab79d06}} 
+\index{window.cpp@{window.cpp}!flhp1@{flhp1}}
+\index{flhp1@{flhp1}!window.cpp@{window.cpp}}
+\doxysubsubsection{\texorpdfstring{flhp1}{flhp1}}
+{\footnotesize\ttfamily F\+I\+LE$\ast$ flhp1 = N\+U\+LL}
+
+
+
+Definition at line 23 of file window.\+cpp.
+
+\mbox{\Hypertarget{_rpi__end__unit__tests_20304_01data_01process_09udp_01_01unit_2window_8cpp_aa4d944473c2ce72052d24e8e4eaa96ce}\label{_rpi__end__unit__tests_20304_01data_01process_09udp_01_01unit_2window_8cpp_aa4d944473c2ce72052d24e8e4eaa96ce}} 
+\index{window.cpp@{window.cpp}!florigin@{florigin}}
+\index{florigin@{florigin}!window.cpp@{window.cpp}}
+\doxysubsubsection{\texorpdfstring{florigin}{florigin}}
+{\footnotesize\ttfamily F\+I\+LE$\ast$ florigin = N\+U\+LL}
+
+
+
+Definition at line 22 of file window.\+cpp.
+
+\mbox{\Hypertarget{_rpi__end__unit__tests_20304_01data_01process_09udp_01_01unit_2window_8cpp_a9cdc0952ddae0cb682503cc9b5bb8019}\label{_rpi__end__unit__tests_20304_01data_01process_09udp_01_01unit_2window_8cpp_a9cdc0952ddae0cb682503cc9b5bb8019}} 
+\index{window.cpp@{window.cpp}!flpower@{flpower}}
+\index{flpower@{flpower}!window.cpp@{window.cpp}}
+\doxysubsubsection{\texorpdfstring{flpower}{flpower}}
+{\footnotesize\ttfamily F\+I\+LE$\ast$ flpower =N\+U\+LL}
+
+
+
+Definition at line 24 of file window.\+cpp.
+
+\mbox{\Hypertarget{_rpi__end__unit__tests_20304_01data_01process_09udp_01_01unit_2window_8cpp_aedcba60e51029a554adc10c3097a6af8}\label{_rpi__end__unit__tests_20304_01data_01process_09udp_01_01unit_2window_8cpp_aedcba60e51029a554adc10c3097a6af8}} 
+\index{window.cpp@{window.cpp}!hp1@{hp1}}
+\index{hp1@{hp1}!window.cpp@{window.cpp}}
+\doxysubsubsection{\texorpdfstring{hp1}{hp1}}
+{\footnotesize\ttfamily Iir\+::\+Butterworth\+::\+High\+Pass$<$\mbox{\hyperlink{_rpi__end__unit__tests_20322_01_high__speed__continous__ads1115_01unit_2window_8cpp_a1b7ba51c7dba40b32bb78cc0fd8074ca}{order}}$>$ hp1}
+
+
+
+Definition at line 25 of file window.\+cpp.
+
+\mbox{\Hypertarget{_rpi__end__unit__tests_20304_01data_01process_09udp_01_01unit_2window_8cpp_a1b7ba51c7dba40b32bb78cc0fd8074ca}\label{_rpi__end__unit__tests_20304_01data_01process_09udp_01_01unit_2window_8cpp_a1b7ba51c7dba40b32bb78cc0fd8074ca}} 
+\index{window.cpp@{window.cpp}!order@{order}}
+\index{order@{order}!window.cpp@{window.cpp}}
+\doxysubsubsection{\texorpdfstring{order}{order}}
+{\footnotesize\ttfamily const int order = 40}
+
+
+
+Definition at line 14 of file window.\+cpp.
+
+\mbox{\Hypertarget{_rpi__end__unit__tests_20304_01data_01process_09udp_01_01unit_2window_8cpp_aa9a1e71de06461b110d2c761035de556}\label{_rpi__end__unit__tests_20304_01data_01process_09udp_01_01unit_2window_8cpp_aa9a1e71de06461b110d2c761035de556}} 
+\index{window.cpp@{window.cpp}!rscverprt@{rscverprt}}
+\index{rscverprt@{rscverprt}!window.cpp@{window.cpp}}
+\doxysubsubsection{\texorpdfstring{rscverprt}{rscverprt}}
+{\footnotesize\ttfamily const quint16 rscverprt = 1112}
+
+
+
+Definition at line 20 of file window.\+cpp.
+
+\mbox{\Hypertarget{_rpi__end__unit__tests_20304_01data_01process_09udp_01_01unit_2window_8cpp_a072a980c304a396787f46c29aa3bd5f1}\label{_rpi__end__unit__tests_20304_01data_01process_09udp_01_01unit_2window_8cpp_a072a980c304a396787f46c29aa3bd5f1}} 
+\index{window.cpp@{window.cpp}!samplingrate@{samplingrate}}
+\index{samplingrate@{samplingrate}!window.cpp@{window.cpp}}
+\doxysubsubsection{\texorpdfstring{samplingrate}{samplingrate}}
+{\footnotesize\ttfamily const float samplingrate = 200}
+
+
+
+Definition at line 17 of file window.\+cpp.
+
+\mbox{\Hypertarget{_rpi__end__unit__tests_20304_01data_01process_09udp_01_01unit_2window_8cpp_a9c9ab370a04018e645c8edafbf2113f1}\label{_rpi__end__unit__tests_20304_01data_01process_09udp_01_01unit_2window_8cpp_a9c9ab370a04018e645c8edafbf2113f1}} 
+\index{window.cpp@{window.cpp}!sderprt@{sderprt}}
+\index{sderprt@{sderprt}!window.cpp@{window.cpp}}
+\doxysubsubsection{\texorpdfstring{sderprt}{sderprt}}
+{\footnotesize\ttfamily const quint16 sderprt = 1117}
+
+
+
+Definition at line 19 of file window.\+cpp.
+

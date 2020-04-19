@@ -1,0 +1,836 @@
+\hypertarget{200322___rpi__end__together_2ads1115_8h}{}\doxysection{/home/finlay/\+R\+T\+E\+P/\+Rpi\+\_\+end/200322\+\_\+\+Rpi\+\_\+end\+\_\+together/ads1115.h File Reference}
+\label{200322___rpi__end__together_2ads1115_8h}\index{/home/finlay/RTEP/Rpi\_end/200322\_Rpi\_end\_together/ads1115.h@{/home/finlay/RTEP/Rpi\_end/200322\_Rpi\_end\_together/ads1115.h}}
+{\ttfamily \#include $<$Q\+Object$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+Include dependency graph for ads1115.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classads1115}{ads1115}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{200322___rpi__end__together_2ads1115_8h_a8bba3b6ee86178501e5e68569c0b2219}{A\+D\+S1115\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+G\+ND}}~(0x48)
+\begin{DoxyCompactList}\small\item\em I2C address pin low (G\+ND). \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{200322___rpi__end__together_2ads1115_8h_a30bd0210fe3ffd64ad9c07662dcdf95a}{A\+D\+S1115\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+V\+DD}}~(0\+X49)
+\begin{DoxyCompactList}\small\item\em I2C address pin high (V\+DD). \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{200322___rpi__end__together_2ads1115_8h_a49c6d85df01926e5c34135fc06b05aa3}{A\+D\+S1115\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+S\+DA}}~(0\+X4A)
+\begin{DoxyCompactList}\small\item\em I2C address pin tied to the S\+DA line. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{200322___rpi__end__together_2ads1115_8h_a9aec08cd27c1bd58c0dd8c3c74d4baa6}{A\+D\+S1115\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+S\+CL}}~(0\+X4B)
+\begin{DoxyCompactList}\small\item\em I2C address pin tied to the S\+CL line. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{200322___rpi__end__together_2ads1115_8h_a19058003b7ee8f55deb5492d9c3b6cb5}{A\+D\+S1115\+\_\+\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N\+D\+E\+L\+AY}}
+\item 
+\#define \mbox{\hyperlink{200322___rpi__end__together_2ads1115_8h_ad58f0f3e05e9aea14c258f93d708d875}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+M\+A\+SK}}~(0x03)
+\item 
+\#define \mbox{\hyperlink{200322___rpi__end__together_2ads1115_8h_a528ccaa7d9dbea0b5febdb69ebb6bf53}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+C\+O\+N\+V\+E\+RT}}~(0x00)
+\begin{DoxyCompactList}\small\item\em Select the conversion register. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{200322___rpi__end__together_2ads1115_8h_a8a6054d1b0e63ccc86f839ac76d8bef5}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+C\+O\+N\+F\+IG}}~(0x01)
+\begin{DoxyCompactList}\small\item\em Select the configuration register. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{200322___rpi__end__together_2ads1115_8h_a12ae9405dd4407fc56876a173e740379}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+L\+O\+W\+T\+H\+R\+E\+SH}}~(0x02)
+\item 
+\#define \mbox{\hyperlink{200322___rpi__end__together_2ads1115_8h_a2d3b47f0a3930bfa741aa99172368663}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+H\+I\+T\+H\+R\+E\+SH}}~(0x03)
+\item 
+\#define \mbox{\hyperlink{200322___rpi__end__together_2ads1115_8h_a54bf7b2963a6a09611a6254e4e22b49c}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+O\+S\+\_\+\+M\+A\+SK}}~(0x8000)
+\begin{DoxyCompactList}\small\item\em OS\+: Operational status/single-\/shot conversion start. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{200322___rpi__end__together_2ads1115_8h_abecb67ac1d427a99761f8a87101c73b1}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+O\+S\+\_\+\+S\+I\+N\+G\+LE}}~(0x8000)
+\begin{DoxyCompactList}\small\item\em Write\+: Set to start a single-\/conversion. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{200322___rpi__end__together_2ads1115_8h_a6b544913066956181b5439b851a04318}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+O\+S\+\_\+\+B\+U\+SY}}~(0x0000)
+\begin{DoxyCompactList}\small\item\em Read\+: Bit = 0 when conversion is in progress. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{200322___rpi__end__together_2ads1115_8h_a10d1e0f484aeb2d6021aeb524d2ff4fc}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+O\+S\+\_\+\+N\+O\+T\+B\+U\+SY}}~(0x8000)
+\begin{DoxyCompactList}\small\item\em Read\+: Bit = 1 when device is not performing a conversion. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{200322___rpi__end__together_2ads1115_8h_a359be266bd66de69908a5046723d1f15}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+U\+X\+\_\+\+D\+I\+F\+F\+\_\+\+P0\+\_\+\+N1}}~(0x0000)
+\begin{DoxyCompactList}\small\item\em Differential input with positive input from A\+I\+N0 and negative input from A\+I\+N1. This is the default value. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{200322___rpi__end__together_2ads1115_8h_a2222fbb0bedbadbbbee784b701e0f468}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+U\+X\+\_\+\+D\+I\+F\+F\+\_\+\+P0\+\_\+\+N3}}~(0x1000)
+\begin{DoxyCompactList}\small\item\em Differential input with positive input from A\+I\+N0 and negative input from A\+I\+N3. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{200322___rpi__end__together_2ads1115_8h_a25568a0253dcfa65f9b0ff2a3d1f51fc}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+U\+X\+\_\+\+D\+I\+F\+F\+\_\+\+P1\+\_\+\+N3}}~(0x2000)
+\begin{DoxyCompactList}\small\item\em Differential input with positive input from A\+I\+N1 and negative input from A\+I\+N3. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{200322___rpi__end__together_2ads1115_8h_afb90675e52a2e3fd17bfbc269e5bb168}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+U\+X\+\_\+\+D\+I\+F\+F\+\_\+\+P2\+\_\+\+N3}}~(0x3000)
+\begin{DoxyCompactList}\small\item\em Differential input with positive input from A\+I\+N2 and negative input from A\+I\+N3.$\ast$/. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{200322___rpi__end__together_2ads1115_8h_a01533e82c75c5a7c2a48098e983eda27}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+U\+X\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+P0\+\_\+\+NG}}~(0x4000)
+\begin{DoxyCompactList}\small\item\em Single-\/ended input with positive input from A\+I\+N0 with reference to G\+ND. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{200322___rpi__end__together_2ads1115_8h_a5a4314f4345043c50de01b9270f978f0}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+U\+X\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+P1\+\_\+\+NG}}~(0x5000)
+\begin{DoxyCompactList}\small\item\em Single-\/ended input with positive input from A\+I\+N1 with reference to G\+ND. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{200322___rpi__end__together_2ads1115_8h_abb8af6813b8c47ebce8b1f760950b752}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+U\+X\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+P2\+\_\+\+NG}}~(0x6000)
+\begin{DoxyCompactList}\small\item\em Single-\/ended input with positive input from A\+I\+N2 with reference to G\+ND. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{200322___rpi__end__together_2ads1115_8h_a02a7097c8850a8737fab257ce8cc03b7}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+U\+X\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+P3\+\_\+\+NG}}~(0x7000)
+\begin{DoxyCompactList}\small\item\em Single-\/ended input with positive input from A\+I\+N3 with reference to G\+ND. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{200322___rpi__end__together_2ads1115_8h_aa4bead0ed56b92f729a2e65c2af284fc}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+G\+A\+\_\+6\+\_\+144V}}~(0x0000)
+\begin{DoxyCompactList}\small\item\em +/-\/6.144V range = Gain 2/3 \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{200322___rpi__end__together_2ads1115_8h_a3acb6997b9bd7692470eb8c1999c33ea}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+G\+A\+\_\+4\+\_\+096V}}~(0x0200)
+\begin{DoxyCompactList}\small\item\em +/-\/4.096V range = Gain 1 \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{200322___rpi__end__together_2ads1115_8h_a516dac63e8cfb0a973222c022b7cc831}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+G\+A\+\_\+2\+\_\+048V}}~(0x0400)
+\begin{DoxyCompactList}\small\item\em +/-\/2.048V range = Gain 2 (default) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{200322___rpi__end__together_2ads1115_8h_a04fa28b60fb035e9bdc8cbaa0ce2c0e6}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+G\+A\+\_\+1\+\_\+024V}}~(0x0600)
+\begin{DoxyCompactList}\small\item\em +/-\/1.024V range = Gain 4 \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{200322___rpi__end__together_2ads1115_8h_ab658622c5fbf84a364e060da2b9be3c5}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+G\+A\+\_\+0\+\_\+512V}}~(0x0800)
+\begin{DoxyCompactList}\small\item\em +/-\/0.512V range = Gain 8 \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{200322___rpi__end__together_2ads1115_8h_a3f1d89160606a4831bba4cc26d70040b}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+G\+A\+\_\+0\+\_\+256V}}~(0x0\+A00)
+\begin{DoxyCompactList}\small\item\em +/-\/0.256V range = Gain 16 \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{200322___rpi__end__together_2ads1115_8h_aa1b17ec78ac3a5f63c7a21198d8b360c}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+O\+D\+E\+\_\+\+C\+O\+N\+T\+IN}}~(0x0000)
+\begin{DoxyCompactList}\small\item\em Continuous conversion mode. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{200322___rpi__end__together_2ads1115_8h_ae0d36b04b300d33d02b53c02db4a5d60}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+O\+D\+E\+\_\+\+E\+N\+D\+C\+ON}}~(0x8583)
+\begin{DoxyCompactList}\small\item\em Shut down Continuous conversion. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{200322___rpi__end__together_2ads1115_8h_a6ca989a5d970e604684ae10eacb1bdfd}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+O\+D\+E\+\_\+\+S\+I\+N\+G\+LE}}~(0x0100)
+\begin{DoxyCompactList}\small\item\em Power-\/down single-\/shot mode (default) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{200322___rpi__end__together_2ads1115_8h_acea3f3cc007181f608c884cc7cdced89}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+D\+R\+\_\+008\+S\+PS}}~(0x0000)
+\begin{DoxyCompactList}\small\item\em 8 samples per second \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{200322___rpi__end__together_2ads1115_8h_aa0eab9ff32b76be36458e04d182901e2}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+D\+R\+\_\+016\+S\+PS}}~(0x0020)
+\begin{DoxyCompactList}\small\item\em 16 samples per second \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{200322___rpi__end__together_2ads1115_8h_a6ff533d3ca2cb85cbcf45ea9de280fab}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+D\+R\+\_\+032\+S\+PS}}~(0x0040)
+\begin{DoxyCompactList}\small\item\em 32 samples per second \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{200322___rpi__end__together_2ads1115_8h_a0c6908c19da69a3d82401b6a26134095}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+D\+R\+\_\+064\+S\+PS}}~(0x0060)
+\begin{DoxyCompactList}\small\item\em 64 samples per second \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{200322___rpi__end__together_2ads1115_8h_a4aff8d5b1b4ac9585952d26ca25385e6}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+D\+R\+\_\+128\+S\+PS}}~(0x0080)
+\begin{DoxyCompactList}\small\item\em 128 samples per second \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{200322___rpi__end__together_2ads1115_8h_ac533241f793b44ed72385f71dec1aa25}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+D\+R\+\_\+250\+S\+PS}}~(0x00\+A0)
+\begin{DoxyCompactList}\small\item\em 250 samples per second (default) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{200322___rpi__end__together_2ads1115_8h_a8eed720123d6bd52580826c2c9ad9e28}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+D\+R\+\_\+475\+S\+PS}}~(0x00\+C0)
+\begin{DoxyCompactList}\small\item\em 475 samples per second \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{200322___rpi__end__together_2ads1115_8h_a9308f41d4c2ff024bbd201efc3b7ff69}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+D\+R\+\_\+860\+S\+PS}}~(0x00\+E0)
+\begin{DoxyCompactList}\small\item\em 860 samples per second \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{200322___rpi__end__together_2ads1115_8h_a6f480d8ddf0e290d2188a345fcc056f0}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+M\+O\+D\+E\+\_\+\+M\+A\+SK}}~(0x0010)
+\item 
+\#define \mbox{\hyperlink{200322___rpi__end__together_2ads1115_8h_af1ad663d5772ae21f145b3b598b9e9ae}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+M\+O\+D\+E\+\_\+\+T\+R\+AD}}~(0x0000)
+\begin{DoxyCompactList}\small\item\em Traditional comparator with hysteresis (default) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{200322___rpi__end__together_2ads1115_8h_a7d75c55f96f7f9a3464e512b8bdee4ea}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+M\+O\+D\+E\+\_\+\+W\+I\+N\+D\+OW}}~(0x0010)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_window}{Window}} comparator. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{200322___rpi__end__together_2ads1115_8h_a0611aed0d6590af68d031e2206c986f9}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+P\+O\+L\+\_\+\+M\+A\+SK}}~(0x0008)
+\item 
+\#define \mbox{\hyperlink{200322___rpi__end__together_2ads1115_8h_a66da8f89b694fef40084a15c72dfb706}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+P\+O\+L\+\_\+\+A\+C\+T\+V\+L\+OW}}~(0x0000)
+\begin{DoxyCompactList}\small\item\em A\+L\+E\+R\+T/\+R\+E\+A\+DY pin is active when low (default) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{200322___rpi__end__together_2ads1115_8h_a41c64f167cde55b49bbbe358fa7cc125}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+P\+O\+L\+\_\+\+A\+C\+T\+V\+H\+I\+GH}}~(0x0008)
+\begin{DoxyCompactList}\small\item\em A\+L\+E\+R\+T/\+R\+DY pin is high when active. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{200322___rpi__end__together_2ads1115_8h_ac135eba3a7e215fc08387759745ff3e8}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+L\+A\+T\+\_\+\+M\+A\+SK}}~(0x0004)
+\item 
+\#define \mbox{\hyperlink{200322___rpi__end__together_2ads1115_8h_a08eb4ee7ddd59d9fbfbfb52b379a27b3}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+L\+A\+T\+\_\+\+N\+O\+N\+L\+AT}}~(0x0000)
+\item 
+\#define \mbox{\hyperlink{200322___rpi__end__together_2ads1115_8h_a3fe6858333964bbcc21f73984d05c721}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+L\+A\+T\+\_\+\+L\+A\+T\+CH}}~(0x0004)
+\item 
+\#define \mbox{\hyperlink{200322___rpi__end__together_2ads1115_8h_a61b259699fa69f86e8fb36ac4f88bfb8}{A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+Q\+U\+E\+\_\+\+M\+A\+SK}}~(0x0003)
+\item 
+\#define \mbox{\hyperlink{200322___rpi__end__together_2ads1115_8h_a4889b7e8a019906eb7c2670ec2466917}{A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+Q\+U\+E\+\_\+1\+C\+O\+NV}}~(0x0000)
+\item 
+\#define \mbox{\hyperlink{200322___rpi__end__together_2ads1115_8h_a88a73e81b13059b1f4756cf5c8a342a3}{A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+Q\+U\+E\+\_\+2\+C\+O\+NV}}~(0x0001)
+\item 
+\#define \mbox{\hyperlink{200322___rpi__end__together_2ads1115_8h_ad14f479d9c6f636631444de22dd7b133}{A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+Q\+U\+E\+\_\+4\+C\+O\+NV}}~(0x0002)
+\item 
+\#define \mbox{\hyperlink{200322___rpi__end__together_2ads1115_8h_aa52ede69f39daf837bb2ebbe639dbef9}{A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+Q\+U\+E\+\_\+\+N\+O\+NE}}~(0x0003)
+\item 
+\#define \mbox{\hyperlink{200322___rpi__end__together_2ads1115_8h_a82057dc56913138291c7aab3816e5f1b}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+T\+H\+R\+E\+S\+\_\+\+M\+S\+B\+\_\+1}}~(0x8000)
+\item 
+\#define \mbox{\hyperlink{200322___rpi__end__together_2ads1115_8h_afa9785bf499e34e5d7941e624b76ed78}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+T\+H\+R\+E\+S\+\_\+\+M\+S\+B\+\_\+0}}~(0x0000)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{200322___rpi__end__together_2ads1115_8h_a4889b7e8a019906eb7c2670ec2466917}\label{200322___rpi__end__together_2ads1115_8h_a4889b7e8a019906eb7c2670ec2466917}} 
+\index{ads1115.h@{ads1115.h}!ADS1015\_REG\_CONFIG\_CQUE\_1CONV@{ADS1015\_REG\_CONFIG\_CQUE\_1CONV}}
+\index{ADS1015\_REG\_CONFIG\_CQUE\_1CONV@{ADS1015\_REG\_CONFIG\_CQUE\_1CONV}!ads1115.h@{ads1115.h}}
+\doxysubsubsection{\texorpdfstring{ADS1015\_REG\_CONFIG\_CQUE\_1CONV}{ADS1015\_REG\_CONFIG\_CQUE\_1CONV}}
+{\footnotesize\ttfamily \#define A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+Q\+U\+E\+\_\+1\+C\+O\+NV~(0x0000)}
+
+
+
+Definition at line 112 of file ads1115.\+h.
+
+\mbox{\Hypertarget{200322___rpi__end__together_2ads1115_8h_a88a73e81b13059b1f4756cf5c8a342a3}\label{200322___rpi__end__together_2ads1115_8h_a88a73e81b13059b1f4756cf5c8a342a3}} 
+\index{ads1115.h@{ads1115.h}!ADS1015\_REG\_CONFIG\_CQUE\_2CONV@{ADS1015\_REG\_CONFIG\_CQUE\_2CONV}}
+\index{ADS1015\_REG\_CONFIG\_CQUE\_2CONV@{ADS1015\_REG\_CONFIG\_CQUE\_2CONV}!ads1115.h@{ads1115.h}}
+\doxysubsubsection{\texorpdfstring{ADS1015\_REG\_CONFIG\_CQUE\_2CONV}{ADS1015\_REG\_CONFIG\_CQUE\_2CONV}}
+{\footnotesize\ttfamily \#define A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+Q\+U\+E\+\_\+2\+C\+O\+NV~(0x0001)}
+
+
+
+Definition at line 113 of file ads1115.\+h.
+
+\mbox{\Hypertarget{200322___rpi__end__together_2ads1115_8h_ad14f479d9c6f636631444de22dd7b133}\label{200322___rpi__end__together_2ads1115_8h_ad14f479d9c6f636631444de22dd7b133}} 
+\index{ads1115.h@{ads1115.h}!ADS1015\_REG\_CONFIG\_CQUE\_4CONV@{ADS1015\_REG\_CONFIG\_CQUE\_4CONV}}
+\index{ADS1015\_REG\_CONFIG\_CQUE\_4CONV@{ADS1015\_REG\_CONFIG\_CQUE\_4CONV}!ads1115.h@{ads1115.h}}
+\doxysubsubsection{\texorpdfstring{ADS1015\_REG\_CONFIG\_CQUE\_4CONV}{ADS1015\_REG\_CONFIG\_CQUE\_4CONV}}
+{\footnotesize\ttfamily \#define A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+Q\+U\+E\+\_\+4\+C\+O\+NV~(0x0002)}
+
+
+
+Definition at line 114 of file ads1115.\+h.
+
+\mbox{\Hypertarget{200322___rpi__end__together_2ads1115_8h_a61b259699fa69f86e8fb36ac4f88bfb8}\label{200322___rpi__end__together_2ads1115_8h_a61b259699fa69f86e8fb36ac4f88bfb8}} 
+\index{ads1115.h@{ads1115.h}!ADS1015\_REG\_CONFIG\_CQUE\_MASK@{ADS1015\_REG\_CONFIG\_CQUE\_MASK}}
+\index{ADS1015\_REG\_CONFIG\_CQUE\_MASK@{ADS1015\_REG\_CONFIG\_CQUE\_MASK}!ads1115.h@{ads1115.h}}
+\doxysubsubsection{\texorpdfstring{ADS1015\_REG\_CONFIG\_CQUE\_MASK}{ADS1015\_REG\_CONFIG\_CQUE\_MASK}}
+{\footnotesize\ttfamily \#define A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+Q\+U\+E\+\_\+\+M\+A\+SK~(0x0003)}
+
+
+
+Definition at line 111 of file ads1115.\+h.
+
+\mbox{\Hypertarget{200322___rpi__end__together_2ads1115_8h_aa52ede69f39daf837bb2ebbe639dbef9}\label{200322___rpi__end__together_2ads1115_8h_aa52ede69f39daf837bb2ebbe639dbef9}} 
+\index{ads1115.h@{ads1115.h}!ADS1015\_REG\_CONFIG\_CQUE\_NONE@{ADS1015\_REG\_CONFIG\_CQUE\_NONE}}
+\index{ADS1015\_REG\_CONFIG\_CQUE\_NONE@{ADS1015\_REG\_CONFIG\_CQUE\_NONE}!ads1115.h@{ads1115.h}}
+\doxysubsubsection{\texorpdfstring{ADS1015\_REG\_CONFIG\_CQUE\_NONE}{ADS1015\_REG\_CONFIG\_CQUE\_NONE}}
+{\footnotesize\ttfamily \#define A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+Q\+U\+E\+\_\+\+N\+O\+NE~(0x0003)}
+
+
+
+Definition at line 115 of file ads1115.\+h.
+
+\mbox{\Hypertarget{200322___rpi__end__together_2ads1115_8h_a8bba3b6ee86178501e5e68569c0b2219}\label{200322___rpi__end__together_2ads1115_8h_a8bba3b6ee86178501e5e68569c0b2219}} 
+\index{ads1115.h@{ads1115.h}!ADS1115\_ADDRESS\_GND@{ADS1115\_ADDRESS\_GND}}
+\index{ADS1115\_ADDRESS\_GND@{ADS1115\_ADDRESS\_GND}!ads1115.h@{ads1115.h}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_ADDRESS\_GND}{ADS1115\_ADDRESS\_GND}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+G\+ND~(0x48)}
+
+
+
+I2C address pin low (G\+ND). 
+
+
+
+Definition at line 20 of file ads1115.\+h.
+
+\mbox{\Hypertarget{200322___rpi__end__together_2ads1115_8h_a9aec08cd27c1bd58c0dd8c3c74d4baa6}\label{200322___rpi__end__together_2ads1115_8h_a9aec08cd27c1bd58c0dd8c3c74d4baa6}} 
+\index{ads1115.h@{ads1115.h}!ADS1115\_ADDRESS\_SCL@{ADS1115\_ADDRESS\_SCL}}
+\index{ADS1115\_ADDRESS\_SCL@{ADS1115\_ADDRESS\_SCL}!ads1115.h@{ads1115.h}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_ADDRESS\_SCL}{ADS1115\_ADDRESS\_SCL}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+S\+CL~(0\+X4B)}
+
+
+
+I2C address pin tied to the S\+CL line. 
+
+
+
+Definition at line 23 of file ads1115.\+h.
+
+\mbox{\Hypertarget{200322___rpi__end__together_2ads1115_8h_a49c6d85df01926e5c34135fc06b05aa3}\label{200322___rpi__end__together_2ads1115_8h_a49c6d85df01926e5c34135fc06b05aa3}} 
+\index{ads1115.h@{ads1115.h}!ADS1115\_ADDRESS\_SDA@{ADS1115\_ADDRESS\_SDA}}
+\index{ADS1115\_ADDRESS\_SDA@{ADS1115\_ADDRESS\_SDA}!ads1115.h@{ads1115.h}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_ADDRESS\_SDA}{ADS1115\_ADDRESS\_SDA}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+S\+DA~(0\+X4A)}
+
+
+
+I2C address pin tied to the S\+DA line. 
+
+
+
+Definition at line 22 of file ads1115.\+h.
+
+\mbox{\Hypertarget{200322___rpi__end__together_2ads1115_8h_a30bd0210fe3ffd64ad9c07662dcdf95a}\label{200322___rpi__end__together_2ads1115_8h_a30bd0210fe3ffd64ad9c07662dcdf95a}} 
+\index{ads1115.h@{ads1115.h}!ADS1115\_ADDRESS\_VDD@{ADS1115\_ADDRESS\_VDD}}
+\index{ADS1115\_ADDRESS\_VDD@{ADS1115\_ADDRESS\_VDD}!ads1115.h@{ads1115.h}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_ADDRESS\_VDD}{ADS1115\_ADDRESS\_VDD}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+V\+DD~(0\+X49)}
+
+
+
+I2C address pin high (V\+DD). 
+
+
+
+Definition at line 21 of file ads1115.\+h.
+
+\mbox{\Hypertarget{200322___rpi__end__together_2ads1115_8h_a19058003b7ee8f55deb5492d9c3b6cb5}\label{200322___rpi__end__together_2ads1115_8h_a19058003b7ee8f55deb5492d9c3b6cb5}} 
+\index{ads1115.h@{ads1115.h}!ADS1115\_CONVERSIONDELAY@{ADS1115\_CONVERSIONDELAY}}
+\index{ADS1115\_CONVERSIONDELAY@{ADS1115\_CONVERSIONDELAY}!ads1115.h@{ads1115.h}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_CONVERSIONDELAY}{ADS1115\_CONVERSIONDELAY}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N\+D\+E\+L\+AY}
+
+
+
+Definition at line 29 of file ads1115.\+h.
+
+\mbox{\Hypertarget{200322___rpi__end__together_2ads1115_8h_a3fe6858333964bbcc21f73984d05c721}\label{200322___rpi__end__together_2ads1115_8h_a3fe6858333964bbcc21f73984d05c721}} 
+\index{ads1115.h@{ads1115.h}!ADS1115\_REG\_CONFIG\_CLAT\_LATCH@{ADS1115\_REG\_CONFIG\_CLAT\_LATCH}}
+\index{ADS1115\_REG\_CONFIG\_CLAT\_LATCH@{ADS1115\_REG\_CONFIG\_CLAT\_LATCH}!ads1115.h@{ads1115.h}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_CONFIG\_CLAT\_LATCH}{ADS1115\_REG\_CONFIG\_CLAT\_LATCH}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+L\+A\+T\+\_\+\+L\+A\+T\+CH~(0x0004)}
+
+
+
+Definition at line 108 of file ads1115.\+h.
+
+\mbox{\Hypertarget{200322___rpi__end__together_2ads1115_8h_ac135eba3a7e215fc08387759745ff3e8}\label{200322___rpi__end__together_2ads1115_8h_ac135eba3a7e215fc08387759745ff3e8}} 
+\index{ads1115.h@{ads1115.h}!ADS1115\_REG\_CONFIG\_CLAT\_MASK@{ADS1115\_REG\_CONFIG\_CLAT\_MASK}}
+\index{ADS1115\_REG\_CONFIG\_CLAT\_MASK@{ADS1115\_REG\_CONFIG\_CLAT\_MASK}!ads1115.h@{ads1115.h}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_CONFIG\_CLAT\_MASK}{ADS1115\_REG\_CONFIG\_CLAT\_MASK}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+L\+A\+T\+\_\+\+M\+A\+SK~(0x0004)}
+
+
+
+Definition at line 106 of file ads1115.\+h.
+
+\mbox{\Hypertarget{200322___rpi__end__together_2ads1115_8h_a08eb4ee7ddd59d9fbfbfb52b379a27b3}\label{200322___rpi__end__together_2ads1115_8h_a08eb4ee7ddd59d9fbfbfb52b379a27b3}} 
+\index{ads1115.h@{ads1115.h}!ADS1115\_REG\_CONFIG\_CLAT\_NONLAT@{ADS1115\_REG\_CONFIG\_CLAT\_NONLAT}}
+\index{ADS1115\_REG\_CONFIG\_CLAT\_NONLAT@{ADS1115\_REG\_CONFIG\_CLAT\_NONLAT}!ads1115.h@{ads1115.h}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_CONFIG\_CLAT\_NONLAT}{ADS1115\_REG\_CONFIG\_CLAT\_NONLAT}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+L\+A\+T\+\_\+\+N\+O\+N\+L\+AT~(0x0000)}
+
+
+
+Definition at line 107 of file ads1115.\+h.
+
+\mbox{\Hypertarget{200322___rpi__end__together_2ads1115_8h_a6f480d8ddf0e290d2188a345fcc056f0}\label{200322___rpi__end__together_2ads1115_8h_a6f480d8ddf0e290d2188a345fcc056f0}} 
+\index{ads1115.h@{ads1115.h}!ADS1115\_REG\_CONFIG\_CMODE\_MASK@{ADS1115\_REG\_CONFIG\_CMODE\_MASK}}
+\index{ADS1115\_REG\_CONFIG\_CMODE\_MASK@{ADS1115\_REG\_CONFIG\_CMODE\_MASK}!ads1115.h@{ads1115.h}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_CONFIG\_CMODE\_MASK}{ADS1115\_REG\_CONFIG\_CMODE\_MASK}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+M\+O\+D\+E\+\_\+\+M\+A\+SK~(0x0010)}
+
+
+
+Definition at line 95 of file ads1115.\+h.
+
+\mbox{\Hypertarget{200322___rpi__end__together_2ads1115_8h_af1ad663d5772ae21f145b3b598b9e9ae}\label{200322___rpi__end__together_2ads1115_8h_af1ad663d5772ae21f145b3b598b9e9ae}} 
+\index{ads1115.h@{ads1115.h}!ADS1115\_REG\_CONFIG\_CMODE\_TRAD@{ADS1115\_REG\_CONFIG\_CMODE\_TRAD}}
+\index{ADS1115\_REG\_CONFIG\_CMODE\_TRAD@{ADS1115\_REG\_CONFIG\_CMODE\_TRAD}!ads1115.h@{ads1115.h}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_CONFIG\_CMODE\_TRAD}{ADS1115\_REG\_CONFIG\_CMODE\_TRAD}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+M\+O\+D\+E\+\_\+\+T\+R\+AD~(0x0000)}
+
+
+
+Traditional comparator with hysteresis (default) 
+
+
+
+Definition at line 96 of file ads1115.\+h.
+
+\mbox{\Hypertarget{200322___rpi__end__together_2ads1115_8h_a7d75c55f96f7f9a3464e512b8bdee4ea}\label{200322___rpi__end__together_2ads1115_8h_a7d75c55f96f7f9a3464e512b8bdee4ea}} 
+\index{ads1115.h@{ads1115.h}!ADS1115\_REG\_CONFIG\_CMODE\_WINDOW@{ADS1115\_REG\_CONFIG\_CMODE\_WINDOW}}
+\index{ADS1115\_REG\_CONFIG\_CMODE\_WINDOW@{ADS1115\_REG\_CONFIG\_CMODE\_WINDOW}!ads1115.h@{ads1115.h}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_CONFIG\_CMODE\_WINDOW}{ADS1115\_REG\_CONFIG\_CMODE\_WINDOW}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+M\+O\+D\+E\+\_\+\+W\+I\+N\+D\+OW~(0x0010)}
+
+
+
+\mbox{\hyperlink{class_window}{Window}} comparator. 
+
+
+
+Definition at line 97 of file ads1115.\+h.
+
+\mbox{\Hypertarget{200322___rpi__end__together_2ads1115_8h_a41c64f167cde55b49bbbe358fa7cc125}\label{200322___rpi__end__together_2ads1115_8h_a41c64f167cde55b49bbbe358fa7cc125}} 
+\index{ads1115.h@{ads1115.h}!ADS1115\_REG\_CONFIG\_CPOL\_ACTVHIGH@{ADS1115\_REG\_CONFIG\_CPOL\_ACTVHIGH}}
+\index{ADS1115\_REG\_CONFIG\_CPOL\_ACTVHIGH@{ADS1115\_REG\_CONFIG\_CPOL\_ACTVHIGH}!ads1115.h@{ads1115.h}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_CONFIG\_CPOL\_ACTVHIGH}{ADS1115\_REG\_CONFIG\_CPOL\_ACTVHIGH}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+P\+O\+L\+\_\+\+A\+C\+T\+V\+H\+I\+GH~(0x0008)}
+
+
+
+A\+L\+E\+R\+T/\+R\+DY pin is high when active. 
+
+
+
+Definition at line 103 of file ads1115.\+h.
+
+\mbox{\Hypertarget{200322___rpi__end__together_2ads1115_8h_a66da8f89b694fef40084a15c72dfb706}\label{200322___rpi__end__together_2ads1115_8h_a66da8f89b694fef40084a15c72dfb706}} 
+\index{ads1115.h@{ads1115.h}!ADS1115\_REG\_CONFIG\_CPOL\_ACTVLOW@{ADS1115\_REG\_CONFIG\_CPOL\_ACTVLOW}}
+\index{ADS1115\_REG\_CONFIG\_CPOL\_ACTVLOW@{ADS1115\_REG\_CONFIG\_CPOL\_ACTVLOW}!ads1115.h@{ads1115.h}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_CONFIG\_CPOL\_ACTVLOW}{ADS1115\_REG\_CONFIG\_CPOL\_ACTVLOW}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+P\+O\+L\+\_\+\+A\+C\+T\+V\+L\+OW~(0x0000)}
+
+
+
+A\+L\+E\+R\+T/\+R\+E\+A\+DY pin is active when low (default) 
+
+
+
+Definition at line 102 of file ads1115.\+h.
+
+\mbox{\Hypertarget{200322___rpi__end__together_2ads1115_8h_a0611aed0d6590af68d031e2206c986f9}\label{200322___rpi__end__together_2ads1115_8h_a0611aed0d6590af68d031e2206c986f9}} 
+\index{ads1115.h@{ads1115.h}!ADS1115\_REG\_CONFIG\_CPOL\_MASK@{ADS1115\_REG\_CONFIG\_CPOL\_MASK}}
+\index{ADS1115\_REG\_CONFIG\_CPOL\_MASK@{ADS1115\_REG\_CONFIG\_CPOL\_MASK}!ads1115.h@{ads1115.h}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_CONFIG\_CPOL\_MASK}{ADS1115\_REG\_CONFIG\_CPOL\_MASK}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+P\+O\+L\+\_\+\+M\+A\+SK~(0x0008)}
+
+
+
+Definition at line 101 of file ads1115.\+h.
+
+\mbox{\Hypertarget{200322___rpi__end__together_2ads1115_8h_acea3f3cc007181f608c884cc7cdced89}\label{200322___rpi__end__together_2ads1115_8h_acea3f3cc007181f608c884cc7cdced89}} 
+\index{ads1115.h@{ads1115.h}!ADS1115\_REG\_CONFIG\_DR\_008SPS@{ADS1115\_REG\_CONFIG\_DR\_008SPS}}
+\index{ADS1115\_REG\_CONFIG\_DR\_008SPS@{ADS1115\_REG\_CONFIG\_DR\_008SPS}!ads1115.h@{ads1115.h}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_CONFIG\_DR\_008SPS}{ADS1115\_REG\_CONFIG\_DR\_008SPS}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+D\+R\+\_\+008\+S\+PS~(0x0000)}
+
+
+
+8 samples per second 
+
+
+
+Definition at line 84 of file ads1115.\+h.
+
+\mbox{\Hypertarget{200322___rpi__end__together_2ads1115_8h_aa0eab9ff32b76be36458e04d182901e2}\label{200322___rpi__end__together_2ads1115_8h_aa0eab9ff32b76be36458e04d182901e2}} 
+\index{ads1115.h@{ads1115.h}!ADS1115\_REG\_CONFIG\_DR\_016SPS@{ADS1115\_REG\_CONFIG\_DR\_016SPS}}
+\index{ADS1115\_REG\_CONFIG\_DR\_016SPS@{ADS1115\_REG\_CONFIG\_DR\_016SPS}!ads1115.h@{ads1115.h}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_CONFIG\_DR\_016SPS}{ADS1115\_REG\_CONFIG\_DR\_016SPS}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+D\+R\+\_\+016\+S\+PS~(0x0020)}
+
+
+
+16 samples per second 
+
+
+
+Definition at line 85 of file ads1115.\+h.
+
+\mbox{\Hypertarget{200322___rpi__end__together_2ads1115_8h_a6ff533d3ca2cb85cbcf45ea9de280fab}\label{200322___rpi__end__together_2ads1115_8h_a6ff533d3ca2cb85cbcf45ea9de280fab}} 
+\index{ads1115.h@{ads1115.h}!ADS1115\_REG\_CONFIG\_DR\_032SPS@{ADS1115\_REG\_CONFIG\_DR\_032SPS}}
+\index{ADS1115\_REG\_CONFIG\_DR\_032SPS@{ADS1115\_REG\_CONFIG\_DR\_032SPS}!ads1115.h@{ads1115.h}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_CONFIG\_DR\_032SPS}{ADS1115\_REG\_CONFIG\_DR\_032SPS}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+D\+R\+\_\+032\+S\+PS~(0x0040)}
+
+
+
+32 samples per second 
+
+
+
+Definition at line 86 of file ads1115.\+h.
+
+\mbox{\Hypertarget{200322___rpi__end__together_2ads1115_8h_a0c6908c19da69a3d82401b6a26134095}\label{200322___rpi__end__together_2ads1115_8h_a0c6908c19da69a3d82401b6a26134095}} 
+\index{ads1115.h@{ads1115.h}!ADS1115\_REG\_CONFIG\_DR\_064SPS@{ADS1115\_REG\_CONFIG\_DR\_064SPS}}
+\index{ADS1115\_REG\_CONFIG\_DR\_064SPS@{ADS1115\_REG\_CONFIG\_DR\_064SPS}!ads1115.h@{ads1115.h}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_CONFIG\_DR\_064SPS}{ADS1115\_REG\_CONFIG\_DR\_064SPS}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+D\+R\+\_\+064\+S\+PS~(0x0060)}
+
+
+
+64 samples per second 
+
+
+
+Definition at line 87 of file ads1115.\+h.
+
+\mbox{\Hypertarget{200322___rpi__end__together_2ads1115_8h_a4aff8d5b1b4ac9585952d26ca25385e6}\label{200322___rpi__end__together_2ads1115_8h_a4aff8d5b1b4ac9585952d26ca25385e6}} 
+\index{ads1115.h@{ads1115.h}!ADS1115\_REG\_CONFIG\_DR\_128SPS@{ADS1115\_REG\_CONFIG\_DR\_128SPS}}
+\index{ADS1115\_REG\_CONFIG\_DR\_128SPS@{ADS1115\_REG\_CONFIG\_DR\_128SPS}!ads1115.h@{ads1115.h}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_CONFIG\_DR\_128SPS}{ADS1115\_REG\_CONFIG\_DR\_128SPS}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+D\+R\+\_\+128\+S\+PS~(0x0080)}
+
+
+
+128 samples per second 
+
+
+
+Definition at line 88 of file ads1115.\+h.
+
+\mbox{\Hypertarget{200322___rpi__end__together_2ads1115_8h_ac533241f793b44ed72385f71dec1aa25}\label{200322___rpi__end__together_2ads1115_8h_ac533241f793b44ed72385f71dec1aa25}} 
+\index{ads1115.h@{ads1115.h}!ADS1115\_REG\_CONFIG\_DR\_250SPS@{ADS1115\_REG\_CONFIG\_DR\_250SPS}}
+\index{ADS1115\_REG\_CONFIG\_DR\_250SPS@{ADS1115\_REG\_CONFIG\_DR\_250SPS}!ads1115.h@{ads1115.h}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_CONFIG\_DR\_250SPS}{ADS1115\_REG\_CONFIG\_DR\_250SPS}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+D\+R\+\_\+250\+S\+PS~(0x00\+A0)}
+
+
+
+250 samples per second (default) 
+
+
+
+Definition at line 89 of file ads1115.\+h.
+
+\mbox{\Hypertarget{200322___rpi__end__together_2ads1115_8h_a8eed720123d6bd52580826c2c9ad9e28}\label{200322___rpi__end__together_2ads1115_8h_a8eed720123d6bd52580826c2c9ad9e28}} 
+\index{ads1115.h@{ads1115.h}!ADS1115\_REG\_CONFIG\_DR\_475SPS@{ADS1115\_REG\_CONFIG\_DR\_475SPS}}
+\index{ADS1115\_REG\_CONFIG\_DR\_475SPS@{ADS1115\_REG\_CONFIG\_DR\_475SPS}!ads1115.h@{ads1115.h}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_CONFIG\_DR\_475SPS}{ADS1115\_REG\_CONFIG\_DR\_475SPS}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+D\+R\+\_\+475\+S\+PS~(0x00\+C0)}
+
+
+
+475 samples per second 
+
+
+
+Definition at line 90 of file ads1115.\+h.
+
+\mbox{\Hypertarget{200322___rpi__end__together_2ads1115_8h_a9308f41d4c2ff024bbd201efc3b7ff69}\label{200322___rpi__end__together_2ads1115_8h_a9308f41d4c2ff024bbd201efc3b7ff69}} 
+\index{ads1115.h@{ads1115.h}!ADS1115\_REG\_CONFIG\_DR\_860SPS@{ADS1115\_REG\_CONFIG\_DR\_860SPS}}
+\index{ADS1115\_REG\_CONFIG\_DR\_860SPS@{ADS1115\_REG\_CONFIG\_DR\_860SPS}!ads1115.h@{ads1115.h}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_CONFIG\_DR\_860SPS}{ADS1115\_REG\_CONFIG\_DR\_860SPS}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+D\+R\+\_\+860\+S\+PS~(0x00\+E0)}
+
+
+
+860 samples per second 
+
+
+
+Definition at line 91 of file ads1115.\+h.
+
+\mbox{\Hypertarget{200322___rpi__end__together_2ads1115_8h_aa1b17ec78ac3a5f63c7a21198d8b360c}\label{200322___rpi__end__together_2ads1115_8h_aa1b17ec78ac3a5f63c7a21198d8b360c}} 
+\index{ads1115.h@{ads1115.h}!ADS1115\_REG\_CONFIG\_MODE\_CONTIN@{ADS1115\_REG\_CONFIG\_MODE\_CONTIN}}
+\index{ADS1115\_REG\_CONFIG\_MODE\_CONTIN@{ADS1115\_REG\_CONFIG\_MODE\_CONTIN}!ads1115.h@{ads1115.h}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_CONFIG\_MODE\_CONTIN}{ADS1115\_REG\_CONFIG\_MODE\_CONTIN}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+O\+D\+E\+\_\+\+C\+O\+N\+T\+IN~(0x0000)}
+
+
+
+Continuous conversion mode. 
+
+
+
+Definition at line 78 of file ads1115.\+h.
+
+\mbox{\Hypertarget{200322___rpi__end__together_2ads1115_8h_ae0d36b04b300d33d02b53c02db4a5d60}\label{200322___rpi__end__together_2ads1115_8h_ae0d36b04b300d33d02b53c02db4a5d60}} 
+\index{ads1115.h@{ads1115.h}!ADS1115\_REG\_CONFIG\_MODE\_ENDCON@{ADS1115\_REG\_CONFIG\_MODE\_ENDCON}}
+\index{ADS1115\_REG\_CONFIG\_MODE\_ENDCON@{ADS1115\_REG\_CONFIG\_MODE\_ENDCON}!ads1115.h@{ads1115.h}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_CONFIG\_MODE\_ENDCON}{ADS1115\_REG\_CONFIG\_MODE\_ENDCON}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+O\+D\+E\+\_\+\+E\+N\+D\+C\+ON~(0x8583)}
+
+
+
+Shut down Continuous conversion. 
+
+
+
+Definition at line 79 of file ads1115.\+h.
+
+\mbox{\Hypertarget{200322___rpi__end__together_2ads1115_8h_a6ca989a5d970e604684ae10eacb1bdfd}\label{200322___rpi__end__together_2ads1115_8h_a6ca989a5d970e604684ae10eacb1bdfd}} 
+\index{ads1115.h@{ads1115.h}!ADS1115\_REG\_CONFIG\_MODE\_SINGLE@{ADS1115\_REG\_CONFIG\_MODE\_SINGLE}}
+\index{ADS1115\_REG\_CONFIG\_MODE\_SINGLE@{ADS1115\_REG\_CONFIG\_MODE\_SINGLE}!ads1115.h@{ads1115.h}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_CONFIG\_MODE\_SINGLE}{ADS1115\_REG\_CONFIG\_MODE\_SINGLE}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+O\+D\+E\+\_\+\+S\+I\+N\+G\+LE~(0x0100)}
+
+
+
+Power-\/down single-\/shot mode (default) 
+
+
+
+Definition at line 80 of file ads1115.\+h.
+
+\mbox{\Hypertarget{200322___rpi__end__together_2ads1115_8h_a359be266bd66de69908a5046723d1f15}\label{200322___rpi__end__together_2ads1115_8h_a359be266bd66de69908a5046723d1f15}} 
+\index{ads1115.h@{ads1115.h}!ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P0\_N1@{ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P0\_N1}}
+\index{ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P0\_N1@{ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P0\_N1}!ads1115.h@{ads1115.h}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P0\_N1}{ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P0\_N1}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+U\+X\+\_\+\+D\+I\+F\+F\+\_\+\+P0\+\_\+\+N1~(0x0000)}
+
+
+
+Differential input with positive input from A\+I\+N0 and negative input from A\+I\+N1. This is the default value. 
+
+
+
+Definition at line 56 of file ads1115.\+h.
+
+\mbox{\Hypertarget{200322___rpi__end__together_2ads1115_8h_a2222fbb0bedbadbbbee784b701e0f468}\label{200322___rpi__end__together_2ads1115_8h_a2222fbb0bedbadbbbee784b701e0f468}} 
+\index{ads1115.h@{ads1115.h}!ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P0\_N3@{ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P0\_N3}}
+\index{ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P0\_N3@{ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P0\_N3}!ads1115.h@{ads1115.h}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P0\_N3}{ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P0\_N3}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+U\+X\+\_\+\+D\+I\+F\+F\+\_\+\+P0\+\_\+\+N3~(0x1000)}
+
+
+
+Differential input with positive input from A\+I\+N0 and negative input from A\+I\+N3. 
+
+
+
+Definition at line 57 of file ads1115.\+h.
+
+\mbox{\Hypertarget{200322___rpi__end__together_2ads1115_8h_a25568a0253dcfa65f9b0ff2a3d1f51fc}\label{200322___rpi__end__together_2ads1115_8h_a25568a0253dcfa65f9b0ff2a3d1f51fc}} 
+\index{ads1115.h@{ads1115.h}!ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P1\_N3@{ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P1\_N3}}
+\index{ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P1\_N3@{ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P1\_N3}!ads1115.h@{ads1115.h}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P1\_N3}{ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P1\_N3}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+U\+X\+\_\+\+D\+I\+F\+F\+\_\+\+P1\+\_\+\+N3~(0x2000)}
+
+
+
+Differential input with positive input from A\+I\+N1 and negative input from A\+I\+N3. 
+
+
+
+Definition at line 58 of file ads1115.\+h.
+
+\mbox{\Hypertarget{200322___rpi__end__together_2ads1115_8h_afb90675e52a2e3fd17bfbc269e5bb168}\label{200322___rpi__end__together_2ads1115_8h_afb90675e52a2e3fd17bfbc269e5bb168}} 
+\index{ads1115.h@{ads1115.h}!ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P2\_N3@{ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P2\_N3}}
+\index{ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P2\_N3@{ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P2\_N3}!ads1115.h@{ads1115.h}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P2\_N3}{ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P2\_N3}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+U\+X\+\_\+\+D\+I\+F\+F\+\_\+\+P2\+\_\+\+N3~(0x3000)}
+
+
+
+Differential input with positive input from A\+I\+N2 and negative input from A\+I\+N3.$\ast$/. 
+
+
+
+Definition at line 59 of file ads1115.\+h.
+
+\mbox{\Hypertarget{200322___rpi__end__together_2ads1115_8h_a01533e82c75c5a7c2a48098e983eda27}\label{200322___rpi__end__together_2ads1115_8h_a01533e82c75c5a7c2a48098e983eda27}} 
+\index{ads1115.h@{ads1115.h}!ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P0\_NG@{ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P0\_NG}}
+\index{ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P0\_NG@{ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P0\_NG}!ads1115.h@{ads1115.h}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P0\_NG}{ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P0\_NG}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+U\+X\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+P0\+\_\+\+NG~(0x4000)}
+
+
+
+Single-\/ended input with positive input from A\+I\+N0 with reference to G\+ND. 
+
+
+
+Definition at line 62 of file ads1115.\+h.
+
+\mbox{\Hypertarget{200322___rpi__end__together_2ads1115_8h_a5a4314f4345043c50de01b9270f978f0}\label{200322___rpi__end__together_2ads1115_8h_a5a4314f4345043c50de01b9270f978f0}} 
+\index{ads1115.h@{ads1115.h}!ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P1\_NG@{ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P1\_NG}}
+\index{ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P1\_NG@{ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P1\_NG}!ads1115.h@{ads1115.h}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P1\_NG}{ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P1\_NG}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+U\+X\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+P1\+\_\+\+NG~(0x5000)}
+
+
+
+Single-\/ended input with positive input from A\+I\+N1 with reference to G\+ND. 
+
+
+
+Definition at line 63 of file ads1115.\+h.
+
+\mbox{\Hypertarget{200322___rpi__end__together_2ads1115_8h_abb8af6813b8c47ebce8b1f760950b752}\label{200322___rpi__end__together_2ads1115_8h_abb8af6813b8c47ebce8b1f760950b752}} 
+\index{ads1115.h@{ads1115.h}!ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P2\_NG@{ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P2\_NG}}
+\index{ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P2\_NG@{ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P2\_NG}!ads1115.h@{ads1115.h}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P2\_NG}{ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P2\_NG}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+U\+X\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+P2\+\_\+\+NG~(0x6000)}
+
+
+
+Single-\/ended input with positive input from A\+I\+N2 with reference to G\+ND. 
+
+
+
+Definition at line 64 of file ads1115.\+h.
+
+\mbox{\Hypertarget{200322___rpi__end__together_2ads1115_8h_a02a7097c8850a8737fab257ce8cc03b7}\label{200322___rpi__end__together_2ads1115_8h_a02a7097c8850a8737fab257ce8cc03b7}} 
+\index{ads1115.h@{ads1115.h}!ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P3\_NG@{ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P3\_NG}}
+\index{ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P3\_NG@{ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P3\_NG}!ads1115.h@{ads1115.h}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P3\_NG}{ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P3\_NG}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+U\+X\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+P3\+\_\+\+NG~(0x7000)}
+
+
+
+Single-\/ended input with positive input from A\+I\+N3 with reference to G\+ND. 
+
+
+
+Definition at line 65 of file ads1115.\+h.
+
+\mbox{\Hypertarget{200322___rpi__end__together_2ads1115_8h_a6b544913066956181b5439b851a04318}\label{200322___rpi__end__together_2ads1115_8h_a6b544913066956181b5439b851a04318}} 
+\index{ads1115.h@{ads1115.h}!ADS1115\_REG\_CONFIG\_OS\_BUSY@{ADS1115\_REG\_CONFIG\_OS\_BUSY}}
+\index{ADS1115\_REG\_CONFIG\_OS\_BUSY@{ADS1115\_REG\_CONFIG\_OS\_BUSY}!ads1115.h@{ads1115.h}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_CONFIG\_OS\_BUSY}{ADS1115\_REG\_CONFIG\_OS\_BUSY}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+O\+S\+\_\+\+B\+U\+SY~(0x0000)}
+
+
+
+Read\+: Bit = 0 when conversion is in progress. 
+
+
+
+Definition at line 51 of file ads1115.\+h.
+
+\mbox{\Hypertarget{200322___rpi__end__together_2ads1115_8h_a54bf7b2963a6a09611a6254e4e22b49c}\label{200322___rpi__end__together_2ads1115_8h_a54bf7b2963a6a09611a6254e4e22b49c}} 
+\index{ads1115.h@{ads1115.h}!ADS1115\_REG\_CONFIG\_OS\_MASK@{ADS1115\_REG\_CONFIG\_OS\_MASK}}
+\index{ADS1115\_REG\_CONFIG\_OS\_MASK@{ADS1115\_REG\_CONFIG\_OS\_MASK}!ads1115.h@{ads1115.h}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_CONFIG\_OS\_MASK}{ADS1115\_REG\_CONFIG\_OS\_MASK}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+O\+S\+\_\+\+M\+A\+SK~(0x8000)}
+
+
+
+OS\+: Operational status/single-\/shot conversion start. 
+
+\textbackslash{}detail This bit determines the operational status of the device. This bit can only be written when in power-\/down mode 
+
+Definition at line 49 of file ads1115.\+h.
+
+\mbox{\Hypertarget{200322___rpi__end__together_2ads1115_8h_a10d1e0f484aeb2d6021aeb524d2ff4fc}\label{200322___rpi__end__together_2ads1115_8h_a10d1e0f484aeb2d6021aeb524d2ff4fc}} 
+\index{ads1115.h@{ads1115.h}!ADS1115\_REG\_CONFIG\_OS\_NOTBUSY@{ADS1115\_REG\_CONFIG\_OS\_NOTBUSY}}
+\index{ADS1115\_REG\_CONFIG\_OS\_NOTBUSY@{ADS1115\_REG\_CONFIG\_OS\_NOTBUSY}!ads1115.h@{ads1115.h}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_CONFIG\_OS\_NOTBUSY}{ADS1115\_REG\_CONFIG\_OS\_NOTBUSY}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+O\+S\+\_\+\+N\+O\+T\+B\+U\+SY~(0x8000)}
+
+
+
+Read\+: Bit = 1 when device is not performing a conversion. 
+
+
+
+Definition at line 52 of file ads1115.\+h.
+
+\mbox{\Hypertarget{200322___rpi__end__together_2ads1115_8h_abecb67ac1d427a99761f8a87101c73b1}\label{200322___rpi__end__together_2ads1115_8h_abecb67ac1d427a99761f8a87101c73b1}} 
+\index{ads1115.h@{ads1115.h}!ADS1115\_REG\_CONFIG\_OS\_SINGLE@{ADS1115\_REG\_CONFIG\_OS\_SINGLE}}
+\index{ADS1115\_REG\_CONFIG\_OS\_SINGLE@{ADS1115\_REG\_CONFIG\_OS\_SINGLE}!ads1115.h@{ads1115.h}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_CONFIG\_OS\_SINGLE}{ADS1115\_REG\_CONFIG\_OS\_SINGLE}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+O\+S\+\_\+\+S\+I\+N\+G\+LE~(0x8000)}
+
+
+
+Write\+: Set to start a single-\/conversion. 
+
+
+
+Definition at line 50 of file ads1115.\+h.
+
+\mbox{\Hypertarget{200322___rpi__end__together_2ads1115_8h_a3f1d89160606a4831bba4cc26d70040b}\label{200322___rpi__end__together_2ads1115_8h_a3f1d89160606a4831bba4cc26d70040b}} 
+\index{ads1115.h@{ads1115.h}!ADS1115\_REG\_CONFIG\_PGA\_0\_256V@{ADS1115\_REG\_CONFIG\_PGA\_0\_256V}}
+\index{ADS1115\_REG\_CONFIG\_PGA\_0\_256V@{ADS1115\_REG\_CONFIG\_PGA\_0\_256V}!ads1115.h@{ads1115.h}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_CONFIG\_PGA\_0\_256V}{ADS1115\_REG\_CONFIG\_PGA\_0\_256V}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+G\+A\+\_\+0\+\_\+256V~(0x0\+A00)}
+
+
+
++/-\/0.256V range = Gain 16 
+
+
+
+Definition at line 74 of file ads1115.\+h.
+
+\mbox{\Hypertarget{200322___rpi__end__together_2ads1115_8h_ab658622c5fbf84a364e060da2b9be3c5}\label{200322___rpi__end__together_2ads1115_8h_ab658622c5fbf84a364e060da2b9be3c5}} 
+\index{ads1115.h@{ads1115.h}!ADS1115\_REG\_CONFIG\_PGA\_0\_512V@{ADS1115\_REG\_CONFIG\_PGA\_0\_512V}}
+\index{ADS1115\_REG\_CONFIG\_PGA\_0\_512V@{ADS1115\_REG\_CONFIG\_PGA\_0\_512V}!ads1115.h@{ads1115.h}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_CONFIG\_PGA\_0\_512V}{ADS1115\_REG\_CONFIG\_PGA\_0\_512V}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+G\+A\+\_\+0\+\_\+512V~(0x0800)}
+
+
+
++/-\/0.512V range = Gain 8 
+
+
+
+Definition at line 73 of file ads1115.\+h.
+
+\mbox{\Hypertarget{200322___rpi__end__together_2ads1115_8h_a04fa28b60fb035e9bdc8cbaa0ce2c0e6}\label{200322___rpi__end__together_2ads1115_8h_a04fa28b60fb035e9bdc8cbaa0ce2c0e6}} 
+\index{ads1115.h@{ads1115.h}!ADS1115\_REG\_CONFIG\_PGA\_1\_024V@{ADS1115\_REG\_CONFIG\_PGA\_1\_024V}}
+\index{ADS1115\_REG\_CONFIG\_PGA\_1\_024V@{ADS1115\_REG\_CONFIG\_PGA\_1\_024V}!ads1115.h@{ads1115.h}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_CONFIG\_PGA\_1\_024V}{ADS1115\_REG\_CONFIG\_PGA\_1\_024V}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+G\+A\+\_\+1\+\_\+024V~(0x0600)}
+
+
+
++/-\/1.024V range = Gain 4 
+
+
+
+Definition at line 72 of file ads1115.\+h.
+
+\mbox{\Hypertarget{200322___rpi__end__together_2ads1115_8h_a516dac63e8cfb0a973222c022b7cc831}\label{200322___rpi__end__together_2ads1115_8h_a516dac63e8cfb0a973222c022b7cc831}} 
+\index{ads1115.h@{ads1115.h}!ADS1115\_REG\_CONFIG\_PGA\_2\_048V@{ADS1115\_REG\_CONFIG\_PGA\_2\_048V}}
+\index{ADS1115\_REG\_CONFIG\_PGA\_2\_048V@{ADS1115\_REG\_CONFIG\_PGA\_2\_048V}!ads1115.h@{ads1115.h}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_CONFIG\_PGA\_2\_048V}{ADS1115\_REG\_CONFIG\_PGA\_2\_048V}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+G\+A\+\_\+2\+\_\+048V~(0x0400)}
+
+
+
++/-\/2.048V range = Gain 2 (default) 
+
+
+
+Definition at line 71 of file ads1115.\+h.
+
+\mbox{\Hypertarget{200322___rpi__end__together_2ads1115_8h_a3acb6997b9bd7692470eb8c1999c33ea}\label{200322___rpi__end__together_2ads1115_8h_a3acb6997b9bd7692470eb8c1999c33ea}} 
+\index{ads1115.h@{ads1115.h}!ADS1115\_REG\_CONFIG\_PGA\_4\_096V@{ADS1115\_REG\_CONFIG\_PGA\_4\_096V}}
+\index{ADS1115\_REG\_CONFIG\_PGA\_4\_096V@{ADS1115\_REG\_CONFIG\_PGA\_4\_096V}!ads1115.h@{ads1115.h}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_CONFIG\_PGA\_4\_096V}{ADS1115\_REG\_CONFIG\_PGA\_4\_096V}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+G\+A\+\_\+4\+\_\+096V~(0x0200)}
+
+
+
++/-\/4.096V range = Gain 1 
+
+
+
+Definition at line 70 of file ads1115.\+h.
+
+\mbox{\Hypertarget{200322___rpi__end__together_2ads1115_8h_aa4bead0ed56b92f729a2e65c2af284fc}\label{200322___rpi__end__together_2ads1115_8h_aa4bead0ed56b92f729a2e65c2af284fc}} 
+\index{ads1115.h@{ads1115.h}!ADS1115\_REG\_CONFIG\_PGA\_6\_144V@{ADS1115\_REG\_CONFIG\_PGA\_6\_144V}}
+\index{ADS1115\_REG\_CONFIG\_PGA\_6\_144V@{ADS1115\_REG\_CONFIG\_PGA\_6\_144V}!ads1115.h@{ads1115.h}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_CONFIG\_PGA\_6\_144V}{ADS1115\_REG\_CONFIG\_PGA\_6\_144V}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+G\+A\+\_\+6\+\_\+144V~(0x0000)}
+
+
+
++/-\/6.144V range = Gain 2/3 
+
+
+
+Definition at line 69 of file ads1115.\+h.
+
+\mbox{\Hypertarget{200322___rpi__end__together_2ads1115_8h_a8a6054d1b0e63ccc86f839ac76d8bef5}\label{200322___rpi__end__together_2ads1115_8h_a8a6054d1b0e63ccc86f839ac76d8bef5}} 
+\index{ads1115.h@{ads1115.h}!ADS1115\_REG\_POINTER\_CONFIG@{ADS1115\_REG\_POINTER\_CONFIG}}
+\index{ADS1115\_REG\_POINTER\_CONFIG@{ADS1115\_REG\_POINTER\_CONFIG}!ads1115.h@{ads1115.h}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_POINTER\_CONFIG}{ADS1115\_REG\_POINTER\_CONFIG}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+C\+O\+N\+F\+IG~(0x01)}
+
+
+
+Select the configuration register. 
+
+
+
+Definition at line 37 of file ads1115.\+h.
+
+\mbox{\Hypertarget{200322___rpi__end__together_2ads1115_8h_a528ccaa7d9dbea0b5febdb69ebb6bf53}\label{200322___rpi__end__together_2ads1115_8h_a528ccaa7d9dbea0b5febdb69ebb6bf53}} 
+\index{ads1115.h@{ads1115.h}!ADS1115\_REG\_POINTER\_CONVERT@{ADS1115\_REG\_POINTER\_CONVERT}}
+\index{ADS1115\_REG\_POINTER\_CONVERT@{ADS1115\_REG\_POINTER\_CONVERT}!ads1115.h@{ads1115.h}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_POINTER\_CONVERT}{ADS1115\_REG\_POINTER\_CONVERT}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+C\+O\+N\+V\+E\+RT~(0x00)}
+
+
+
+Select the conversion register. 
+
+
+
+Definition at line 36 of file ads1115.\+h.
+
+\mbox{\Hypertarget{200322___rpi__end__together_2ads1115_8h_a2d3b47f0a3930bfa741aa99172368663}\label{200322___rpi__end__together_2ads1115_8h_a2d3b47f0a3930bfa741aa99172368663}} 
+\index{ads1115.h@{ads1115.h}!ADS1115\_REG\_POINTER\_HITHRESH@{ADS1115\_REG\_POINTER\_HITHRESH}}
+\index{ADS1115\_REG\_POINTER\_HITHRESH@{ADS1115\_REG\_POINTER\_HITHRESH}!ads1115.h@{ads1115.h}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_POINTER\_HITHRESH}{ADS1115\_REG\_POINTER\_HITHRESH}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+H\+I\+T\+H\+R\+E\+SH~(0x03)}
+
+
+
+Definition at line 39 of file ads1115.\+h.
+
+\mbox{\Hypertarget{200322___rpi__end__together_2ads1115_8h_a12ae9405dd4407fc56876a173e740379}\label{200322___rpi__end__together_2ads1115_8h_a12ae9405dd4407fc56876a173e740379}} 
+\index{ads1115.h@{ads1115.h}!ADS1115\_REG\_POINTER\_LOWTHRESH@{ADS1115\_REG\_POINTER\_LOWTHRESH}}
+\index{ADS1115\_REG\_POINTER\_LOWTHRESH@{ADS1115\_REG\_POINTER\_LOWTHRESH}!ads1115.h@{ads1115.h}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_POINTER\_LOWTHRESH}{ADS1115\_REG\_POINTER\_LOWTHRESH}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+L\+O\+W\+T\+H\+R\+E\+SH~(0x02)}
+
+
+
+Definition at line 38 of file ads1115.\+h.
+
+\mbox{\Hypertarget{200322___rpi__end__together_2ads1115_8h_ad58f0f3e05e9aea14c258f93d708d875}\label{200322___rpi__end__together_2ads1115_8h_ad58f0f3e05e9aea14c258f93d708d875}} 
+\index{ads1115.h@{ads1115.h}!ADS1115\_REG\_POINTER\_MASK@{ADS1115\_REG\_POINTER\_MASK}}
+\index{ADS1115\_REG\_POINTER\_MASK@{ADS1115\_REG\_POINTER\_MASK}!ads1115.h@{ads1115.h}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_POINTER\_MASK}{ADS1115\_REG\_POINTER\_MASK}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+M\+A\+SK~(0x03)}
+
+
+
+Definition at line 35 of file ads1115.\+h.
+
+\mbox{\Hypertarget{200322___rpi__end__together_2ads1115_8h_afa9785bf499e34e5d7941e624b76ed78}\label{200322___rpi__end__together_2ads1115_8h_afa9785bf499e34e5d7941e624b76ed78}} 
+\index{ads1115.h@{ads1115.h}!ADS1115\_REG\_THRES\_MSB\_0@{ADS1115\_REG\_THRES\_MSB\_0}}
+\index{ADS1115\_REG\_THRES\_MSB\_0@{ADS1115\_REG\_THRES\_MSB\_0}!ads1115.h@{ads1115.h}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_THRES\_MSB\_0}{ADS1115\_REG\_THRES\_MSB\_0}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+T\+H\+R\+E\+S\+\_\+\+M\+S\+B\+\_\+0~(0x0000)}
+
+
+
+Definition at line 120 of file ads1115.\+h.
+
+\mbox{\Hypertarget{200322___rpi__end__together_2ads1115_8h_a82057dc56913138291c7aab3816e5f1b}\label{200322___rpi__end__together_2ads1115_8h_a82057dc56913138291c7aab3816e5f1b}} 
+\index{ads1115.h@{ads1115.h}!ADS1115\_REG\_THRES\_MSB\_1@{ADS1115\_REG\_THRES\_MSB\_1}}
+\index{ADS1115\_REG\_THRES\_MSB\_1@{ADS1115\_REG\_THRES\_MSB\_1}!ads1115.h@{ads1115.h}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_THRES\_MSB\_1}{ADS1115\_REG\_THRES\_MSB\_1}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+T\+H\+R\+E\+S\+\_\+\+M\+S\+B\+\_\+1~(0x8000)}
+
+
+
+Definition at line 119 of file ads1115.\+h.
+

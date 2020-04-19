@@ -1,0 +1,97 @@
+\hypertarget{classGPIOlisten}{}\doxysection{G\+P\+I\+Olisten Class Reference}
+\label{classGPIOlisten}\index{GPIOlisten@{GPIOlisten}}
+
+
+This class is responsible for the data communications and threading involved with conversion and processing of incoming data to the A\+D\+S1115.  
+
+
+
+
+{\ttfamily \#include $<$G\+P\+I\+Olis.\+h$>$}
+
+Inheritance diagram for G\+P\+I\+Olisten\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classGPIOlisten}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGPIOlisten_ad1d6644b5ab62fb8fa170062c9f4704c}{G\+P\+I\+Olis}} (Q\+Object $\ast$parent=0)
+\begin{DoxyCompactList}\small\item\em Initialises a thread. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classGPIOlisten_a9f281b655c0e2a395f5af1f3155a6fb7}{$\sim$\+G\+P\+I\+Olis}} ()
+\begin{DoxyCompactList}\small\item\em G\+P\+I\+Olis destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGPIOlisten_a9351f856e64420434e92eacb44c3657a}{interrupt}} (void)
+\begin{DoxyCompactList}\small\item\em Executed in response to an interrupt, the function returns emits the readyread() signal with the measured voltage. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classGPIOlisten_a24bfdaf8078d09bfdc3d4f2a947009dd}{count}}
+\begin{DoxyCompactList}\small\item\em A simple counter for use in the \mbox{\hyperlink{classGPIOlisten_a9351f856e64420434e92eacb44c3657a}{interrupt()}} function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class is responsible for the data communications and threading involved with conversion and processing of incoming data to the A\+D\+S1115. 
+
+The \mbox{\hyperlink{classGPIOlisten}{G\+P\+I\+Olisten}} class monitors the A\+L\+E\+R\+T/\+R\+DY pin and triggers an interrupt each time an AD conversion is ready. The data is then processed before sleeping until the next interrupt. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classGPIOlisten_a9f281b655c0e2a395f5af1f3155a6fb7}\label{classGPIOlisten_a9f281b655c0e2a395f5af1f3155a6fb7}} 
+\index{GPIOlisten@{GPIOlisten}!````~GPIOlis@{$\sim$GPIOlis}}
+\index{````~GPIOlis@{$\sim$GPIOlis}!GPIOlisten@{GPIOlisten}}
+\doxysubsubsection{\texorpdfstring{$\sim$GPIOlis()}{~GPIOlis()}}
+{\footnotesize\ttfamily G\+P\+I\+Olisten\+::$\sim$\+G\+P\+I\+Olis (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+G\+P\+I\+Olis destructor. 
+
+Destroys the G\+P\+I\+Olis object 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classGPIOlisten_ad1d6644b5ab62fb8fa170062c9f4704c}\label{classGPIOlisten_ad1d6644b5ab62fb8fa170062c9f4704c}} 
+\index{GPIOlisten@{GPIOlisten}!GPIOlis@{GPIOlis}}
+\index{GPIOlis@{GPIOlis}!GPIOlisten@{GPIOlisten}}
+\doxysubsubsection{\texorpdfstring{GPIOlis()}{GPIOlis()}}
+{\footnotesize\ttfamily G\+P\+I\+Olisten\+::\+G\+P\+I\+Olis (\begin{DoxyParamCaption}\item[{Q\+Object $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Initialises a thread. 
+
+Creates a new instance of the \mbox{\hyperlink{classads1115}{ads1115}} class \mbox{\Hypertarget{classGPIOlisten_a9351f856e64420434e92eacb44c3657a}\label{classGPIOlisten_a9351f856e64420434e92eacb44c3657a}} 
+\index{GPIOlisten@{GPIOlisten}!interrupt@{interrupt}}
+\index{interrupt@{interrupt}!GPIOlisten@{GPIOlisten}}
+\doxysubsubsection{\texorpdfstring{interrupt()}{interrupt()}}
+{\footnotesize\ttfamily void G\+P\+I\+Olisten\+::interrupt (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Executed in response to an interrupt, the function returns emits the readyread() signal with the measured voltage. 
+
+Uses the readsig() function of the \mbox{\hyperlink{classads1115}{ads1115}} class to measure an input voltage before emitting the readyread() signal containing the voltage result. A counter keeps track of the number of conversions performed (uses of the \mbox{\hyperlink{classGPIOlisten_a9351f856e64420434e92eacb44c3657a}{interrupt()}} function, each time alerting the onset of conversion through the q\+Debug() slot.
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classGPIOlisten_a24bfdaf8078d09bfdc3d4f2a947009dd}\label{classGPIOlisten_a24bfdaf8078d09bfdc3d4f2a947009dd}} 
+\index{GPIOlisten@{GPIOlisten}!count@{count}}
+\index{count@{count}!GPIOlisten@{GPIOlisten}}
+\doxysubsubsection{\texorpdfstring{count}{count}}
+{\footnotesize\ttfamily int G\+P\+I\+Olisten\+::count}
+
+
+
+A simple counter for use in the \mbox{\hyperlink{classGPIOlisten_a9351f856e64420434e92eacb44c3657a}{interrupt()}} function. 
+
+Instantiates through the \mbox{\hyperlink{classGPIOlisten_ad1d6644b5ab62fb8fa170062c9f4704c}{G\+P\+I\+Olis()}} function to keep track of the number of interrupts performed. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/finlay/\+R\+T\+E\+P1/\+Rpi\+\_\+end/200322\+\_\+\+Rpi\+\_\+end\+\_\+together/\mbox{\hyperlink{GPIOlis_8h}{G\+P\+I\+Olis.\+h}}\end{DoxyCompactItemize}

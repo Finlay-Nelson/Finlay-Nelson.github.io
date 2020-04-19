@@ -1,0 +1,75 @@
+\hypertarget{_rpi__end_2200322___rpi__end__together_2_g_p_i_olis_8h}{}\doxysection{/home/finlay/\+R\+T\+E\+P1/\+Rpi\+\_\+end/200322\+\_\+\+Rpi\+\_\+end\+\_\+together/\+G\+P\+I\+Olis.h File Reference}
+\label{_rpi__end_2200322___rpi__end__together_2_g_p_i_olis_8h}\index{/home/finlay/RTEP1/Rpi\_end/200322\_Rpi\_end\_together/GPIOlis.h@{/home/finlay/RTEP1/Rpi\_end/200322\_Rpi\_end\_together/GPIOlis.h}}
+
+
+Threading and interrupts.  
+
+
+{\ttfamily \#include $<$Q\+Thread$>$}\newline
+{\ttfamily \#include \char`\"{}ads1115.\+h\char`\"{}}\newline
+Include dependency graph for G\+P\+I\+Olis.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_g_p_i_olisten}{G\+P\+I\+Olisten}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_rpi__end_2200322___rpi__end__together_2_g_p_i_olis_8h_a92db9bfbde7a3eb35d84e4734394e084}{G\+P\+I\+Olis\+\_\+H}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{_rpi__end_2200322___rpi__end__together_2_g_p_i_olis_8h_a6715efeafc8103a65e244026d957b70b}{gpipinterrupt}}
+\begin{DoxyCompactList}\small\item\em Stores a binary value relating to the interrupt state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Threading and interrupts. 
+
+Listens to the Alert pin of the A\+D\+S1115 in continuous mode, interrupts every time an AD conversion is ready, then sends data and triggers processing through the signal-\/slot mechanism. \char`\"{}run()\char`\"{} listens to the interrupt and calls back the interrupt every time it is detected before sleeping for 1ms. interrupt() reads in data and sends back a readyread signal.
+
+\begin{DoxyAuthor}{Author}
+Zonghan Gan 
+
+Finlay Nelson 
+
+Henry Cowan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11 April 2020 
+\end{DoxyDate}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_rpi__end_2200322___rpi__end__together_2_g_p_i_olis_8h_a92db9bfbde7a3eb35d84e4734394e084}\label{_rpi__end_2200322___rpi__end__together_2_g_p_i_olis_8h_a92db9bfbde7a3eb35d84e4734394e084}} 
+\index{GPIOlis.h@{GPIOlis.h}!GPIOlis\_H@{GPIOlis\_H}}
+\index{GPIOlis\_H@{GPIOlis\_H}!GPIOlis.h@{GPIOlis.h}}
+\doxysubsubsection{\texorpdfstring{GPIOlis\_H}{GPIOlis\_H}}
+{\footnotesize\ttfamily \#define G\+P\+I\+Olis\+\_\+H}
+
+
+
+Definition at line 20 of file G\+P\+I\+Olis.\+h.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_rpi__end_2200322___rpi__end__together_2_g_p_i_olis_8h_a6715efeafc8103a65e244026d957b70b}\label{_rpi__end_2200322___rpi__end__together_2_g_p_i_olis_8h_a6715efeafc8103a65e244026d957b70b}} 
+\index{GPIOlis.h@{GPIOlis.h}!gpipinterrupt@{gpipinterrupt}}
+\index{gpipinterrupt@{gpipinterrupt}!GPIOlis.h@{GPIOlis.h}}
+\doxysubsubsection{\texorpdfstring{gpipinterrupt}{gpipinterrupt}}
+{\footnotesize\ttfamily int \mbox{\hyperlink{_rpi__end_2200322___rpi__end__together_2_g_p_i_olis_8cpp_abae77f938c3265f051527499510c0932}{gpipinterrupt}}}
+
+
+
+Stores a binary value relating to the interrupt state. 
+
+
+
+Definition at line 12 of file G\+P\+I\+Olis.\+cpp.
+

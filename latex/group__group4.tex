@@ -1,0 +1,165 @@
+\hypertarget{group__group4}{}\doxysection{A\+D\+S1115\+: I\+N\+P\+UT M\+U\+L\+T\+I\+P\+L\+E\+X\+ER C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+ON}
+\label{group__group4}\index{ADS1115: INPUT MULTIPLEXER CONFIGURATION@{ADS1115: INPUT MULTIPLEXER CONFIGURATION}}
+
+
+A\+D\+S1115 Bit\mbox{[}14-\/12\mbox{]}.  
+
+
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__group4_ga7db34e6ba1050094aa2f5895594fa473}{A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+U\+X\+\_\+\+D\+I\+F\+F\+\_\+0\+\_\+1}}~(0x0000)
+\begin{DoxyCompactList}\small\item\em Differential input with positive input from A\+I\+N0 and negative input from A\+I\+N1 (D\+E\+F\+A\+U\+LT). \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group4_ga467ee1de37d13577785e33fb6d67e93d}{A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+U\+X\+\_\+\+D\+I\+F\+F\+\_\+0\+\_\+3}}~(0x1000)
+\begin{DoxyCompactList}\small\item\em Differential input with positive input from A\+I\+N0 and negative input from A\+I\+N3. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group4_ga59f246f973620f2d59f917187c9aeeb1}{A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+U\+X\+\_\+\+D\+I\+F\+F\+\_\+1\+\_\+3}}~(0x2000)
+\begin{DoxyCompactList}\small\item\em Differential input with positive input from A\+I\+N1 and negative input from A\+I\+N3. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group4_ga438ac41e1655d0c8e10a62b36d803696}{A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+U\+X\+\_\+\+D\+I\+F\+F\+\_\+2\+\_\+3}}~(0x3000)
+\begin{DoxyCompactList}\small\item\em Differential input with positive input from A\+I\+N2 and negative input from A\+I\+N3. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group4_ga95d034ea82362b3f6573492209aac4f2}{A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+U\+X\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+0}}~(0x4000)
+\begin{DoxyCompactList}\small\item\em Single-\/ended input with positive input from A\+I\+N0 with reference to G\+ND. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group4_ga2db511c8817fda53e31b5d1f72601909}{A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+U\+X\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+1}}~(0x5000)
+\begin{DoxyCompactList}\small\item\em Single-\/ended input with positive input from A\+I\+N1 with reference to G\+ND. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group4_gae31fb46fbe9801ae7bb9210e88b7162d}{A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+U\+X\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+2}}~(0x6000)
+\begin{DoxyCompactList}\small\item\em Single-\/ended input with positive input from A\+I\+N2 with reference to G\+ND. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group4_ga9cb6f8bf1d45341e508cece5bcbc7841}{A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+U\+X\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+3}}~(0x7000)
+\begin{DoxyCompactList}\small\item\em Single-\/ended input with positive input from A\+I\+N3 with reference to G\+ND. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A\+D\+S1115 Bit\mbox{[}14-\/12\mbox{]}. 
+
+These bits configure the input multiplexer.
+\begin{DoxyItemize}
+\item Differential
+\begin{DoxyItemize}
+\item Positive 0\+:1 Negative
+\item Positive 0\+:3 Negative
+\item Positive 1\+:3 Negative
+\item Positive 2\+:3 Negative.
+\end{DoxyItemize}
+\item Single-\/ended
+\begin{DoxyItemize}
+\item Positive 0\+:G\+ND Negative
+\item Positive 1\+:G\+ND Negative
+\item Positive 2\+:G\+ND Negative
+\item Positive 3\+:G\+ND Negative
+\end{DoxyItemize}
+\end{DoxyItemize}The D\+E\+F\+A\+U\+LT setting is a differential input;
+\begin{DoxyItemize}
+\item Positive 0\+:1 Negative
+\end{DoxyItemize}
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__group4_ga7db34e6ba1050094aa2f5895594fa473}\label{group__group4_ga7db34e6ba1050094aa2f5895594fa473}} 
+\index{ADS1115: INPUT MULTIPLEXER CONFIGURATION@{ADS1115: INPUT MULTIPLEXER CONFIGURATION}!ADS1015\_REG\_CONFIG\_MUX\_DIFF\_0\_1@{ADS1015\_REG\_CONFIG\_MUX\_DIFF\_0\_1}}
+\index{ADS1015\_REG\_CONFIG\_MUX\_DIFF\_0\_1@{ADS1015\_REG\_CONFIG\_MUX\_DIFF\_0\_1}!ADS1115: INPUT MULTIPLEXER CONFIGURATION@{ADS1115: INPUT MULTIPLEXER CONFIGURATION}}
+\doxysubsubsection{\texorpdfstring{ADS1015\_REG\_CONFIG\_MUX\_DIFF\_0\_1}{ADS1015\_REG\_CONFIG\_MUX\_DIFF\_0\_1}}
+{\footnotesize\ttfamily \#define A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+U\+X\+\_\+\+D\+I\+F\+F\+\_\+0\+\_\+1~(0x0000)}
+
+
+
+Differential input with positive input from A\+I\+N0 and negative input from A\+I\+N1 (D\+E\+F\+A\+U\+LT). 
+
+
+
+Definition at line 194 of file ads1115.\+h.
+
+\mbox{\Hypertarget{group__group4_ga467ee1de37d13577785e33fb6d67e93d}\label{group__group4_ga467ee1de37d13577785e33fb6d67e93d}} 
+\index{ADS1115: INPUT MULTIPLEXER CONFIGURATION@{ADS1115: INPUT MULTIPLEXER CONFIGURATION}!ADS1015\_REG\_CONFIG\_MUX\_DIFF\_0\_3@{ADS1015\_REG\_CONFIG\_MUX\_DIFF\_0\_3}}
+\index{ADS1015\_REG\_CONFIG\_MUX\_DIFF\_0\_3@{ADS1015\_REG\_CONFIG\_MUX\_DIFF\_0\_3}!ADS1115: INPUT MULTIPLEXER CONFIGURATION@{ADS1115: INPUT MULTIPLEXER CONFIGURATION}}
+\doxysubsubsection{\texorpdfstring{ADS1015\_REG\_CONFIG\_MUX\_DIFF\_0\_3}{ADS1015\_REG\_CONFIG\_MUX\_DIFF\_0\_3}}
+{\footnotesize\ttfamily \#define A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+U\+X\+\_\+\+D\+I\+F\+F\+\_\+0\+\_\+3~(0x1000)}
+
+
+
+Differential input with positive input from A\+I\+N0 and negative input from A\+I\+N3. 
+
+
+
+Definition at line 195 of file ads1115.\+h.
+
+\mbox{\Hypertarget{group__group4_ga59f246f973620f2d59f917187c9aeeb1}\label{group__group4_ga59f246f973620f2d59f917187c9aeeb1}} 
+\index{ADS1115: INPUT MULTIPLEXER CONFIGURATION@{ADS1115: INPUT MULTIPLEXER CONFIGURATION}!ADS1015\_REG\_CONFIG\_MUX\_DIFF\_1\_3@{ADS1015\_REG\_CONFIG\_MUX\_DIFF\_1\_3}}
+\index{ADS1015\_REG\_CONFIG\_MUX\_DIFF\_1\_3@{ADS1015\_REG\_CONFIG\_MUX\_DIFF\_1\_3}!ADS1115: INPUT MULTIPLEXER CONFIGURATION@{ADS1115: INPUT MULTIPLEXER CONFIGURATION}}
+\doxysubsubsection{\texorpdfstring{ADS1015\_REG\_CONFIG\_MUX\_DIFF\_1\_3}{ADS1015\_REG\_CONFIG\_MUX\_DIFF\_1\_3}}
+{\footnotesize\ttfamily \#define A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+U\+X\+\_\+\+D\+I\+F\+F\+\_\+1\+\_\+3~(0x2000)}
+
+
+
+Differential input with positive input from A\+I\+N1 and negative input from A\+I\+N3. 
+
+
+
+Definition at line 196 of file ads1115.\+h.
+
+\mbox{\Hypertarget{group__group4_ga438ac41e1655d0c8e10a62b36d803696}\label{group__group4_ga438ac41e1655d0c8e10a62b36d803696}} 
+\index{ADS1115: INPUT MULTIPLEXER CONFIGURATION@{ADS1115: INPUT MULTIPLEXER CONFIGURATION}!ADS1015\_REG\_CONFIG\_MUX\_DIFF\_2\_3@{ADS1015\_REG\_CONFIG\_MUX\_DIFF\_2\_3}}
+\index{ADS1015\_REG\_CONFIG\_MUX\_DIFF\_2\_3@{ADS1015\_REG\_CONFIG\_MUX\_DIFF\_2\_3}!ADS1115: INPUT MULTIPLEXER CONFIGURATION@{ADS1115: INPUT MULTIPLEXER CONFIGURATION}}
+\doxysubsubsection{\texorpdfstring{ADS1015\_REG\_CONFIG\_MUX\_DIFF\_2\_3}{ADS1015\_REG\_CONFIG\_MUX\_DIFF\_2\_3}}
+{\footnotesize\ttfamily \#define A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+U\+X\+\_\+\+D\+I\+F\+F\+\_\+2\+\_\+3~(0x3000)}
+
+
+
+Differential input with positive input from A\+I\+N2 and negative input from A\+I\+N3. 
+
+
+
+Definition at line 197 of file ads1115.\+h.
+
+\mbox{\Hypertarget{group__group4_ga95d034ea82362b3f6573492209aac4f2}\label{group__group4_ga95d034ea82362b3f6573492209aac4f2}} 
+\index{ADS1115: INPUT MULTIPLEXER CONFIGURATION@{ADS1115: INPUT MULTIPLEXER CONFIGURATION}!ADS1015\_REG\_CONFIG\_MUX\_SINGLE\_0@{ADS1015\_REG\_CONFIG\_MUX\_SINGLE\_0}}
+\index{ADS1015\_REG\_CONFIG\_MUX\_SINGLE\_0@{ADS1015\_REG\_CONFIG\_MUX\_SINGLE\_0}!ADS1115: INPUT MULTIPLEXER CONFIGURATION@{ADS1115: INPUT MULTIPLEXER CONFIGURATION}}
+\doxysubsubsection{\texorpdfstring{ADS1015\_REG\_CONFIG\_MUX\_SINGLE\_0}{ADS1015\_REG\_CONFIG\_MUX\_SINGLE\_0}}
+{\footnotesize\ttfamily \#define A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+U\+X\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+0~(0x4000)}
+
+
+
+Single-\/ended input with positive input from A\+I\+N0 with reference to G\+ND. 
+
+
+
+Definition at line 198 of file ads1115.\+h.
+
+\mbox{\Hypertarget{group__group4_ga2db511c8817fda53e31b5d1f72601909}\label{group__group4_ga2db511c8817fda53e31b5d1f72601909}} 
+\index{ADS1115: INPUT MULTIPLEXER CONFIGURATION@{ADS1115: INPUT MULTIPLEXER CONFIGURATION}!ADS1015\_REG\_CONFIG\_MUX\_SINGLE\_1@{ADS1015\_REG\_CONFIG\_MUX\_SINGLE\_1}}
+\index{ADS1015\_REG\_CONFIG\_MUX\_SINGLE\_1@{ADS1015\_REG\_CONFIG\_MUX\_SINGLE\_1}!ADS1115: INPUT MULTIPLEXER CONFIGURATION@{ADS1115: INPUT MULTIPLEXER CONFIGURATION}}
+\doxysubsubsection{\texorpdfstring{ADS1015\_REG\_CONFIG\_MUX\_SINGLE\_1}{ADS1015\_REG\_CONFIG\_MUX\_SINGLE\_1}}
+{\footnotesize\ttfamily \#define A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+U\+X\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+1~(0x5000)}
+
+
+
+Single-\/ended input with positive input from A\+I\+N1 with reference to G\+ND. 
+
+
+
+Definition at line 199 of file ads1115.\+h.
+
+\mbox{\Hypertarget{group__group4_gae31fb46fbe9801ae7bb9210e88b7162d}\label{group__group4_gae31fb46fbe9801ae7bb9210e88b7162d}} 
+\index{ADS1115: INPUT MULTIPLEXER CONFIGURATION@{ADS1115: INPUT MULTIPLEXER CONFIGURATION}!ADS1015\_REG\_CONFIG\_MUX\_SINGLE\_2@{ADS1015\_REG\_CONFIG\_MUX\_SINGLE\_2}}
+\index{ADS1015\_REG\_CONFIG\_MUX\_SINGLE\_2@{ADS1015\_REG\_CONFIG\_MUX\_SINGLE\_2}!ADS1115: INPUT MULTIPLEXER CONFIGURATION@{ADS1115: INPUT MULTIPLEXER CONFIGURATION}}
+\doxysubsubsection{\texorpdfstring{ADS1015\_REG\_CONFIG\_MUX\_SINGLE\_2}{ADS1015\_REG\_CONFIG\_MUX\_SINGLE\_2}}
+{\footnotesize\ttfamily \#define A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+U\+X\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+2~(0x6000)}
+
+
+
+Single-\/ended input with positive input from A\+I\+N2 with reference to G\+ND. 
+
+
+
+Definition at line 200 of file ads1115.\+h.
+
+\mbox{\Hypertarget{group__group4_ga9cb6f8bf1d45341e508cece5bcbc7841}\label{group__group4_ga9cb6f8bf1d45341e508cece5bcbc7841}} 
+\index{ADS1115: INPUT MULTIPLEXER CONFIGURATION@{ADS1115: INPUT MULTIPLEXER CONFIGURATION}!ADS1015\_REG\_CONFIG\_MUX\_SINGLE\_3@{ADS1015\_REG\_CONFIG\_MUX\_SINGLE\_3}}
+\index{ADS1015\_REG\_CONFIG\_MUX\_SINGLE\_3@{ADS1015\_REG\_CONFIG\_MUX\_SINGLE\_3}!ADS1115: INPUT MULTIPLEXER CONFIGURATION@{ADS1115: INPUT MULTIPLEXER CONFIGURATION}}
+\doxysubsubsection{\texorpdfstring{ADS1015\_REG\_CONFIG\_MUX\_SINGLE\_3}{ADS1015\_REG\_CONFIG\_MUX\_SINGLE\_3}}
+{\footnotesize\ttfamily \#define A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+U\+X\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+3~(0x7000)}
+
+
+
+Single-\/ended input with positive input from A\+I\+N3 with reference to G\+ND. 
+
+
+
+Definition at line 201 of file ads1115.\+h.
+

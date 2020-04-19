@@ -1,0 +1,64 @@
+\hypertarget{GPIOlis_8h}{}\doxysection{/home/finlay/\+R\+T\+E\+P1/\+Rpi\+\_\+end/200322\+\_\+\+Rpi\+\_\+end\+\_\+together/\+G\+P\+I\+Olis.h File Reference}
+\label{GPIOlis_8h}\index{/home/finlay/RTEP1/Rpi\_end/200322\_Rpi\_end\_together/GPIOlis.h@{/home/finlay/RTEP1/Rpi\_end/200322\_Rpi\_end\_together/GPIOlis.h}}
+
+
+A collection of useful C++ classes for use of an A\+D\+S1115 device in U\+DP transmission and an Android Pong game.  
+
+
+{\ttfamily \#include $<$G\+Thread$>$}\newline
+{\ttfamily \#include \char`\"{}ads1115.\+h\char`\"{}}\newline
+Include dependency graph for G\+P\+I\+Olis.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{GPIOlis_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{GPIOlis_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classGPIOlis}{G\+P\+I\+Olis}}
+\begin{DoxyCompactList}\small\item\em This class is responsible for the data communications and threading involved with conversion and processing of input data to the A\+D\+S1115. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{GPIOlis_8h_a6715efeafc8103a65e244026d957b70b}{gpipinterrupt}}
+\begin{DoxyCompactList}\small\item\em Stores a binary value relating to the interrupt state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A collection of useful C++ classes for use of an A\+D\+S1115 device in U\+DP transmission and an Android Pong game. 
+
+Listens to the Alert pin of the A\+D\+S1115 in continuous mode, interrupts every time an AD conversion is ready, then sends data and triggers processing through the signal-\/slot mechanism. \mbox{\hyperlink{classGPIOlis_a65d2d0d0faf0d9edc0b31ddb51e88d2b}{G\+P\+I\+Olis\+::run}} listens to the interrupt and calls back the interrupt every time it is detected before sleeping for 1ms. interrupt() reads in data and sends back a readyread signal.
+
+\begin{DoxyAuthor}{Author}
+Zonghan Gan 
+
+Finlay Nelson 
+
+Henry Cowan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11 April 2020 
+\end{DoxyDate}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{GPIOlis_8h_a6715efeafc8103a65e244026d957b70b}\label{GPIOlis_8h_a6715efeafc8103a65e244026d957b70b}} 
+\index{GPIOlis.h@{GPIOlis.h}!gpipinterrupt@{gpipinterrupt}}
+\index{gpipinterrupt@{gpipinterrupt}!GPIOlis.h@{GPIOlis.h}}
+\doxysubsubsection{\texorpdfstring{gpipinterrupt}{gpipinterrupt}}
+{\footnotesize\ttfamily int gpipinterrupt}
+
+
+
+Stores a binary value relating to the interrupt state. 
+
+The resting value of this variable remains 0 until an interrupt is called. This changes the \char`\"{}gpipinterrupt\char`\"{} value to 1, triggering the non-\/conditional elements of the \mbox{\hyperlink{classGPIOlis_a65d2d0d0faf0d9edc0b31ddb51e88d2b}{G\+P\+I\+Olis\+::run()}} function. 

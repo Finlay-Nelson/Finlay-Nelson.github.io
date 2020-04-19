@@ -1,0 +1,4 @@
+<map id="interrupt2" name="interrupt2">
+<area shape="rect" id="node1" title="Called in response to an interrupt, to alter the value of the flag &quot;gpipinterrupt&quot;." alt="" coords="148,5,224,32"/>
+<area shape="rect" id="node2" href="$classGPIOlis.html#a65d2d0d0faf0d9edc0b31ddb51e88d2b" title="Run." alt="" coords="5,5,100,32"/>
+</map>

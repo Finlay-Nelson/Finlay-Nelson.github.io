@@ -1,0 +1,12 @@
+digraph "/home/finlay/RTEP1/Server_end" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_448a74561f0efab6356107d418ecc187 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_448a74561f0efab6356107d418ecc187.html"];
+    dir_448a74561f0efab6356107d418ecc187 [shape=plaintext label="Server_end"];
+    dir_38e871420ebf182afc0f08104fa68a5e [shape=box label="0301_Pong_GUI" color="red" fillcolor="white" style="filled" URL="dir_38e871420ebf182afc0f08104fa68a5e.html"];
+  }
+  dir_055a16307f33c4427eac748495cdd32d [shape=box label="Rpi_end" fillcolor="white" style="filled" color="red" URL="dir_055a16307f33c4427eac748495cdd32d.html"];
+  dir_38e871420ebf182afc0f08104fa68a5e->dir_055a16307f33c4427eac748495cdd32d [headlabel="2", labeldistance=1.5 headhref="dir_000003_000000.html"];
+}

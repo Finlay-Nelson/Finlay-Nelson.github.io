@@ -1,0 +1,524 @@
+\begin{theindex}
+
+  \item {/home/finlay/RTEP1/Rpi\_end/200322\_Rpi\_end\_together/GPIOlis.cpp}, 
+		\hyperpage{64}
+  \item {/home/finlay/RTEP1/Rpi\_end/200322\_Rpi\_end\_together/GPIOlis.h}, 
+		\hyperpage{65}
+  \item {/home/finlay/RTEP1/Rpi\_end/200322\_Rpi\_end\_together/ads1115.cpp}, 
+		\hyperpage{57}
+  \item {/home/finlay/RTEP1/Rpi\_end/200322\_Rpi\_end\_together/ads1115.h}, 
+		\hyperpage{60}
+  \item {/home/finlay/RTEP1/Rpi\_end/200322\_Rpi\_end\_together/main.cpp}, 
+		\hyperpage{70}
+  \item {/home/finlay/RTEP1/Rpi\_end/200322\_Rpi\_end\_together/window.cpp}, 
+		\hyperpage{66}
+  \item {/home/finlay/RTEP1/Rpi\_end/200322\_Rpi\_end\_together/window.h}, 
+		\hyperpage{69}
+  \item {/home/finlay/RTEP1/Server\_end/0301\_Pong\_GUI/main.cpp}, 
+		\hyperpage{69}
+  \item {/home/finlay/RTEP1/Server\_end/0301\_Pong\_GUI/mainwindow.cpp}, 
+		\hyperpage{71}
+  \item {/home/finlay/RTEP1/Server\_end/0301\_Pong\_GUI/mainwindow.h}, 
+		\hyperpage{71}
+  \item {$\sim$GPIOlisten}
+    \subitem {GPIOlisten}, \hyperpage{38}
+  \item {$\sim$MainWindow}
+    \subitem {MainWindow}, \hyperpage{43}
+  \item {$\sim$Window}
+    \subitem {Window}, \hyperpage{52}
+
+  \indexspace
+
+  \item {ads1}
+    \subitem {GPIOlisten}, \hyperpage{39}
+  \item {ads1115}, \hyperpage{33}
+    \subitem {ads1115}, \hyperpage{34}
+    \subitem {endads}, \hyperpage{34}
+    \subitem {fd}, \hyperpage{35}
+    \subitem {iicaddr}, \hyperpage{36}
+    \subitem {readsig}, \hyperpage{35}
+    \subitem {readyread}, \hyperpage{35}
+  \item {ads1115.cpp}
+    \subitem {config}, \hyperpage{58}
+    \subitem {high}, \hyperpage{58}
+    \subitem {high\_config}, \hyperpage{58}
+    \subitem {load\_config}, \hyperpage{58}
+    \subitem {low}, \hyperpage{59}
+    \subitem {low\_config}, \hyperpage{59}
+    \subitem {rcr}, \hyperpage{59}
+    \subitem {value}, \hyperpage{59}
+    \subitem {voltage}, \hyperpage{60}
+  \item {ADS1115: ADDRESS PINS}, \hyperpage{11}
+    \subitem {ADS1115\_ADDRESS\_GND}, \hyperpage{12}
+    \subitem {ADS1115\_ADDRESS\_SCL}, \hyperpage{12}
+    \subitem {ADS1115\_ADDRESS\_SDA}, \hyperpage{12}
+    \subitem {ADS1115\_ADDRESS\_VDD}, \hyperpage{12}
+  \item {ADS1115: COMPARATOR MODE}, \hyperpage{25}
+    \subitem {ADS1115\_COMP\_MODE\_HYSTERESIS}, \hyperpage{25}
+    \subitem {ADS1115\_COMP\_MODE\_WINDOW}, \hyperpage{25}
+  \item {ADS1115: COMPARATOR POLARITY}, \hyperpage{26}
+    \subitem {ADS1115\_COMP\_POL\_ACTIVE\_HIGH}, \hyperpage{26}
+    \subitem {ADS1115\_COMP\_POL\_ACTIVE\_LOW}, \hyperpage{26}
+  \item {ADS1115: COMPARATOR QUEUE AND DISABLE}, \hyperpage{28}
+    \subitem {ADS1115\_COMP\_QUE\_ASSERT1}, \hyperpage{28}
+    \subitem {ADS1115\_COMP\_QUE\_ASSERT2}, \hyperpage{28}
+    \subitem {ADS1115\_COMP\_QUE\_ASSERT4}, \hyperpage{29}
+    \subitem {ADS1115\_COMP\_QUE\_DISABLE}, \hyperpage{29}
+    \subitem {ADS1115\_REG\_THRESH\_MSB\_0}, \hyperpage{29}
+    \subitem {ADS1115\_REG\_THRESH\_MSB\_1}, \hyperpage{29}
+  \item {ADS1115: DATA RATE}, \hyperpage{22}
+    \subitem {ADS1115\_RATE\_008}, \hyperpage{22}
+    \subitem {ADS1115\_RATE\_016}, \hyperpage{23}
+    \subitem {ADS1115\_RATE\_032}, \hyperpage{23}
+    \subitem {ADS1115\_RATE\_064}, \hyperpage{23}
+    \subitem {ADS1115\_RATE\_128}, \hyperpage{23}
+    \subitem {ADS1115\_RATE\_250}, \hyperpage{23}
+    \subitem {ADS1115\_RATE\_475}, \hyperpage{24}
+    \subitem {ADS1115\_RATE\_860}, \hyperpage{24}
+  \item {ADS1115: DEVICE OPERATING MODE}, \hyperpage{21}
+    \subitem {ADS1115\_REG\_CONFIG\_MODE\_CONTIN}, \hyperpage{21}
+    \subitem {ADS1115\_REG\_CONFIG\_MODE\_ENDCON}, \hyperpage{21}
+    \subitem {ADS1115\_REG\_CONFIG\_MODE\_SINGLE}, \hyperpage{21}
+  \item {ADS1115: INPUT MULTIPLEXER CONFIGURATION}, \hyperpage{16}
+    \subitem {ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P0\_N1}, \hyperpage{17}
+    \subitem {ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P0\_N3}, \hyperpage{17}
+    \subitem {ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P1\_N3}, \hyperpage{17}
+    \subitem {ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P2\_N3}, \hyperpage{17}
+    \subitem {ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P0\_NG}, 
+		\hyperpage{17}
+    \subitem {ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P1\_NG}, 
+		\hyperpage{17}
+    \subitem {ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P2\_NG}, 
+		\hyperpage{18}
+    \subitem {ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P3\_NG}, 
+		\hyperpage{18}
+  \item {ADS1115: LATCHING COMPARATOR}, \hyperpage{27}
+    \subitem {ADS1115\_COMP\_LAT\_LATCHING}, \hyperpage{27}
+    \subitem {ADS1115\_COMP\_LAT\_NON\_LATCHING}, \hyperpage{27}
+  \item {ADS1115: OPERATIONAL STATUS}, \hyperpage{15}
+    \subitem {ADS1115\_REG\_CONFIG\_OS\_BUSY}, \hyperpage{15}
+    \subitem {ADS1115\_REG\_CONFIG\_OS\_NOTBUSY}, \hyperpage{15}
+    \subitem {ADS1115\_REG\_CONFIG\_OS\_SINGLE}, \hyperpage{15}
+  \item {ADS1115: POINTER REGISTER}, \hyperpage{13}
+    \subitem {ADS1115\_REG\_POINTER\_CONFIG}, \hyperpage{13}
+    \subitem {ADS1115\_REG\_POINTER\_CONVERT}, \hyperpage{13}
+    \subitem {ADS1115\_REG\_POINTER\_HITHRESH}, \hyperpage{14}
+    \subitem {ADS1115\_REG\_POINTER\_LOWTHRESH}, \hyperpage{14}
+  \item {ADS1115: PROGRAMMABLE GAIN AMPLIFIER CONFIGURATION}, 
+		\hyperpage{19}
+    \subitem {ADS1115\_REG\_CONFIG\_PGA\_0\_256V}, \hyperpage{19}
+    \subitem {ADS1115\_REG\_CONFIG\_PGA\_0\_512V}, \hyperpage{19}
+    \subitem {ADS1115\_REG\_CONFIG\_PGA\_1\_024V}, \hyperpage{20}
+    \subitem {ADS1115\_REG\_CONFIG\_PGA\_2\_048V}, \hyperpage{20}
+    \subitem {ADS1115\_REG\_CONFIG\_PGA\_4\_096V}, \hyperpage{20}
+    \subitem {ADS1115\_REG\_CONFIG\_PGA\_6\_144V}, \hyperpage{20}
+  \item {ADS1115\_ADDRESS\_GND}
+    \subitem {ADS1115: ADDRESS PINS}, \hyperpage{12}
+  \item {ADS1115\_ADDRESS\_SCL}
+    \subitem {ADS1115: ADDRESS PINS}, \hyperpage{12}
+  \item {ADS1115\_ADDRESS\_SDA}
+    \subitem {ADS1115: ADDRESS PINS}, \hyperpage{12}
+  \item {ADS1115\_ADDRESS\_VDD}
+    \subitem {ADS1115: ADDRESS PINS}, \hyperpage{12}
+  \item {ADS1115\_COMP\_LAT\_LATCHING}
+    \subitem {ADS1115: LATCHING COMPARATOR}, \hyperpage{27}
+  \item {ADS1115\_COMP\_LAT\_NON\_LATCHING}
+    \subitem {ADS1115: LATCHING COMPARATOR}, \hyperpage{27}
+  \item {ADS1115\_COMP\_MODE\_HYSTERESIS}
+    \subitem {ADS1115: COMPARATOR MODE}, \hyperpage{25}
+  \item {ADS1115\_COMP\_MODE\_WINDOW}
+    \subitem {ADS1115: COMPARATOR MODE}, \hyperpage{25}
+  \item {ADS1115\_COMP\_POL\_ACTIVE\_HIGH}
+    \subitem {ADS1115: COMPARATOR POLARITY}, \hyperpage{26}
+  \item {ADS1115\_COMP\_POL\_ACTIVE\_LOW}
+    \subitem {ADS1115: COMPARATOR POLARITY}, \hyperpage{26}
+  \item {ADS1115\_COMP\_QUE\_ASSERT1}
+    \subitem {ADS1115: COMPARATOR QUEUE AND DISABLE}, \hyperpage{28}
+  \item {ADS1115\_COMP\_QUE\_ASSERT2}
+    \subitem {ADS1115: COMPARATOR QUEUE AND DISABLE}, \hyperpage{28}
+  \item {ADS1115\_COMP\_QUE\_ASSERT4}
+    \subitem {ADS1115: COMPARATOR QUEUE AND DISABLE}, \hyperpage{29}
+  \item {ADS1115\_COMP\_QUE\_DISABLE}
+    \subitem {ADS1115: COMPARATOR QUEUE AND DISABLE}, \hyperpage{29}
+  \item {ADS1115\_RATE\_008}
+    \subitem {ADS1115: DATA RATE}, \hyperpage{22}
+  \item {ADS1115\_RATE\_016}
+    \subitem {ADS1115: DATA RATE}, \hyperpage{23}
+  \item {ADS1115\_RATE\_032}
+    \subitem {ADS1115: DATA RATE}, \hyperpage{23}
+  \item {ADS1115\_RATE\_064}
+    \subitem {ADS1115: DATA RATE}, \hyperpage{23}
+  \item {ADS1115\_RATE\_128}
+    \subitem {ADS1115: DATA RATE}, \hyperpage{23}
+  \item {ADS1115\_RATE\_250}
+    \subitem {ADS1115: DATA RATE}, \hyperpage{23}
+  \item {ADS1115\_RATE\_475}
+    \subitem {ADS1115: DATA RATE}, \hyperpage{24}
+  \item {ADS1115\_RATE\_860}
+    \subitem {ADS1115: DATA RATE}, \hyperpage{24}
+  \item {ADS1115\_REG\_CONFIG\_MODE\_CONTIN}
+    \subitem {ADS1115: DEVICE OPERATING MODE}, \hyperpage{21}
+  \item {ADS1115\_REG\_CONFIG\_MODE\_ENDCON}
+    \subitem {ADS1115: DEVICE OPERATING MODE}, \hyperpage{21}
+  \item {ADS1115\_REG\_CONFIG\_MODE\_SINGLE}
+    \subitem {ADS1115: DEVICE OPERATING MODE}, \hyperpage{21}
+  \item {ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P0\_N1}
+    \subitem {ADS1115: INPUT MULTIPLEXER CONFIGURATION}, \hyperpage{17}
+  \item {ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P0\_N3}
+    \subitem {ADS1115: INPUT MULTIPLEXER CONFIGURATION}, \hyperpage{17}
+  \item {ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P1\_N3}
+    \subitem {ADS1115: INPUT MULTIPLEXER CONFIGURATION}, \hyperpage{17}
+  \item {ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P2\_N3}
+    \subitem {ADS1115: INPUT MULTIPLEXER CONFIGURATION}, \hyperpage{17}
+  \item {ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P0\_NG}
+    \subitem {ADS1115: INPUT MULTIPLEXER CONFIGURATION}, \hyperpage{17}
+  \item {ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P1\_NG}
+    \subitem {ADS1115: INPUT MULTIPLEXER CONFIGURATION}, \hyperpage{17}
+  \item {ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P2\_NG}
+    \subitem {ADS1115: INPUT MULTIPLEXER CONFIGURATION}, \hyperpage{18}
+  \item {ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P3\_NG}
+    \subitem {ADS1115: INPUT MULTIPLEXER CONFIGURATION}, \hyperpage{18}
+  \item {ADS1115\_REG\_CONFIG\_OS\_BUSY}
+    \subitem {ADS1115: OPERATIONAL STATUS}, \hyperpage{15}
+  \item {ADS1115\_REG\_CONFIG\_OS\_NOTBUSY}
+    \subitem {ADS1115: OPERATIONAL STATUS}, \hyperpage{15}
+  \item {ADS1115\_REG\_CONFIG\_OS\_SINGLE}
+    \subitem {ADS1115: OPERATIONAL STATUS}, \hyperpage{15}
+  \item {ADS1115\_REG\_CONFIG\_PGA\_0\_256V}
+    \subitem {ADS1115: PROGRAMMABLE GAIN AMPLIFIER CONFIGURATION}, 
+		\hyperpage{19}
+  \item {ADS1115\_REG\_CONFIG\_PGA\_0\_512V}
+    \subitem {ADS1115: PROGRAMMABLE GAIN AMPLIFIER CONFIGURATION}, 
+		\hyperpage{19}
+  \item {ADS1115\_REG\_CONFIG\_PGA\_1\_024V}
+    \subitem {ADS1115: PROGRAMMABLE GAIN AMPLIFIER CONFIGURATION}, 
+		\hyperpage{20}
+  \item {ADS1115\_REG\_CONFIG\_PGA\_2\_048V}
+    \subitem {ADS1115: PROGRAMMABLE GAIN AMPLIFIER CONFIGURATION}, 
+		\hyperpage{20}
+  \item {ADS1115\_REG\_CONFIG\_PGA\_4\_096V}
+    \subitem {ADS1115: PROGRAMMABLE GAIN AMPLIFIER CONFIGURATION}, 
+		\hyperpage{20}
+  \item {ADS1115\_REG\_CONFIG\_PGA\_6\_144V}
+    \subitem {ADS1115: PROGRAMMABLE GAIN AMPLIFIER CONFIGURATION}, 
+		\hyperpage{20}
+  \item {ADS1115\_REG\_POINTER\_CONFIG}
+    \subitem {ADS1115: POINTER REGISTER}, \hyperpage{13}
+  \item {ADS1115\_REG\_POINTER\_CONVERT}
+    \subitem {ADS1115: POINTER REGISTER}, \hyperpage{13}
+  \item {ADS1115\_REG\_POINTER\_HITHRESH}
+    \subitem {ADS1115: POINTER REGISTER}, \hyperpage{14}
+  \item {ADS1115\_REG\_POINTER\_LOWTHRESH}
+    \subitem {ADS1115: POINTER REGISTER}, \hyperpage{14}
+  \item {ADS1115\_REG\_THRESH\_MSB\_0}
+    \subitem {ADS1115: COMPARATOR QUEUE AND DISABLE}, \hyperpage{29}
+  \item {ADS1115\_REG\_THRESH\_MSB\_1}
+    \subitem {ADS1115: COMPARATOR QUEUE AND DISABLE}, \hyperpage{29}
+
+  \indexspace
+
+  \item {cmdmtx}, \hyperpage{36}
+    \subitem {GPIOlis.cpp}, \hyperpage{65}
+  \item {config}
+    \subitem {ads1115.cpp}, \hyperpage{58}
+  \item {count}
+    \subitem {GPIOlisten}, \hyperpage{39}
+  \item {CpuP1Motion}
+    \subitem {MainWindow}, \hyperpage{43}
+  \item {curve1}
+    \subitem {Window}, \hyperpage{53}
+  \item {curve2}
+    \subitem {Window}, \hyperpage{53}
+
+  \indexspace
+
+  \item {datapros}
+    \subitem {Window}, \hyperpage{53}
+
+  \indexspace
+
+  \item {endads}
+    \subitem {ads1115}, \hyperpage{34}
+
+  \indexspace
+
+  \item {fd}
+    \subitem {ads1115}, \hyperpage{35}
+  \item {flag}
+    \subitem {GPIOlisten}, \hyperpage{39}
+  \item {flhp1}
+    \subitem {window.cpp}, \hyperpage{67}
+  \item {florigin}
+    \subitem {window.cpp}, \hyperpage{67}
+  \item {flpower}
+    \subitem {window.cpp}, \hyperpage{67}
+
+  \indexspace
+
+  \item {goal}
+    \subitem {MainWindow}, \hyperpage{43}
+  \item {GPIOlis.cpp}
+    \subitem {cmdmtx}, \hyperpage{65}
+    \subitem {gpipinterrupt}, \hyperpage{64}
+    \subitem {interrupt2}, \hyperpage{65}
+  \item {GPIOlis.h}
+    \subitem {gpipinterrupt}, \hyperpage{66}
+  \item {gpiolis1}
+    \subitem {Window}, \hyperpage{53}
+  \item {GPIOlisten}, \hyperpage{36}
+    \subitem {$\sim$GPIOlisten}, \hyperpage{38}
+    \subitem {ads1}, \hyperpage{39}
+    \subitem {count}, \hyperpage{39}
+    \subitem {flag}, \hyperpage{39}
+    \subitem {GPIOlisten}, \hyperpage{37}
+    \subitem {interrupt}, \hyperpage{38}
+    \subitem {quit}, \hyperpage{38}
+    \subitem {ready}, \hyperpage{38}
+    \subitem {readyread}, \hyperpage{38}
+    \subitem {run}, \hyperpage{39}
+  \item {gpipinterrupt}
+    \subitem {GPIOlis.cpp}, \hyperpage{64}
+    \subitem {GPIOlis.h}, \hyperpage{66}
+
+  \indexspace
+
+  \item {high}
+    \subitem {ads1115.cpp}, \hyperpage{58}
+  \item {high\_config}
+    \subitem {ads1115.cpp}, \hyperpage{58}
+  \item {hLayout}
+    \subitem {Window}, \hyperpage{54}
+  \item {hp1}
+    \subitem {window.cpp}, \hyperpage{67}
+
+  \indexspace
+
+  \item {iBall}
+    \subitem {MainWindow}, \hyperpage{44}
+  \item {iBallMotion}
+    \subitem {MainWindow}, \hyperpage{44}
+  \item {iicaddr}
+    \subitem {ads1115}, \hyperpage{36}
+  \item {index}
+    \subitem {window.cpp}, \hyperpage{68}
+  \item {interrupt}
+    \subitem {GPIOlisten}, \hyperpage{38}
+  \item {interrupt2}
+    \subitem {GPIOlis.cpp}, \hyperpage{65}
+  \item {iP1}
+    \subitem {MainWindow}, \hyperpage{45}
+  \item {iP1Motion}
+    \subitem {MainWindow}, \hyperpage{45}
+  \item {iP2}
+    \subitem {MainWindow}, \hyperpage{45}
+  \item {iP2Motion}
+    \subitem {MainWindow}, \hyperpage{45}
+  \item {iScene}
+    \subitem {MainWindow}, \hyperpage{46}
+  \item {iScore}
+    \subitem {MainWindow}, \hyperpage{46}
+  \item {iTimer}
+    \subitem {MainWindow}, \hyperpage{46}
+
+  \indexspace
+
+  \item {load\_config}, \hyperpage{40}
+    \subitem {ads1115.cpp}, \hyperpage{58}
+  \item {low}
+    \subitem {ads1115.cpp}, \hyperpage{59}
+  \item {low\_config}
+    \subitem {ads1115.cpp}, \hyperpage{59}
+
+  \indexspace
+
+  \item {main}
+    \subitem {main.cpp}, \hyperpage{69, 70}
+  \item {main.cpp}
+    \subitem {main}, \hyperpage{69, 70}
+  \item {MainWindow}, \hyperpage{40}
+    \subitem {$\sim$MainWindow}, \hyperpage{43}
+    \subitem {CpuP1Motion}, \hyperpage{43}
+    \subitem {goal}, \hyperpage{43}
+    \subitem {iBall}, \hyperpage{44}
+    \subitem {iBallMotion}, \hyperpage{44}
+    \subitem {iP1}, \hyperpage{45}
+    \subitem {iP1Motion}, \hyperpage{45}
+    \subitem {iP2}, \hyperpage{45}
+    \subitem {iP2Motion}, \hyperpage{45}
+    \subitem {iScene}, \hyperpage{46}
+    \subitem {iScore}, \hyperpage{46}
+    \subitem {iTimer}, \hyperpage{46}
+    \subitem {MainWindow}, \hyperpage{42}
+    \subitem {P1Xprime}, \hyperpage{46}
+    \subitem {P2Xprime}, \hyperpage{47}
+    \subitem {Position}, \hyperpage{43}
+    \subitem {receive}, \hyperpage{43}
+    \subitem {refreshScore}, \hyperpage{44}
+    \subitem {rfsh}, \hyperpage{44}
+    \subitem {rfshcount}, \hyperpage{47}
+    \subitem {rsverSocket}, \hyperpage{47}
+    \subitem {timer\_measure}, \hyperpage{47}
+    \subitem {totalHeight}, \hyperpage{47}
+    \subitem {totalWidth}, \hyperpage{48}
+    \subitem {ui}, \hyperpage{48}
+    \subitem {wdheight}, \hyperpage{48}
+    \subitem {wdwidth}, \hyperpage{48}
+    \subitem {Xprime}, \hyperpage{48}
+    \subitem {Yprime}, \hyperpage{48}
+  \item {Mainwindow}, \hyperpage{49}
+  \item {mainwindow.cpp}
+    \subitem {rsPort}, \hyperpage{71}
+
+  \indexspace
+
+  \item {order}
+    \subitem {window.cpp}, \hyperpage{68}
+
+  \indexspace
+
+  \item {P1Xprime}
+    \subitem {MainWindow}, \hyperpage{46}
+  \item {P2Xprime}
+    \subitem {MainWindow}, \hyperpage{47}
+  \item {plot1}, \hyperpage{49}
+    \subitem {Window}, \hyperpage{54}
+  \item {plot2}
+    \subitem {Window}, \hyperpage{54}
+  \item {plotDataSize}
+    \subitem {Window}, \hyperpage{54}
+  \item {plotrefresh}
+    \subitem {Window}, \hyperpage{53}
+  \item {Position}
+    \subitem {MainWindow}, \hyperpage{43}
+
+  \indexspace
+
+  \item {QGraphicsItem}, \hyperpage{49}
+  \item {QTimer}, \hyperpage{50}
+  \item {quit}
+    \subitem {GPIOlisten}, \hyperpage{38}
+
+  \indexspace
+
+  \item {rcr}
+    \subitem {ads1115.cpp}, \hyperpage{59}
+  \item {readsig}
+    \subitem {ads1115}, \hyperpage{35}
+  \item {ready}
+    \subitem {GPIOlisten}, \hyperpage{38}
+  \item {readyread}
+    \subitem {ads1115}, \hyperpage{35}
+    \subitem {GPIOlisten}, \hyperpage{38}
+  \item {receive}, \hyperpage{50}
+    \subitem {MainWindow}, \hyperpage{43}
+  \item {refreshScore}
+    \subitem {MainWindow}, \hyperpage{44}
+  \item {rfsh}
+    \subitem {MainWindow}, \hyperpage{44}
+  \item {rfshcount}
+    \subitem {MainWindow}, \hyperpage{47}
+  \item {rftimer}
+    \subitem {Window}, \hyperpage{54}
+  \item {rscverprt}
+    \subitem {window.cpp}, \hyperpage{68}
+  \item {rsPort}
+    \subitem {mainwindow.cpp}, \hyperpage{71}
+  \item {rsverSocket}
+    \subitem {MainWindow}, \hyperpage{47}
+  \item {run}
+    \subitem {GPIOlisten}, \hyperpage{39}
+
+  \indexspace
+
+  \item {samplingrate}
+    \subitem {window.cpp}, \hyperpage{68}
+  \item {sderprt}
+    \subitem {window.cpp}, \hyperpage{68}
+  \item {sdersc}
+    \subitem {Window}, \hyperpage{54}
+  \item {sumpower}
+    \subitem {Window}, \hyperpage{55}
+
+  \indexspace
+
+  \item {timer\_measure}
+    \subitem {MainWindow}, \hyperpage{47}
+  \item {totalHeight}
+    \subitem {MainWindow}, \hyperpage{47}
+  \item {totalWidth}
+    \subitem {MainWindow}, \hyperpage{48}
+
+  \indexspace
+
+  \item {Ui}, \hyperpage{31}
+  \item {ui}
+    \subitem {MainWindow}, \hyperpage{48}
+
+  \indexspace
+
+  \item {value}
+    \subitem {ads1115.cpp}, \hyperpage{59}
+  \item {voltage}
+    \subitem {ads1115.cpp}, \hyperpage{60}
+
+  \indexspace
+
+  \item {wdheight}
+    \subitem {MainWindow}, \hyperpage{48}
+  \item {wdwidth}
+    \subitem {MainWindow}, \hyperpage{48}
+  \item {Window}, \hyperpage{51}
+    \subitem {$\sim$Window}, \hyperpage{52}
+    \subitem {curve1}, \hyperpage{53}
+    \subitem {curve2}, \hyperpage{53}
+    \subitem {datapros}, \hyperpage{53}
+    \subitem {gpiolis1}, \hyperpage{53}
+    \subitem {hLayout}, \hyperpage{54}
+    \subitem {plot1}, \hyperpage{54}
+    \subitem {plot2}, \hyperpage{54}
+    \subitem {plotDataSize}, \hyperpage{54}
+    \subitem {plotrefresh}, \hyperpage{53}
+    \subitem {rftimer}, \hyperpage{54}
+    \subitem {sdersc}, \hyperpage{54}
+    \subitem {sumpower}, \hyperpage{55}
+    \subitem {Window}, \hyperpage{52}
+    \subitem {xData1}, \hyperpage{55}
+    \subitem {xData2}, \hyperpage{55}
+    \subitem {xData3}, \hyperpage{55}
+    \subitem {yData1}, \hyperpage{55}
+    \subitem {yData2}, \hyperpage{56}
+    \subitem {yData3}, \hyperpage{56}
+  \item {window.cpp}
+    \subitem {flhp1}, \hyperpage{67}
+    \subitem {florigin}, \hyperpage{67}
+    \subitem {flpower}, \hyperpage{67}
+    \subitem {hp1}, \hyperpage{67}
+    \subitem {index}, \hyperpage{68}
+    \subitem {order}, \hyperpage{68}
+    \subitem {rscverprt}, \hyperpage{68}
+    \subitem {samplingrate}, \hyperpage{68}
+    \subitem {sderprt}, \hyperpage{68}
+
+  \indexspace
+
+  \item {xData1}
+    \subitem {Window}, \hyperpage{55}
+  \item {xData2}
+    \subitem {Window}, \hyperpage{55}
+  \item {xData3}
+    \subitem {Window}, \hyperpage{55}
+  \item {Xprime}
+    \subitem {MainWindow}, \hyperpage{48}
+
+  \indexspace
+
+  \item {yData1}
+    \subitem {Window}, \hyperpage{55}
+  \item {yData2}
+    \subitem {Window}, \hyperpage{56}
+  \item {yData3}
+    \subitem {Window}, \hyperpage{56}
+  \item {Yprime}
+    \subitem {MainWindow}, \hyperpage{48}
+
+\end{theindex}

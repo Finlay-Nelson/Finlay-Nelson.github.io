@@ -1,0 +1,626 @@
+\hypertarget{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r}{}\doxysection{C\+O\+N\+G\+I\+G\+\_\+\+R\+E\+G\+I\+S\+T\+ER}
+\label{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r}\index{CONGIG\_REGISTER@{CONGIG\_REGISTER}}
+
+
+The options for the 16 bits of the C\+O\+N\+F\+IG register.  
+
+
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_gabecb67ac1d427a99761f8a87101c73b1}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+O\+S\+\_\+\+S\+I\+N\+G\+LE}}~(0x8000)
+\begin{DoxyCompactList}\small\item\em Write\+: Set to start a single-\/conversion. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga6b544913066956181b5439b851a04318}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+O\+S\+\_\+\+B\+U\+SY}}~(0x0000)
+\begin{DoxyCompactList}\small\item\em Read\+: 0 when conversion is in progress. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga10d1e0f484aeb2d6021aeb524d2ff4fc}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+O\+S\+\_\+\+N\+O\+T\+B\+U\+SY}}~(0x8000)
+\begin{DoxyCompactList}\small\item\em Read\+: 1 when device is not performing a conversion. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga359be266bd66de69908a5046723d1f15}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+U\+X\+\_\+\+D\+I\+F\+F\+\_\+\+P0\+\_\+\+N1}}~(0x0000)
+\begin{DoxyCompactList}\small\item\em Differential input with positive input from A\+I\+N0 and negative input from A\+I\+N1 (D\+E\+F\+A\+U\+LT). \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga2222fbb0bedbadbbbee784b701e0f468}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+U\+X\+\_\+\+D\+I\+F\+F\+\_\+\+P0\+\_\+\+N3}}~(0x1000)
+\begin{DoxyCompactList}\small\item\em Differential input with positive input from A\+I\+N0 and negative input from A\+I\+N3. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga25568a0253dcfa65f9b0ff2a3d1f51fc}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+U\+X\+\_\+\+D\+I\+F\+F\+\_\+\+P1\+\_\+\+N3}}~(0x2000)
+\begin{DoxyCompactList}\small\item\em Differential input with positive input from A\+I\+N1 and negative input from A\+I\+N3. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_gafb90675e52a2e3fd17bfbc269e5bb168}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+U\+X\+\_\+\+D\+I\+F\+F\+\_\+\+P2\+\_\+\+N3}}~(0x3000)
+\begin{DoxyCompactList}\small\item\em Differential input with positive input from A\+I\+N2 and negative input from A\+I\+N3. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga01533e82c75c5a7c2a48098e983eda27}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+U\+X\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+P0\+\_\+\+NG}}~(0x4000)
+\begin{DoxyCompactList}\small\item\em Single-\/ended input with positive input from A\+I\+N0 with reference to G\+ND. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga5a4314f4345043c50de01b9270f978f0}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+U\+X\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+P1\+\_\+\+NG}}~(0x5000)
+\begin{DoxyCompactList}\small\item\em Single-\/ended input with positive input from A\+I\+N1 with reference to G\+ND. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_gabb8af6813b8c47ebce8b1f760950b752}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+U\+X\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+P2\+\_\+\+NG}}~(0x6000)
+\begin{DoxyCompactList}\small\item\em Single-\/ended input with positive input from A\+I\+N2 with reference to G\+ND. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga02a7097c8850a8737fab257ce8cc03b7}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+U\+X\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+P3\+\_\+\+NG}}~(0x7000)
+\begin{DoxyCompactList}\small\item\em Single-\/ended input with positive input from A\+I\+N3 with reference to G\+ND. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_gaa4bead0ed56b92f729a2e65c2af284fc}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+G\+A\+\_\+6\+\_\+144V}}~(0x0000)
+\begin{DoxyCompactList}\small\item\em +/-\/6.144V range = Gain 2/3 \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga3acb6997b9bd7692470eb8c1999c33ea}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+G\+A\+\_\+4\+\_\+096V}}~(0x0200)
+\begin{DoxyCompactList}\small\item\em +/-\/4.096V range = Gain 1 \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga516dac63e8cfb0a973222c022b7cc831}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+G\+A\+\_\+2\+\_\+048V}}~(0x0400)
+\begin{DoxyCompactList}\small\item\em +/-\/2.048V range = Gain 2 (D\+E\+F\+A\+U\+LT) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga04fa28b60fb035e9bdc8cbaa0ce2c0e6}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+G\+A\+\_\+1\+\_\+024V}}~(0x0600)
+\begin{DoxyCompactList}\small\item\em +/-\/1.024V range = Gain 4 \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_gab658622c5fbf84a364e060da2b9be3c5}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+G\+A\+\_\+0\+\_\+512V}}~(0x0800)
+\begin{DoxyCompactList}\small\item\em +/-\/0.512V range = Gain 8 \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga3f1d89160606a4831bba4cc26d70040b}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+G\+A\+\_\+0\+\_\+256V}}~(0x0\+A00)
+\begin{DoxyCompactList}\small\item\em +/-\/0.256V range = Gain 16 \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_gaa1b17ec78ac3a5f63c7a21198d8b360c}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+O\+D\+E\+\_\+\+C\+O\+N\+T\+IN}}~(0x0000)
+\begin{DoxyCompactList}\small\item\em Continuous conversion mode. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_gae0d36b04b300d33d02b53c02db4a5d60}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+O\+D\+E\+\_\+\+E\+N\+D\+C\+ON}}~(0x8583)
+\begin{DoxyCompactList}\small\item\em Shut down Continuous conversion. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga6ca989a5d970e604684ae10eacb1bdfd}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+O\+D\+E\+\_\+\+S\+I\+N\+G\+LE}}~(0x0100)
+\begin{DoxyCompactList}\small\item\em Power-\/down single-\/shot mode (D\+E\+F\+A\+U\+LT) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga0b474106bb5b943641b989c34809bc18}{A\+D\+S1115\+\_\+\+R\+A\+T\+E\+\_\+8}}~(0x0000)
+\begin{DoxyCompactList}\small\item\em 8 samples per second \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_gad40999ef8f61647e10622ae9a9d9a9b2}{A\+D\+S1115\+\_\+\+R\+A\+T\+E\+\_\+16}}~(0x0020)
+\begin{DoxyCompactList}\small\item\em 16 samples per second \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga37801a019c11ae0f9c3c15cbb30329a2}{A\+D\+S1115\+\_\+\+R\+A\+T\+E\+\_\+32}}~(0x0040)
+\begin{DoxyCompactList}\small\item\em 32 samples per second \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga6284df49c2a8c4a2a9641d44043554da}{A\+D\+S1115\+\_\+\+R\+A\+T\+E\+\_\+64}}~(0x0060)
+\begin{DoxyCompactList}\small\item\em 64 samples per second \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga27d11511474a6d8e97f6c4f1d3fdb4cc}{A\+D\+S1115\+\_\+\+R\+A\+T\+E\+\_\+128}}~(0x0080)
+\begin{DoxyCompactList}\small\item\em 128 samples per second \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga66c16e9b0790a56a39953fbb78d1a58a}{A\+D\+S1115\+\_\+\+R\+A\+T\+E\+\_\+250}}~(0x00\+A0)
+\begin{DoxyCompactList}\small\item\em 250 samples per second (D\+E\+F\+A\+U\+LT) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga7fbfe1ec9f7422b19df4c58e43cc63bf}{A\+D\+S1115\+\_\+\+R\+A\+T\+E\+\_\+475}}~(0x00\+C0)
+\begin{DoxyCompactList}\small\item\em 475 samples per second \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga3634f6c42eaa6df29c988c6cf1374a09}{A\+D\+S1115\+\_\+\+R\+A\+T\+E\+\_\+860}}~(0x00\+E0)
+\begin{DoxyCompactList}\small\item\em 860 samples per second \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_gad433faa360bfa6df4e15acad86025c1b}{A\+D\+S1115\+\_\+\+C\+O\+M\+P\+\_\+\+M\+O\+D\+E\+\_\+\+H\+Y\+S\+T\+E\+R\+E\+S\+IS}}~(0x0000)
+\begin{DoxyCompactList}\small\item\em Traditional comparator with hysteresis (D\+E\+F\+A\+U\+LT) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_gab4091584ad6deef3778fad79dd9a17b6}{A\+D\+S1115\+\_\+\+C\+O\+M\+P\+\_\+\+M\+O\+D\+E\+\_\+\+W\+I\+N\+D\+OW}}~(0x0010)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_window}{Window}} comparator. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga01382051d07250536ba2a8a85c0ff4ac}{A\+D\+S1115\+\_\+\+C\+O\+M\+P\+\_\+\+P\+O\+L\+\_\+\+A\+C\+T\+I\+V\+E\+\_\+\+L\+OW}}~(0x0000)
+\begin{DoxyCompactList}\small\item\em A\+L\+E\+R\+T/\+R\+DY pin is active low (D\+E\+F\+A\+U\+LT) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga1004329d634171dc330f65fe8af56d8a}{A\+D\+S1115\+\_\+\+C\+O\+M\+P\+\_\+\+P\+O\+L\+\_\+\+A\+C\+T\+I\+V\+E\+\_\+\+H\+I\+GH}}~(0x0008)
+\begin{DoxyCompactList}\small\item\em A\+L\+E\+R\+T/\+R\+DY pin is active high. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_gae70330c50da5554c77938ef76d95b7c7}{A\+D\+S1115\+\_\+\+C\+O\+M\+P\+\_\+\+L\+A\+T\+\_\+\+N\+O\+N\+\_\+\+L\+A\+T\+C\+H\+I\+NG}}~(0x0000)
+\begin{DoxyCompactList}\small\item\em Non-\/latching comparator (D\+E\+F\+A\+U\+LT) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga7fff1a95721a2f13408b4f183e2fdadf}{A\+D\+S1115\+\_\+\+C\+O\+M\+P\+\_\+\+L\+A\+T\+\_\+\+L\+A\+T\+C\+H\+I\+NG}}~(0x0004)
+\begin{DoxyCompactList}\small\item\em Latching comparator. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga42aca45fc4ef0ed956cf5f257d8f1674}{A\+D\+S1115\+\_\+\+C\+O\+M\+P\+\_\+\+Q\+U\+E\+\_\+\+A\+S\+S\+E\+R\+T1}}~(0x0000)
+\begin{DoxyCompactList}\small\item\em Assert after one conversions. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga788588e4976b4dd611e2c47bfa0cb30a}{A\+D\+S1115\+\_\+\+C\+O\+M\+P\+\_\+\+Q\+U\+E\+\_\+\+A\+S\+S\+E\+R\+T2}}~(0x0001)
+\begin{DoxyCompactList}\small\item\em Assert after two conversions. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_gae16f844ad5bab7e07f0a37442c1cc62c}{A\+D\+S1115\+\_\+\+C\+O\+M\+P\+\_\+\+Q\+U\+E\+\_\+\+A\+S\+S\+E\+R\+T4}}~(0x0002)
+\begin{DoxyCompactList}\small\item\em Assert after four conversions. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga8980056fcd1ed0e3e4007caff5ada854}{A\+D\+S1115\+\_\+\+C\+O\+M\+P\+\_\+\+Q\+U\+E\+\_\+\+D\+I\+S\+A\+B\+LE}}~(0x0003)
+\begin{DoxyCompactList}\small\item\em Disable comparator (D\+E\+F\+A\+U\+LT) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The options for the 16 bits of the C\+O\+N\+F\+IG register. 
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga7fff1a95721a2f13408b4f183e2fdadf}\label{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga7fff1a95721a2f13408b4f183e2fdadf}} 
+\index{CONGIG\_REGISTER@{CONGIG\_REGISTER}!ADS1115\_COMP\_LAT\_LATCHING@{ADS1115\_COMP\_LAT\_LATCHING}}
+\index{ADS1115\_COMP\_LAT\_LATCHING@{ADS1115\_COMP\_LAT\_LATCHING}!CONGIG\_REGISTER@{CONGIG\_REGISTER}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_COMP\_LAT\_LATCHING}{ADS1115\_COMP\_LAT\_LATCHING}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+C\+O\+M\+P\+\_\+\+L\+A\+T\+\_\+\+L\+A\+T\+C\+H\+I\+NG~(0x0004)}
+
+
+
+Latching comparator. 
+
+
+
+Definition at line 102 of file ads1115.\+h.
+
+\mbox{\Hypertarget{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_gae70330c50da5554c77938ef76d95b7c7}\label{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_gae70330c50da5554c77938ef76d95b7c7}} 
+\index{CONGIG\_REGISTER@{CONGIG\_REGISTER}!ADS1115\_COMP\_LAT\_NON\_LATCHING@{ADS1115\_COMP\_LAT\_NON\_LATCHING}}
+\index{ADS1115\_COMP\_LAT\_NON\_LATCHING@{ADS1115\_COMP\_LAT\_NON\_LATCHING}!CONGIG\_REGISTER@{CONGIG\_REGISTER}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_COMP\_LAT\_NON\_LATCHING}{ADS1115\_COMP\_LAT\_NON\_LATCHING}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+C\+O\+M\+P\+\_\+\+L\+A\+T\+\_\+\+N\+O\+N\+\_\+\+L\+A\+T\+C\+H\+I\+NG~(0x0000)}
+
+
+
+Non-\/latching comparator (D\+E\+F\+A\+U\+LT) 
+
+
+
+Definition at line 101 of file ads1115.\+h.
+
+\mbox{\Hypertarget{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_gad433faa360bfa6df4e15acad86025c1b}\label{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_gad433faa360bfa6df4e15acad86025c1b}} 
+\index{CONGIG\_REGISTER@{CONGIG\_REGISTER}!ADS1115\_COMP\_MODE\_HYSTERESIS@{ADS1115\_COMP\_MODE\_HYSTERESIS}}
+\index{ADS1115\_COMP\_MODE\_HYSTERESIS@{ADS1115\_COMP\_MODE\_HYSTERESIS}!CONGIG\_REGISTER@{CONGIG\_REGISTER}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_COMP\_MODE\_HYSTERESIS}{ADS1115\_COMP\_MODE\_HYSTERESIS}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+C\+O\+M\+P\+\_\+\+M\+O\+D\+E\+\_\+\+H\+Y\+S\+T\+E\+R\+E\+S\+IS~(0x0000)}
+
+
+
+Traditional comparator with hysteresis (D\+E\+F\+A\+U\+LT) 
+
+
+
+Definition at line 91 of file ads1115.\+h.
+
+\mbox{\Hypertarget{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_gab4091584ad6deef3778fad79dd9a17b6}\label{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_gab4091584ad6deef3778fad79dd9a17b6}} 
+\index{CONGIG\_REGISTER@{CONGIG\_REGISTER}!ADS1115\_COMP\_MODE\_WINDOW@{ADS1115\_COMP\_MODE\_WINDOW}}
+\index{ADS1115\_COMP\_MODE\_WINDOW@{ADS1115\_COMP\_MODE\_WINDOW}!CONGIG\_REGISTER@{CONGIG\_REGISTER}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_COMP\_MODE\_WINDOW}{ADS1115\_COMP\_MODE\_WINDOW}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+C\+O\+M\+P\+\_\+\+M\+O\+D\+E\+\_\+\+W\+I\+N\+D\+OW~(0x0010)}
+
+
+
+\mbox{\hyperlink{class_window}{Window}} comparator. 
+
+
+
+Definition at line 92 of file ads1115.\+h.
+
+\mbox{\Hypertarget{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga1004329d634171dc330f65fe8af56d8a}\label{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga1004329d634171dc330f65fe8af56d8a}} 
+\index{CONGIG\_REGISTER@{CONGIG\_REGISTER}!ADS1115\_COMP\_POL\_ACTIVE\_HIGH@{ADS1115\_COMP\_POL\_ACTIVE\_HIGH}}
+\index{ADS1115\_COMP\_POL\_ACTIVE\_HIGH@{ADS1115\_COMP\_POL\_ACTIVE\_HIGH}!CONGIG\_REGISTER@{CONGIG\_REGISTER}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_COMP\_POL\_ACTIVE\_HIGH}{ADS1115\_COMP\_POL\_ACTIVE\_HIGH}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+C\+O\+M\+P\+\_\+\+P\+O\+L\+\_\+\+A\+C\+T\+I\+V\+E\+\_\+\+H\+I\+GH~(0x0008)}
+
+
+
+A\+L\+E\+R\+T/\+R\+DY pin is active high. 
+
+
+
+Definition at line 97 of file ads1115.\+h.
+
+\mbox{\Hypertarget{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga01382051d07250536ba2a8a85c0ff4ac}\label{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga01382051d07250536ba2a8a85c0ff4ac}} 
+\index{CONGIG\_REGISTER@{CONGIG\_REGISTER}!ADS1115\_COMP\_POL\_ACTIVE\_LOW@{ADS1115\_COMP\_POL\_ACTIVE\_LOW}}
+\index{ADS1115\_COMP\_POL\_ACTIVE\_LOW@{ADS1115\_COMP\_POL\_ACTIVE\_LOW}!CONGIG\_REGISTER@{CONGIG\_REGISTER}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_COMP\_POL\_ACTIVE\_LOW}{ADS1115\_COMP\_POL\_ACTIVE\_LOW}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+C\+O\+M\+P\+\_\+\+P\+O\+L\+\_\+\+A\+C\+T\+I\+V\+E\+\_\+\+L\+OW~(0x0000)}
+
+
+
+A\+L\+E\+R\+T/\+R\+DY pin is active low (D\+E\+F\+A\+U\+LT) 
+
+
+
+Definition at line 96 of file ads1115.\+h.
+
+\mbox{\Hypertarget{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga42aca45fc4ef0ed956cf5f257d8f1674}\label{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga42aca45fc4ef0ed956cf5f257d8f1674}} 
+\index{CONGIG\_REGISTER@{CONGIG\_REGISTER}!ADS1115\_COMP\_QUE\_ASSERT1@{ADS1115\_COMP\_QUE\_ASSERT1}}
+\index{ADS1115\_COMP\_QUE\_ASSERT1@{ADS1115\_COMP\_QUE\_ASSERT1}!CONGIG\_REGISTER@{CONGIG\_REGISTER}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_COMP\_QUE\_ASSERT1}{ADS1115\_COMP\_QUE\_ASSERT1}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+C\+O\+M\+P\+\_\+\+Q\+U\+E\+\_\+\+A\+S\+S\+E\+R\+T1~(0x0000)}
+
+
+
+Assert after one conversions. 
+
+
+
+Definition at line 106 of file ads1115.\+h.
+
+\mbox{\Hypertarget{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga788588e4976b4dd611e2c47bfa0cb30a}\label{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga788588e4976b4dd611e2c47bfa0cb30a}} 
+\index{CONGIG\_REGISTER@{CONGIG\_REGISTER}!ADS1115\_COMP\_QUE\_ASSERT2@{ADS1115\_COMP\_QUE\_ASSERT2}}
+\index{ADS1115\_COMP\_QUE\_ASSERT2@{ADS1115\_COMP\_QUE\_ASSERT2}!CONGIG\_REGISTER@{CONGIG\_REGISTER}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_COMP\_QUE\_ASSERT2}{ADS1115\_COMP\_QUE\_ASSERT2}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+C\+O\+M\+P\+\_\+\+Q\+U\+E\+\_\+\+A\+S\+S\+E\+R\+T2~(0x0001)}
+
+
+
+Assert after two conversions. 
+
+
+
+Definition at line 107 of file ads1115.\+h.
+
+\mbox{\Hypertarget{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_gae16f844ad5bab7e07f0a37442c1cc62c}\label{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_gae16f844ad5bab7e07f0a37442c1cc62c}} 
+\index{CONGIG\_REGISTER@{CONGIG\_REGISTER}!ADS1115\_COMP\_QUE\_ASSERT4@{ADS1115\_COMP\_QUE\_ASSERT4}}
+\index{ADS1115\_COMP\_QUE\_ASSERT4@{ADS1115\_COMP\_QUE\_ASSERT4}!CONGIG\_REGISTER@{CONGIG\_REGISTER}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_COMP\_QUE\_ASSERT4}{ADS1115\_COMP\_QUE\_ASSERT4}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+C\+O\+M\+P\+\_\+\+Q\+U\+E\+\_\+\+A\+S\+S\+E\+R\+T4~(0x0002)}
+
+
+
+Assert after four conversions. 
+
+
+
+Definition at line 108 of file ads1115.\+h.
+
+\mbox{\Hypertarget{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga8980056fcd1ed0e3e4007caff5ada854}\label{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga8980056fcd1ed0e3e4007caff5ada854}} 
+\index{CONGIG\_REGISTER@{CONGIG\_REGISTER}!ADS1115\_COMP\_QUE\_DISABLE@{ADS1115\_COMP\_QUE\_DISABLE}}
+\index{ADS1115\_COMP\_QUE\_DISABLE@{ADS1115\_COMP\_QUE\_DISABLE}!CONGIG\_REGISTER@{CONGIG\_REGISTER}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_COMP\_QUE\_DISABLE}{ADS1115\_COMP\_QUE\_DISABLE}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+C\+O\+M\+P\+\_\+\+Q\+U\+E\+\_\+\+D\+I\+S\+A\+B\+LE~(0x0003)}
+
+
+
+Disable comparator (D\+E\+F\+A\+U\+LT) 
+
+
+
+Definition at line 109 of file ads1115.\+h.
+
+\mbox{\Hypertarget{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga27d11511474a6d8e97f6c4f1d3fdb4cc}\label{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga27d11511474a6d8e97f6c4f1d3fdb4cc}} 
+\index{CONGIG\_REGISTER@{CONGIG\_REGISTER}!ADS1115\_RATE\_128@{ADS1115\_RATE\_128}}
+\index{ADS1115\_RATE\_128@{ADS1115\_RATE\_128}!CONGIG\_REGISTER@{CONGIG\_REGISTER}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_RATE\_128}{ADS1115\_RATE\_128}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+A\+T\+E\+\_\+128~(0x0080)}
+
+
+
+128 samples per second 
+
+
+
+Definition at line 84 of file ads1115.\+h.
+
+\mbox{\Hypertarget{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_gad40999ef8f61647e10622ae9a9d9a9b2}\label{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_gad40999ef8f61647e10622ae9a9d9a9b2}} 
+\index{CONGIG\_REGISTER@{CONGIG\_REGISTER}!ADS1115\_RATE\_16@{ADS1115\_RATE\_16}}
+\index{ADS1115\_RATE\_16@{ADS1115\_RATE\_16}!CONGIG\_REGISTER@{CONGIG\_REGISTER}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_RATE\_16}{ADS1115\_RATE\_16}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+A\+T\+E\+\_\+16~(0x0020)}
+
+
+
+16 samples per second 
+
+
+
+Definition at line 81 of file ads1115.\+h.
+
+\mbox{\Hypertarget{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga66c16e9b0790a56a39953fbb78d1a58a}\label{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga66c16e9b0790a56a39953fbb78d1a58a}} 
+\index{CONGIG\_REGISTER@{CONGIG\_REGISTER}!ADS1115\_RATE\_250@{ADS1115\_RATE\_250}}
+\index{ADS1115\_RATE\_250@{ADS1115\_RATE\_250}!CONGIG\_REGISTER@{CONGIG\_REGISTER}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_RATE\_250}{ADS1115\_RATE\_250}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+A\+T\+E\+\_\+250~(0x00\+A0)}
+
+
+
+250 samples per second (D\+E\+F\+A\+U\+LT) 
+
+
+
+Definition at line 85 of file ads1115.\+h.
+
+\mbox{\Hypertarget{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga37801a019c11ae0f9c3c15cbb30329a2}\label{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga37801a019c11ae0f9c3c15cbb30329a2}} 
+\index{CONGIG\_REGISTER@{CONGIG\_REGISTER}!ADS1115\_RATE\_32@{ADS1115\_RATE\_32}}
+\index{ADS1115\_RATE\_32@{ADS1115\_RATE\_32}!CONGIG\_REGISTER@{CONGIG\_REGISTER}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_RATE\_32}{ADS1115\_RATE\_32}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+A\+T\+E\+\_\+32~(0x0040)}
+
+
+
+32 samples per second 
+
+
+
+Definition at line 82 of file ads1115.\+h.
+
+\mbox{\Hypertarget{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga7fbfe1ec9f7422b19df4c58e43cc63bf}\label{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga7fbfe1ec9f7422b19df4c58e43cc63bf}} 
+\index{CONGIG\_REGISTER@{CONGIG\_REGISTER}!ADS1115\_RATE\_475@{ADS1115\_RATE\_475}}
+\index{ADS1115\_RATE\_475@{ADS1115\_RATE\_475}!CONGIG\_REGISTER@{CONGIG\_REGISTER}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_RATE\_475}{ADS1115\_RATE\_475}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+A\+T\+E\+\_\+475~(0x00\+C0)}
+
+
+
+475 samples per second 
+
+
+
+Definition at line 86 of file ads1115.\+h.
+
+\mbox{\Hypertarget{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga6284df49c2a8c4a2a9641d44043554da}\label{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga6284df49c2a8c4a2a9641d44043554da}} 
+\index{CONGIG\_REGISTER@{CONGIG\_REGISTER}!ADS1115\_RATE\_64@{ADS1115\_RATE\_64}}
+\index{ADS1115\_RATE\_64@{ADS1115\_RATE\_64}!CONGIG\_REGISTER@{CONGIG\_REGISTER}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_RATE\_64}{ADS1115\_RATE\_64}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+A\+T\+E\+\_\+64~(0x0060)}
+
+
+
+64 samples per second 
+
+
+
+Definition at line 83 of file ads1115.\+h.
+
+\mbox{\Hypertarget{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga0b474106bb5b943641b989c34809bc18}\label{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga0b474106bb5b943641b989c34809bc18}} 
+\index{CONGIG\_REGISTER@{CONGIG\_REGISTER}!ADS1115\_RATE\_8@{ADS1115\_RATE\_8}}
+\index{ADS1115\_RATE\_8@{ADS1115\_RATE\_8}!CONGIG\_REGISTER@{CONGIG\_REGISTER}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_RATE\_8}{ADS1115\_RATE\_8}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+A\+T\+E\+\_\+8~(0x0000)}
+
+
+
+8 samples per second 
+
+
+
+Definition at line 80 of file ads1115.\+h.
+
+\mbox{\Hypertarget{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga3634f6c42eaa6df29c988c6cf1374a09}\label{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga3634f6c42eaa6df29c988c6cf1374a09}} 
+\index{CONGIG\_REGISTER@{CONGIG\_REGISTER}!ADS1115\_RATE\_860@{ADS1115\_RATE\_860}}
+\index{ADS1115\_RATE\_860@{ADS1115\_RATE\_860}!CONGIG\_REGISTER@{CONGIG\_REGISTER}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_RATE\_860}{ADS1115\_RATE\_860}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+A\+T\+E\+\_\+860~(0x00\+E0)}
+
+
+
+860 samples per second 
+
+
+
+Definition at line 87 of file ads1115.\+h.
+
+\mbox{\Hypertarget{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_gaa1b17ec78ac3a5f63c7a21198d8b360c}\label{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_gaa1b17ec78ac3a5f63c7a21198d8b360c}} 
+\index{CONGIG\_REGISTER@{CONGIG\_REGISTER}!ADS1115\_REG\_CONFIG\_MODE\_CONTIN@{ADS1115\_REG\_CONFIG\_MODE\_CONTIN}}
+\index{ADS1115\_REG\_CONFIG\_MODE\_CONTIN@{ADS1115\_REG\_CONFIG\_MODE\_CONTIN}!CONGIG\_REGISTER@{CONGIG\_REGISTER}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_CONFIG\_MODE\_CONTIN}{ADS1115\_REG\_CONFIG\_MODE\_CONTIN}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+O\+D\+E\+\_\+\+C\+O\+N\+T\+IN~(0x0000)}
+
+
+
+Continuous conversion mode. 
+
+
+
+Definition at line 74 of file ads1115.\+h.
+
+\mbox{\Hypertarget{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_gae0d36b04b300d33d02b53c02db4a5d60}\label{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_gae0d36b04b300d33d02b53c02db4a5d60}} 
+\index{CONGIG\_REGISTER@{CONGIG\_REGISTER}!ADS1115\_REG\_CONFIG\_MODE\_ENDCON@{ADS1115\_REG\_CONFIG\_MODE\_ENDCON}}
+\index{ADS1115\_REG\_CONFIG\_MODE\_ENDCON@{ADS1115\_REG\_CONFIG\_MODE\_ENDCON}!CONGIG\_REGISTER@{CONGIG\_REGISTER}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_CONFIG\_MODE\_ENDCON}{ADS1115\_REG\_CONFIG\_MODE\_ENDCON}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+O\+D\+E\+\_\+\+E\+N\+D\+C\+ON~(0x8583)}
+
+
+
+Shut down Continuous conversion. 
+
+
+
+Definition at line 75 of file ads1115.\+h.
+
+\mbox{\Hypertarget{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga6ca989a5d970e604684ae10eacb1bdfd}\label{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga6ca989a5d970e604684ae10eacb1bdfd}} 
+\index{CONGIG\_REGISTER@{CONGIG\_REGISTER}!ADS1115\_REG\_CONFIG\_MODE\_SINGLE@{ADS1115\_REG\_CONFIG\_MODE\_SINGLE}}
+\index{ADS1115\_REG\_CONFIG\_MODE\_SINGLE@{ADS1115\_REG\_CONFIG\_MODE\_SINGLE}!CONGIG\_REGISTER@{CONGIG\_REGISTER}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_CONFIG\_MODE\_SINGLE}{ADS1115\_REG\_CONFIG\_MODE\_SINGLE}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+O\+D\+E\+\_\+\+S\+I\+N\+G\+LE~(0x0100)}
+
+
+
+Power-\/down single-\/shot mode (D\+E\+F\+A\+U\+LT) 
+
+
+
+Definition at line 76 of file ads1115.\+h.
+
+\mbox{\Hypertarget{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga359be266bd66de69908a5046723d1f15}\label{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga359be266bd66de69908a5046723d1f15}} 
+\index{CONGIG\_REGISTER@{CONGIG\_REGISTER}!ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P0\_N1@{ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P0\_N1}}
+\index{ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P0\_N1@{ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P0\_N1}!CONGIG\_REGISTER@{CONGIG\_REGISTER}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P0\_N1}{ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P0\_N1}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+U\+X\+\_\+\+D\+I\+F\+F\+\_\+\+P0\+\_\+\+N1~(0x0000)}
+
+
+
+Differential input with positive input from A\+I\+N0 and negative input from A\+I\+N1 (D\+E\+F\+A\+U\+LT). 
+
+
+
+Definition at line 54 of file ads1115.\+h.
+
+\mbox{\Hypertarget{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga2222fbb0bedbadbbbee784b701e0f468}\label{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga2222fbb0bedbadbbbee784b701e0f468}} 
+\index{CONGIG\_REGISTER@{CONGIG\_REGISTER}!ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P0\_N3@{ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P0\_N3}}
+\index{ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P0\_N3@{ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P0\_N3}!CONGIG\_REGISTER@{CONGIG\_REGISTER}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P0\_N3}{ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P0\_N3}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+U\+X\+\_\+\+D\+I\+F\+F\+\_\+\+P0\+\_\+\+N3~(0x1000)}
+
+
+
+Differential input with positive input from A\+I\+N0 and negative input from A\+I\+N3. 
+
+
+
+Definition at line 55 of file ads1115.\+h.
+
+\mbox{\Hypertarget{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga25568a0253dcfa65f9b0ff2a3d1f51fc}\label{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga25568a0253dcfa65f9b0ff2a3d1f51fc}} 
+\index{CONGIG\_REGISTER@{CONGIG\_REGISTER}!ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P1\_N3@{ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P1\_N3}}
+\index{ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P1\_N3@{ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P1\_N3}!CONGIG\_REGISTER@{CONGIG\_REGISTER}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P1\_N3}{ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P1\_N3}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+U\+X\+\_\+\+D\+I\+F\+F\+\_\+\+P1\+\_\+\+N3~(0x2000)}
+
+
+
+Differential input with positive input from A\+I\+N1 and negative input from A\+I\+N3. 
+
+
+
+Definition at line 56 of file ads1115.\+h.
+
+\mbox{\Hypertarget{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_gafb90675e52a2e3fd17bfbc269e5bb168}\label{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_gafb90675e52a2e3fd17bfbc269e5bb168}} 
+\index{CONGIG\_REGISTER@{CONGIG\_REGISTER}!ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P2\_N3@{ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P2\_N3}}
+\index{ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P2\_N3@{ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P2\_N3}!CONGIG\_REGISTER@{CONGIG\_REGISTER}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P2\_N3}{ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P2\_N3}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+U\+X\+\_\+\+D\+I\+F\+F\+\_\+\+P2\+\_\+\+N3~(0x3000)}
+
+
+
+Differential input with positive input from A\+I\+N2 and negative input from A\+I\+N3. 
+
+
+
+Definition at line 57 of file ads1115.\+h.
+
+\mbox{\Hypertarget{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga01533e82c75c5a7c2a48098e983eda27}\label{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga01533e82c75c5a7c2a48098e983eda27}} 
+\index{CONGIG\_REGISTER@{CONGIG\_REGISTER}!ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P0\_NG@{ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P0\_NG}}
+\index{ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P0\_NG@{ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P0\_NG}!CONGIG\_REGISTER@{CONGIG\_REGISTER}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P0\_NG}{ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P0\_NG}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+U\+X\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+P0\+\_\+\+NG~(0x4000)}
+
+
+
+Single-\/ended input with positive input from A\+I\+N0 with reference to G\+ND. 
+
+
+
+Definition at line 58 of file ads1115.\+h.
+
+\mbox{\Hypertarget{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga5a4314f4345043c50de01b9270f978f0}\label{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga5a4314f4345043c50de01b9270f978f0}} 
+\index{CONGIG\_REGISTER@{CONGIG\_REGISTER}!ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P1\_NG@{ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P1\_NG}}
+\index{ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P1\_NG@{ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P1\_NG}!CONGIG\_REGISTER@{CONGIG\_REGISTER}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P1\_NG}{ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P1\_NG}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+U\+X\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+P1\+\_\+\+NG~(0x5000)}
+
+
+
+Single-\/ended input with positive input from A\+I\+N1 with reference to G\+ND. 
+
+
+
+Definition at line 59 of file ads1115.\+h.
+
+\mbox{\Hypertarget{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_gabb8af6813b8c47ebce8b1f760950b752}\label{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_gabb8af6813b8c47ebce8b1f760950b752}} 
+\index{CONGIG\_REGISTER@{CONGIG\_REGISTER}!ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P2\_NG@{ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P2\_NG}}
+\index{ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P2\_NG@{ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P2\_NG}!CONGIG\_REGISTER@{CONGIG\_REGISTER}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P2\_NG}{ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P2\_NG}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+U\+X\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+P2\+\_\+\+NG~(0x6000)}
+
+
+
+Single-\/ended input with positive input from A\+I\+N2 with reference to G\+ND. 
+
+
+
+Definition at line 60 of file ads1115.\+h.
+
+\mbox{\Hypertarget{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga02a7097c8850a8737fab257ce8cc03b7}\label{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga02a7097c8850a8737fab257ce8cc03b7}} 
+\index{CONGIG\_REGISTER@{CONGIG\_REGISTER}!ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P3\_NG@{ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P3\_NG}}
+\index{ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P3\_NG@{ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P3\_NG}!CONGIG\_REGISTER@{CONGIG\_REGISTER}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P3\_NG}{ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P3\_NG}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+U\+X\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+P3\+\_\+\+NG~(0x7000)}
+
+
+
+Single-\/ended input with positive input from A\+I\+N3 with reference to G\+ND. 
+
+
+
+Definition at line 61 of file ads1115.\+h.
+
+\mbox{\Hypertarget{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga6b544913066956181b5439b851a04318}\label{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga6b544913066956181b5439b851a04318}} 
+\index{CONGIG\_REGISTER@{CONGIG\_REGISTER}!ADS1115\_REG\_CONFIG\_OS\_BUSY@{ADS1115\_REG\_CONFIG\_OS\_BUSY}}
+\index{ADS1115\_REG\_CONFIG\_OS\_BUSY@{ADS1115\_REG\_CONFIG\_OS\_BUSY}!CONGIG\_REGISTER@{CONGIG\_REGISTER}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_CONFIG\_OS\_BUSY}{ADS1115\_REG\_CONFIG\_OS\_BUSY}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+O\+S\+\_\+\+B\+U\+SY~(0x0000)}
+
+
+
+Read\+: 0 when conversion is in progress. 
+
+
+
+Definition at line 49 of file ads1115.\+h.
+
+\mbox{\Hypertarget{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga10d1e0f484aeb2d6021aeb524d2ff4fc}\label{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga10d1e0f484aeb2d6021aeb524d2ff4fc}} 
+\index{CONGIG\_REGISTER@{CONGIG\_REGISTER}!ADS1115\_REG\_CONFIG\_OS\_NOTBUSY@{ADS1115\_REG\_CONFIG\_OS\_NOTBUSY}}
+\index{ADS1115\_REG\_CONFIG\_OS\_NOTBUSY@{ADS1115\_REG\_CONFIG\_OS\_NOTBUSY}!CONGIG\_REGISTER@{CONGIG\_REGISTER}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_CONFIG\_OS\_NOTBUSY}{ADS1115\_REG\_CONFIG\_OS\_NOTBUSY}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+O\+S\+\_\+\+N\+O\+T\+B\+U\+SY~(0x8000)}
+
+
+
+Read\+: 1 when device is not performing a conversion. 
+
+
+
+Definition at line 50 of file ads1115.\+h.
+
+\mbox{\Hypertarget{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_gabecb67ac1d427a99761f8a87101c73b1}\label{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_gabecb67ac1d427a99761f8a87101c73b1}} 
+\index{CONGIG\_REGISTER@{CONGIG\_REGISTER}!ADS1115\_REG\_CONFIG\_OS\_SINGLE@{ADS1115\_REG\_CONFIG\_OS\_SINGLE}}
+\index{ADS1115\_REG\_CONFIG\_OS\_SINGLE@{ADS1115\_REG\_CONFIG\_OS\_SINGLE}!CONGIG\_REGISTER@{CONGIG\_REGISTER}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_CONFIG\_OS\_SINGLE}{ADS1115\_REG\_CONFIG\_OS\_SINGLE}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+O\+S\+\_\+\+S\+I\+N\+G\+LE~(0x8000)}
+
+
+
+Write\+: Set to start a single-\/conversion. 
+
+
+
+Definition at line 48 of file ads1115.\+h.
+
+\mbox{\Hypertarget{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga3f1d89160606a4831bba4cc26d70040b}\label{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga3f1d89160606a4831bba4cc26d70040b}} 
+\index{CONGIG\_REGISTER@{CONGIG\_REGISTER}!ADS1115\_REG\_CONFIG\_PGA\_0\_256V@{ADS1115\_REG\_CONFIG\_PGA\_0\_256V}}
+\index{ADS1115\_REG\_CONFIG\_PGA\_0\_256V@{ADS1115\_REG\_CONFIG\_PGA\_0\_256V}!CONGIG\_REGISTER@{CONGIG\_REGISTER}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_CONFIG\_PGA\_0\_256V}{ADS1115\_REG\_CONFIG\_PGA\_0\_256V}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+G\+A\+\_\+0\+\_\+256V~(0x0\+A00)}
+
+
+
++/-\/0.256V range = Gain 16 
+
+
+
+Definition at line 70 of file ads1115.\+h.
+
+\mbox{\Hypertarget{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_gab658622c5fbf84a364e060da2b9be3c5}\label{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_gab658622c5fbf84a364e060da2b9be3c5}} 
+\index{CONGIG\_REGISTER@{CONGIG\_REGISTER}!ADS1115\_REG\_CONFIG\_PGA\_0\_512V@{ADS1115\_REG\_CONFIG\_PGA\_0\_512V}}
+\index{ADS1115\_REG\_CONFIG\_PGA\_0\_512V@{ADS1115\_REG\_CONFIG\_PGA\_0\_512V}!CONGIG\_REGISTER@{CONGIG\_REGISTER}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_CONFIG\_PGA\_0\_512V}{ADS1115\_REG\_CONFIG\_PGA\_0\_512V}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+G\+A\+\_\+0\+\_\+512V~(0x0800)}
+
+
+
++/-\/0.512V range = Gain 8 
+
+
+
+Definition at line 69 of file ads1115.\+h.
+
+\mbox{\Hypertarget{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga04fa28b60fb035e9bdc8cbaa0ce2c0e6}\label{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga04fa28b60fb035e9bdc8cbaa0ce2c0e6}} 
+\index{CONGIG\_REGISTER@{CONGIG\_REGISTER}!ADS1115\_REG\_CONFIG\_PGA\_1\_024V@{ADS1115\_REG\_CONFIG\_PGA\_1\_024V}}
+\index{ADS1115\_REG\_CONFIG\_PGA\_1\_024V@{ADS1115\_REG\_CONFIG\_PGA\_1\_024V}!CONGIG\_REGISTER@{CONGIG\_REGISTER}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_CONFIG\_PGA\_1\_024V}{ADS1115\_REG\_CONFIG\_PGA\_1\_024V}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+G\+A\+\_\+1\+\_\+024V~(0x0600)}
+
+
+
++/-\/1.024V range = Gain 4 
+
+
+
+Definition at line 68 of file ads1115.\+h.
+
+\mbox{\Hypertarget{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga516dac63e8cfb0a973222c022b7cc831}\label{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga516dac63e8cfb0a973222c022b7cc831}} 
+\index{CONGIG\_REGISTER@{CONGIG\_REGISTER}!ADS1115\_REG\_CONFIG\_PGA\_2\_048V@{ADS1115\_REG\_CONFIG\_PGA\_2\_048V}}
+\index{ADS1115\_REG\_CONFIG\_PGA\_2\_048V@{ADS1115\_REG\_CONFIG\_PGA\_2\_048V}!CONGIG\_REGISTER@{CONGIG\_REGISTER}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_CONFIG\_PGA\_2\_048V}{ADS1115\_REG\_CONFIG\_PGA\_2\_048V}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+G\+A\+\_\+2\+\_\+048V~(0x0400)}
+
+
+
++/-\/2.048V range = Gain 2 (D\+E\+F\+A\+U\+LT) 
+
+
+
+Definition at line 67 of file ads1115.\+h.
+
+\mbox{\Hypertarget{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga3acb6997b9bd7692470eb8c1999c33ea}\label{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_ga3acb6997b9bd7692470eb8c1999c33ea}} 
+\index{CONGIG\_REGISTER@{CONGIG\_REGISTER}!ADS1115\_REG\_CONFIG\_PGA\_4\_096V@{ADS1115\_REG\_CONFIG\_PGA\_4\_096V}}
+\index{ADS1115\_REG\_CONFIG\_PGA\_4\_096V@{ADS1115\_REG\_CONFIG\_PGA\_4\_096V}!CONGIG\_REGISTER@{CONGIG\_REGISTER}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_CONFIG\_PGA\_4\_096V}{ADS1115\_REG\_CONFIG\_PGA\_4\_096V}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+G\+A\+\_\+4\+\_\+096V~(0x0200)}
+
+
+
++/-\/4.096V range = Gain 1 
+
+
+
+Definition at line 66 of file ads1115.\+h.
+
+\mbox{\Hypertarget{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_gaa4bead0ed56b92f729a2e65c2af284fc}\label{group___c_o_n_g_i_g___r_e_g_i_s_t_e_r_gaa4bead0ed56b92f729a2e65c2af284fc}} 
+\index{CONGIG\_REGISTER@{CONGIG\_REGISTER}!ADS1115\_REG\_CONFIG\_PGA\_6\_144V@{ADS1115\_REG\_CONFIG\_PGA\_6\_144V}}
+\index{ADS1115\_REG\_CONFIG\_PGA\_6\_144V@{ADS1115\_REG\_CONFIG\_PGA\_6\_144V}!CONGIG\_REGISTER@{CONGIG\_REGISTER}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_CONFIG\_PGA\_6\_144V}{ADS1115\_REG\_CONFIG\_PGA\_6\_144V}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+G\+A\+\_\+6\+\_\+144V~(0x0000)}
+
+
+
++/-\/6.144V range = Gain 2/3 
+
+
+
+Definition at line 65 of file ads1115.\+h.
+

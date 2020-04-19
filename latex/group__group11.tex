@@ -1,0 +1,84 @@
+\hypertarget{group__group11}{}\doxysection{A\+D\+S1115\+: C\+O\+M\+P\+A\+R\+A\+T\+OR Q\+U\+E\+UE A\+ND D\+I\+S\+A\+B\+LE}
+\label{group__group11}\index{ADS1115: COMPARATOR QUEUE AND DISABLE@{ADS1115: COMPARATOR QUEUE AND DISABLE}}
+
+
+A\+D\+S1115 Bit\mbox{[}1-\/0\mbox{]}.  
+
+
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__group11_ga4889b7e8a019906eb7c2670ec2466917}{A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+Q\+U\+E\+\_\+1\+C\+O\+NV}}~(0x0000)
+\begin{DoxyCompactList}\small\item\em Assert after one conversion. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group11_ga88a73e81b13059b1f4756cf5c8a342a3}{A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+Q\+U\+E\+\_\+2\+C\+O\+NV}}~(0x0001)
+\begin{DoxyCompactList}\small\item\em Assert after two conversions. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group11_gad14f479d9c6f636631444de22dd7b133}{A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+Q\+U\+E\+\_\+4\+C\+O\+NV}}~(0x0002)
+\begin{DoxyCompactList}\small\item\em Assert after four conversions. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group11_gaa52ede69f39daf837bb2ebbe639dbef9}{A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+Q\+U\+E\+\_\+\+N\+O\+NE}}~(0x0003)
+\begin{DoxyCompactList}\small\item\em Disable comparator (D\+E\+F\+A\+U\+LT) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A\+D\+S1115 Bit\mbox{[}1-\/0\mbox{]}. 
+
+These bits perform two functions. When set to \textquotesingle{}11\textquotesingle{}, they disable the comparator function and put the A\+L\+E\+R\+T/\+R\+DY pin into a high state. When set to any other value, they control the number of successive conversions exceeding the upper or lower thresholds required before asserting the A\+L\+E\+R\+T/\+R\+DY pin.
+
+The D\+E\+F\+A\+U\+LT setting disables the comparator 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__group11_ga4889b7e8a019906eb7c2670ec2466917}\label{group__group11_ga4889b7e8a019906eb7c2670ec2466917}} 
+\index{ADS1115: COMPARATOR QUEUE AND DISABLE@{ADS1115: COMPARATOR QUEUE AND DISABLE}!ADS1015\_REG\_CONFIG\_CQUE\_1CONV@{ADS1015\_REG\_CONFIG\_CQUE\_1CONV}}
+\index{ADS1015\_REG\_CONFIG\_CQUE\_1CONV@{ADS1015\_REG\_CONFIG\_CQUE\_1CONV}!ADS1115: COMPARATOR QUEUE AND DISABLE@{ADS1115: COMPARATOR QUEUE AND DISABLE}}
+\doxysubsubsection{\texorpdfstring{ADS1015\_REG\_CONFIG\_CQUE\_1CONV}{ADS1015\_REG\_CONFIG\_CQUE\_1CONV}}
+{\footnotesize\ttfamily \#define A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+Q\+U\+E\+\_\+1\+C\+O\+NV~(0x0000)}
+
+
+
+Assert after one conversion. 
+
+
+
+Definition at line 341 of file ads1115.\+h.
+
+\mbox{\Hypertarget{group__group11_ga88a73e81b13059b1f4756cf5c8a342a3}\label{group__group11_ga88a73e81b13059b1f4756cf5c8a342a3}} 
+\index{ADS1115: COMPARATOR QUEUE AND DISABLE@{ADS1115: COMPARATOR QUEUE AND DISABLE}!ADS1015\_REG\_CONFIG\_CQUE\_2CONV@{ADS1015\_REG\_CONFIG\_CQUE\_2CONV}}
+\index{ADS1015\_REG\_CONFIG\_CQUE\_2CONV@{ADS1015\_REG\_CONFIG\_CQUE\_2CONV}!ADS1115: COMPARATOR QUEUE AND DISABLE@{ADS1115: COMPARATOR QUEUE AND DISABLE}}
+\doxysubsubsection{\texorpdfstring{ADS1015\_REG\_CONFIG\_CQUE\_2CONV}{ADS1015\_REG\_CONFIG\_CQUE\_2CONV}}
+{\footnotesize\ttfamily \#define A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+Q\+U\+E\+\_\+2\+C\+O\+NV~(0x0001)}
+
+
+
+Assert after two conversions. 
+
+
+
+Definition at line 342 of file ads1115.\+h.
+
+\mbox{\Hypertarget{group__group11_gad14f479d9c6f636631444de22dd7b133}\label{group__group11_gad14f479d9c6f636631444de22dd7b133}} 
+\index{ADS1115: COMPARATOR QUEUE AND DISABLE@{ADS1115: COMPARATOR QUEUE AND DISABLE}!ADS1015\_REG\_CONFIG\_CQUE\_4CONV@{ADS1015\_REG\_CONFIG\_CQUE\_4CONV}}
+\index{ADS1015\_REG\_CONFIG\_CQUE\_4CONV@{ADS1015\_REG\_CONFIG\_CQUE\_4CONV}!ADS1115: COMPARATOR QUEUE AND DISABLE@{ADS1115: COMPARATOR QUEUE AND DISABLE}}
+\doxysubsubsection{\texorpdfstring{ADS1015\_REG\_CONFIG\_CQUE\_4CONV}{ADS1015\_REG\_CONFIG\_CQUE\_4CONV}}
+{\footnotesize\ttfamily \#define A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+Q\+U\+E\+\_\+4\+C\+O\+NV~(0x0002)}
+
+
+
+Assert after four conversions. 
+
+
+
+Definition at line 343 of file ads1115.\+h.
+
+\mbox{\Hypertarget{group__group11_gaa52ede69f39daf837bb2ebbe639dbef9}\label{group__group11_gaa52ede69f39daf837bb2ebbe639dbef9}} 
+\index{ADS1115: COMPARATOR QUEUE AND DISABLE@{ADS1115: COMPARATOR QUEUE AND DISABLE}!ADS1015\_REG\_CONFIG\_CQUE\_NONE@{ADS1015\_REG\_CONFIG\_CQUE\_NONE}}
+\index{ADS1015\_REG\_CONFIG\_CQUE\_NONE@{ADS1015\_REG\_CONFIG\_CQUE\_NONE}!ADS1115: COMPARATOR QUEUE AND DISABLE@{ADS1115: COMPARATOR QUEUE AND DISABLE}}
+\doxysubsubsection{\texorpdfstring{ADS1015\_REG\_CONFIG\_CQUE\_NONE}{ADS1015\_REG\_CONFIG\_CQUE\_NONE}}
+{\footnotesize\ttfamily \#define A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+Q\+U\+E\+\_\+\+N\+O\+NE~(0x0003)}
+
+
+
+Disable comparator (D\+E\+F\+A\+U\+LT) 
+
+
+
+Definition at line 344 of file ads1115.\+h.
+

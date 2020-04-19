@@ -1,0 +1,175 @@
+\hypertarget{class_g_p_i_olisten}{}\doxysection{G\+P\+I\+Olisten Class Reference}
+\label{class_g_p_i_olisten}\index{GPIOlisten@{GPIOlisten}}
+
+
+This class is responsible for the data communications and threading involved with conversion and processing of incoming data to the A\+D\+S1115.  
+
+
+
+
+{\ttfamily \#include $<$G\+P\+I\+Olis.\+h$>$}
+
+
+
+Inheritance diagram for G\+P\+I\+Olisten\+:
+% FIG 0
+
+
+Collaboration diagram for G\+P\+I\+Olisten\+:
+% FIG 1
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_g_p_i_olisten_a190b4fc03370201df025b13efa7db705}{ready}} ()
+\begin{DoxyCompactList}\small\item\em Stuff. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_p_i_olisten_a1ef56c1710169fb3d08d89a36cb418ef}{readyread}} (float \mbox{\hyperlink{ads1115_8cpp_a47061fcae597f83f8a0a99d4b7b5a5c1}{voltage}})
+\begin{DoxyCompactList}\small\item\em Details. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_p_i_olisten_ad1d6644b5ab62fb8fa170062c9f4704c}{G\+P\+I\+Olis}} (Q\+Object $\ast$parent=0)
+\begin{DoxyCompactList}\small\item\em Initialises a thread. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_g_p_i_olisten_a9f281b655c0e2a395f5af1f3155a6fb7}{$\sim$\+G\+P\+I\+Olis}} ()
+\begin{DoxyCompactList}\small\item\em G\+P\+I\+Olis destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_p_i_olisten_a9351f856e64420434e92eacb44c3657a}{interrupt}} (void)
+\begin{DoxyCompactList}\small\item\em Executed in response to an interrupt, the function returns emits the \mbox{\hyperlink{class_g_p_i_olisten_a1ef56c1710169fb3d08d89a36cb418ef}{readyread()}} signal with the measured voltage. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_g_p_i_olisten_a24bfdaf8078d09bfdc3d4f2a947009dd}{count}}
+\begin{DoxyCompactList}\small\item\em A simple counter for use in the \mbox{\hyperlink{class_g_p_i_olisten_a9351f856e64420434e92eacb44c3657a}{interrupt()}} function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_g_p_i_olisten_a92ca445e95b811cccfefe961e30272c4}{run}} ()
+\begin{DoxyCompactList}\small\item\em Exit continuous conversion mode and delete the thread. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_g_p_i_olisten_a1f0c27ace31fff718032f722f1ee3ef7}{flag}} =1
+\begin{DoxyCompactList}\small\item\em Denotes whether data can successfully be read using the wiringpi library. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class is responsible for the data communications and threading involved with conversion and processing of incoming data to the A\+D\+S1115. 
+
+The \mbox{\hyperlink{class_g_p_i_olisten}{G\+P\+I\+Olisten}} class monitors the A\+L\+E\+R\+T/\+R\+DY pin and triggers an interrupt each time an AD conversion is ready. The data is then processed before sleeping until the next interrupt. 
+
+Definition at line 37 of file G\+P\+I\+Olis.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_g_p_i_olisten_a9f281b655c0e2a395f5af1f3155a6fb7}\label{class_g_p_i_olisten_a9f281b655c0e2a395f5af1f3155a6fb7}} 
+\index{GPIOlisten@{GPIOlisten}!````~GPIOlis@{$\sim$GPIOlis}}
+\index{````~GPIOlis@{$\sim$GPIOlis}!GPIOlisten@{GPIOlisten}}
+\doxysubsubsection{\texorpdfstring{$\sim$GPIOlis()}{~GPIOlis()}}
+{\footnotesize\ttfamily G\+P\+I\+Olisten\+::$\sim$\+G\+P\+I\+Olis (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+G\+P\+I\+Olis destructor. 
+
+Destroys the G\+P\+I\+Olis object 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_p_i_olisten_ad1d6644b5ab62fb8fa170062c9f4704c}\label{class_g_p_i_olisten_ad1d6644b5ab62fb8fa170062c9f4704c}} 
+\index{GPIOlisten@{GPIOlisten}!GPIOlis@{GPIOlis}}
+\index{GPIOlis@{GPIOlis}!GPIOlisten@{GPIOlisten}}
+\doxysubsubsection{\texorpdfstring{GPIOlis()}{GPIOlis()}}
+{\footnotesize\ttfamily G\+P\+I\+Olisten\+::\+G\+P\+I\+Olis (\begin{DoxyParamCaption}\item[{Q\+Object $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Initialises a thread. 
+
+Creates a new instance of the \mbox{\hyperlink{classads1115}{ads1115}} class \mbox{\Hypertarget{class_g_p_i_olisten_a9351f856e64420434e92eacb44c3657a}\label{class_g_p_i_olisten_a9351f856e64420434e92eacb44c3657a}} 
+\index{GPIOlisten@{GPIOlisten}!interrupt@{interrupt}}
+\index{interrupt@{interrupt}!GPIOlisten@{GPIOlisten}}
+\doxysubsubsection{\texorpdfstring{interrupt()}{interrupt()}}
+{\footnotesize\ttfamily void G\+P\+I\+Olisten\+::interrupt (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Executed in response to an interrupt, the function returns emits the \mbox{\hyperlink{class_g_p_i_olisten_a1ef56c1710169fb3d08d89a36cb418ef}{readyread()}} signal with the measured voltage. 
+
+Uses the readsig() function of the \mbox{\hyperlink{classads1115}{ads1115}} class to measure an input voltage before emitting the \mbox{\hyperlink{class_g_p_i_olisten_a1ef56c1710169fb3d08d89a36cb418ef}{readyread()}} signal containing the voltage result. A counter keeps track of the number of conversions performed (uses of the \mbox{\hyperlink{class_g_p_i_olisten_a9351f856e64420434e92eacb44c3657a}{interrupt()}} function, each time alerting the onset of conversion through the q\+Debug() slot.
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_p_i_olisten_a190b4fc03370201df025b13efa7db705}\label{class_g_p_i_olisten_a190b4fc03370201df025b13efa7db705}} 
+\index{GPIOlisten@{GPIOlisten}!ready@{ready}}
+\index{ready@{ready}!GPIOlisten@{GPIOlisten}}
+\doxysubsubsection{\texorpdfstring{ready}{ready}}
+{\footnotesize\ttfamily void G\+P\+I\+Olisten\+::ready (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Stuff. 
+
+Details \mbox{\Hypertarget{class_g_p_i_olisten_a1ef56c1710169fb3d08d89a36cb418ef}\label{class_g_p_i_olisten_a1ef56c1710169fb3d08d89a36cb418ef}} 
+\index{GPIOlisten@{GPIOlisten}!readyread@{readyread}}
+\index{readyread@{readyread}!GPIOlisten@{GPIOlisten}}
+\doxysubsubsection{\texorpdfstring{readyread}{readyread}}
+{\footnotesize\ttfamily void G\+P\+I\+Olisten\+::readyread (\begin{DoxyParamCaption}\item[{float}]{voltage }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Details. 
+
+\mbox{\Hypertarget{class_g_p_i_olisten_a92ca445e95b811cccfefe961e30272c4}\label{class_g_p_i_olisten_a92ca445e95b811cccfefe961e30272c4}} 
+\index{GPIOlisten@{GPIOlisten}!run@{run}}
+\index{run@{run}!GPIOlisten@{GPIOlisten}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void G\+P\+I\+Olisten\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Exit continuous conversion mode and delete the thread. 
+
+Applies the endads() function to the instance of the \mbox{\hyperlink{classads1115}{ads1115}} class. This exits the continuous conversion mode of the A\+DC. The instance of the class is then deleted before exiting the thread.
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & Run \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_g_p_i_olisten_a24bfdaf8078d09bfdc3d4f2a947009dd}\label{class_g_p_i_olisten_a24bfdaf8078d09bfdc3d4f2a947009dd}} 
+\index{GPIOlisten@{GPIOlisten}!count@{count}}
+\index{count@{count}!GPIOlisten@{GPIOlisten}}
+\doxysubsubsection{\texorpdfstring{count}{count}}
+{\footnotesize\ttfamily int G\+P\+I\+Olisten\+::count}
+
+
+
+A simple counter for use in the \mbox{\hyperlink{class_g_p_i_olisten_a9351f856e64420434e92eacb44c3657a}{interrupt()}} function. 
+
+Instantiates through the \mbox{\hyperlink{class_g_p_i_olisten_ad1d6644b5ab62fb8fa170062c9f4704c}{G\+P\+I\+Olis()}} function to keep track of the number of interrupts performed. 
+
+Definition at line 84 of file G\+P\+I\+Olis.\+h.
+
+\mbox{\Hypertarget{class_g_p_i_olisten_a1f0c27ace31fff718032f722f1ee3ef7}\label{class_g_p_i_olisten_a1f0c27ace31fff718032f722f1ee3ef7}} 
+\index{GPIOlisten@{GPIOlisten}!flag@{flag}}
+\index{flag@{flag}!GPIOlisten@{GPIOlisten}}
+\doxysubsubsection{\texorpdfstring{flag}{flag}}
+{\footnotesize\ttfamily int G\+P\+I\+Olisten\+::flag =1\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Denotes whether data can successfully be read using the wiringpi library. 
+
+Within the \mbox{\hyperlink{class_g_p_i_olisten_a92ca445e95b811cccfefe961e30272c4}{run()}} function, flag takes the value of 0 if an error is returned during execution of the wiring\+Pi\+Setup() and wiring\+Pi\+I\+S\+R() functions. If the value of flag remains 1 after the \mbox{\hyperlink{class_g_p_i_olisten_a92ca445e95b811cccfefe961e30272c4}{run()}} function, data can be successfully read from the A\+DC and triggers something. 
+
+Definition at line 47 of file G\+P\+I\+Olis.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/finlay/\+R\+T\+E\+P1/\+Rpi\+\_\+end/200322\+\_\+\+Rpi\+\_\+end\+\_\+together/\mbox{\hyperlink{_g_p_i_olis_8h}{G\+P\+I\+Olis.\+h}}\end{DoxyCompactItemize}

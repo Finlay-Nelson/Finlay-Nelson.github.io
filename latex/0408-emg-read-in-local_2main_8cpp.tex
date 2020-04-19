@@ -1,0 +1,39 @@
+\hypertarget{0408-emg-read-in-local_2main_8cpp}{}\doxysection{/home/finlay/\+R\+T\+E\+P/\+Server\+\_\+end/0301\+\_\+\+Pong\+\_\+\+G\+U\+I/0408-\/emg-\/read-\/in-\/local/main.cpp File Reference}
+\label{0408-emg-read-in-local_2main_8cpp}\index{/home/finlay/RTEP/Server\_end/0301\_Pong\_GUI/0408-\/emg-\/read-\/in-\/local/main.cpp@{/home/finlay/RTEP/Server\_end/0301\_Pong\_GUI/0408-\/emg-\/read-\/in-\/local/main.cpp}}
+{\ttfamily \#include $<$window.\+h$>$}\newline
+{\ttfamily \#include $<$Q\+Application$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{0408-emg-read-in-local_2main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{0408-emg-read-in-local_2main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{0408-emg-read-in-local_2main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 14 of file main.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{15 \{}
+\DoxyCodeLine{16     QApplication app(argc, argv);}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18     \textcolor{comment}{// create the window}}
+\DoxyCodeLine{19     \mbox{\hyperlink{classWindow}{Window}} window;}
+\DoxyCodeLine{20     window.showMaximized();}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22     \textcolor{comment}{// call the window.timerEvent function every 40 ms}}
+\DoxyCodeLine{23     window.startTimer(1);}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25     \textcolor{comment}{// execute the application}}
+\DoxyCodeLine{26     \textcolor{keywordflow}{return} app.exec();}
+\DoxyCodeLine{27 \}}
+
+\end{DoxyCode}

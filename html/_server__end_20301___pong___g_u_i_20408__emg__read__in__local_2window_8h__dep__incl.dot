@@ -1,0 +1,12 @@
+digraph "/home/finlay/RTEP1/Server_end/0301_Pong_GUI/0408_emg_read_in_local/window.h"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="/home/finlay/RTEP1\l/Server_end/0301_Pong\l_GUI/0408_emg_read_in\l_local/window.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="/home/finlay/RTEP1\l/Server_end/0301_Pong\l_GUI/0408_emg_read_in\l_local/main.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_server__end_20301___pong___g_u_i_20408__emg__read__in__local_2main_8cpp.html",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="/home/finlay/RTEP1\l/Server_end/0301_Pong\l_GUI/0408_emg_read_in\l_local/window.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_server__end_20301___pong___g_u_i_20408__emg__read__in__local_2window_8cpp.html",tooltip=" "];
+}

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>xbel.h Example File | Qt WebKit Examples 5.9</title>
+  <link rel="stylesheet" type="text/css" href="style/offline-simple.css" />
+  <script type="text/javascript">
+    window.onload = function(){document.getElementsByTagName("link").item(0).setAttribute("href", "style/offline.css");};
+  </script>
+</head>
+<body>
+<div class="header" id="qtdocheader">
+  <div class="main">
+    <div class="main-rounded">
+      <div class="navigationbar">
+        <table><tr>
+<td >Qt 5.9</td><td ><a href="qtwebkitexamples-index.html">Qt WebKit Examples</a></td><td ><a href="qtwebkitexamples-webkitwidgets-browser-example.html">Tab Browser</a></td><td >xbel.h Example File</td></tr></table><table class="buildversion"><tr>
+<td id="buildversion" width="100%" align="right">Qt 5.9.1 Reference Documentation</td>
+        </tr></table>
+      </div>
+    </div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="sidebar"><div class="sidebar-content" id="sidebar-content"></div></div>
+<h1 class="title">xbel.h Example File</h1>
+<span class="subtitle">webkitwidgets/browser/xbel.h</span>
+<!-- $$$webkitwidgets/browser/xbel.h-description -->
+<div class="descr"> <a name="details"></a>
+<pre class="cpp">
+
+  <span class="comment">/****************************************************************************
+  **
+  ** Copyright (C) 2015 The Qt Company Ltd.
+  ** Contact: http://www.qt.io/licensing/
+  **
+  ** This file is part of the demonstration applications of the Qt Toolkit.
+  **
+  ** $QT_BEGIN_LICENSE:LGPL21$
+  ** Commercial License Usage
+  ** Licensees holding valid commercial Qt licenses may use this file in
+  ** accordance with the commercial license agreement provided with the
+  ** Software or, alternatively, in accordance with the terms contained in
+  ** a written agreement between you and The Qt Company. For licensing terms
+  ** and conditions see http://www.qt.io/terms-conditions. For further
+  ** information use the contact form at http://www.qt.io/contact-us.
+  **
+  ** GNU Lesser General Public License Usage
+  ** Alternatively, this file may be used under the terms of the GNU Lesser
+  ** General Public License version 2.1 or version 3 as published by the Free
+  ** Software Foundation and appearing in the file LICENSE.LGPLv21 and
+  ** LICENSE.LGPLv3 included in the packaging of this file. Please review the
+  ** following information to ensure the GNU Lesser General Public License
+  ** requirements will be met: https://www.gnu.org/licenses/lgpl.html and
+  ** http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+  **
+  ** As a special exception, The Qt Company gives you certain additional
+  ** rights. These rights are described in The Qt Company LGPL Exception
+  ** version 1.1, included in the file LGPL_EXCEPTION.txt in this package.
+  **
+  ** $QT_END_LICENSE$
+  **
+  ****************************************************************************/</span>
+
+  <span class="preprocessor">#ifndef XBEL_H</span>
+  <span class="preprocessor">#define XBEL_H</span>
+
+  <span class="preprocessor">#include &lt;QtCore/QXmlStreamReader&gt;</span>
+  <span class="preprocessor">#include &lt;QtCore/QDateTime&gt;</span>
+
+  <span class="keyword">class</span> BookmarkNode
+  {
+  <span class="keyword">public</span>:
+      <span class="keyword">enum</span> Type {
+          Root<span class="operator">,</span>
+          Folder<span class="operator">,</span>
+          Bookmark<span class="operator">,</span>
+          Separator
+      };
+
+      BookmarkNode(Type type <span class="operator">=</span> Root<span class="operator">,</span> BookmarkNode <span class="operator">*</span>parent <span class="operator">=</span> <span class="number">0</span>);
+      <span class="operator">~</span>BookmarkNode();
+      bool <span class="keyword">operator</span><span class="operator">=</span><span class="operator">=</span>(<span class="keyword">const</span> BookmarkNode <span class="operator">&amp;</span>other);
+
+      Type type() <span class="keyword">const</span>;
+      <span class="type">void</span> setType(Type type);
+      <span class="type">QList</span><span class="operator">&lt;</span>BookmarkNode <span class="operator">*</span><span class="operator">&gt;</span> children() <span class="keyword">const</span>;
+      BookmarkNode <span class="operator">*</span>parent() <span class="keyword">const</span>;
+
+      <span class="type">void</span> add(BookmarkNode <span class="operator">*</span>child<span class="operator">,</span> <span class="type">int</span> offset <span class="operator">=</span> <span class="operator">-</span><span class="number">1</span>);
+      <span class="type">void</span> remove(BookmarkNode <span class="operator">*</span>child);
+
+      <span class="type">QString</span> url;
+      <span class="type">QString</span> title;
+      <span class="type">QString</span> desc;
+      bool expanded;
+
+  <span class="keyword">private</span>:
+      BookmarkNode <span class="operator">*</span>m_parent;
+      Type m_type;
+      <span class="type">QList</span><span class="operator">&lt;</span>BookmarkNode <span class="operator">*</span><span class="operator">&gt;</span> m_children;
+
+  };
+
+  <span class="keyword">class</span> XbelReader : <span class="keyword">public</span> <span class="type">QXmlStreamReader</span>
+  {
+  <span class="keyword">public</span>:
+      XbelReader();
+      BookmarkNode <span class="operator">*</span>read(<span class="keyword">const</span> <span class="type">QString</span> <span class="operator">&amp;</span>fileName);
+      BookmarkNode <span class="operator">*</span>read(<span class="type">QIODevice</span> <span class="operator">*</span>device);
+
+  <span class="keyword">private</span>:
+      <span class="type">void</span> readXBEL(BookmarkNode <span class="operator">*</span>parent);
+      <span class="type">void</span> readTitle(BookmarkNode <span class="operator">*</span>parent);
+      <span class="type">void</span> readDescription(BookmarkNode <span class="operator">*</span>parent);
+      <span class="type">void</span> readSeparator(BookmarkNode <span class="operator">*</span>parent);
+      <span class="type">void</span> readFolder(BookmarkNode <span class="operator">*</span>parent);
+      <span class="type">void</span> readBookmarkNode(BookmarkNode <span class="operator">*</span>parent);
+  };
+
+  <span class="preprocessor">#include &lt;QtCore/QXmlStreamWriter&gt;</span>
+
+  <span class="keyword">class</span> XbelWriter : <span class="keyword">public</span> <span class="type">QXmlStreamWriter</span>
+  {
+  <span class="keyword">public</span>:
+      XbelWriter();
+      bool write(<span class="keyword">const</span> <span class="type">QString</span> <span class="operator">&amp;</span>fileName<span class="operator">,</span> <span class="keyword">const</span> BookmarkNode <span class="operator">*</span>root);
+      bool write(<span class="type">QIODevice</span> <span class="operator">*</span>device<span class="operator">,</span> <span class="keyword">const</span> BookmarkNode <span class="operator">*</span>root);
+
+  <span class="keyword">private</span>:
+      <span class="type">void</span> writeItem(<span class="keyword">const</span> BookmarkNode <span class="operator">*</span>parent);
+  };
+
+  <span class="preprocessor">#endif // XBEL_H</span>
+
+</pre>
+</div>
+<!-- @@@webkitwidgets/browser/xbel.h -->
+        </div>
+       </div>
+   </div>
+   </div>
+</div>
+<div class="footer">
+   <p>
+   <acronym title="Copyright">&copy;</acronym> 2017 The Qt Company Ltd.
+   Documentation contributions included herein are the copyrights of
+   their respective owners.<br>    The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.<br>    Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</div>
+</body>
+</html>

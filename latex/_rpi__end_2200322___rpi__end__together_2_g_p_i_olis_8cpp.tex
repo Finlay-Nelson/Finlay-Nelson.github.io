@@ -1,0 +1,77 @@
+\hypertarget{_rpi__end_2200322___rpi__end__together_2_g_p_i_olis_8cpp}{}\doxysection{/home/finlay/\+R\+T\+E\+P1/\+Rpi\+\_\+end/200322\+\_\+\+Rpi\+\_\+end\+\_\+together/\+G\+P\+I\+Olis.cpp File Reference}
+\label{_rpi__end_2200322___rpi__end__together_2_g_p_i_olis_8cpp}\index{/home/finlay/RTEP1/Rpi\_end/200322\_Rpi\_end\_together/GPIOlis.cpp@{/home/finlay/RTEP1/Rpi\_end/200322\_Rpi\_end\_together/GPIOlis.cpp}}
+{\ttfamily \#include $<$Q\+Debug$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$wiring\+Pi.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include \char`\"{}G\+P\+I\+Olis.\+h\char`\"{}}\newline
+Include dependency graph for G\+P\+I\+Olis.\+cpp\+:
+% FIG 0
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{_rpi__end_2200322___rpi__end__together_2_g_p_i_olis_8cpp_abae77f938c3265f051527499510c0932}{gpipinterrupt}} = 0
+\begin{DoxyCompactList}\small\item\em A flag to identify the activation of the threading operation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_rpi__end_2200322___rpi__end__together_2_g_p_i_olis_8cpp_ad7831c642a7240a6d74f929a1158d448}{interrupt2}} (void)
+\begin{DoxyCompactList}\small\item\em Called in response to an interrupt, to alter the value of the flag \char`\"{}gpipinterrupt\char`\"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+mutex \mbox{\hyperlink{_rpi__end_2200322___rpi__end__together_2_g_p_i_olis_8cpp_a07dc39766a74777e22b3895ffbd8a63d}{cmdmtx}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{_rpi__end_2200322___rpi__end__together_2_g_p_i_olis_8cpp_abae77f938c3265f051527499510c0932}\label{_rpi__end_2200322___rpi__end__together_2_g_p_i_olis_8cpp_abae77f938c3265f051527499510c0932}} 
+\index{GPIOlis.cpp@{GPIOlis.cpp}!gpipinterrupt@{gpipinterrupt}}
+\index{gpipinterrupt@{gpipinterrupt}!GPIOlis.cpp@{GPIOlis.cpp}}
+\doxysubsubsection{\texorpdfstring{gpipinterrupt}{gpipinterrupt}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{_rpi__end_2200322___rpi__end__together_2_g_p_i_olis_8cpp_abae77f938c3265f051527499510c0932}{gpipinterrupt}} =  0}
+
+
+
+A flag to identify the activation of the threading operation. 
+
+
+
+Definition at line 17 of file G\+P\+I\+Olis.\+cpp.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_rpi__end_2200322___rpi__end__together_2_g_p_i_olis_8cpp_ad7831c642a7240a6d74f929a1158d448}\label{_rpi__end_2200322___rpi__end__together_2_g_p_i_olis_8cpp_ad7831c642a7240a6d74f929a1158d448}} 
+\index{GPIOlis.cpp@{GPIOlis.cpp}!interrupt2@{interrupt2}}
+\index{interrupt2@{interrupt2}!GPIOlis.cpp@{GPIOlis.cpp}}
+\doxysubsubsection{\texorpdfstring{interrupt2()}{interrupt2()}}
+{\footnotesize\ttfamily void interrupt2 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Called in response to an interrupt, to alter the value of the flag \char`\"{}gpipinterrupt\char`\"{}. 
+
+$<$ Locks the mutex if the mutex isn\textquotesingle{}t currently locked by any thread
+
+$<$ Unlocks the mutex if the mutex isn\textquotesingle{}t currently locked by any thread
+
+Definition at line 30 of file G\+P\+I\+Olis.\+cpp.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_rpi__end_2200322___rpi__end__together_2_g_p_i_olis_8cpp_a07dc39766a74777e22b3895ffbd8a63d}\label{_rpi__end_2200322___rpi__end__together_2_g_p_i_olis_8cpp_a07dc39766a74777e22b3895ffbd8a63d}} 
+\index{GPIOlis.cpp@{GPIOlis.cpp}!cmdmtx@{cmdmtx}}
+\index{cmdmtx@{cmdmtx}!GPIOlis.cpp@{GPIOlis.cpp}}
+\doxysubsubsection{\texorpdfstring{cmdmtx}{cmdmtx}}
+{\footnotesize\ttfamily mutex \mbox{\hyperlink{classcmdmtx}{cmdmtx}}}
+
+
+
+Definition at line 24 of file G\+P\+I\+Olis.\+cpp.
+

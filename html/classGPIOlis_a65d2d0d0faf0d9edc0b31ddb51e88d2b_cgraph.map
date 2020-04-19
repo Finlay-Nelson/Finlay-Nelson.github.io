@@ -1,0 +1,6 @@
+<map id="GPIOlis::run" name="GPIOlis::run">
+<area shape="rect" id="node1" title="Run." alt="" coords="5,31,100,57"/>
+<area shape="rect" id="node2" href="$classGPIOlis.html#a844470403deaa7436a19b8aef29eac5b" title="Executed in response to an interrupt, the function returns emits the readyread() signal with the meas..." alt="" coords="148,5,271,32"/>
+<area shape="rect" id="node4" href="$GPIOlis_8cpp.html#ad7831c642a7240a6d74f929a1158d448" title="Called in response to an interrupt, to alter the value of the flag &quot;gpipinterrupt&quot;." alt="" coords="171,56,247,83"/>
+<area shape="rect" id="node3" href="$classads1115.html#a761c3ec573fc59956d7eca446841c18d" title="Reads the digital conversion of the analogue EMG input." alt="" coords="319,5,440,32"/>
+</map>

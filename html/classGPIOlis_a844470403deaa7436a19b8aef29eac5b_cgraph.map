@@ -1,0 +1,4 @@
+<map id="GPIOlis::interrupt" name="GPIOlis::interrupt">
+<area shape="rect" id="node1" title="Executed in response to an interrupt, the function returns emits the readyread() signal with the meas..." alt="" coords="5,5,128,32"/>
+<area shape="rect" id="node2" href="$classads1115.html#a761c3ec573fc59956d7eca446841c18d" title="Reads the digital conversion of the analogue EMG input." alt="" coords="176,5,297,32"/>
+</map>

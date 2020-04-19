@@ -1,0 +1,40 @@
+This is a unit test to do the data processing and udp sending of an artificial function sampling at 200hz using the coarse timer of qt
+
+\doxysection*{Making it work}
+
+Install the Q\+T5 and Qwt development packages\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{apt-\/get install qtdeclarative5-\/dev-\/tools}
+\DoxyCodeLine{apt-\/get install libqwt-\/qt5-\/dev}
+\end{DoxyCode}
+
+
+To clone this git repository.
+
+To build\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd qwt-\/example}
+\DoxyCodeLine{qmake}
+\DoxyCodeLine{make}
+\end{DoxyCode}
+
+
+To run (assuming you are logged into the R\+Pi over ssh and no X-\/server is running)\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{startx ./QwtExample}
+\end{DoxyCode}
+
+
+or with X running
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./QwtExample}
+\end{DoxyCode}
+ 

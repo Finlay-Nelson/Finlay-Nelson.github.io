@@ -1,0 +1,237 @@
+\hypertarget{class_g_p_i_olis}{}\doxysection{G\+P\+I\+Olis Class Reference}
+\label{class_g_p_i_olis}\index{GPIOlis@{GPIOlis}}
+
+
+This class is responsible for the data communications and threading involved with conversion and processing of input data to the A\+D\+S1115.  
+
+
+
+
+{\ttfamily \#include $<$G\+P\+I\+Olis.\+h$>$}
+
+
+
+Collaboration diagram for G\+P\+I\+Olis\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{class_g_p_i_olis__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_g_p_i_olis_a1e658d32e43003c3612ba46bd99a1732}{ready}} ()
+\begin{DoxyCompactList}\small\item\em I don\textquotesingle{}t think this is in use anywhere. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_p_i_olis_ac36d3b9264536731e3458ed295666719}{readyread}} (float \mbox{\hyperlink{ads1115_8cpp_a47061fcae597f83f8a0a99d4b7b5a5c1}{voltage}})
+\begin{DoxyCompactList}\small\item\em A signal containing the voltage result from signal processing and conversion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_p_i_olis_a428a2f8c4b0bd64b769f1526c61c5dac}{G\+P\+I\+Olis}} (\textbf{ Q\+Object} $\ast$\textbf{ parent}=0)
+\begin{DoxyCompactList}\small\item\em The constructor of the \mbox{\hyperlink{class_g_p_i_olis}{G\+P\+I\+Olis}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_g_p_i_olis_a9095dfa3056b0f1c4026f6018f0f7ba7}{$\sim$\+G\+P\+I\+Olis}} ()
+\begin{DoxyCompactList}\small\item\em The destructor of the \mbox{\hyperlink{class_g_p_i_olis}{G\+P\+I\+Olis}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_p_i_olis_a844470403deaa7436a19b8aef29eac5b}{interrupt}} (void)
+\begin{DoxyCompactList}\small\item\em Emits the \mbox{\hyperlink{class_g_p_i_olis_ac36d3b9264536731e3458ed295666719}{readyread()}} signal with a measured voltage in response to an interrupt. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_p_i_olis_a06b2b0dbfd20843e43a5015c2c1cf829}{quit}} ()
+\begin{DoxyCompactList}\small\item\em Exit continuous conversion mode of the A\+DC and exits the existing thread. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_g_p_i_olis_a81e5f98d39e2ae03bf0ab38466ad24bd}{count}}
+\begin{DoxyCompactList}\small\item\em A simple counter for monitoring the iterrations of the \mbox{\hyperlink{class_g_p_i_olis_a844470403deaa7436a19b8aef29eac5b}{interrupt()}} function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_g_p_i_olis_a65d2d0d0faf0d9edc0b31ddb51e88d2b}{run}} ()
+\begin{DoxyCompactList}\small\item\em A call back function to execute \mbox{\hyperlink{class_g_p_i_olis_a844470403deaa7436a19b8aef29eac5b}{G\+P\+I\+Olis\+::interrupt()}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_g_p_i_olis_ae86ee364670cfe22722a5d9f612e9aa4}{flag}} =1
+\begin{DoxyCompactList}\small\item\em Denotes whether data can successfully be read using the wiringpi library. Within the \mbox{\hyperlink{class_g_p_i_olis_a65d2d0d0faf0d9edc0b31ddb51e88d2b}{G\+P\+I\+Olis\+::run()}} function, \char`\"{}flag\char`\"{} takes the value of 0 if an error is returned during execution of either of the wiring\+Pi\+Setup() or wiring\+Pi\+I\+S\+R() functions. For as long as the value of \char`\"{}flag\char`\"{} remains 1 after initialisation of the \mbox{\hyperlink{class_g_p_i_olis_a65d2d0d0faf0d9edc0b31ddb51e88d2b}{run()}} function, the callback in the \mbox{\hyperlink{class_g_p_i_olis_a65d2d0d0faf0d9edc0b31ddb51e88d2b}{G\+P\+I\+Olis\+::run()}} function is exdcutred. \char`\"{}flag\char`\"{} takes an initial value of 1 such that only an unsuccssful (false) execution of the wiring\+Pi functions results in a 0 value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classads1115}{ads1115}} $\ast$ \mbox{\hyperlink{class_g_p_i_olis_a4dd64eebb025a26b454d17176e70aaf8}{ads1}}
+\begin{DoxyCompactList}\small\item\em An instance of the \mbox{\hyperlink{classads1115}{ads1115}} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+This class is responsible for the data communications and threading involved with conversion and processing of input data to the A\+D\+S1115. 
+
+The G\+P\+I\+Olisten class monitors the A\+L\+E\+R\+T/\+R\+DY pin and triggers an interrupt each time an AD conversion is ready. The data is then processed before sleeping until the next interrupt. Important member functions include\+:
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{class_g_p_i_olis_a428a2f8c4b0bd64b769f1526c61c5dac}{G\+P\+I\+Olis()}}
+\item \mbox{\hyperlink{class_g_p_i_olis_a844470403deaa7436a19b8aef29eac5b}{interrupt()}}
+\item \mbox{\hyperlink{class_g_p_i_olis_a65d2d0d0faf0d9edc0b31ddb51e88d2b}{run()}}
+\item \mbox{\hyperlink{class_g_p_i_olis_a06b2b0dbfd20843e43a5015c2c1cf829}{quit()}} 
+\end{DoxyItemize}
+
+Definition at line 41 of file G\+P\+I\+Olis.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_g_p_i_olis_a428a2f8c4b0bd64b769f1526c61c5dac}\label{class_g_p_i_olis_a428a2f8c4b0bd64b769f1526c61c5dac}} 
+\index{GPIOlis@{GPIOlis}!GPIOlis@{GPIOlis}}
+\index{GPIOlis@{GPIOlis}!GPIOlis@{GPIOlis}}
+\doxysubsubsection{\texorpdfstring{GPIOlis()}{GPIOlis()}}
+{\footnotesize\ttfamily G\+P\+I\+Olis\+::\+G\+P\+I\+Olis (\begin{DoxyParamCaption}\item[{\textbf{ Q\+Object} $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+The constructor of the \mbox{\hyperlink{class_g_p_i_olis}{G\+P\+I\+Olis}} object. 
+
+Creates an instance of the \mbox{\hyperlink{classads1115}{ads1115}} class. The constructor also instantiates a counter to track the number of conversions performed. $<$ A new instance of the class \mbox{\hyperlink{classads1115}{ads1115}}
+
+Definition at line 55 of file G\+P\+I\+Olis.\+cpp.
+
+\mbox{\Hypertarget{class_g_p_i_olis_a9095dfa3056b0f1c4026f6018f0f7ba7}\label{class_g_p_i_olis_a9095dfa3056b0f1c4026f6018f0f7ba7}} 
+\index{GPIOlis@{GPIOlis}!````~GPIOlis@{$\sim$GPIOlis}}
+\index{````~GPIOlis@{$\sim$GPIOlis}!GPIOlis@{GPIOlis}}
+\doxysubsubsection{\texorpdfstring{$\sim$GPIOlis()}{~GPIOlis()}}
+{\footnotesize\ttfamily G\+P\+I\+Olis\+::$\sim$\+G\+P\+I\+Olis (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The destructor of the \mbox{\hyperlink{class_g_p_i_olis}{G\+P\+I\+Olis}} object. 
+
+Destroys the \mbox{\hyperlink{class_g_p_i_olis}{G\+P\+I\+Olis}} object. 
+
+Definition at line 71 of file G\+P\+I\+Olis.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_p_i_olis_a844470403deaa7436a19b8aef29eac5b}\label{class_g_p_i_olis_a844470403deaa7436a19b8aef29eac5b}} 
+\index{GPIOlis@{GPIOlis}!interrupt@{interrupt}}
+\index{interrupt@{interrupt}!GPIOlis@{GPIOlis}}
+\doxysubsubsection{\texorpdfstring{interrupt()}{interrupt()}}
+{\footnotesize\ttfamily void G\+P\+I\+Olis\+::interrupt (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Emits the \mbox{\hyperlink{class_g_p_i_olis_ac36d3b9264536731e3458ed295666719}{readyread()}} signal with a measured voltage in response to an interrupt. 
+
+Uses the readsig() function of the \mbox{\hyperlink{classads1115}{ads1115}} class to measure an input voltage before emitting the \mbox{\hyperlink{class_g_p_i_olis_ac36d3b9264536731e3458ed295666719}{readyread()}} signal containing the voltage result. A counter keeps track of the number of conversions performed (uses of the \mbox{\hyperlink{class_g_p_i_olis_a844470403deaa7436a19b8aef29eac5b}{interrupt()}} function), each time alerting the onset of conversion through the q\+Debug() slot.
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 62 of file G\+P\+I\+Olis.\+cpp.
+
+\mbox{\Hypertarget{class_g_p_i_olis_a06b2b0dbfd20843e43a5015c2c1cf829}\label{class_g_p_i_olis_a06b2b0dbfd20843e43a5015c2c1cf829}} 
+\index{GPIOlis@{GPIOlis}!quit@{quit}}
+\index{quit@{quit}!GPIOlis@{GPIOlis}}
+\doxysubsubsection{\texorpdfstring{quit()}{quit()}}
+{\footnotesize\ttfamily void G\+P\+I\+Olis\+::quit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Exit continuous conversion mode of the A\+DC and exits the existing thread. 
+
+Applies the G\+P\+I\+Olis\+::endads() function to the \mbox{\hyperlink{classads1115}{ads1115}} object, exiting the continuous conversion mode of the A\+DC. The object is then deleted before exiting the thread.
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 113 of file G\+P\+I\+Olis.\+cpp.
+
+\mbox{\Hypertarget{class_g_p_i_olis_a1e658d32e43003c3612ba46bd99a1732}\label{class_g_p_i_olis_a1e658d32e43003c3612ba46bd99a1732}} 
+\index{GPIOlis@{GPIOlis}!ready@{ready}}
+\index{ready@{ready}!GPIOlis@{GPIOlis}}
+\doxysubsubsection{\texorpdfstring{ready}{ready}}
+{\footnotesize\ttfamily void G\+P\+I\+Olis\+::ready (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+I don\textquotesingle{}t think this is in use anywhere. 
+
+\mbox{\Hypertarget{class_g_p_i_olis_ac36d3b9264536731e3458ed295666719}\label{class_g_p_i_olis_ac36d3b9264536731e3458ed295666719}} 
+\index{GPIOlis@{GPIOlis}!readyread@{readyread}}
+\index{readyread@{readyread}!GPIOlis@{GPIOlis}}
+\doxysubsubsection{\texorpdfstring{readyread}{readyread}}
+{\footnotesize\ttfamily void G\+P\+I\+Olis\+::readyread (\begin{DoxyParamCaption}\item[{float}]{voltage }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+A signal containing the voltage result from signal processing and conversion. 
+
+\char`\"{}voltage\char`\"{} is the return value of the \mbox{\hyperlink{classads1115_a761c3ec573fc59956d7eca446841c18d}{ads1115\+::readsig()}} function, post-\/processing and conversion. This is then the input parameter for the \mbox{\hyperlink{class_g_p_i_olis_ac36d3b9264536731e3458ed295666719}{readyread()}} signal.
+
+
+\begin{DoxyParams}{Parameters}
+{\em voltage} & The post-\/processing converted input E\+MG signal. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_p_i_olis_a65d2d0d0faf0d9edc0b31ddb51e88d2b}\label{class_g_p_i_olis_a65d2d0d0faf0d9edc0b31ddb51e88d2b}} 
+\index{GPIOlis@{GPIOlis}!run@{run}}
+\index{run@{run}!GPIOlis@{GPIOlis}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void G\+P\+I\+Olis\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+A call back function to execute \mbox{\hyperlink{class_g_p_i_olis_a844470403deaa7436a19b8aef29eac5b}{G\+P\+I\+Olis\+::interrupt()}} 
+
+If use of the wiring\+Pi\+Setup() and wiring\+Pi\+I\+S\+R() functions does not return an error, and \char`\"{}gpipinterrupt\char`\"{} takes the value of 1, the \mbox{\hyperlink{class_g_p_i_olis_a844470403deaa7436a19b8aef29eac5b}{G\+P\+I\+Olis\+::interrupt()}} function is triggered.. 
+
+Reimplemented from \textbf{ Q\+Thread}.
+
+
+
+Definition at line 74 of file G\+P\+I\+Olis.\+cpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_g_p_i_olis_a4dd64eebb025a26b454d17176e70aaf8}\label{class_g_p_i_olis_a4dd64eebb025a26b454d17176e70aaf8}} 
+\index{GPIOlis@{GPIOlis}!ads1@{ads1}}
+\index{ads1@{ads1}!GPIOlis@{GPIOlis}}
+\doxysubsubsection{\texorpdfstring{ads1}{ads1}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classads1115}{ads1115}}$\ast$ G\+P\+I\+Olis\+::ads1\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+An instance of the \mbox{\hyperlink{classads1115}{ads1115}} class. 
+
+This object allows access to the members of the \mbox{\hyperlink{classads1115}{ads1115}} class, for signal read and conversion. 
+
+Definition at line 111 of file G\+P\+I\+Olis.\+h.
+
+\mbox{\Hypertarget{class_g_p_i_olis_a81e5f98d39e2ae03bf0ab38466ad24bd}\label{class_g_p_i_olis_a81e5f98d39e2ae03bf0ab38466ad24bd}} 
+\index{GPIOlis@{GPIOlis}!count@{count}}
+\index{count@{count}!GPIOlis@{GPIOlis}}
+\doxysubsubsection{\texorpdfstring{count}{count}}
+{\footnotesize\ttfamily int G\+P\+I\+Olis\+::count}
+
+
+
+A simple counter for monitoring the iterrations of the \mbox{\hyperlink{class_g_p_i_olis_a844470403deaa7436a19b8aef29eac5b}{interrupt()}} function. 
+
+Instantiates through the \mbox{\hyperlink{class_g_p_i_olis_a428a2f8c4b0bd64b769f1526c61c5dac}{G\+P\+I\+Olis()}} function to keep track of the number of interrupts performe. The value increments each time the \mbox{\hyperlink{class_g_p_i_olis_a844470403deaa7436a19b8aef29eac5b}{G\+P\+I\+Olis\+::interrupt()}} function is executed. 
+
+Definition at line 90 of file G\+P\+I\+Olis.\+h.
+
+\mbox{\Hypertarget{class_g_p_i_olis_ae86ee364670cfe22722a5d9f612e9aa4}\label{class_g_p_i_olis_ae86ee364670cfe22722a5d9f612e9aa4}} 
+\index{GPIOlis@{GPIOlis}!flag@{flag}}
+\index{flag@{flag}!GPIOlis@{GPIOlis}}
+\doxysubsubsection{\texorpdfstring{flag}{flag}}
+{\footnotesize\ttfamily int G\+P\+I\+Olis\+::flag =1\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Denotes whether data can successfully be read using the wiringpi library. Within the \mbox{\hyperlink{class_g_p_i_olis_a65d2d0d0faf0d9edc0b31ddb51e88d2b}{G\+P\+I\+Olis\+::run()}} function, \char`\"{}flag\char`\"{} takes the value of 0 if an error is returned during execution of either of the wiring\+Pi\+Setup() or wiring\+Pi\+I\+S\+R() functions. For as long as the value of \char`\"{}flag\char`\"{} remains 1 after initialisation of the \mbox{\hyperlink{class_g_p_i_olis_a65d2d0d0faf0d9edc0b31ddb51e88d2b}{run()}} function, the callback in the \mbox{\hyperlink{class_g_p_i_olis_a65d2d0d0faf0d9edc0b31ddb51e88d2b}{G\+P\+I\+Olis\+::run()}} function is exdcutred. \char`\"{}flag\char`\"{} takes an initial value of 1 such that only an unsuccssful (false) execution of the wiring\+Pi functions results in a 0 value. 
+
+
+
+Definition at line 51 of file G\+P\+I\+Olis.\+h.
+

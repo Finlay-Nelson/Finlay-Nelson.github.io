@@ -1,0 +1,19 @@
+As a result of the C\+O\+V\+I\+D-\/19 outbreak and associated facility closures, testing of hardware components described here remains incomplete.
+
+Important features of the design\+:
+
+
+\begin{DoxyEnumerate}
+\item The differential amplifiers (I\+N\+A126) are used to obtain differential E\+MG signals.
+\begin{DoxyEnumerate}
+\item These input to the A\+D\+Cs (A\+D\+S1115).
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item The A\+D\+Cs utilise the I2C bus protocol.
+\end{DoxyEnumerate}
+\item A reference voltage circuit is used to provide a 1.\+67V reference to the amplifiers so as to offset the E\+MG signals and retain the negative component.
+\item A voltage devider and buffering amplifer (T\+L071) are used to generate the reference voltage.
+\item Standard decoupling capacitors are used for the A\+DC protection and clamping diodes are placed at the E\+MG inputs to short any large static volatages and protect the amplifiers.
+\end{DoxyEnumerate}
+
+{\bfseries{The A\+D\+S1115 has the potential to read 4 input channels. However, only two of these channels are utilised per components to maintain a high rate of sampling of each channel.}} 

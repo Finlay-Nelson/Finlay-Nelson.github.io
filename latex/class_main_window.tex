@@ -1,0 +1,561 @@
+\hypertarget{class_main_window}{}\doxysection{Main\+Window Class Reference}
+\label{class_main_window}\index{MainWindow@{MainWindow}}
+
+
+Contains the functions and variables relating to the G\+UI window.  
+
+
+
+
+{\ttfamily \#include $<$mainwindow.\+h$>$}
+
+
+
+Collaboration diagram for Main\+Window\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_main_window_a154bcffa7153d04371f0832193108731}{refresh\+Score}} (int count)
+\begin{DoxyCompactList}\small\item\em Refresh the game score. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_ad7e9c58ba60e7219d5348a4403b805d0}{Position}} ()
+\begin{DoxyCompactList}\small\item\em Calculates and refreshes the position of the paddles and ball (G\+UI refresh). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_aa4a61b706dc1ac7eafed167da9fb6cc3}{receive}} ()
+\begin{DoxyCompactList}\small\item\em Calculates the direction of the player paddle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_main_window_a2f1a7f4643b4afc4d573ea439eb19f14}{goal}} (int player)
+\begin{DoxyCompactList}\small\item\em Signal to update the game score. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a14f7506762b59058b9b2b04f754557e7}{rfsh}} ()
+\begin{DoxyCompactList}\small\item\em Signal to refresh the G\+UI. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_main_window_a33775e00c8964ce95697f48cd6f7509b}{Main\+Window}} (int scrnwidth, int scrnheight, \textbf{ Q\+Widget} $\ast$\textbf{ parent}=0)
+\begin{DoxyCompactList}\small\item\em Generates the UI and the associated feature. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}{$\sim$\+Main\+Window}} ()
+\begin{DoxyCompactList}\small\item\em G\+UI window destructor. \end{DoxyCompactList}\item 
+qreal \mbox{\hyperlink{class_main_window_ab191051a7cc5f050d2ef2cb09a7aee34}{Cpu\+P1\+Motion}} ()
+\begin{DoxyCompactList}\small\item\em Control of Paddle 1 by the C\+PU. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Ui\+::\+Main\+Window $\ast$ \mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}
+\item 
+int \mbox{\hyperlink{class_main_window_ab666d1d050708e71196c963e1f1b8c10}{i\+Score}}
+\begin{DoxyCompactList}\small\item\em A simple counter to monitor game score. \end{DoxyCompactList}\item 
+\textbf{ Q\+Graphics\+Scene} $\ast$ \mbox{\hyperlink{class_main_window_ac635937c03a5a7af86c1ad212c27a4eb}{i\+Scene}}
+\begin{DoxyCompactList}\small\item\em Provides a surface for managing a number of 2D items. \end{DoxyCompactList}\item 
+\textbf{ Q\+Graphics\+Rect\+Item} $\ast$ \mbox{\hyperlink{class_main_window_a9a2efe9e5fd1003f44c1d77da6fc2717}{i\+P2}}
+\begin{DoxyCompactList}\small\item\em The paddle for the Player to control with E\+MG input. \end{DoxyCompactList}\item 
+\textbf{ Q\+Graphics\+Rect\+Item} $\ast$ \mbox{\hyperlink{class_main_window_a32ae2ba16c3ef020cd23bc405faf6dc7}{i\+P1}}
+\begin{DoxyCompactList}\small\item\em The paddle for the C\+PU. \end{DoxyCompactList}\item 
+\textbf{ Q\+Graphics\+Ellipse\+Item} $\ast$ \mbox{\hyperlink{class_main_window_ab7d9e890e4ec111fe09e02e840748196}{i\+Ball}}
+\begin{DoxyCompactList}\small\item\em The Pong ball. \end{DoxyCompactList}\item 
+\textbf{ Q\+Timer} $\ast$ \mbox{\hyperlink{class_main_window_a6940eadea7e5a3348f27464404f50ec8}{i\+Timer}}
+\item 
+\textbf{ Q\+Elapsed\+Timer} \mbox{\hyperlink{class_main_window_a4db7d07416fcafa0d9e7a9291b64f842}{timer\+\_\+measure}}
+\item 
+\textbf{ Q\+PointF} \mbox{\hyperlink{class_main_window_afdf01f0c6fdea31c1461f7e44b7edbef}{i\+Ball\+Motion}}
+\begin{DoxyCompactList}\small\item\em The direction of motion of the ball. \end{DoxyCompactList}\item 
+qreal \mbox{\hyperlink{class_main_window_afc63533a2041d39ea4b6effe1cb71c7a}{i\+P2\+Motion}}
+\begin{DoxyCompactList}\small\item\em The direction of motion of paddle 2 in the X direction. \end{DoxyCompactList}\item 
+qreal \mbox{\hyperlink{class_main_window_a121ed236a48b89f3539f7fe59c9b4c37}{i\+P1\+Motion}}
+\begin{DoxyCompactList}\small\item\em The direction of motion of paddle 1 in the X direction. \end{DoxyCompactList}\item 
+qreal \mbox{\hyperlink{class_main_window_a05f46373bd9b7c48927c7caea6abdad8}{Xprime}}
+\begin{DoxyCompactList}\small\item\em The new X position of the ball. \end{DoxyCompactList}\item 
+qreal \mbox{\hyperlink{class_main_window_aa3243052c3f75d05e0695b4dda5c5201}{Yprime}}
+\begin{DoxyCompactList}\small\item\em The new Y position of the ball. \end{DoxyCompactList}\item 
+qreal \mbox{\hyperlink{class_main_window_ad4fc744b75c4d35e52fb59fa82aa3178}{P2\+Xprime}}
+\begin{DoxyCompactList}\small\item\em The new position of the Player paddle. \end{DoxyCompactList}\item 
+qreal \mbox{\hyperlink{class_main_window_a7266f47cf9c4b85b27b5fcc10101ff91}{P1\+Xprime}}
+\begin{DoxyCompactList}\small\item\em The new position of the C\+PU paddle. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_main_window_a725ff3891e2e0e053150bd685209b808}{rfshcount}} =0
+\begin{DoxyCompactList}\small\item\em Counter to monitor G\+UI refreshes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Q\+Udp\+Socket} $\ast$ \mbox{\hyperlink{class_main_window_ac5ecc9473d3a01f67cdf77de41f5057d}{rsver\+Socket}}
+\begin{DoxyCompactList}\small\item\em \textbf{ Q\+Udp\+Socket} with ip and port to receive U\+DP signal (E\+MG signal) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_main_window_a808fcf1fec443ec645b4377470fbdda8}{wdwidth}}
+\begin{DoxyCompactList}\small\item\em The G\+UI window width, partially smaller than the screen width. Used in defining the dimensions of the game boundary display. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_main_window_a4a5b3b6188f1a6b45c8ca2a18bf1f460}{wdheight}}
+\begin{DoxyCompactList}\small\item\em The G\+UI window height, partially smaller than the screen height. Used in defining the dimensions of the game boundary display. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_main_window_ac30d3076a0577dd1c4fb9ca96cd7192a}{total\+Height}} = 350
+\item 
+int \mbox{\hyperlink{class_main_window_a96ba56ac81ca9d1d972e107b0c0398be}{total\+Width}} = 320
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Contains the functions and variables relating to the G\+UI window. 
+
+Member functions
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{class_main_window_a33775e00c8964ce95697f48cd6f7509b}{Main\+Window()}}
+\begin{DoxyItemize}
+\item This function proudces the UI and it\textquotesingle{}s features using the \textbf{ Qt} toolkit. These features include the background, scoreboard, paddles, and ball. It allows visualisation of the pong game, as well as communicating with an Anrdoid host via the U\+DP.
+\end{DoxyItemize}
+\end{DoxyItemize}
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{class_main_window_ab191051a7cc5f050d2ef2cb09a7aee34}{Cpu\+P1\+Motion()}}
+\end{DoxyItemize}Slots
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{class_main_window_a154bcffa7153d04371f0832193108731}{refresh\+Score()}}
+\begin{DoxyItemize}
+\item Upon receiving the \mbox{\hyperlink{class_main_window_a2f1a7f4643b4afc4d573ea439eb19f14}{goal()}} signal, the slot executes to refresh the member \char`\"{}iscore\char`\"{}, updating according to the signal value. The lcd\+Number of the UI is used to display the \char`\"{}iscore\char`\"{}.
+\end{DoxyItemize}
+\end{DoxyItemize}
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{class_main_window_ad7e9c58ba60e7219d5348a4403b805d0}{Position()}}
+\item \mbox{\hyperlink{class_main_window_aa4a61b706dc1ac7eafed167da9fb6cc3}{receive()}}
+\end{DoxyItemize}Signals
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{class_main_window_a2f1a7f4643b4afc4d573ea439eb19f14}{goal()}}
+\end{DoxyItemize}
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{class_main_window_a14f7506762b59058b9b2b04f754557e7}{rfsh()}}
+\end{DoxyItemize}
+
+Definition at line 87 of file mainwindow.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_main_window_a33775e00c8964ce95697f48cd6f7509b}\label{class_main_window_a33775e00c8964ce95697f48cd6f7509b}} 
+\index{MainWindow@{MainWindow}!MainWindow@{MainWindow}}
+\index{MainWindow@{MainWindow}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{MainWindow()}{MainWindow()}}
+{\footnotesize\ttfamily Main\+Window\+::\+Main\+Window (\begin{DoxyParamCaption}\item[{int}]{scrnwidth,  }\item[{int}]{scrnheight,  }\item[{\textbf{ Q\+Widget} $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Generates the UI and the associated feature. 
+
+This function proudces the UI and it\textquotesingle{}s features using the \textbf{ Qt} toolkit. These features include the background, scoreboard, paddles, and ball. It allows visualisation of the pong game, as well as communicating with an Android host via the U\+DP.
+
+
+\begin{DoxyParams}{Parameters}
+{\em scrnwidth} & The width of the screen \\
+\hline
+{\em scrnheight} & The height of the screen \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 32 of file mainwindow.\+cpp.
+
+\mbox{\Hypertarget{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}\label{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}} 
+\index{MainWindow@{MainWindow}!````~MainWindow@{$\sim$MainWindow}}
+\index{````~MainWindow@{$\sim$MainWindow}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{$\sim$MainWindow()}{~MainWindow()}}
+{\footnotesize\ttfamily Main\+Window\+::$\sim$\+Main\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+G\+UI window destructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & Deletes the G\+UI window and frees up the associated memory. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 108 of file mainwindow.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_main_window_ab191051a7cc5f050d2ef2cb09a7aee34}\label{class_main_window_ab191051a7cc5f050d2ef2cb09a7aee34}} 
+\index{MainWindow@{MainWindow}!CpuP1Motion@{CpuP1Motion}}
+\index{CpuP1Motion@{CpuP1Motion}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{CpuP1Motion()}{CpuP1Motion()}}
+{\footnotesize\ttfamily qreal Main\+Window\+::\+Cpu\+P1\+Motion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Control of Paddle 1 by the C\+PU. 
+
+Details 
+
+Definition at line 199 of file mainwindow.\+cpp.
+
+\mbox{\Hypertarget{class_main_window_a2f1a7f4643b4afc4d573ea439eb19f14}\label{class_main_window_a2f1a7f4643b4afc4d573ea439eb19f14}} 
+\index{MainWindow@{MainWindow}!goal@{goal}}
+\index{goal@{goal}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{goal}{goal}}
+{\footnotesize\ttfamily void Main\+Window\+::goal (\begin{DoxyParamCaption}\item[{int}]{player }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Signal to update the game score. 
+
+Connects to the \mbox{\hyperlink{class_main_window_a154bcffa7153d04371f0832193108731}{refresh\+Score()}} slot, and emitted by the \mbox{\hyperlink{class_main_window_ad7e9c58ba60e7219d5348a4403b805d0}{Position()}} slot when the ball hits a boundary instead of a paddle. The value taken is +1 for hitting the bottom wall and -\/1 for hitting the top wall and is given by the sign of \char`\"{}\+Yprime\char`\"{}. \mbox{\Hypertarget{class_main_window_ad7e9c58ba60e7219d5348a4403b805d0}\label{class_main_window_ad7e9c58ba60e7219d5348a4403b805d0}} 
+\index{MainWindow@{MainWindow}!Position@{Position}}
+\index{Position@{Position}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{Position}{Position}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Calculates and refreshes the position of the paddles and ball (G\+UI refresh). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & Executed when receiving the \mbox{\hyperlink{class_main_window_a14f7506762b59058b9b2b04f754557e7}{rfsh()}} signal, this slot refreshes the G\+UI, calculating and updating the positions and values of G\+UI objects. Emits the \mbox{\hyperlink{class_main_window_a2f1a7f4643b4afc4d573ea439eb19f14}{goal()}} signal after the ball hits a boundary. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 131 of file mainwindow.\+cpp.
+
+\mbox{\Hypertarget{class_main_window_aa4a61b706dc1ac7eafed167da9fb6cc3}\label{class_main_window_aa4a61b706dc1ac7eafed167da9fb6cc3}} 
+\index{MainWindow@{MainWindow}!receive@{receive}}
+\index{receive@{receive}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{receive}{receive}}
+{\footnotesize\ttfamily void Main\+Window\+::receive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Calculates the direction of the player paddle. 
+
+Receives and processes the E\+MG signal through the U\+DP.
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & Executed when receiving the \char`\"{}readyread()\char`\"{} signal for the \textbf{ Q\+Udp\+Socket} \char`\"{}rsversc\char`\"{}. This slot calculates the direction of the player paddle based on input E\+MG signal.\\
+\hline
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+$<$ Store the number of channels
+
+$<$ Difference between output values to control the position of the user controlled paddle
+
+Definition at line 232 of file mainwindow.\+cpp.
+
+\mbox{\Hypertarget{class_main_window_a154bcffa7153d04371f0832193108731}\label{class_main_window_a154bcffa7153d04371f0832193108731}} 
+\index{MainWindow@{MainWindow}!refreshScore@{refreshScore}}
+\index{refreshScore@{refreshScore}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{refreshScore}{refreshScore}}
+{\footnotesize\ttfamily void Main\+Window\+::refresh\+Score (\begin{DoxyParamCaption}\item[{int}]{count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Refresh the game score. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em count} & A score increment (+1 or -\/1)\\
+\hline
+\end{DoxyParams}
+Upon receiving the \mbox{\hyperlink{class_main_window_a2f1a7f4643b4afc4d573ea439eb19f14}{goal()}} signal, the slot executes to refresh the member \char`\"{}iscore\char`\"{}, updating according to the signal value. The lcd\+Number of the UI is used to display the \char`\"{}iscore\char`\"{}. 
+
+Definition at line 121 of file mainwindow.\+cpp.
+
+\mbox{\Hypertarget{class_main_window_a14f7506762b59058b9b2b04f754557e7}\label{class_main_window_a14f7506762b59058b9b2b04f754557e7}} 
+\index{MainWindow@{MainWindow}!rfsh@{rfsh}}
+\index{rfsh@{rfsh}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{rfsh}{rfsh}}
+{\footnotesize\ttfamily void Main\+Window\+::rfsh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Signal to refresh the G\+UI. 
+
+Connects to the \mbox{\hyperlink{class_main_window_ad7e9c58ba60e7219d5348a4403b805d0}{Position()}} slot, and emitted by the \mbox{\hyperlink{class_main_window_aa4a61b706dc1ac7eafed167da9fb6cc3}{receive()}} slot if \char`\"{}rfshcount\char`\"{} $>$ 5 samples. With a sampling frequency of 860Hz as used in the recommended configuration of the A\+D\+S1115, the delay equates to 5.\+8ms. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_main_window_ab7d9e890e4ec111fe09e02e840748196}\label{class_main_window_ab7d9e890e4ec111fe09e02e840748196}} 
+\index{MainWindow@{MainWindow}!iBall@{iBall}}
+\index{iBall@{iBall}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{iBall}{iBall}}
+{\footnotesize\ttfamily \textbf{ Q\+Graphics\+Ellipse\+Item}$\ast$ Main\+Window\+::i\+Ball}
+
+
+
+The Pong ball. 
+
+i\+Ball is an instance of the class \textbf{ Q\+Graphics\+Ellipse\+Item} which generates an ellipse item to add to a \textbf{ Q\+Graphics\+Scene}. This acts as the ball for the game.
+
+set\+Brush() sets the item\textquotesingle{}s brush to \textquotesingle{}brush\textquotesingle{}, which is used to fill the item. The brush can then be set using \textbf{ Q\+Brush}
+
+move\+By() is inherited from \textbf{ Q\+Graphics\+Item}, and moves the item by dx points horizontally, and dy points vertically. 
+
+Definition at line 158 of file mainwindow.\+h.
+
+\mbox{\Hypertarget{class_main_window_afdf01f0c6fdea31c1461f7e44b7edbef}\label{class_main_window_afdf01f0c6fdea31c1461f7e44b7edbef}} 
+\index{MainWindow@{MainWindow}!iBallMotion@{iBallMotion}}
+\index{iBallMotion@{iBallMotion}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{iBallMotion}{iBallMotion}}
+{\footnotesize\ttfamily \textbf{ Q\+PointF} Main\+Window\+::i\+Ball\+Motion}
+
+
+
+The direction of motion of the ball. 
+
+A point is specified by an X coordinate and a Y coordinate which can be accessed using the X() and Y() functions. The coordinates of the point are specified using floating point numbers for accuracy. The is\+Null() function returns true if both X and Y values are set to 0.\+0. The coordinates can be set using the set\+X() and set\+Y() functions. 
+
+Definition at line 173 of file mainwindow.\+h.
+
+\mbox{\Hypertarget{class_main_window_a32ae2ba16c3ef020cd23bc405faf6dc7}\label{class_main_window_a32ae2ba16c3ef020cd23bc405faf6dc7}} 
+\index{MainWindow@{MainWindow}!iP1@{iP1}}
+\index{iP1@{iP1}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{iP1}{iP1}}
+{\footnotesize\ttfamily \textbf{ Q\+Graphics\+Rect\+Item}$\ast$ Main\+Window\+::i\+P1}
+
+
+
+The paddle for the C\+PU. 
+
+i\+P1 is a instance of the Q\+Graphics\+Rec\+Item class. \textbf{ Q\+Graphics\+Rect\+Item} generates a rectangular item to add to a \textbf{ Q\+Graphics\+Scene}. \textbf{ Q\+Graphics\+Rect\+Item} is constructed with a default ractangle, and the given \char`\"{}width\char`\"{} and \char`\"{}height\char`\"{}. This is the paddle for the C\+PU. 
+
+Definition at line 147 of file mainwindow.\+h.
+
+\mbox{\Hypertarget{class_main_window_a121ed236a48b89f3539f7fe59c9b4c37}\label{class_main_window_a121ed236a48b89f3539f7fe59c9b4c37}} 
+\index{MainWindow@{MainWindow}!iP1Motion@{iP1Motion}}
+\index{iP1Motion@{iP1Motion}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{iP1Motion}{iP1Motion}}
+{\footnotesize\ttfamily qreal Main\+Window\+::i\+P1\+Motion}
+
+
+
+The direction of motion of paddle 1 in the X direction. 
+
+
+
+Definition at line 179 of file mainwindow.\+h.
+
+\mbox{\Hypertarget{class_main_window_a9a2efe9e5fd1003f44c1d77da6fc2717}\label{class_main_window_a9a2efe9e5fd1003f44c1d77da6fc2717}} 
+\index{MainWindow@{MainWindow}!iP2@{iP2}}
+\index{iP2@{iP2}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{iP2}{iP2}}
+{\footnotesize\ttfamily \textbf{ Q\+Graphics\+Rect\+Item}$\ast$ Main\+Window\+::i\+P2}
+
+
+
+The paddle for the Player to control with E\+MG input. 
+
+i\+P2 is an instance of the Q\+Graphics\+Rec\+Item class. \textbf{ Q\+Graphics\+Rect\+Item} generates a rectangular item to add to a \textbf{ Q\+Graphics\+Scene}. This is the paddle for the Player to control with E\+MG input. 
+
+Definition at line 140 of file mainwindow.\+h.
+
+\mbox{\Hypertarget{class_main_window_afc63533a2041d39ea4b6effe1cb71c7a}\label{class_main_window_afc63533a2041d39ea4b6effe1cb71c7a}} 
+\index{MainWindow@{MainWindow}!iP2Motion@{iP2Motion}}
+\index{iP2Motion@{iP2Motion}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{iP2Motion}{iP2Motion}}
+{\footnotesize\ttfamily qreal Main\+Window\+::i\+P2\+Motion}
+
+
+
+The direction of motion of paddle 2 in the X direction. 
+
+
+
+Definition at line 177 of file mainwindow.\+h.
+
+\mbox{\Hypertarget{class_main_window_ac635937c03a5a7af86c1ad212c27a4eb}\label{class_main_window_ac635937c03a5a7af86c1ad212c27a4eb}} 
+\index{MainWindow@{MainWindow}!iScene@{iScene}}
+\index{iScene@{iScene}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{iScene}{iScene}}
+{\footnotesize\ttfamily \textbf{ Q\+Graphics\+Scene}$\ast$ Main\+Window\+::i\+Scene}
+
+
+
+Provides a surface for managing a number of 2D items. 
+
+The class serves as a container for Q\+Graphics\+Items. It is used together with \textbf{ Q\+Graphics\+View} for visualising graphical items such as lines and rectangles on a 2D surface.
+
+Items can be added to the \textbf{ Q\+Graphics\+Scene} by calling add\+Item() and returns a pointer to the newly added item. The \textbf{ width()} and \textbf{ height()} functions can be used to declare the position of a Q\+Item. \textbf{ Q\+Graphics\+View} can then be used to visualize the scene.
+
+The scene rectangle defines the extent of the scene. It is primarily used by \textbf{ Q\+Graphics\+View} to determine the view\textquotesingle{}s default scrollable area, and by \textbf{ Q\+Graphics\+Scene} to manage item indexing. set\+Scene\+Rect(qreal x, qreal y, qreal w, qreal h). 
+
+Definition at line 133 of file mainwindow.\+h.
+
+\mbox{\Hypertarget{class_main_window_ab666d1d050708e71196c963e1f1b8c10}\label{class_main_window_ab666d1d050708e71196c963e1f1b8c10}} 
+\index{MainWindow@{MainWindow}!iScore@{iScore}}
+\index{iScore@{iScore}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{iScore}{iScore}}
+{\footnotesize\ttfamily int Main\+Window\+::i\+Score}
+
+
+
+A simple counter to monitor game score. 
+
+When the E\+MG controlled paddle wins a point, the value of iscore increments 
+
+Definition at line 122 of file mainwindow.\+h.
+
+\mbox{\Hypertarget{class_main_window_a6940eadea7e5a3348f27464404f50ec8}\label{class_main_window_a6940eadea7e5a3348f27464404f50ec8}} 
+\index{MainWindow@{MainWindow}!iTimer@{iTimer}}
+\index{iTimer@{iTimer}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{iTimer}{iTimer}}
+{\footnotesize\ttfamily \textbf{ Q\+Timer}$\ast$ Main\+Window\+::i\+Timer}
+
+
+
+Definition at line 162 of file mainwindow.\+h.
+
+\mbox{\Hypertarget{class_main_window_a7266f47cf9c4b85b27b5fcc10101ff91}\label{class_main_window_a7266f47cf9c4b85b27b5fcc10101ff91}} 
+\index{MainWindow@{MainWindow}!P1Xprime@{P1Xprime}}
+\index{P1Xprime@{P1Xprime}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{P1Xprime}{P1Xprime}}
+{\footnotesize\ttfamily qreal Main\+Window\+::\+P1\+Xprime}
+
+
+
+The new position of the C\+PU paddle. 
+
+
+
+Definition at line 187 of file mainwindow.\+h.
+
+\mbox{\Hypertarget{class_main_window_ad4fc744b75c4d35e52fb59fa82aa3178}\label{class_main_window_ad4fc744b75c4d35e52fb59fa82aa3178}} 
+\index{MainWindow@{MainWindow}!P2Xprime@{P2Xprime}}
+\index{P2Xprime@{P2Xprime}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{P2Xprime}{P2Xprime}}
+{\footnotesize\ttfamily qreal Main\+Window\+::\+P2\+Xprime}
+
+
+
+The new position of the Player paddle. 
+
+
+
+Definition at line 185 of file mainwindow.\+h.
+
+\mbox{\Hypertarget{class_main_window_a725ff3891e2e0e053150bd685209b808}\label{class_main_window_a725ff3891e2e0e053150bd685209b808}} 
+\index{MainWindow@{MainWindow}!rfshcount@{rfshcount}}
+\index{rfshcount@{rfshcount}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{rfshcount}{rfshcount}}
+{\footnotesize\ttfamily int Main\+Window\+::rfshcount =0}
+
+
+
+Counter to monitor G\+UI refreshes. 
+
+Unlike Linux, the Android system uses a polling time to control the refresh of its G\+UI. It is more prudent to use signal counting instead of a C++ timer for an Android system. Used in the \mbox{\hyperlink{class_main_window_aa4a61b706dc1ac7eafed167da9fb6cc3}{Main\+Window\+::receive()}} function, \char`\"{}rfshcount\char`\"{} increments to monnitor the number of G\+UI refreshes that have occurred. 
+
+Definition at line 201 of file mainwindow.\+h.
+
+\mbox{\Hypertarget{class_main_window_ac5ecc9473d3a01f67cdf77de41f5057d}\label{class_main_window_ac5ecc9473d3a01f67cdf77de41f5057d}} 
+\index{MainWindow@{MainWindow}!rsverSocket@{rsverSocket}}
+\index{rsverSocket@{rsverSocket}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{rsverSocket}{rsverSocket}}
+{\footnotesize\ttfamily \textbf{ Q\+Udp\+Socket}$\ast$ Main\+Window\+::rsver\+Socket\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\textbf{ Q\+Udp\+Socket} with ip and port to receive U\+DP signal (E\+MG signal) 
+
+
+
+Definition at line 275 of file mainwindow.\+h.
+
+\mbox{\Hypertarget{class_main_window_a4db7d07416fcafa0d9e7a9291b64f842}\label{class_main_window_a4db7d07416fcafa0d9e7a9291b64f842}} 
+\index{MainWindow@{MainWindow}!timer\_measure@{timer\_measure}}
+\index{timer\_measure@{timer\_measure}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{timer\_measure}{timer\_measure}}
+{\footnotesize\ttfamily \textbf{ Q\+Elapsed\+Timer} Main\+Window\+::timer\+\_\+measure}
+
+
+
+Definition at line 163 of file mainwindow.\+h.
+
+\mbox{\Hypertarget{class_main_window_ac30d3076a0577dd1c4fb9ca96cd7192a}\label{class_main_window_ac30d3076a0577dd1c4fb9ca96cd7192a}} 
+\index{MainWindow@{MainWindow}!totalHeight@{totalHeight}}
+\index{totalHeight@{totalHeight}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{totalHeight}{totalHeight}}
+{\footnotesize\ttfamily int Main\+Window\+::total\+Height = 350\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 279 of file mainwindow.\+h.
+
+\mbox{\Hypertarget{class_main_window_a96ba56ac81ca9d1d972e107b0c0398be}\label{class_main_window_a96ba56ac81ca9d1d972e107b0c0398be}} 
+\index{MainWindow@{MainWindow}!totalWidth@{totalWidth}}
+\index{totalWidth@{totalWidth}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{totalWidth}{totalWidth}}
+{\footnotesize\ttfamily int Main\+Window\+::total\+Width = 320\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 280 of file mainwindow.\+h.
+
+\mbox{\Hypertarget{class_main_window_a35466a70ed47252a0191168126a352a5}\label{class_main_window_a35466a70ed47252a0191168126a352a5}} 
+\index{MainWindow@{MainWindow}!ui@{ui}}
+\index{ui@{ui}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{ui}{ui}}
+{\footnotesize\ttfamily Ui\+::\+Main\+Window$\ast$ Main\+Window\+::ui}
+
+
+
+Definition at line 114 of file mainwindow.\+h.
+
+\mbox{\Hypertarget{class_main_window_a4a5b3b6188f1a6b45c8ca2a18bf1f460}\label{class_main_window_a4a5b3b6188f1a6b45c8ca2a18bf1f460}} 
+\index{MainWindow@{MainWindow}!wdheight@{wdheight}}
+\index{wdheight@{wdheight}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{wdheight}{wdheight}}
+{\footnotesize\ttfamily int Main\+Window\+::wdheight\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The G\+UI window height, partially smaller than the screen height. Used in defining the dimensions of the game boundary display. 
+
+
+
+Definition at line 278 of file mainwindow.\+h.
+
+\mbox{\Hypertarget{class_main_window_a808fcf1fec443ec645b4377470fbdda8}\label{class_main_window_a808fcf1fec443ec645b4377470fbdda8}} 
+\index{MainWindow@{MainWindow}!wdwidth@{wdwidth}}
+\index{wdwidth@{wdwidth}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{wdwidth}{wdwidth}}
+{\footnotesize\ttfamily int Main\+Window\+::wdwidth\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The G\+UI window width, partially smaller than the screen width. Used in defining the dimensions of the game boundary display. 
+
+
+
+Definition at line 277 of file mainwindow.\+h.
+
+\mbox{\Hypertarget{class_main_window_a05f46373bd9b7c48927c7caea6abdad8}\label{class_main_window_a05f46373bd9b7c48927c7caea6abdad8}} 
+\index{MainWindow@{MainWindow}!Xprime@{Xprime}}
+\index{Xprime@{Xprime}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{Xprime}{Xprime}}
+{\footnotesize\ttfamily qreal Main\+Window\+::\+Xprime}
+
+
+
+The new X position of the ball. 
+
+
+
+Definition at line 181 of file mainwindow.\+h.
+
+\mbox{\Hypertarget{class_main_window_aa3243052c3f75d05e0695b4dda5c5201}\label{class_main_window_aa3243052c3f75d05e0695b4dda5c5201}} 
+\index{MainWindow@{MainWindow}!Yprime@{Yprime}}
+\index{Yprime@{Yprime}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{Yprime}{Yprime}}
+{\footnotesize\ttfamily qreal Main\+Window\+::\+Yprime}
+
+
+
+The new Y position of the ball. 
+
+
+
+Definition at line 183 of file mainwindow.\+h.
+

@@ -1,0 +1,66 @@
+\hypertarget{group__group3}{}\doxysection{A\+D\+S1115\+: O\+P\+E\+R\+A\+T\+I\+O\+N\+AL S\+T\+A\+T\+US}
+\label{group__group3}\index{ADS1115: OPERATIONAL STATUS@{ADS1115: OPERATIONAL STATUS}}
+
+
+A\+D\+S1115 Bit\mbox{[}15\mbox{]}.  
+
+
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__group3_ga13f4550d061699b1cf4bd49520fc4a9c}{A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+O\+S\+\_\+\+S\+I\+N\+G\+LE}}~(0x8000)
+\begin{DoxyCompactList}\small\item\em Write\+: Set to start a single-\/conversion. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group3_gaab6ae96215401637a9435c030e1919a9}{A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+O\+S\+\_\+\+B\+U\+SY}}~(0x0000)
+\begin{DoxyCompactList}\small\item\em Read\+: 0 when conversion is in progress. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group3_ga7744f0dffe0c80b9052a31b1f1d4d4d3}{A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+O\+S\+\_\+\+N\+O\+T\+B\+U\+SY}}~(0x8000)
+\begin{DoxyCompactList}\small\item\em Read\+: 1 when device is not performing a conversion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A\+D\+S1115 Bit\mbox{[}15\mbox{]}. 
+
+This bit determines the operational status of the device. It can only be written when in power-\/down mode 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__group3_gaab6ae96215401637a9435c030e1919a9}\label{group__group3_gaab6ae96215401637a9435c030e1919a9}} 
+\index{ADS1115: OPERATIONAL STATUS@{ADS1115: OPERATIONAL STATUS}!ADS1015\_REG\_CONFIG\_OS\_BUSY@{ADS1015\_REG\_CONFIG\_OS\_BUSY}}
+\index{ADS1015\_REG\_CONFIG\_OS\_BUSY@{ADS1015\_REG\_CONFIG\_OS\_BUSY}!ADS1115: OPERATIONAL STATUS@{ADS1115: OPERATIONAL STATUS}}
+\doxysubsubsection{\texorpdfstring{ADS1015\_REG\_CONFIG\_OS\_BUSY}{ADS1015\_REG\_CONFIG\_OS\_BUSY}}
+{\footnotesize\ttfamily \#define A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+O\+S\+\_\+\+B\+U\+SY~(0x0000)}
+
+
+
+Read\+: 0 when conversion is in progress. 
+
+
+
+Definition at line 163 of file ads1115.\+h.
+
+\mbox{\Hypertarget{group__group3_ga7744f0dffe0c80b9052a31b1f1d4d4d3}\label{group__group3_ga7744f0dffe0c80b9052a31b1f1d4d4d3}} 
+\index{ADS1115: OPERATIONAL STATUS@{ADS1115: OPERATIONAL STATUS}!ADS1015\_REG\_CONFIG\_OS\_NOTBUSY@{ADS1015\_REG\_CONFIG\_OS\_NOTBUSY}}
+\index{ADS1015\_REG\_CONFIG\_OS\_NOTBUSY@{ADS1015\_REG\_CONFIG\_OS\_NOTBUSY}!ADS1115: OPERATIONAL STATUS@{ADS1115: OPERATIONAL STATUS}}
+\doxysubsubsection{\texorpdfstring{ADS1015\_REG\_CONFIG\_OS\_NOTBUSY}{ADS1015\_REG\_CONFIG\_OS\_NOTBUSY}}
+{\footnotesize\ttfamily \#define A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+O\+S\+\_\+\+N\+O\+T\+B\+U\+SY~(0x8000)}
+
+
+
+Read\+: 1 when device is not performing a conversion. 
+
+
+
+Definition at line 164 of file ads1115.\+h.
+
+\mbox{\Hypertarget{group__group3_ga13f4550d061699b1cf4bd49520fc4a9c}\label{group__group3_ga13f4550d061699b1cf4bd49520fc4a9c}} 
+\index{ADS1115: OPERATIONAL STATUS@{ADS1115: OPERATIONAL STATUS}!ADS1015\_REG\_CONFIG\_OS\_SINGLE@{ADS1015\_REG\_CONFIG\_OS\_SINGLE}}
+\index{ADS1015\_REG\_CONFIG\_OS\_SINGLE@{ADS1015\_REG\_CONFIG\_OS\_SINGLE}!ADS1115: OPERATIONAL STATUS@{ADS1115: OPERATIONAL STATUS}}
+\doxysubsubsection{\texorpdfstring{ADS1015\_REG\_CONFIG\_OS\_SINGLE}{ADS1015\_REG\_CONFIG\_OS\_SINGLE}}
+{\footnotesize\ttfamily \#define A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+O\+S\+\_\+\+S\+I\+N\+G\+LE~(0x8000)}
+
+
+
+Write\+: Set to start a single-\/conversion. 
+
+
+
+Definition at line 162 of file ads1115.\+h.
+

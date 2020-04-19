@@ -1,0 +1,309 @@
+\indexentry{ADS1115: ADDRESS PINS@{ADS1115: ADDRESS PINS}|hyperpage}{11}
+\indexentry{ADS1115: ADDRESS PINS@{ADS1115: ADDRESS PINS}!ADS1115\_ADDRESS\_GND@{ADS1115\_ADDRESS\_GND}|hyperpage}{12}
+\indexentry{ADS1115\_ADDRESS\_GND@{ADS1115\_ADDRESS\_GND}!ADS1115: ADDRESS PINS@{ADS1115: ADDRESS PINS}|hyperpage}{12}
+\indexentry{ADS1115: ADDRESS PINS@{ADS1115: ADDRESS PINS}!ADS1115\_ADDRESS\_SCL@{ADS1115\_ADDRESS\_SCL}|hyperpage}{12}
+\indexentry{ADS1115\_ADDRESS\_SCL@{ADS1115\_ADDRESS\_SCL}!ADS1115: ADDRESS PINS@{ADS1115: ADDRESS PINS}|hyperpage}{12}
+\indexentry{ADS1115: ADDRESS PINS@{ADS1115: ADDRESS PINS}!ADS1115\_ADDRESS\_SDA@{ADS1115\_ADDRESS\_SDA}|hyperpage}{12}
+\indexentry{ADS1115\_ADDRESS\_SDA@{ADS1115\_ADDRESS\_SDA}!ADS1115: ADDRESS PINS@{ADS1115: ADDRESS PINS}|hyperpage}{12}
+\indexentry{ADS1115: ADDRESS PINS@{ADS1115: ADDRESS PINS}!ADS1115\_ADDRESS\_VDD@{ADS1115\_ADDRESS\_VDD}|hyperpage}{12}
+\indexentry{ADS1115\_ADDRESS\_VDD@{ADS1115\_ADDRESS\_VDD}!ADS1115: ADDRESS PINS@{ADS1115: ADDRESS PINS}|hyperpage}{12}
+\indexentry{ADS1115: POINTER REGISTER@{ADS1115: POINTER REGISTER}|hyperpage}{13}
+\indexentry{ADS1115: POINTER REGISTER@{ADS1115: POINTER REGISTER}!ADS1115\_REG\_POINTER\_CONFIG@{ADS1115\_REG\_POINTER\_CONFIG}|hyperpage}{13}
+\indexentry{ADS1115\_REG\_POINTER\_CONFIG@{ADS1115\_REG\_POINTER\_CONFIG}!ADS1115: POINTER REGISTER@{ADS1115: POINTER REGISTER}|hyperpage}{13}
+\indexentry{ADS1115: POINTER REGISTER@{ADS1115: POINTER REGISTER}!ADS1115\_REG\_POINTER\_CONVERT@{ADS1115\_REG\_POINTER\_CONVERT}|hyperpage}{13}
+\indexentry{ADS1115\_REG\_POINTER\_CONVERT@{ADS1115\_REG\_POINTER\_CONVERT}!ADS1115: POINTER REGISTER@{ADS1115: POINTER REGISTER}|hyperpage}{13}
+\indexentry{ADS1115: POINTER REGISTER@{ADS1115: POINTER REGISTER}!ADS1115\_REG\_POINTER\_HITHRESH@{ADS1115\_REG\_POINTER\_HITHRESH}|hyperpage}{14}
+\indexentry{ADS1115\_REG\_POINTER\_HITHRESH@{ADS1115\_REG\_POINTER\_HITHRESH}!ADS1115: POINTER REGISTER@{ADS1115: POINTER REGISTER}|hyperpage}{14}
+\indexentry{ADS1115: POINTER REGISTER@{ADS1115: POINTER REGISTER}!ADS1115\_REG\_POINTER\_LOWTHRESH@{ADS1115\_REG\_POINTER\_LOWTHRESH}|hyperpage}{14}
+\indexentry{ADS1115\_REG\_POINTER\_LOWTHRESH@{ADS1115\_REG\_POINTER\_LOWTHRESH}!ADS1115: POINTER REGISTER@{ADS1115: POINTER REGISTER}|hyperpage}{14}
+\indexentry{ADS1115: OPERATIONAL STATUS@{ADS1115: OPERATIONAL STATUS}|hyperpage}{15}
+\indexentry{ADS1115: OPERATIONAL STATUS@{ADS1115: OPERATIONAL STATUS}!ADS1115\_REG\_CONFIG\_OS\_BUSY@{ADS1115\_REG\_CONFIG\_OS\_BUSY}|hyperpage}{15}
+\indexentry{ADS1115\_REG\_CONFIG\_OS\_BUSY@{ADS1115\_REG\_CONFIG\_OS\_BUSY}!ADS1115: OPERATIONAL STATUS@{ADS1115: OPERATIONAL STATUS}|hyperpage}{15}
+\indexentry{ADS1115: OPERATIONAL STATUS@{ADS1115: OPERATIONAL STATUS}!ADS1115\_REG\_CONFIG\_OS\_NOTBUSY@{ADS1115\_REG\_CONFIG\_OS\_NOTBUSY}|hyperpage}{15}
+\indexentry{ADS1115\_REG\_CONFIG\_OS\_NOTBUSY@{ADS1115\_REG\_CONFIG\_OS\_NOTBUSY}!ADS1115: OPERATIONAL STATUS@{ADS1115: OPERATIONAL STATUS}|hyperpage}{15}
+\indexentry{ADS1115: OPERATIONAL STATUS@{ADS1115: OPERATIONAL STATUS}!ADS1115\_REG\_CONFIG\_OS\_SINGLE@{ADS1115\_REG\_CONFIG\_OS\_SINGLE}|hyperpage}{15}
+\indexentry{ADS1115\_REG\_CONFIG\_OS\_SINGLE@{ADS1115\_REG\_CONFIG\_OS\_SINGLE}!ADS1115: OPERATIONAL STATUS@{ADS1115: OPERATIONAL STATUS}|hyperpage}{15}
+\indexentry{ADS1115: INPUT MULTIPLEXER CONFIGURATION@{ADS1115: INPUT MULTIPLEXER CONFIGURATION}|hyperpage}{16}
+\indexentry{ADS1115: INPUT MULTIPLEXER CONFIGURATION@{ADS1115: INPUT MULTIPLEXER CONFIGURATION}!ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P0\_N1@{ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P0\_N1}|hyperpage}{17}
+\indexentry{ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P0\_N1@{ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P0\_N1}!ADS1115: INPUT MULTIPLEXER CONFIGURATION@{ADS1115: INPUT MULTIPLEXER CONFIGURATION}|hyperpage}{17}
+\indexentry{ADS1115: INPUT MULTIPLEXER CONFIGURATION@{ADS1115: INPUT MULTIPLEXER CONFIGURATION}!ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P0\_N3@{ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P0\_N3}|hyperpage}{17}
+\indexentry{ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P0\_N3@{ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P0\_N3}!ADS1115: INPUT MULTIPLEXER CONFIGURATION@{ADS1115: INPUT MULTIPLEXER CONFIGURATION}|hyperpage}{17}
+\indexentry{ADS1115: INPUT MULTIPLEXER CONFIGURATION@{ADS1115: INPUT MULTIPLEXER CONFIGURATION}!ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P1\_N3@{ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P1\_N3}|hyperpage}{17}
+\indexentry{ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P1\_N3@{ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P1\_N3}!ADS1115: INPUT MULTIPLEXER CONFIGURATION@{ADS1115: INPUT MULTIPLEXER CONFIGURATION}|hyperpage}{17}
+\indexentry{ADS1115: INPUT MULTIPLEXER CONFIGURATION@{ADS1115: INPUT MULTIPLEXER CONFIGURATION}!ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P2\_N3@{ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P2\_N3}|hyperpage}{17}
+\indexentry{ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P2\_N3@{ADS1115\_REG\_CONFIG\_MUX\_DIFF\_P2\_N3}!ADS1115: INPUT MULTIPLEXER CONFIGURATION@{ADS1115: INPUT MULTIPLEXER CONFIGURATION}|hyperpage}{17}
+\indexentry{ADS1115: INPUT MULTIPLEXER CONFIGURATION@{ADS1115: INPUT MULTIPLEXER CONFIGURATION}!ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P0\_NG@{ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P0\_NG}|hyperpage}{17}
+\indexentry{ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P0\_NG@{ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P0\_NG}!ADS1115: INPUT MULTIPLEXER CONFIGURATION@{ADS1115: INPUT MULTIPLEXER CONFIGURATION}|hyperpage}{17}
+\indexentry{ADS1115: INPUT MULTIPLEXER CONFIGURATION@{ADS1115: INPUT MULTIPLEXER CONFIGURATION}!ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P1\_NG@{ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P1\_NG}|hyperpage}{17}
+\indexentry{ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P1\_NG@{ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P1\_NG}!ADS1115: INPUT MULTIPLEXER CONFIGURATION@{ADS1115: INPUT MULTIPLEXER CONFIGURATION}|hyperpage}{17}
+\indexentry{ADS1115: INPUT MULTIPLEXER CONFIGURATION@{ADS1115: INPUT MULTIPLEXER CONFIGURATION}!ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P2\_NG@{ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P2\_NG}|hyperpage}{18}
+\indexentry{ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P2\_NG@{ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P2\_NG}!ADS1115: INPUT MULTIPLEXER CONFIGURATION@{ADS1115: INPUT MULTIPLEXER CONFIGURATION}|hyperpage}{18}
+\indexentry{ADS1115: INPUT MULTIPLEXER CONFIGURATION@{ADS1115: INPUT MULTIPLEXER CONFIGURATION}!ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P3\_NG@{ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P3\_NG}|hyperpage}{18}
+\indexentry{ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P3\_NG@{ADS1115\_REG\_CONFIG\_MUX\_SINGLE\_P3\_NG}!ADS1115: INPUT MULTIPLEXER CONFIGURATION@{ADS1115: INPUT MULTIPLEXER CONFIGURATION}|hyperpage}{18}
+\indexentry{ADS1115: PROGRAMMABLE GAIN AMPLIFIER CONFIGURATION@{ADS1115: PROGRAMMABLE GAIN AMPLIFIER CONFIGURATION}|hyperpage}{19}
+\indexentry{ADS1115: PROGRAMMABLE GAIN AMPLIFIER CONFIGURATION@{ADS1115: PROGRAMMABLE GAIN AMPLIFIER CONFIGURATION}!ADS1115\_REG\_CONFIG\_PGA\_0\_256V@{ADS1115\_REG\_CONFIG\_PGA\_0\_256V}|hyperpage}{19}
+\indexentry{ADS1115\_REG\_CONFIG\_PGA\_0\_256V@{ADS1115\_REG\_CONFIG\_PGA\_0\_256V}!ADS1115: PROGRAMMABLE GAIN AMPLIFIER CONFIGURATION@{ADS1115: PROGRAMMABLE GAIN AMPLIFIER CONFIGURATION}|hyperpage}{19}
+\indexentry{ADS1115: PROGRAMMABLE GAIN AMPLIFIER CONFIGURATION@{ADS1115: PROGRAMMABLE GAIN AMPLIFIER CONFIGURATION}!ADS1115\_REG\_CONFIG\_PGA\_0\_512V@{ADS1115\_REG\_CONFIG\_PGA\_0\_512V}|hyperpage}{19}
+\indexentry{ADS1115\_REG\_CONFIG\_PGA\_0\_512V@{ADS1115\_REG\_CONFIG\_PGA\_0\_512V}!ADS1115: PROGRAMMABLE GAIN AMPLIFIER CONFIGURATION@{ADS1115: PROGRAMMABLE GAIN AMPLIFIER CONFIGURATION}|hyperpage}{19}
+\indexentry{ADS1115: PROGRAMMABLE GAIN AMPLIFIER CONFIGURATION@{ADS1115: PROGRAMMABLE GAIN AMPLIFIER CONFIGURATION}!ADS1115\_REG\_CONFIG\_PGA\_1\_024V@{ADS1115\_REG\_CONFIG\_PGA\_1\_024V}|hyperpage}{20}
+\indexentry{ADS1115\_REG\_CONFIG\_PGA\_1\_024V@{ADS1115\_REG\_CONFIG\_PGA\_1\_024V}!ADS1115: PROGRAMMABLE GAIN AMPLIFIER CONFIGURATION@{ADS1115: PROGRAMMABLE GAIN AMPLIFIER CONFIGURATION}|hyperpage}{20}
+\indexentry{ADS1115: PROGRAMMABLE GAIN AMPLIFIER CONFIGURATION@{ADS1115: PROGRAMMABLE GAIN AMPLIFIER CONFIGURATION}!ADS1115\_REG\_CONFIG\_PGA\_2\_048V@{ADS1115\_REG\_CONFIG\_PGA\_2\_048V}|hyperpage}{20}
+\indexentry{ADS1115\_REG\_CONFIG\_PGA\_2\_048V@{ADS1115\_REG\_CONFIG\_PGA\_2\_048V}!ADS1115: PROGRAMMABLE GAIN AMPLIFIER CONFIGURATION@{ADS1115: PROGRAMMABLE GAIN AMPLIFIER CONFIGURATION}|hyperpage}{20}
+\indexentry{ADS1115: PROGRAMMABLE GAIN AMPLIFIER CONFIGURATION@{ADS1115: PROGRAMMABLE GAIN AMPLIFIER CONFIGURATION}!ADS1115\_REG\_CONFIG\_PGA\_4\_096V@{ADS1115\_REG\_CONFIG\_PGA\_4\_096V}|hyperpage}{20}
+\indexentry{ADS1115\_REG\_CONFIG\_PGA\_4\_096V@{ADS1115\_REG\_CONFIG\_PGA\_4\_096V}!ADS1115: PROGRAMMABLE GAIN AMPLIFIER CONFIGURATION@{ADS1115: PROGRAMMABLE GAIN AMPLIFIER CONFIGURATION}|hyperpage}{20}
+\indexentry{ADS1115: PROGRAMMABLE GAIN AMPLIFIER CONFIGURATION@{ADS1115: PROGRAMMABLE GAIN AMPLIFIER CONFIGURATION}!ADS1115\_REG\_CONFIG\_PGA\_6\_144V@{ADS1115\_REG\_CONFIG\_PGA\_6\_144V}|hyperpage}{20}
+\indexentry{ADS1115\_REG\_CONFIG\_PGA\_6\_144V@{ADS1115\_REG\_CONFIG\_PGA\_6\_144V}!ADS1115: PROGRAMMABLE GAIN AMPLIFIER CONFIGURATION@{ADS1115: PROGRAMMABLE GAIN AMPLIFIER CONFIGURATION}|hyperpage}{20}
+\indexentry{ADS1115: DEVICE OPERATING MODE@{ADS1115: DEVICE OPERATING MODE}|hyperpage}{21}
+\indexentry{ADS1115: DEVICE OPERATING MODE@{ADS1115: DEVICE OPERATING MODE}!ADS1115\_REG\_CONFIG\_MODE\_CONTIN@{ADS1115\_REG\_CONFIG\_MODE\_CONTIN}|hyperpage}{21}
+\indexentry{ADS1115\_REG\_CONFIG\_MODE\_CONTIN@{ADS1115\_REG\_CONFIG\_MODE\_CONTIN}!ADS1115: DEVICE OPERATING MODE@{ADS1115: DEVICE OPERATING MODE}|hyperpage}{21}
+\indexentry{ADS1115: DEVICE OPERATING MODE@{ADS1115: DEVICE OPERATING MODE}!ADS1115\_REG\_CONFIG\_MODE\_ENDCON@{ADS1115\_REG\_CONFIG\_MODE\_ENDCON}|hyperpage}{21}
+\indexentry{ADS1115\_REG\_CONFIG\_MODE\_ENDCON@{ADS1115\_REG\_CONFIG\_MODE\_ENDCON}!ADS1115: DEVICE OPERATING MODE@{ADS1115: DEVICE OPERATING MODE}|hyperpage}{21}
+\indexentry{ADS1115: DEVICE OPERATING MODE@{ADS1115: DEVICE OPERATING MODE}!ADS1115\_REG\_CONFIG\_MODE\_SINGLE@{ADS1115\_REG\_CONFIG\_MODE\_SINGLE}|hyperpage}{21}
+\indexentry{ADS1115\_REG\_CONFIG\_MODE\_SINGLE@{ADS1115\_REG\_CONFIG\_MODE\_SINGLE}!ADS1115: DEVICE OPERATING MODE@{ADS1115: DEVICE OPERATING MODE}|hyperpage}{21}
+\indexentry{ADS1115: DATA RATE@{ADS1115: DATA RATE}|hyperpage}{22}
+\indexentry{ADS1115: DATA RATE@{ADS1115: DATA RATE}!ADS1115\_RATE\_008@{ADS1115\_RATE\_008}|hyperpage}{22}
+\indexentry{ADS1115\_RATE\_008@{ADS1115\_RATE\_008}!ADS1115: DATA RATE@{ADS1115: DATA RATE}|hyperpage}{22}
+\indexentry{ADS1115: DATA RATE@{ADS1115: DATA RATE}!ADS1115\_RATE\_016@{ADS1115\_RATE\_016}|hyperpage}{23}
+\indexentry{ADS1115\_RATE\_016@{ADS1115\_RATE\_016}!ADS1115: DATA RATE@{ADS1115: DATA RATE}|hyperpage}{23}
+\indexentry{ADS1115: DATA RATE@{ADS1115: DATA RATE}!ADS1115\_RATE\_032@{ADS1115\_RATE\_032}|hyperpage}{23}
+\indexentry{ADS1115\_RATE\_032@{ADS1115\_RATE\_032}!ADS1115: DATA RATE@{ADS1115: DATA RATE}|hyperpage}{23}
+\indexentry{ADS1115: DATA RATE@{ADS1115: DATA RATE}!ADS1115\_RATE\_064@{ADS1115\_RATE\_064}|hyperpage}{23}
+\indexentry{ADS1115\_RATE\_064@{ADS1115\_RATE\_064}!ADS1115: DATA RATE@{ADS1115: DATA RATE}|hyperpage}{23}
+\indexentry{ADS1115: DATA RATE@{ADS1115: DATA RATE}!ADS1115\_RATE\_128@{ADS1115\_RATE\_128}|hyperpage}{23}
+\indexentry{ADS1115\_RATE\_128@{ADS1115\_RATE\_128}!ADS1115: DATA RATE@{ADS1115: DATA RATE}|hyperpage}{23}
+\indexentry{ADS1115: DATA RATE@{ADS1115: DATA RATE}!ADS1115\_RATE\_250@{ADS1115\_RATE\_250}|hyperpage}{23}
+\indexentry{ADS1115\_RATE\_250@{ADS1115\_RATE\_250}!ADS1115: DATA RATE@{ADS1115: DATA RATE}|hyperpage}{23}
+\indexentry{ADS1115: DATA RATE@{ADS1115: DATA RATE}!ADS1115\_RATE\_475@{ADS1115\_RATE\_475}|hyperpage}{24}
+\indexentry{ADS1115\_RATE\_475@{ADS1115\_RATE\_475}!ADS1115: DATA RATE@{ADS1115: DATA RATE}|hyperpage}{24}
+\indexentry{ADS1115: DATA RATE@{ADS1115: DATA RATE}!ADS1115\_RATE\_860@{ADS1115\_RATE\_860}|hyperpage}{24}
+\indexentry{ADS1115\_RATE\_860@{ADS1115\_RATE\_860}!ADS1115: DATA RATE@{ADS1115: DATA RATE}|hyperpage}{24}
+\indexentry{ADS1115: COMPARATOR MODE@{ADS1115: COMPARATOR MODE}|hyperpage}{25}
+\indexentry{ADS1115: COMPARATOR MODE@{ADS1115: COMPARATOR MODE}!ADS1115\_COMP\_MODE\_HYSTERESIS@{ADS1115\_COMP\_MODE\_HYSTERESIS}|hyperpage}{25}
+\indexentry{ADS1115\_COMP\_MODE\_HYSTERESIS@{ADS1115\_COMP\_MODE\_HYSTERESIS}!ADS1115: COMPARATOR MODE@{ADS1115: COMPARATOR MODE}|hyperpage}{25}
+\indexentry{ADS1115: COMPARATOR MODE@{ADS1115: COMPARATOR MODE}!ADS1115\_COMP\_MODE\_WINDOW@{ADS1115\_COMP\_MODE\_WINDOW}|hyperpage}{25}
+\indexentry{ADS1115\_COMP\_MODE\_WINDOW@{ADS1115\_COMP\_MODE\_WINDOW}!ADS1115: COMPARATOR MODE@{ADS1115: COMPARATOR MODE}|hyperpage}{25}
+\indexentry{ADS1115: COMPARATOR POLARITY@{ADS1115: COMPARATOR POLARITY}|hyperpage}{26}
+\indexentry{ADS1115: COMPARATOR POLARITY@{ADS1115: COMPARATOR POLARITY}!ADS1115\_COMP\_POL\_ACTIVE\_HIGH@{ADS1115\_COMP\_POL\_ACTIVE\_HIGH}|hyperpage}{26}
+\indexentry{ADS1115\_COMP\_POL\_ACTIVE\_HIGH@{ADS1115\_COMP\_POL\_ACTIVE\_HIGH}!ADS1115: COMPARATOR POLARITY@{ADS1115: COMPARATOR POLARITY}|hyperpage}{26}
+\indexentry{ADS1115: COMPARATOR POLARITY@{ADS1115: COMPARATOR POLARITY}!ADS1115\_COMP\_POL\_ACTIVE\_LOW@{ADS1115\_COMP\_POL\_ACTIVE\_LOW}|hyperpage}{26}
+\indexentry{ADS1115\_COMP\_POL\_ACTIVE\_LOW@{ADS1115\_COMP\_POL\_ACTIVE\_LOW}!ADS1115: COMPARATOR POLARITY@{ADS1115: COMPARATOR POLARITY}|hyperpage}{26}
+\indexentry{ADS1115: LATCHING COMPARATOR@{ADS1115: LATCHING COMPARATOR}|hyperpage}{27}
+\indexentry{ADS1115: LATCHING COMPARATOR@{ADS1115: LATCHING COMPARATOR}!ADS1115\_COMP\_LAT\_LATCHING@{ADS1115\_COMP\_LAT\_LATCHING}|hyperpage}{27}
+\indexentry{ADS1115\_COMP\_LAT\_LATCHING@{ADS1115\_COMP\_LAT\_LATCHING}!ADS1115: LATCHING COMPARATOR@{ADS1115: LATCHING COMPARATOR}|hyperpage}{27}
+\indexentry{ADS1115: LATCHING COMPARATOR@{ADS1115: LATCHING COMPARATOR}!ADS1115\_COMP\_LAT\_NON\_LATCHING@{ADS1115\_COMP\_LAT\_NON\_LATCHING}|hyperpage}{27}
+\indexentry{ADS1115\_COMP\_LAT\_NON\_LATCHING@{ADS1115\_COMP\_LAT\_NON\_LATCHING}!ADS1115: LATCHING COMPARATOR@{ADS1115: LATCHING COMPARATOR}|hyperpage}{27}
+\indexentry{ADS1115: COMPARATOR QUEUE AND DISABLE@{ADS1115: COMPARATOR QUEUE AND DISABLE}|hyperpage}{28}
+\indexentry{ADS1115: COMPARATOR QUEUE AND DISABLE@{ADS1115: COMPARATOR QUEUE AND DISABLE}!ADS1115\_COMP\_QUE\_ASSERT1@{ADS1115\_COMP\_QUE\_ASSERT1}|hyperpage}{28}
+\indexentry{ADS1115\_COMP\_QUE\_ASSERT1@{ADS1115\_COMP\_QUE\_ASSERT1}!ADS1115: COMPARATOR QUEUE AND DISABLE@{ADS1115: COMPARATOR QUEUE AND DISABLE}|hyperpage}{28}
+\indexentry{ADS1115: COMPARATOR QUEUE AND DISABLE@{ADS1115: COMPARATOR QUEUE AND DISABLE}!ADS1115\_COMP\_QUE\_ASSERT2@{ADS1115\_COMP\_QUE\_ASSERT2}|hyperpage}{28}
+\indexentry{ADS1115\_COMP\_QUE\_ASSERT2@{ADS1115\_COMP\_QUE\_ASSERT2}!ADS1115: COMPARATOR QUEUE AND DISABLE@{ADS1115: COMPARATOR QUEUE AND DISABLE}|hyperpage}{28}
+\indexentry{ADS1115: COMPARATOR QUEUE AND DISABLE@{ADS1115: COMPARATOR QUEUE AND DISABLE}!ADS1115\_COMP\_QUE\_ASSERT4@{ADS1115\_COMP\_QUE\_ASSERT4}|hyperpage}{29}
+\indexentry{ADS1115\_COMP\_QUE\_ASSERT4@{ADS1115\_COMP\_QUE\_ASSERT4}!ADS1115: COMPARATOR QUEUE AND DISABLE@{ADS1115: COMPARATOR QUEUE AND DISABLE}|hyperpage}{29}
+\indexentry{ADS1115: COMPARATOR QUEUE AND DISABLE@{ADS1115: COMPARATOR QUEUE AND DISABLE}!ADS1115\_COMP\_QUE\_DISABLE@{ADS1115\_COMP\_QUE\_DISABLE}|hyperpage}{29}
+\indexentry{ADS1115\_COMP\_QUE\_DISABLE@{ADS1115\_COMP\_QUE\_DISABLE}!ADS1115: COMPARATOR QUEUE AND DISABLE@{ADS1115: COMPARATOR QUEUE AND DISABLE}|hyperpage}{29}
+\indexentry{ADS1115: COMPARATOR QUEUE AND DISABLE@{ADS1115: COMPARATOR QUEUE AND DISABLE}!ADS1115\_REG\_THRESH\_MSB\_0@{ADS1115\_REG\_THRESH\_MSB\_0}|hyperpage}{29}
+\indexentry{ADS1115\_REG\_THRESH\_MSB\_0@{ADS1115\_REG\_THRESH\_MSB\_0}!ADS1115: COMPARATOR QUEUE AND DISABLE@{ADS1115: COMPARATOR QUEUE AND DISABLE}|hyperpage}{29}
+\indexentry{ADS1115: COMPARATOR QUEUE AND DISABLE@{ADS1115: COMPARATOR QUEUE AND DISABLE}!ADS1115\_REG\_THRESH\_MSB\_1@{ADS1115\_REG\_THRESH\_MSB\_1}|hyperpage}{29}
+\indexentry{ADS1115\_REG\_THRESH\_MSB\_1@{ADS1115\_REG\_THRESH\_MSB\_1}!ADS1115: COMPARATOR QUEUE AND DISABLE@{ADS1115: COMPARATOR QUEUE AND DISABLE}|hyperpage}{29}
+\indexentry{Ui@{Ui}|hyperpage}{31}
+\indexentry{ads1115@{ads1115}|hyperpage}{33}
+\indexentry{ads1115@{ads1115}!ads1115@{ads1115}|hyperpage}{34}
+\indexentry{ads1115@{ads1115}!ads1115@{ads1115}|hyperpage}{34}
+\indexentry{ads1115@{ads1115}!endads@{endads}|hyperpage}{34}
+\indexentry{endads@{endads}!ads1115@{ads1115}|hyperpage}{34}
+\indexentry{ads1115@{ads1115}!readsig@{readsig}|hyperpage}{35}
+\indexentry{readsig@{readsig}!ads1115@{ads1115}|hyperpage}{35}
+\indexentry{ads1115@{ads1115}!readyread@{readyread}|hyperpage}{35}
+\indexentry{readyread@{readyread}!ads1115@{ads1115}|hyperpage}{35}
+\indexentry{ads1115@{ads1115}!fd@{fd}|hyperpage}{35}
+\indexentry{fd@{fd}!ads1115@{ads1115}|hyperpage}{35}
+\indexentry{ads1115@{ads1115}!iicaddr@{iicaddr}|hyperpage}{36}
+\indexentry{iicaddr@{iicaddr}!ads1115@{ads1115}|hyperpage}{36}
+\indexentry{cmdmtx@{cmdmtx}|hyperpage}{36}
+\indexentry{GPIOlisten@{GPIOlisten}|hyperpage}{36}
+\indexentry{GPIOlisten@{GPIOlisten}!GPIOlisten@{GPIOlisten}|hyperpage}{37}
+\indexentry{GPIOlisten@{GPIOlisten}!GPIOlisten@{GPIOlisten}|hyperpage}{37}
+\indexentry{GPIOlisten@{GPIOlisten}!````~GPIOlisten@{$\sim$GPIOlisten}|hyperpage}{38}
+\indexentry{````~GPIOlisten@{$\sim$GPIOlisten}!GPIOlisten@{GPIOlisten}|hyperpage}{38}
+\indexentry{GPIOlisten@{GPIOlisten}!interrupt@{interrupt}|hyperpage}{38}
+\indexentry{interrupt@{interrupt}!GPIOlisten@{GPIOlisten}|hyperpage}{38}
+\indexentry{GPIOlisten@{GPIOlisten}!quit@{quit}|hyperpage}{38}
+\indexentry{quit@{quit}!GPIOlisten@{GPIOlisten}|hyperpage}{38}
+\indexentry{GPIOlisten@{GPIOlisten}!ready@{ready}|hyperpage}{38}
+\indexentry{ready@{ready}!GPIOlisten@{GPIOlisten}|hyperpage}{38}
+\indexentry{GPIOlisten@{GPIOlisten}!readyread@{readyread}|hyperpage}{38}
+\indexentry{readyread@{readyread}!GPIOlisten@{GPIOlisten}|hyperpage}{38}
+\indexentry{GPIOlisten@{GPIOlisten}!run@{run}|hyperpage}{39}
+\indexentry{run@{run}!GPIOlisten@{GPIOlisten}|hyperpage}{39}
+\indexentry{GPIOlisten@{GPIOlisten}!ads1@{ads1}|hyperpage}{39}
+\indexentry{ads1@{ads1}!GPIOlisten@{GPIOlisten}|hyperpage}{39}
+\indexentry{GPIOlisten@{GPIOlisten}!count@{count}|hyperpage}{39}
+\indexentry{count@{count}!GPIOlisten@{GPIOlisten}|hyperpage}{39}
+\indexentry{GPIOlisten@{GPIOlisten}!flag@{flag}|hyperpage}{39}
+\indexentry{flag@{flag}!GPIOlisten@{GPIOlisten}|hyperpage}{39}
+\indexentry{load\_config@{load\_config}|hyperpage}{40}
+\indexentry{MainWindow@{MainWindow}|hyperpage}{40}
+\indexentry{MainWindow@{MainWindow}!MainWindow@{MainWindow}|hyperpage}{42}
+\indexentry{MainWindow@{MainWindow}!MainWindow@{MainWindow}|hyperpage}{42}
+\indexentry{MainWindow@{MainWindow}!````~MainWindow@{$\sim$MainWindow}|hyperpage}{43}
+\indexentry{````~MainWindow@{$\sim$MainWindow}!MainWindow@{MainWindow}|hyperpage}{43}
+\indexentry{MainWindow@{MainWindow}!CpuP1Motion@{CpuP1Motion}|hyperpage}{43}
+\indexentry{CpuP1Motion@{CpuP1Motion}!MainWindow@{MainWindow}|hyperpage}{43}
+\indexentry{MainWindow@{MainWindow}!goal@{goal}|hyperpage}{43}
+\indexentry{goal@{goal}!MainWindow@{MainWindow}|hyperpage}{43}
+\indexentry{MainWindow@{MainWindow}!Position@{Position}|hyperpage}{43}
+\indexentry{Position@{Position}!MainWindow@{MainWindow}|hyperpage}{43}
+\indexentry{MainWindow@{MainWindow}!receive@{receive}|hyperpage}{43}
+\indexentry{receive@{receive}!MainWindow@{MainWindow}|hyperpage}{43}
+\indexentry{MainWindow@{MainWindow}!refreshScore@{refreshScore}|hyperpage}{44}
+\indexentry{refreshScore@{refreshScore}!MainWindow@{MainWindow}|hyperpage}{44}
+\indexentry{MainWindow@{MainWindow}!rfsh@{rfsh}|hyperpage}{44}
+\indexentry{rfsh@{rfsh}!MainWindow@{MainWindow}|hyperpage}{44}
+\indexentry{MainWindow@{MainWindow}!iBall@{iBall}|hyperpage}{44}
+\indexentry{iBall@{iBall}!MainWindow@{MainWindow}|hyperpage}{44}
+\indexentry{MainWindow@{MainWindow}!iBallMotion@{iBallMotion}|hyperpage}{44}
+\indexentry{iBallMotion@{iBallMotion}!MainWindow@{MainWindow}|hyperpage}{44}
+\indexentry{MainWindow@{MainWindow}!iP1@{iP1}|hyperpage}{45}
+\indexentry{iP1@{iP1}!MainWindow@{MainWindow}|hyperpage}{45}
+\indexentry{MainWindow@{MainWindow}!iP1Motion@{iP1Motion}|hyperpage}{45}
+\indexentry{iP1Motion@{iP1Motion}!MainWindow@{MainWindow}|hyperpage}{45}
+\indexentry{MainWindow@{MainWindow}!iP2@{iP2}|hyperpage}{45}
+\indexentry{iP2@{iP2}!MainWindow@{MainWindow}|hyperpage}{45}
+\indexentry{MainWindow@{MainWindow}!iP2Motion@{iP2Motion}|hyperpage}{45}
+\indexentry{iP2Motion@{iP2Motion}!MainWindow@{MainWindow}|hyperpage}{45}
+\indexentry{MainWindow@{MainWindow}!iScene@{iScene}|hyperpage}{46}
+\indexentry{iScene@{iScene}!MainWindow@{MainWindow}|hyperpage}{46}
+\indexentry{MainWindow@{MainWindow}!iScore@{iScore}|hyperpage}{46}
+\indexentry{iScore@{iScore}!MainWindow@{MainWindow}|hyperpage}{46}
+\indexentry{MainWindow@{MainWindow}!iTimer@{iTimer}|hyperpage}{46}
+\indexentry{iTimer@{iTimer}!MainWindow@{MainWindow}|hyperpage}{46}
+\indexentry{MainWindow@{MainWindow}!P1Xprime@{P1Xprime}|hyperpage}{46}
+\indexentry{P1Xprime@{P1Xprime}!MainWindow@{MainWindow}|hyperpage}{46}
+\indexentry{MainWindow@{MainWindow}!P2Xprime@{P2Xprime}|hyperpage}{47}
+\indexentry{P2Xprime@{P2Xprime}!MainWindow@{MainWindow}|hyperpage}{47}
+\indexentry{MainWindow@{MainWindow}!rfshcount@{rfshcount}|hyperpage}{47}
+\indexentry{rfshcount@{rfshcount}!MainWindow@{MainWindow}|hyperpage}{47}
+\indexentry{MainWindow@{MainWindow}!rsverSocket@{rsverSocket}|hyperpage}{47}
+\indexentry{rsverSocket@{rsverSocket}!MainWindow@{MainWindow}|hyperpage}{47}
+\indexentry{MainWindow@{MainWindow}!timer\_measure@{timer\_measure}|hyperpage}{47}
+\indexentry{timer\_measure@{timer\_measure}!MainWindow@{MainWindow}|hyperpage}{47}
+\indexentry{MainWindow@{MainWindow}!totalHeight@{totalHeight}|hyperpage}{47}
+\indexentry{totalHeight@{totalHeight}!MainWindow@{MainWindow}|hyperpage}{47}
+\indexentry{MainWindow@{MainWindow}!totalWidth@{totalWidth}|hyperpage}{48}
+\indexentry{totalWidth@{totalWidth}!MainWindow@{MainWindow}|hyperpage}{48}
+\indexentry{MainWindow@{MainWindow}!ui@{ui}|hyperpage}{48}
+\indexentry{ui@{ui}!MainWindow@{MainWindow}|hyperpage}{48}
+\indexentry{MainWindow@{MainWindow}!wdheight@{wdheight}|hyperpage}{48}
+\indexentry{wdheight@{wdheight}!MainWindow@{MainWindow}|hyperpage}{48}
+\indexentry{MainWindow@{MainWindow}!wdwidth@{wdwidth}|hyperpage}{48}
+\indexentry{wdwidth@{wdwidth}!MainWindow@{MainWindow}|hyperpage}{48}
+\indexentry{MainWindow@{MainWindow}!Xprime@{Xprime}|hyperpage}{48}
+\indexentry{Xprime@{Xprime}!MainWindow@{MainWindow}|hyperpage}{48}
+\indexentry{MainWindow@{MainWindow}!Yprime@{Yprime}|hyperpage}{48}
+\indexentry{Yprime@{Yprime}!MainWindow@{MainWindow}|hyperpage}{48}
+\indexentry{Mainwindow@{Mainwindow}|hyperpage}{49}
+\indexentry{plot1@{plot1}|hyperpage}{49}
+\indexentry{QGraphicsItem@{QGraphicsItem}|hyperpage}{49}
+\indexentry{QTimer@{QTimer}|hyperpage}{50}
+\indexentry{receive@{receive}|hyperpage}{50}
+\indexentry{Window@{Window}|hyperpage}{51}
+\indexentry{Window@{Window}!Window@{Window}|hyperpage}{52}
+\indexentry{Window@{Window}!Window@{Window}|hyperpage}{52}
+\indexentry{Window@{Window}!````~Window@{$\sim$Window}|hyperpage}{52}
+\indexentry{````~Window@{$\sim$Window}!Window@{Window}|hyperpage}{52}
+\indexentry{Window@{Window}!datapros@{datapros}|hyperpage}{53}
+\indexentry{datapros@{datapros}!Window@{Window}|hyperpage}{53}
+\indexentry{Window@{Window}!plotrefresh@{plotrefresh}|hyperpage}{53}
+\indexentry{plotrefresh@{plotrefresh}!Window@{Window}|hyperpage}{53}
+\indexentry{Window@{Window}!curve1@{curve1}|hyperpage}{53}
+\indexentry{curve1@{curve1}!Window@{Window}|hyperpage}{53}
+\indexentry{Window@{Window}!curve2@{curve2}|hyperpage}{53}
+\indexentry{curve2@{curve2}!Window@{Window}|hyperpage}{53}
+\indexentry{Window@{Window}!gpiolis1@{gpiolis1}|hyperpage}{53}
+\indexentry{gpiolis1@{gpiolis1}!Window@{Window}|hyperpage}{53}
+\indexentry{Window@{Window}!hLayout@{hLayout}|hyperpage}{54}
+\indexentry{hLayout@{hLayout}!Window@{Window}|hyperpage}{54}
+\indexentry{Window@{Window}!plot1@{plot1}|hyperpage}{54}
+\indexentry{plot1@{plot1}!Window@{Window}|hyperpage}{54}
+\indexentry{Window@{Window}!plot2@{plot2}|hyperpage}{54}
+\indexentry{plot2@{plot2}!Window@{Window}|hyperpage}{54}
+\indexentry{Window@{Window}!plotDataSize@{plotDataSize}|hyperpage}{54}
+\indexentry{plotDataSize@{plotDataSize}!Window@{Window}|hyperpage}{54}
+\indexentry{Window@{Window}!rftimer@{rftimer}|hyperpage}{54}
+\indexentry{rftimer@{rftimer}!Window@{Window}|hyperpage}{54}
+\indexentry{Window@{Window}!sdersc@{sdersc}|hyperpage}{54}
+\indexentry{sdersc@{sdersc}!Window@{Window}|hyperpage}{54}
+\indexentry{Window@{Window}!sumpower@{sumpower}|hyperpage}{55}
+\indexentry{sumpower@{sumpower}!Window@{Window}|hyperpage}{55}
+\indexentry{Window@{Window}!xData1@{xData1}|hyperpage}{55}
+\indexentry{xData1@{xData1}!Window@{Window}|hyperpage}{55}
+\indexentry{Window@{Window}!xData2@{xData2}|hyperpage}{55}
+\indexentry{xData2@{xData2}!Window@{Window}|hyperpage}{55}
+\indexentry{Window@{Window}!xData3@{xData3}|hyperpage}{55}
+\indexentry{xData3@{xData3}!Window@{Window}|hyperpage}{55}
+\indexentry{Window@{Window}!yData1@{yData1}|hyperpage}{55}
+\indexentry{yData1@{yData1}!Window@{Window}|hyperpage}{55}
+\indexentry{Window@{Window}!yData2@{yData2}|hyperpage}{56}
+\indexentry{yData2@{yData2}!Window@{Window}|hyperpage}{56}
+\indexentry{Window@{Window}!yData3@{yData3}|hyperpage}{56}
+\indexentry{yData3@{yData3}!Window@{Window}|hyperpage}{56}
+\indexentry{/home/finlay/RTEP1/Rpi\_end/200322\_Rpi\_end\_together/ads1115.cpp@{/home/finlay/RTEP1/Rpi\_end/200322\_Rpi\_end\_together/ads1115.cpp}|hyperpage}{57}
+\indexentry{ads1115.cpp@{ads1115.cpp}!load\_config@{load\_config}|hyperpage}{58}
+\indexentry{load\_config@{load\_config}!ads1115.cpp@{ads1115.cpp}|hyperpage}{58}
+\indexentry{ads1115.cpp@{ads1115.cpp}!config@{config}|hyperpage}{58}
+\indexentry{config@{config}!ads1115.cpp@{ads1115.cpp}|hyperpage}{58}
+\indexentry{ads1115.cpp@{ads1115.cpp}!high@{high}|hyperpage}{58}
+\indexentry{high@{high}!ads1115.cpp@{ads1115.cpp}|hyperpage}{58}
+\indexentry{ads1115.cpp@{ads1115.cpp}!high\_config@{high\_config}|hyperpage}{58}
+\indexentry{high\_config@{high\_config}!ads1115.cpp@{ads1115.cpp}|hyperpage}{58}
+\indexentry{ads1115.cpp@{ads1115.cpp}!low@{low}|hyperpage}{59}
+\indexentry{low@{low}!ads1115.cpp@{ads1115.cpp}|hyperpage}{59}
+\indexentry{ads1115.cpp@{ads1115.cpp}!low\_config@{low\_config}|hyperpage}{59}
+\indexentry{low\_config@{low\_config}!ads1115.cpp@{ads1115.cpp}|hyperpage}{59}
+\indexentry{ads1115.cpp@{ads1115.cpp}!rcr@{rcr}|hyperpage}{59}
+\indexentry{rcr@{rcr}!ads1115.cpp@{ads1115.cpp}|hyperpage}{59}
+\indexentry{ads1115.cpp@{ads1115.cpp}!value@{value}|hyperpage}{59}
+\indexentry{value@{value}!ads1115.cpp@{ads1115.cpp}|hyperpage}{59}
+\indexentry{ads1115.cpp@{ads1115.cpp}!voltage@{voltage}|hyperpage}{60}
+\indexentry{voltage@{voltage}!ads1115.cpp@{ads1115.cpp}|hyperpage}{60}
+\indexentry{/home/finlay/RTEP1/Rpi\_end/200322\_Rpi\_end\_together/ads1115.h@{/home/finlay/RTEP1/Rpi\_end/200322\_Rpi\_end\_together/ads1115.h}|hyperpage}{60}
+\indexentry{/home/finlay/RTEP1/Rpi\_end/200322\_Rpi\_end\_together/GPIOlis.cpp@{/home/finlay/RTEP1/Rpi\_end/200322\_Rpi\_end\_together/GPIOlis.cpp}|hyperpage}{64}
+\indexentry{GPIOlis.cpp@{GPIOlis.cpp}!gpipinterrupt@{gpipinterrupt}|hyperpage}{64}
+\indexentry{gpipinterrupt@{gpipinterrupt}!GPIOlis.cpp@{GPIOlis.cpp}|hyperpage}{64}
+\indexentry{GPIOlis.cpp@{GPIOlis.cpp}!interrupt2@{interrupt2}|hyperpage}{65}
+\indexentry{interrupt2@{interrupt2}!GPIOlis.cpp@{GPIOlis.cpp}|hyperpage}{65}
+\indexentry{GPIOlis.cpp@{GPIOlis.cpp}!cmdmtx@{cmdmtx}|hyperpage}{65}
+\indexentry{cmdmtx@{cmdmtx}!GPIOlis.cpp@{GPIOlis.cpp}|hyperpage}{65}
+\indexentry{/home/finlay/RTEP1/Rpi\_end/200322\_Rpi\_end\_together/GPIOlis.h@{/home/finlay/RTEP1/Rpi\_end/200322\_Rpi\_end\_together/GPIOlis.h}|hyperpage}{65}
+\indexentry{GPIOlis.h@{GPIOlis.h}!gpipinterrupt@{gpipinterrupt}|hyperpage}{66}
+\indexentry{gpipinterrupt@{gpipinterrupt}!GPIOlis.h@{GPIOlis.h}|hyperpage}{66}
+\indexentry{/home/finlay/RTEP1/Rpi\_end/200322\_Rpi\_end\_together/window.cpp@{/home/finlay/RTEP1/Rpi\_end/200322\_Rpi\_end\_together/window.cpp}|hyperpage}{66}
+\indexentry{window.cpp@{window.cpp}!flhp1@{flhp1}|hyperpage}{67}
+\indexentry{flhp1@{flhp1}!window.cpp@{window.cpp}|hyperpage}{67}
+\indexentry{window.cpp@{window.cpp}!florigin@{florigin}|hyperpage}{67}
+\indexentry{florigin@{florigin}!window.cpp@{window.cpp}|hyperpage}{67}
+\indexentry{window.cpp@{window.cpp}!flpower@{flpower}|hyperpage}{67}
+\indexentry{flpower@{flpower}!window.cpp@{window.cpp}|hyperpage}{67}
+\indexentry{window.cpp@{window.cpp}!hp1@{hp1}|hyperpage}{67}
+\indexentry{hp1@{hp1}!window.cpp@{window.cpp}|hyperpage}{67}
+\indexentry{window.cpp@{window.cpp}!index@{index}|hyperpage}{68}
+\indexentry{index@{index}!window.cpp@{window.cpp}|hyperpage}{68}
+\indexentry{window.cpp@{window.cpp}!order@{order}|hyperpage}{68}
+\indexentry{order@{order}!window.cpp@{window.cpp}|hyperpage}{68}
+\indexentry{window.cpp@{window.cpp}!rscverprt@{rscverprt}|hyperpage}{68}
+\indexentry{rscverprt@{rscverprt}!window.cpp@{window.cpp}|hyperpage}{68}
+\indexentry{window.cpp@{window.cpp}!samplingrate@{samplingrate}|hyperpage}{68}
+\indexentry{samplingrate@{samplingrate}!window.cpp@{window.cpp}|hyperpage}{68}
+\indexentry{window.cpp@{window.cpp}!sderprt@{sderprt}|hyperpage}{68}
+\indexentry{sderprt@{sderprt}!window.cpp@{window.cpp}|hyperpage}{68}
+\indexentry{/home/finlay/RTEP1/Rpi\_end/200322\_Rpi\_end\_together/window.h@{/home/finlay/RTEP1/Rpi\_end/200322\_Rpi\_end\_together/window.h}|hyperpage}{69}
+\indexentry{/home/finlay/RTEP1/Server\_end/0301\_Pong\_GUI/main.cpp@{/home/finlay/RTEP1/Server\_end/0301\_Pong\_GUI/main.cpp}|hyperpage}{69}
+\indexentry{main.cpp@{main.cpp}!main@{main}|hyperpage}{69}
+\indexentry{main@{main}!main.cpp@{main.cpp}|hyperpage}{69}
+\indexentry{/home/finlay/RTEP1/Rpi\_end/200322\_Rpi\_end\_together/main.cpp@{/home/finlay/RTEP1/Rpi\_end/200322\_Rpi\_end\_together/main.cpp}|hyperpage}{70}
+\indexentry{main.cpp@{main.cpp}!main@{main}|hyperpage}{70}
+\indexentry{main@{main}!main.cpp@{main.cpp}|hyperpage}{70}
+\indexentry{/home/finlay/RTEP1/Server\_end/0301\_Pong\_GUI/mainwindow.cpp@{/home/finlay/RTEP1/Server\_end/0301\_Pong\_GUI/mainwindow.cpp}|hyperpage}{71}
+\indexentry{mainwindow.cpp@{mainwindow.cpp}!rsPort@{rsPort}|hyperpage}{71}
+\indexentry{rsPort@{rsPort}!mainwindow.cpp@{mainwindow.cpp}|hyperpage}{71}
+\indexentry{/home/finlay/RTEP1/Server\_end/0301\_Pong\_GUI/mainwindow.h@{/home/finlay/RTEP1/Server\_end/0301\_Pong\_GUI/mainwindow.h}|hyperpage}{71}

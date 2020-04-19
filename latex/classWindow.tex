@@ -1,0 +1,300 @@
+\hypertarget{classWindow}{}\doxysection{Window Class Reference}
+\label{classWindow}\index{Window@{Window}}
+
+
+Generates and updates the components of the Pong gmae\textquotesingle{}s G\+UI window.  
+
+
+
+
+{\ttfamily \#include $<$window.\+h$>$}
+
+
+
+Collaboration diagram for Window\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classWindow__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classWindow_aa0c78bd5a1a320ec6cf427e7441d9714}{datapros}} (float)
+\begin{DoxyCompactList}\small\item\em Performs the data processing and filtering of the input signals. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWindow_ad7445be21c77c9944b3dba2e146bb989}{plotrefresh}} ()
+\begin{DoxyCompactList}\small\item\em Refreshes the G\+UI window plot every 20ms. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWindow_ab27fe44e0834066236f79f244b02f67e}{Window}} (Q\+Widget $\ast$parent=0)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWindow}{Window}} default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWindow_a245d821e6016fa1f6970ccbbedd635f6}{$\sim$\+Window}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWindow}{Window}} destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Q\+Udp\+Socket $\ast$ \mbox{\hyperlink{classWindow_ad0125c79705223e60f695c194166f312}{sdersc}}
+\begin{DoxyCompactList}\small\item\em An instance of the Q\+Udp\+Socket class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classGPIOlis}{G\+P\+I\+Olis}} $\ast$ \mbox{\hyperlink{classWindow_a99a930e8fdf9c009aca0d1bed1bdcd8f}{gpiolis1}}
+\item 
+Q\+Timer $\ast$ \mbox{\hyperlink{classWindow_a703d58d30da77e83166ef37942ad8602}{rftimer}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Qwt\+Plot $\ast$ \mbox{\hyperlink{classWindow_ac930f3c9fd48aeb627204e7aeaf80573}{plot1}}
+\begin{DoxyCompactList}\small\item\em Qt widget\+: First plot. \end{DoxyCompactList}\item 
+Qwt\+Plot $\ast$ \mbox{\hyperlink{classWindow_a10bbc5d8730ee6c5bb4f4a956225533c}{plot2}}
+\begin{DoxyCompactList}\small\item\em QT widget\+: Second plot. \end{DoxyCompactList}\item 
+Qwt\+Plot\+Curve $\ast$ \mbox{\hyperlink{classWindow_a112c8681462cb0339faf1b3a5e8d312c}{curve1}}
+\begin{DoxyCompactList}\small\item\em QT widget\+: First curve. \end{DoxyCompactList}\item 
+Qwt\+Plot\+Curve $\ast$ \mbox{\hyperlink{classWindow_ad6c1bf613b3e5a026fba544ed567a87b}{curve2}}
+\begin{DoxyCompactList}\small\item\em QT widget\+: Second curve. \end{DoxyCompactList}\item 
+Q\+H\+Box\+Layout $\ast$ \mbox{\hyperlink{classWindow_a088e83054c444170282461344174f30b}{h\+Layout}}
+\begin{DoxyCompactList}\small\item\em Horizontal layout. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classWindow_a13ad2a2a6dd2fa6a8943e92fb08629a1}{x\+Data1}} \mbox{[}\mbox{\hyperlink{classWindow_a9908e75f132d5ac3f23b4ff9a4832c63}{plot\+Data\+Size}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Data array for x\+Data1. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classWindow_a9baba6757f9e1a5c25e2c8bcf291ad32}{y\+Data1}} \mbox{[}\mbox{\hyperlink{classWindow_a9908e75f132d5ac3f23b4ff9a4832c63}{plot\+Data\+Size}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Data array for y\+Data1. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classWindow_a7b0d44a397ca90add463e2093f4a1423}{x\+Data2}} \mbox{[}\mbox{\hyperlink{classWindow_a9908e75f132d5ac3f23b4ff9a4832c63}{plot\+Data\+Size}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Data array for x\+Data2. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classWindow_a25e229e2503d02a9904f56fb730d4744}{y\+Data2}} \mbox{[}\mbox{\hyperlink{classWindow_a9908e75f132d5ac3f23b4ff9a4832c63}{plot\+Data\+Size}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Data array for y\+Data2. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classWindow_a66e60e4413d120313000c1d744c904f1}{x\+Data3}} \mbox{[}\mbox{\hyperlink{classWindow_a9908e75f132d5ac3f23b4ff9a4832c63}{plot\+Data\+Size}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Data array for x\+Data3. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classWindow_a7f1854f46d87a6bfd6b53806be12ba1c}{y\+Data3}} \mbox{[}\mbox{\hyperlink{classWindow_a9908e75f132d5ac3f23b4ff9a4832c63}{plot\+Data\+Size}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Data array for y\+Data3. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classWindow_ab9f0f7ea3db5d4d0fa70c915590e4c72}{sumpower}}
+\begin{DoxyCompactList}\small\item\em Stores the result of the pow() function in signal processing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \mbox{\hyperlink{classWindow_a9908e75f132d5ac3f23b4ff9a4832c63}{plot\+Data\+Size}} = 5
+\begin{DoxyCompactList}\small\item\em The size of variable storage in data arrays. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Generates and updates the components of the Pong gmae\textquotesingle{}s G\+UI window. 
+
+This class instantiates the game components (the G\+UI scene, paddles, ball and scoreboard), and updates them based on the incoming E\+MG signal through the Qt signal slot mechanism. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWindow_ab27fe44e0834066236f79f244b02f67e}\label{classWindow_ab27fe44e0834066236f79f244b02f67e}} 
+\index{Window@{Window}!Window@{Window}}
+\index{Window@{Window}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{Window()}{Window()}}
+{\footnotesize\ttfamily Window\+::\+Window (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\mbox{\hyperlink{classWindow}{Window}} default constructor. 
+
+Initialises data buffers for incomning E\+MG data, and generates plot objects to which buffers attach. The constructor also defines a highpass Butterworth filter, creates appropriate files in which to store log data, and initialises the A\+DC and U\+DP sender. $<$ An instance of the class Qwt\+Plot\+Curve
+
+$<$ An instance of the class Qwt\+Plot\+Curve
+
+$<$ An instance of the class Qwt\+Plot
+
+$<$ An instance of the class Qwt\+Plot\mbox{\Hypertarget{classWindow_a245d821e6016fa1f6970ccbbedd635f6}\label{classWindow_a245d821e6016fa1f6970ccbbedd635f6}} 
+\index{Window@{Window}!````~Window@{$\sim$Window}}
+\index{````~Window@{$\sim$Window}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{$\sim$Window()}{~Window()}}
+{\footnotesize\ttfamily Window\+::$\sim$\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classWindow}{Window}} destructor. 
+
+Exits the \mbox{\hyperlink{classGPIOlis}{G\+P\+I\+Olis()}} object and deletes the G\+UI window and it\textquotesingle{}s components 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWindow_aa0c78bd5a1a320ec6cf427e7441d9714}\label{classWindow_aa0c78bd5a1a320ec6cf427e7441d9714}} 
+\index{Window@{Window}!datapros@{datapros}}
+\index{datapros@{datapros}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{datapros}{datapros}}
+{\footnotesize\ttfamily void Window\+::datapros (\begin{DoxyParamCaption}\item[{float}]{inval }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Performs the data processing and filtering of the input signals. 
+
+\char`\"{}hp1\char`\"{} is an instance of a high pass Butterworth I\+IR filer, of order given by the input parameter. The time-\/smoothed power of the signal is calculated, added to the plots through the memmove() function, and saved. A 1 channel U\+DP is sent to test control of the game.
+
+
+\begin{DoxyParams}{Parameters}
+{\em inval} & The I\+IR filter order for processing. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classWindow_ad7445be21c77c9944b3dba2e146bb989}\label{classWindow_ad7445be21c77c9944b3dba2e146bb989}} 
+\index{Window@{Window}!plotrefresh@{plotrefresh}}
+\index{plotrefresh@{plotrefresh}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{plotrefresh}{plotrefresh}}
+{\footnotesize\ttfamily void Window\+::plotrefresh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Refreshes the G\+UI window plot every 20ms. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classWindow_a112c8681462cb0339faf1b3a5e8d312c}\label{classWindow_a112c8681462cb0339faf1b3a5e8d312c}} 
+\index{Window@{Window}!curve1@{curve1}}
+\index{curve1@{curve1}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{curve1}{curve1}}
+{\footnotesize\ttfamily Qwt\+Plot\+Curve$\ast$ Window\+::curve1\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+QT widget\+: First curve. 
+
+\mbox{\Hypertarget{classWindow_ad6c1bf613b3e5a026fba544ed567a87b}\label{classWindow_ad6c1bf613b3e5a026fba544ed567a87b}} 
+\index{Window@{Window}!curve2@{curve2}}
+\index{curve2@{curve2}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{curve2}{curve2}}
+{\footnotesize\ttfamily Qwt\+Plot\+Curve$\ast$ Window\+::curve2\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+QT widget\+: Second curve. 
+
+\mbox{\Hypertarget{classWindow_a99a930e8fdf9c009aca0d1bed1bdcd8f}\label{classWindow_a99a930e8fdf9c009aca0d1bed1bdcd8f}} 
+\index{Window@{Window}!gpiolis1@{gpiolis1}}
+\index{gpiolis1@{gpiolis1}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{gpiolis1}{gpiolis1}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGPIOlis}{G\+P\+I\+Olis}}$\ast$ Window\+::gpiolis1}
+
+\mbox{\Hypertarget{classWindow_a088e83054c444170282461344174f30b}\label{classWindow_a088e83054c444170282461344174f30b}} 
+\index{Window@{Window}!hLayout@{hLayout}}
+\index{hLayout@{hLayout}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{hLayout}{hLayout}}
+{\footnotesize\ttfamily Q\+H\+Box\+Layout$\ast$ Window\+::h\+Layout\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Horizontal layout. 
+
+\mbox{\Hypertarget{classWindow_ac930f3c9fd48aeb627204e7aeaf80573}\label{classWindow_ac930f3c9fd48aeb627204e7aeaf80573}} 
+\index{Window@{Window}!plot1@{plot1}}
+\index{plot1@{plot1}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{plot1}{plot1}}
+{\footnotesize\ttfamily Qwt\+Plot$\ast$ Window\+::plot1\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Qt widget\+: First plot. 
+
+\mbox{\Hypertarget{classWindow_a10bbc5d8730ee6c5bb4f4a956225533c}\label{classWindow_a10bbc5d8730ee6c5bb4f4a956225533c}} 
+\index{Window@{Window}!plot2@{plot2}}
+\index{plot2@{plot2}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{plot2}{plot2}}
+{\footnotesize\ttfamily Qwt\+Plot$\ast$ Window\+::plot2\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+QT widget\+: Second plot. 
+
+\mbox{\Hypertarget{classWindow_a9908e75f132d5ac3f23b4ff9a4832c63}\label{classWindow_a9908e75f132d5ac3f23b4ff9a4832c63}} 
+\index{Window@{Window}!plotDataSize@{plotDataSize}}
+\index{plotDataSize@{plotDataSize}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{plotDataSize}{plotDataSize}}
+{\footnotesize\ttfamily const int Window\+::plot\+Data\+Size = 5\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+The size of variable storage in data arrays. 
+
+\mbox{\Hypertarget{classWindow_a703d58d30da77e83166ef37942ad8602}\label{classWindow_a703d58d30da77e83166ef37942ad8602}} 
+\index{Window@{Window}!rftimer@{rftimer}}
+\index{rftimer@{rftimer}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{rftimer}{rftimer}}
+{\footnotesize\ttfamily Q\+Timer$\ast$ Window\+::rftimer}
+
+\mbox{\Hypertarget{classWindow_ad0125c79705223e60f695c194166f312}\label{classWindow_ad0125c79705223e60f695c194166f312}} 
+\index{Window@{Window}!sdersc@{sdersc}}
+\index{sdersc@{sdersc}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{sdersc}{sdersc}}
+{\footnotesize\ttfamily Q\+Udp\+Socket$\ast$ Window\+::sdersc}
+
+
+
+An instance of the Q\+Udp\+Socket class. 
+
+\mbox{\Hypertarget{classWindow_ab9f0f7ea3db5d4d0fa70c915590e4c72}\label{classWindow_ab9f0f7ea3db5d4d0fa70c915590e4c72}} 
+\index{Window@{Window}!sumpower@{sumpower}}
+\index{sumpower@{sumpower}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{sumpower}{sumpower}}
+{\footnotesize\ttfamily double Window\+::sumpower\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Stores the result of the pow() function in signal processing. 
+
+\mbox{\Hypertarget{classWindow_a13ad2a2a6dd2fa6a8943e92fb08629a1}\label{classWindow_a13ad2a2a6dd2fa6a8943e92fb08629a1}} 
+\index{Window@{Window}!xData1@{xData1}}
+\index{xData1@{xData1}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{xData1}{xData1}}
+{\footnotesize\ttfamily double Window\+::x\+Data1\mbox{[}\mbox{\hyperlink{classWindow_a9908e75f132d5ac3f23b4ff9a4832c63}{plot\+Data\+Size}}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Data array for x\+Data1. 
+
+\mbox{\Hypertarget{classWindow_a7b0d44a397ca90add463e2093f4a1423}\label{classWindow_a7b0d44a397ca90add463e2093f4a1423}} 
+\index{Window@{Window}!xData2@{xData2}}
+\index{xData2@{xData2}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{xData2}{xData2}}
+{\footnotesize\ttfamily double Window\+::x\+Data2\mbox{[}\mbox{\hyperlink{classWindow_a9908e75f132d5ac3f23b4ff9a4832c63}{plot\+Data\+Size}}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Data array for x\+Data2. 
+
+\mbox{\Hypertarget{classWindow_a66e60e4413d120313000c1d744c904f1}\label{classWindow_a66e60e4413d120313000c1d744c904f1}} 
+\index{Window@{Window}!xData3@{xData3}}
+\index{xData3@{xData3}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{xData3}{xData3}}
+{\footnotesize\ttfamily double Window\+::x\+Data3\mbox{[}\mbox{\hyperlink{classWindow_a9908e75f132d5ac3f23b4ff9a4832c63}{plot\+Data\+Size}}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Data array for x\+Data3. 
+
+\mbox{\Hypertarget{classWindow_a9baba6757f9e1a5c25e2c8bcf291ad32}\label{classWindow_a9baba6757f9e1a5c25e2c8bcf291ad32}} 
+\index{Window@{Window}!yData1@{yData1}}
+\index{yData1@{yData1}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{yData1}{yData1}}
+{\footnotesize\ttfamily double Window\+::y\+Data1\mbox{[}\mbox{\hyperlink{classWindow_a9908e75f132d5ac3f23b4ff9a4832c63}{plot\+Data\+Size}}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Data array for y\+Data1. 
+
+\mbox{\Hypertarget{classWindow_a25e229e2503d02a9904f56fb730d4744}\label{classWindow_a25e229e2503d02a9904f56fb730d4744}} 
+\index{Window@{Window}!yData2@{yData2}}
+\index{yData2@{yData2}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{yData2}{yData2}}
+{\footnotesize\ttfamily double Window\+::y\+Data2\mbox{[}\mbox{\hyperlink{classWindow_a9908e75f132d5ac3f23b4ff9a4832c63}{plot\+Data\+Size}}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Data array for y\+Data2. 
+
+\mbox{\Hypertarget{classWindow_a7f1854f46d87a6bfd6b53806be12ba1c}\label{classWindow_a7f1854f46d87a6bfd6b53806be12ba1c}} 
+\index{Window@{Window}!yData3@{yData3}}
+\index{yData3@{yData3}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{yData3}{yData3}}
+{\footnotesize\ttfamily double Window\+::y\+Data3\mbox{[}\mbox{\hyperlink{classWindow_a9908e75f132d5ac3f23b4ff9a4832c63}{plot\+Data\+Size}}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Data array for y\+Data3. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/finlay/\+R\+T\+E\+P1/\+Rpi\+\_\+end/200322\+\_\+\+Rpi\+\_\+end\+\_\+together/\mbox{\hyperlink{window_8h}{window.\+h}}\item 
+/home/finlay/\+R\+T\+E\+P1/\+Rpi\+\_\+end/200322\+\_\+\+Rpi\+\_\+end\+\_\+together/\mbox{\hyperlink{window_8cpp}{window.\+cpp}}\end{DoxyCompactItemize}

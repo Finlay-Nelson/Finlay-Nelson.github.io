@@ -1,0 +1,87 @@
+\hypertarget{GPIOlis_8cpp}{}\doxysection{/home/finlay/\+R\+T\+E\+P1/\+Rpi\+\_\+end/200322\+\_\+\+Rpi\+\_\+end\+\_\+together/\+G\+P\+I\+Olis.cpp File Reference}
+\label{GPIOlis_8cpp}\index{/home/finlay/RTEP1/Rpi\_end/200322\_Rpi\_end\_together/GPIOlis.cpp@{/home/finlay/RTEP1/Rpi\_end/200322\_Rpi\_end\_together/GPIOlis.cpp}}
+
+
+Stuff.  
+
+
+{\ttfamily \#include $<$Q\+Debug$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$wiring\+Pi.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include \char`\"{}G\+P\+I\+Olis.\+h\char`\"{}}\newline
+Include dependency graph for G\+P\+I\+Olis.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{GPIOlis_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{GPIOlis_8cpp_ad7831c642a7240a6d74f929a1158d448}{interrupt2}} (void)
+\begin{DoxyCompactList}\small\item\em Called in response to an interrupt, to alter the value of the flag \char`\"{}gpipinterrupt\char`\"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{GPIOlis_8cpp_a6715efeafc8103a65e244026d957b70b}{gpipinterrupt}} =0
+\begin{DoxyCompactList}\small\item\em Stores a binary value relating to the interrupt state. \end{DoxyCompactList}\item 
+std\+::mutex \mbox{\hyperlink{GPIOlis_8cpp_a4f14f0593fff5e3ca0491b3962e6544f}{cmdmtx}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Stuff. 
+
+Details
+
+\begin{DoxyAuthor}{Author}
+Zonghan Gan 
+
+Finlay Nelson 
+
+Henry Cowan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+16 April 2020 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{GPIOlis_8cpp_ad7831c642a7240a6d74f929a1158d448}\label{GPIOlis_8cpp_ad7831c642a7240a6d74f929a1158d448}} 
+\index{GPIOlis.cpp@{GPIOlis.cpp}!interrupt2@{interrupt2}}
+\index{interrupt2@{interrupt2}!GPIOlis.cpp@{GPIOlis.cpp}}
+\doxysubsubsection{\texorpdfstring{interrupt2()}{interrupt2()}}
+{\footnotesize\ttfamily void interrupt2 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Called in response to an interrupt, to alter the value of the flag \char`\"{}gpipinterrupt\char`\"{}. 
+
+$<$ Locks the mutex if the mutex isn\textquotesingle{}t currently locked by any thread
+
+$<$ Unlocks the mutex if the mutex isn\textquotesingle{}t currently locked by any thread
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{GPIOlis_8cpp_a4f14f0593fff5e3ca0491b3962e6544f}\label{GPIOlis_8cpp_a4f14f0593fff5e3ca0491b3962e6544f}} 
+\index{GPIOlis.cpp@{GPIOlis.cpp}!cmdmtx@{cmdmtx}}
+\index{cmdmtx@{cmdmtx}!GPIOlis.cpp@{GPIOlis.cpp}}
+\doxysubsubsection{\texorpdfstring{cmdmtx}{cmdmtx}}
+{\footnotesize\ttfamily std\+::mutex \mbox{\hyperlink{classcmdmtx}{cmdmtx}}}
+
+\mbox{\Hypertarget{GPIOlis_8cpp_a6715efeafc8103a65e244026d957b70b}\label{GPIOlis_8cpp_a6715efeafc8103a65e244026d957b70b}} 
+\index{GPIOlis.cpp@{GPIOlis.cpp}!gpipinterrupt@{gpipinterrupt}}
+\index{gpipinterrupt@{gpipinterrupt}!GPIOlis.cpp@{GPIOlis.cpp}}
+\doxysubsubsection{\texorpdfstring{gpipinterrupt}{gpipinterrupt}}
+{\footnotesize\ttfamily int gpipinterrupt =0}
+
+
+
+Stores a binary value relating to the interrupt state. 
+
+The resting value of this variable remains 0 until an interrupt is called. This changes the \char`\"{}gpipinterrupt\char`\"{} value to 1, triggering the non-\/conditional elements of the \mbox{\hyperlink{classGPIOlis_a65d2d0d0faf0d9edc0b31ddb51e88d2b}{G\+P\+I\+Olis\+::run()}} function. 
