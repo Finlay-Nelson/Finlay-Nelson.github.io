@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="group__group10" kind="group">
+    <compoundname>group10</compoundname>
+    <title>ADS1115: LATCHING COMPARATOR</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__group10_1ga98757804761f1d945f4cf6ca40e30457" prot="public" static="no">
+        <name>ADS1015_REG_CONFIG_CLAT_NONLAT</name>
+        <initializer>(0x0000)</initializer>
+        <briefdescription>
+<para>Non-latching comparator (DEFAULT) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="324" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="324" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group10_1gaf7f9528dd1aee135afad4c44d771b9f6" prot="public" static="no">
+        <name>ADS1015_REG_CONFIG_CLAT_LATCH</name>
+        <initializer>(0x0004)</initializer>
+        <briefdescription>
+<para>Latching comparator. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="325" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="325" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>ADS1115 Bit[2]. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This bit controls whether the ALERT/RDY pin latches once asserted or clears once conversions are within the margin of the upper and lower threshold values. When COMP_LAT = &apos;0&apos;, the ALERT/RDY pin does not latch when asserted. When COMP_LAT = &apos;1&apos;, the asserted ALERT/RDY pin remains latched until conversion data are read by the master or an appropriate SMBus alert response is sent by the master, the device responds with its address, and it is the lowest address currently asserting the ALERT/RDY bus line.</para>
+<para>The DEFAULT setting holds the ALERT/RDY pin active low </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

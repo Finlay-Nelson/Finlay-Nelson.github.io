@@ -1,0 +1,45 @@
+.TH "group12" 3 "Sun Apr 19 2020" "Muscle Power Gaming" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+group12 \- Dictates the MSB\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBADS1115_REG_THRESH_MSB_1\fP   (0x8000)"
+.br
+.RI "Set MSB to 1\&. "
+.ti -1c
+.RI "#define \fBADS1115_REG_THRESH_MSB_0\fP   (0x7FFF)"
+.br
+.RI "Set MSB to 0\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Dictates the MSB\&. 
+
+This bit controls whether the ALERT/RDY pin latches once asserted or clears once conversions are within the margin of the upper and lower threshold values\&. When COMP_LAT = '0', the ALERT/RDY pin does not latch when asserted\&. When COMP_LAT = '1', the asserted ALERT/RDY pin remains latched until conversion data are read by the master or an appropriate SMBus alert response is sent by the master, the device responds with its address, and it is the lowest address currently asserting the ALERT/RDY bus line\&.
+.PP
+The DEFAULT setting holds the ALERT/RDY pin active low 
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define ADS1115_REG_THRESH_MSB_0   (0x7FFF)"
+
+.PP
+Set MSB to 0\&. 
+.PP
+Definition at line 363 of file ads1115\&.h\&.
+.SS "#define ADS1115_REG_THRESH_MSB_1   (0x8000)"
+
+.PP
+Set MSB to 1\&. 
+.PP
+Definition at line 362 of file ads1115\&.h\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Muscle Power Gaming from the source code\&.

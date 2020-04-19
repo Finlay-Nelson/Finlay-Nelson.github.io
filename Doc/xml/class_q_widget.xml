@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="class_q_widget" kind="class" language="C++" prot="public">
+    <compoundname>QWidget</compoundname>
+    <derivedcompoundref refid="class_window" prot="public" virt="non-virtual">Window</derivedcompoundref>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Window</label>
+        <link refid="class_window"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>QWidget</label>
+        <link refid="class_q_widget"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>QWidget</label>
+        <link refid="class_q_widget"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/finlay/RTEP1/Rpi_end/200322_Rpi_end_together/window.h" line="52" column="1"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

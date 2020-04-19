@@ -1,0 +1,898 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="class_window" kind="class" language="C++" prot="public">
+    <compoundname>Window</compoundname>
+    <basecompoundref refid="qwidget" prot="public" virt="non-virtual">QWidget</basecompoundref>
+    <includes refid="window_8h" local="no">window.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_window_1ad0125c79705223e60f695c194166f312" prot="public" static="no" mutable="no">
+        <type><ref refid="qudpsocket" kindref="compound" external="/home/finlay/Repo/doc/qtnetwork/qtnetwork.tags">QUdpSocket</ref> *</type>
+        <definition>QUdpSocket* Window::sdersc</definition>
+        <argsstring></argsstring>
+        <name>sdersc</name>
+        <briefdescription>
+<para>A pointer to the <ref refid="qudpsocket" kindref="compound" external="/home/finlay/Repo/doc/qtnetwork/qtnetwork.tags">QUdpSocket</ref> class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The <ref refid="qudpsocket" kindref="compound" external="/home/finlay/Repo/doc/qtnetwork/qtnetwork.tags">QUdpSocket</ref> class is a subclass of <ref refid="qabstractsocket" kindref="compound" external="/home/finlay/Repo/doc/qtnetwork/qtnetwork.tags">QAbstractSocket</ref> that allows the sending and receiving of UDP (User Datagram Protocol) datagrams. Used to bind an adress and port to transfer data. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/window.h" line="63" column="14" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/window.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_1a99a930e8fdf9c009aca0d1bed1bdcd8f" prot="public" static="no" mutable="no">
+        <type><ref refid="class_g_p_i_olis" kindref="compound">GPIOlis</ref> *</type>
+        <definition>GPIOlis* Window::gpiolis1</definition>
+        <argsstring></argsstring>
+        <name>gpiolis1</name>
+        <briefdescription>
+<para>gpiolis1 is a pointer to the <ref refid="class_g_p_i_olis" kindref="compound">GPIOlis</ref> function </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/window.h" line="81" column="11" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/window.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_1a703d58d30da77e83166ef37942ad8602" prot="public" static="no" mutable="no">
+        <type><ref refid="qtimer" kindref="compound" external="/home/finlay/Repo/doc/qtcore/qtcore.tags">QTimer</ref> *</type>
+        <definition>QTimer* Window::rftimer</definition>
+        <argsstring></argsstring>
+        <name>rftimer</name>
+        <briefdescription>
+<para>rftimer is a pointer to the <ref refid="qtimer" kindref="compound" external="/home/finlay/Repo/doc/qtcore/qtcore.tags">QTimer</ref> function </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/window.h" line="83" column="10" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/window.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_window_1ac930f3c9fd48aeb627204e7aeaf80573" prot="private" static="no" mutable="no">
+        <type>QwtPlot *</type>
+        <definition>QwtPlot* Window::plot1</definition>
+        <argsstring></argsstring>
+        <name>plot1</name>
+        <briefdescription>
+<para><ref refid="qt" kindref="compound" external="/home/finlay/Repo/doc/qtcore/qtcore.tags">Qt</ref> widget: First plot. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/window.h" line="106" column="16" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/window.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_1a10bbc5d8730ee6c5bb4f4a956225533c" prot="private" static="no" mutable="no">
+        <type>QwtPlot *</type>
+        <definition>QwtPlot* Window::plot2</definition>
+        <argsstring></argsstring>
+        <name>plot2</name>
+        <briefdescription>
+<para>QT widget: Second plot. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/window.h" line="107" column="16" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/window.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_1a112c8681462cb0339faf1b3a5e8d312c" prot="private" static="no" mutable="no">
+        <type>QwtPlotCurve *</type>
+        <definition>QwtPlotCurve* Window::curve1</definition>
+        <argsstring></argsstring>
+        <name>curve1</name>
+        <briefdescription>
+<para>QT widget: First curve. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/window.h" line="108" column="16" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/window.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_1ad6c1bf613b3e5a026fba544ed567a87b" prot="private" static="no" mutable="no">
+        <type>QwtPlotCurve *</type>
+        <definition>QwtPlotCurve* Window::curve2</definition>
+        <argsstring></argsstring>
+        <name>curve2</name>
+        <briefdescription>
+<para>QT widget: Second curve. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/window.h" line="109" column="16" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/window.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_1a088e83054c444170282461344174f30b" prot="private" static="no" mutable="no">
+        <type><ref refid="qhboxlayout" kindref="compound" external="/home/finlay/Repo/doc/qtwidgets/qtwidgets.tags">QHBoxLayout</ref> *</type>
+        <definition>QHBoxLayout* Window::hLayout</definition>
+        <argsstring></argsstring>
+        <name>hLayout</name>
+        <briefdescription>
+<para>Horizontal layout. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/window.h" line="111" column="16" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/window.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_1a13ad2a2a6dd2fa6a8943e92fb08629a1" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Window::xData1[plotDataSize]</definition>
+        <argsstring>[plotDataSize]</argsstring>
+        <name>xData1</name>
+        <briefdescription>
+<para>Data array for xData1. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/window.h" line="115" column="10" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/window.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_1a9baba6757f9e1a5c25e2c8bcf291ad32" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Window::yData1[plotDataSize]</definition>
+        <argsstring>[plotDataSize]</argsstring>
+        <name>yData1</name>
+        <briefdescription>
+<para>Data array for yData1. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/window.h" line="116" column="10" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/window.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_1a7b0d44a397ca90add463e2093f4a1423" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Window::xData2[plotDataSize]</definition>
+        <argsstring>[plotDataSize]</argsstring>
+        <name>xData2</name>
+        <briefdescription>
+<para>Data array for xData2. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/window.h" line="117" column="10" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/window.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_1a25e229e2503d02a9904f56fb730d4744" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Window::yData2[plotDataSize]</definition>
+        <argsstring>[plotDataSize]</argsstring>
+        <name>yData2</name>
+        <briefdescription>
+<para>Data array for yData2. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/window.h" line="118" column="10" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/window.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_1a66e60e4413d120313000c1d744c904f1" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Window::xData3[plotDataSize]</definition>
+        <argsstring>[plotDataSize]</argsstring>
+        <name>xData3</name>
+        <briefdescription>
+<para>Data array for xData3. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/window.h" line="119" column="10" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/window.h" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_1a7f1854f46d87a6bfd6b53806be12ba1c" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Window::yData3[plotDataSize]</definition>
+        <argsstring>[plotDataSize]</argsstring>
+        <name>yData3</name>
+        <briefdescription>
+<para>Data array for yData3. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/window.h" line="120" column="10" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/window.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_1ab9f0f7ea3db5d4d0fa70c915590e4c72" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Window::sumpower</definition>
+        <argsstring></argsstring>
+        <name>sumpower</name>
+        <briefdescription>
+<para>Stores the result of the pow() function in signal processing. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/window.h" line="121" column="10" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/window.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_window_1a9908e75f132d5ac3f23b4ff9a4832c63" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int Window::plotDataSize</definition>
+        <argsstring></argsstring>
+        <name>plotDataSize</name>
+        <initializer>= 5</initializer>
+        <briefdescription>
+<para>The size of variable storage in data arrays. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/window.h" line="113" column="20" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/window.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_window_1ab27fe44e0834066236f79f244b02f67e" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Window::Window</definition>
+        <argsstring>(QWidget *parent=0)</argsstring>
+        <name>Window</name>
+        <param>
+          <type><ref refid="qwidget" kindref="compound" external="/home/finlay/Repo/doc/qtwidgets/qtwidgets.tags">QWidget</ref> *</type>
+          <declname>parent</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para><ref refid="class_window" kindref="compound">Window</ref> default constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialises data buffers for incoming EMG data, and generates plot objects to which buffers attach. The constructor also defines a highpass Butterworth filter, creates appropriate files in which to store log data, and initialises the ADC and UDP. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/window.h" line="70" column="12" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/window.cpp" bodystart="47" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="class_window_1a245d821e6016fa1f6970ccbbedd635f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Window::~Window</definition>
+        <argsstring>()</argsstring>
+        <name>~Window</name>
+        <briefdescription>
+<para><ref refid="class_window" kindref="compound">Window</ref> destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Exits the <ref refid="class_g_p_i_olis" kindref="compound">GPIOlis()</ref> object and deletes the GUI window and it&apos;s components </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/window.h" line="78" column="3" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/window.cpp" bodystart="115" bodyend="135"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-slot">
+      <memberdef kind="slot" id="class_window_1aa0c78bd5a1a320ec6cf427e7441d9714" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Window::datapros</definition>
+        <argsstring>(float)</argsstring>
+        <name>datapros</name>
+        <param>
+          <type>float</type>
+          <defname>inval</defname>
+        </param>
+        <briefdescription>
+<para>Performs the data processing and filtering of the input signals. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>&quot;hp1&quot; is an instance of a high pass Butterworth IIR filer, of order given by the input parameter. The time-smoothed power of the signal is calculated, added to the plots through the memmove() function, and saved. A 1 channel UDP is sent to test control of the game.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>inval</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The IIR filter order for processing. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/window.h" line="96" column="8" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/window.cpp" bodystart="138" bodyend="188"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_window_1ad7445be21c77c9944b3dba2e146bb989" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Window::plotrefresh</definition>
+        <argsstring>()</argsstring>
+        <name>plotrefresh</name>
+        <briefdescription>
+<para>Refreshes the GUI window plot every 20ms. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/window.h" line="102" column="8" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/window.cpp" bodystart="190" bodyend="198"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Generates and updates the components of the Pong game&apos;s GUI window. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class instantiates the game components (the GUI scene, paddles, ball and scoreboard), and updates them based on the incoming EMG signal through the <ref refid="qt" kindref="compound" external="/home/finlay/Repo/doc/qtcore/qtcore.tags">Qt</ref> signal slot mechanism. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Window</label>
+        <link refid="class_window"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>QObject</label>
+        <link refid="qobject" external="/home/finlay/Repo/doc/qtcore/qtcore.tags"/>
+      </node>
+      <node id="2">
+        <label>QWidget</label>
+        <link refid="qwidget" external="/home/finlay/Repo/doc/qtwidgets/qtwidgets.tags"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>QPaintDevice</label>
+        <link refid="qpaintdevice" external="/home/finlay/Repo/doc/qtgui/qtgui.tags"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="14">
+        <label>QLayout</label>
+        <link refid="qlayout" external="/home/finlay/Repo/doc/qtwidgets/qtwidgets.tags"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Window</label>
+        <link refid="class_window"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>gpiolis1</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>rftimer</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>sdersc</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>hLayout</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>QObject</label>
+        <link refid="qobject" external="/home/finlay/Repo/doc/qtcore/qtcore.tags"/>
+      </node>
+      <node id="6">
+        <label>QThread</label>
+        <link refid="qthread" external="/home/finlay/Repo/doc/qtcore/qtcore.tags"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>GPIOlis</label>
+        <link refid="class_g_p_i_olis"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>ads1</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>QAbstractSocket</label>
+        <link refid="qabstractsocket" external="/home/finlay/Repo/doc/qtnetwork/qtnetwork.tags"/>
+        <childnode refid="11" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>ads1115</label>
+        <link refid="classads1115"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>QHBoxLayout</label>
+        <link refid="qhboxlayout" external="/home/finlay/Repo/doc/qtwidgets/qtwidgets.tags"/>
+        <childnode refid="13" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>QIODevice</label>
+        <link refid="qiodevice" external="/home/finlay/Repo/doc/qtcore/qtcore.tags"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>QTimer</label>
+        <link refid="qtimer" external="/home/finlay/Repo/doc/qtcore/qtcore.tags"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>QWidget</label>
+        <link refid="qwidget" external="/home/finlay/Repo/doc/qtwidgets/qtwidgets.tags"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>QUdpSocket</label>
+        <link refid="qudpsocket" external="/home/finlay/Repo/doc/qtnetwork/qtnetwork.tags"/>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>QLayoutItem</label>
+        <link refid="qlayoutitem" external="/home/finlay/Repo/doc/qtwidgets/qtwidgets.tags"/>
+      </node>
+      <node id="4">
+        <label>QPaintDevice</label>
+        <link refid="qpaintdevice" external="/home/finlay/Repo/doc/qtgui/qtgui.tags"/>
+      </node>
+      <node id="13">
+        <label>QBoxLayout</label>
+        <link refid="qboxlayout" external="/home/finlay/Repo/doc/qtwidgets/qtwidgets.tags"/>
+        <childnode refid="14" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/window.h" line="52" column="1" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/window.h" bodystart="53" bodyend="123"/>
+    <listofallmembers>
+      <member refid="qwidget_1acceptDrops-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>acceptDrops</name></member>
+      <member refid="qwidget_1acceptDrops-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>acceptDrops</name></member>
+      <member refid="qwidget_1accessibleDescription-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>accessibleDescription</name></member>
+      <member refid="qwidget_1accessibleDescription-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>accessibleDescription</name></member>
+      <member refid="qwidget_1accessibleName-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>accessibleName</name></member>
+      <member refid="qwidget_1accessibleName-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>accessibleName</name></member>
+      <member refid="qwidget_1actionEvent" prot="protected" virt="virtual"><scope>Window</scope><name>actionEvent</name></member>
+      <member refid="qwidget_1actions" prot="public" virt="non-virtual"><scope>Window</scope><name>actions</name></member>
+      <member refid="qwidget_1activateWindow" prot="public" virt="non-virtual"><scope>Window</scope><name>activateWindow</name></member>
+      <member refid="qwidget_1addAction" prot="public" virt="non-virtual"><scope>Window</scope><name>addAction</name></member>
+      <member refid="qwidget_1addActions" prot="public" virt="non-virtual"><scope>Window</scope><name>addActions</name></member>
+      <member refid="qwidget_1adjustSize" prot="public" virt="non-virtual"><scope>Window</scope><name>adjustSize</name></member>
+      <member refid="qwidget_1autoFillBackground-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>autoFillBackground</name></member>
+      <member refid="qwidget_1autoFillBackground-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>autoFillBackground</name></member>
+      <member refid="qwidget_1backgroundRole" prot="public" virt="non-virtual"><scope>Window</scope><name>backgroundRole</name></member>
+      <member refid="qwidget_1backingStore" prot="public" virt="non-virtual"><scope>Window</scope><name>backingStore</name></member>
+      <member refid="qwidget_1baseSize-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>baseSize</name></member>
+      <member refid="qwidget_1baseSize-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>baseSize</name></member>
+      <member refid="qobject_1blockSignals" prot="public" virt="non-virtual"><scope>Window</scope><name>blockSignals</name></member>
+      <member refid="qwidget_1changeEvent" prot="protected" virt="virtual"><scope>Window</scope><name>changeEvent</name></member>
+      <member refid="qwidget_1childAt" prot="public" virt="non-virtual"><scope>Window</scope><name>childAt</name></member>
+      <member refid="qwidget_1childAt-1" prot="public" virt="non-virtual"><scope>Window</scope><name>childAt</name></member>
+      <member refid="qobject_1childEvent" prot="protected" virt="virtual"><scope>Window</scope><name>childEvent</name></member>
+      <member refid="qobject_1children" prot="public" virt="non-virtual"><scope>Window</scope><name>children</name></member>
+      <member refid="qwidget_1childrenRect-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>childrenRect</name></member>
+      <member refid="qwidget_1childrenRect-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>childrenRect</name></member>
+      <member refid="qwidget_1childrenRegion-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>childrenRegion</name></member>
+      <member refid="qwidget_1childrenRegion-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>childrenRegion</name></member>
+      <member refid="qwidget_1clearFocus" prot="public" virt="non-virtual"><scope>Window</scope><name>clearFocus</name></member>
+      <member refid="qwidget_1clearMask" prot="public" virt="non-virtual"><scope>Window</scope><name>clearMask</name></member>
+      <member refid="qwidget_1close" prot="public" virt="non-virtual"><scope>Window</scope><name>close</name></member>
+      <member refid="qwidget_1closeEvent" prot="protected" virt="virtual"><scope>Window</scope><name>closeEvent</name></member>
+      <member refid="qpaintdevice_1colorCount" prot="public" virt="non-virtual"><scope>Window</scope><name>colorCount</name></member>
+      <member refid="qobject_1connect" prot="public" virt="non-virtual"><scope>Window</scope><name>connect</name></member>
+      <member refid="qobject_1connect-1" prot="public" virt="non-virtual"><scope>Window</scope><name>connect</name></member>
+      <member refid="qobject_1connect-2" prot="public" virt="non-virtual"><scope>Window</scope><name>connect</name></member>
+      <member refid="qobject_1connect-3" prot="public" virt="non-virtual"><scope>Window</scope><name>connect</name></member>
+      <member refid="qobject_1connect-4" prot="public" virt="non-virtual"><scope>Window</scope><name>connect</name></member>
+      <member refid="qobject_1connect-5" prot="public" virt="non-virtual"><scope>Window</scope><name>connect</name></member>
+      <member refid="qobject_1connectNotify" prot="protected" virt="virtual"><scope>Window</scope><name>connectNotify</name></member>
+      <member refid="qwidget_1contentsMargins" prot="public" virt="non-virtual"><scope>Window</scope><name>contentsMargins</name></member>
+      <member refid="qwidget_1contentsRect" prot="public" virt="non-virtual"><scope>Window</scope><name>contentsRect</name></member>
+      <member refid="qwidget_1contextMenuEvent" prot="protected" virt="virtual"><scope>Window</scope><name>contextMenuEvent</name></member>
+      <member refid="qwidget_1contextMenuPolicy-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>contextMenuPolicy</name></member>
+      <member refid="qwidget_1contextMenuPolicy-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>contextMenuPolicy</name></member>
+      <member refid="qwidget_1create" prot="protected" virt="non-virtual"><scope>Window</scope><name>create</name></member>
+      <member refid="qwidget_1createWindowContainer" prot="public" virt="non-virtual"><scope>Window</scope><name>createWindowContainer</name></member>
+      <member refid="qwidget_1cursor-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>cursor</name></member>
+      <member refid="qwidget_1cursor-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>cursor</name></member>
+      <member refid="class_window_1a112c8681462cb0339faf1b3a5e8d312c" prot="private" virt="non-virtual"><scope>Window</scope><name>curve1</name></member>
+      <member refid="class_window_1ad6c1bf613b3e5a026fba544ed567a87b" prot="private" virt="non-virtual"><scope>Window</scope><name>curve2</name></member>
+      <member refid="qwidget_1customContextMenuRequested" prot="public" virt="non-virtual"><scope>Window</scope><name>customContextMenuRequested</name></member>
+      <member refid="qobject_1customEvent" prot="protected" virt="virtual"><scope>Window</scope><name>customEvent</name></member>
+      <member refid="class_window_1aa0c78bd5a1a320ec6cf427e7441d9714" prot="public" virt="non-virtual"><scope>Window</scope><name>datapros</name></member>
+      <member refid="qobject_1deleteLater" prot="public" virt="non-virtual"><scope>Window</scope><name>deleteLater</name></member>
+      <member refid="qpaintdevice_1depth" prot="public" virt="non-virtual"><scope>Window</scope><name>depth</name></member>
+      <member refid="qwidget_1destroy" prot="protected" virt="non-virtual"><scope>Window</scope><name>destroy</name></member>
+      <member refid="qobject_1destroyed" prot="public" virt="non-virtual"><scope>Window</scope><name>destroyed</name></member>
+      <member refid="qpaintdevice_1devicePixelRatio" prot="public" virt="non-virtual"><scope>Window</scope><name>devicePixelRatio</name></member>
+      <member refid="qpaintdevice_1devicePixelRatioF" prot="public" virt="non-virtual"><scope>Window</scope><name>devicePixelRatioF</name></member>
+      <member refid="qobject_1disconnect" prot="public" virt="non-virtual"><scope>Window</scope><name>disconnect</name></member>
+      <member refid="qobject_1disconnect-1" prot="public" virt="non-virtual"><scope>Window</scope><name>disconnect</name></member>
+      <member refid="qobject_1disconnect-2" prot="public" virt="non-virtual"><scope>Window</scope><name>disconnect</name></member>
+      <member refid="qobject_1disconnect-3" prot="public" virt="non-virtual"><scope>Window</scope><name>disconnect</name></member>
+      <member refid="qobject_1disconnect-4" prot="public" virt="non-virtual"><scope>Window</scope><name>disconnect</name></member>
+      <member refid="qobject_1disconnect-5" prot="public" virt="non-virtual"><scope>Window</scope><name>disconnect</name></member>
+      <member refid="qobject_1disconnectNotify" prot="protected" virt="virtual"><scope>Window</scope><name>disconnectNotify</name></member>
+      <member refid="qwidget_1dragEnterEvent" prot="protected" virt="virtual"><scope>Window</scope><name>dragEnterEvent</name></member>
+      <member refid="qwidget_1dragLeaveEvent" prot="protected" virt="virtual"><scope>Window</scope><name>dragLeaveEvent</name></member>
+      <member refid="qwidget_1dragMoveEvent" prot="protected" virt="virtual"><scope>Window</scope><name>dragMoveEvent</name></member>
+      <member refid="qwidget_1dropEvent" prot="protected" virt="virtual"><scope>Window</scope><name>dropEvent</name></member>
+      <member refid="qobject-obsolete_1dumpObjectInfo-1" prot="public" virt="non-virtual"><scope>Window</scope><name>dumpObjectInfo</name></member>
+      <member refid="qobject_1dumpObjectInfo" prot="public" virt="non-virtual"><scope>Window</scope><name>dumpObjectInfo</name></member>
+      <member refid="qobject-obsolete_1dumpObjectTree-1" prot="public" virt="non-virtual"><scope>Window</scope><name>dumpObjectTree</name></member>
+      <member refid="qobject_1dumpObjectTree" prot="public" virt="non-virtual"><scope>Window</scope><name>dumpObjectTree</name></member>
+      <member refid="qobject_1dynamicPropertyNames" prot="public" virt="non-virtual"><scope>Window</scope><name>dynamicPropertyNames</name></member>
+      <member refid="qwidget_1effectiveWinId" prot="public" virt="non-virtual"><scope>Window</scope><name>effectiveWinId</name></member>
+      <member refid="qwidget_1enabled-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>enabled</name></member>
+      <member refid="qwidget_1ensurePolished" prot="public" virt="non-virtual"><scope>Window</scope><name>ensurePolished</name></member>
+      <member refid="qwidget_1enterEvent" prot="protected" virt="virtual"><scope>Window</scope><name>enterEvent</name></member>
+      <member refid="qwidget_1event" prot="protected" virt="virtual"><scope>Window</scope><name>event</name></member>
+      <member refid="qobject_1eventFilter" prot="public" virt="virtual"><scope>Window</scope><name>eventFilter</name></member>
+      <member refid="qwidget_1find" prot="public" virt="non-virtual"><scope>Window</scope><name>find</name></member>
+      <member refid="qobject_1findChild" prot="public" virt="non-virtual"><scope>Window</scope><name>findChild</name></member>
+      <member refid="qobject_1findChildren" prot="public" virt="non-virtual"><scope>Window</scope><name>findChildren</name></member>
+      <member refid="qobject_1findChildren-1" prot="public" virt="non-virtual"><scope>Window</scope><name>findChildren</name></member>
+      <member refid="qobject_1findChildren-2" prot="public" virt="non-virtual"><scope>Window</scope><name>findChildren</name></member>
+      <member refid="qwidget_1focus-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>focus</name></member>
+      <member refid="qwidget_1focusInEvent" prot="protected" virt="virtual"><scope>Window</scope><name>focusInEvent</name></member>
+      <member refid="qwidget_1focusNextChild" prot="protected" virt="non-virtual"><scope>Window</scope><name>focusNextChild</name></member>
+      <member refid="qwidget_1focusNextPrevChild" prot="protected" virt="virtual"><scope>Window</scope><name>focusNextPrevChild</name></member>
+      <member refid="qwidget_1focusOutEvent" prot="protected" virt="virtual"><scope>Window</scope><name>focusOutEvent</name></member>
+      <member refid="qwidget_1focusPolicy-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>focusPolicy</name></member>
+      <member refid="qwidget_1focusPolicy-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>focusPolicy</name></member>
+      <member refid="qwidget_1focusPreviousChild" prot="protected" virt="non-virtual"><scope>Window</scope><name>focusPreviousChild</name></member>
+      <member refid="qwidget_1focusProxy" prot="public" virt="non-virtual"><scope>Window</scope><name>focusProxy</name></member>
+      <member refid="qwidget_1focusWidget" prot="public" virt="non-virtual"><scope>Window</scope><name>focusWidget</name></member>
+      <member refid="qwidget_1font-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>font</name></member>
+      <member refid="qwidget_1font-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>font</name></member>
+      <member refid="qwidget_1fontInfo" prot="public" virt="non-virtual"><scope>Window</scope><name>fontInfo</name></member>
+      <member refid="qwidget_1fontMetrics" prot="public" virt="non-virtual"><scope>Window</scope><name>fontMetrics</name></member>
+      <member refid="qwidget_1foregroundRole" prot="public" virt="non-virtual"><scope>Window</scope><name>foregroundRole</name></member>
+      <member refid="qwidget_1frameGeometry-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>frameGeometry</name></member>
+      <member refid="qwidget_1frameGeometry-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>frameGeometry</name></member>
+      <member refid="qwidget_1frameSize-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>frameSize</name></member>
+      <member refid="qwidget_1frameSize-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>frameSize</name></member>
+      <member refid="qwidget_1fullScreen-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>fullScreen</name></member>
+      <member refid="qwidget_1geometry-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>geometry</name></member>
+      <member refid="qwidget_1geometry-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>geometry</name></member>
+      <member refid="qwidget_1getContentsMargins" prot="public" virt="non-virtual"><scope>Window</scope><name>getContentsMargins</name></member>
+      <member refid="class_window_1a99a930e8fdf9c009aca0d1bed1bdcd8f" prot="public" virt="non-virtual"><scope>Window</scope><name>gpiolis1</name></member>
+      <member refid="qwidget_1grab" prot="public" virt="non-virtual"><scope>Window</scope><name>grab</name></member>
+      <member refid="qwidget_1grabGesture" prot="public" virt="non-virtual"><scope>Window</scope><name>grabGesture</name></member>
+      <member refid="qwidget_1grabKeyboard" prot="public" virt="non-virtual"><scope>Window</scope><name>grabKeyboard</name></member>
+      <member refid="qwidget_1grabMouse" prot="public" virt="non-virtual"><scope>Window</scope><name>grabMouse</name></member>
+      <member refid="qwidget_1grabMouse-1" prot="public" virt="non-virtual"><scope>Window</scope><name>grabMouse</name></member>
+      <member refid="qwidget_1grabShortcut" prot="public" virt="non-virtual"><scope>Window</scope><name>grabShortcut</name></member>
+      <member refid="qwidget_1graphicsEffect" prot="public" virt="non-virtual"><scope>Window</scope><name>graphicsEffect</name></member>
+      <member refid="qwidget_1graphicsProxyWidget" prot="public" virt="non-virtual"><scope>Window</scope><name>graphicsProxyWidget</name></member>
+      <member refid="qwidget_1hasEditFocus" prot="public" virt="non-virtual"><scope>Window</scope><name>hasEditFocus</name></member>
+      <member refid="qwidget_1focus-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>hasFocus</name></member>
+      <member refid="qwidget_1hasHeightForWidth" prot="public" virt="virtual"><scope>Window</scope><name>hasHeightForWidth</name></member>
+      <member refid="qwidget_1mouseTracking-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>hasMouseTracking</name></member>
+      <member refid="qwidget_1tabletTracking-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>hasTabletTracking</name></member>
+      <member refid="qwidget_1height-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>height</name></member>
+      <member refid="qwidget_1height-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>height</name></member>
+      <member refid="qwidget_1heightForWidth" prot="public" virt="virtual"><scope>Window</scope><name>heightForWidth</name></member>
+      <member refid="qpaintdevice_1heightMM" prot="public" virt="non-virtual"><scope>Window</scope><name>heightMM</name></member>
+      <member refid="qwidget_1hide" prot="public" virt="non-virtual"><scope>Window</scope><name>hide</name></member>
+      <member refid="qwidget_1hideEvent" prot="protected" virt="virtual"><scope>Window</scope><name>hideEvent</name></member>
+      <member refid="class_window_1a088e83054c444170282461344174f30b" prot="private" virt="non-virtual"><scope>Window</scope><name>hLayout</name></member>
+      <member refid="qobject_1inherits" prot="public" virt="non-virtual"><scope>Window</scope><name>inherits</name></member>
+      <member refid="qwidget_1initPainter" prot="protected" virt="virtual"><scope>Window</scope><name>initPainter</name></member>
+      <member refid="qwidget_1inputMethodEvent" prot="protected" virt="virtual"><scope>Window</scope><name>inputMethodEvent</name></member>
+      <member refid="qwidget_1inputMethodHints-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>inputMethodHints</name></member>
+      <member refid="qwidget_1inputMethodHints-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>inputMethodHints</name></member>
+      <member refid="qwidget_1inputMethodQuery" prot="public" virt="virtual"><scope>Window</scope><name>inputMethodQuery</name></member>
+      <member refid="qwidget_1insertAction" prot="public" virt="non-virtual"><scope>Window</scope><name>insertAction</name></member>
+      <member refid="qwidget_1insertActions" prot="public" virt="non-virtual"><scope>Window</scope><name>insertActions</name></member>
+      <member refid="qobject_1installEventFilter" prot="public" virt="non-virtual"><scope>Window</scope><name>installEventFilter</name></member>
+      <member refid="qwidget_1isActiveWindow-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>isActiveWindow</name></member>
+      <member refid="qwidget_1isActiveWindow-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>isActiveWindow</name></member>
+      <member refid="qwidget_1isAncestorOf" prot="public" virt="non-virtual"><scope>Window</scope><name>isAncestorOf</name></member>
+      <member refid="qwidget_1enabled-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>isEnabled</name></member>
+      <member refid="qwidget_1isEnabledTo" prot="public" virt="non-virtual"><scope>Window</scope><name>isEnabledTo</name></member>
+      <member refid="qwidget-obsolete_1isEnabledToTLW" prot="public" virt="non-virtual"><scope>Window</scope><name>isEnabledToTLW</name></member>
+      <member refid="qwidget_1fullScreen-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>isFullScreen</name></member>
+      <member refid="qwidget_1isHidden" prot="public" virt="non-virtual"><scope>Window</scope><name>isHidden</name></member>
+      <member refid="qwidget_1maximized-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>isMaximized</name></member>
+      <member refid="qwidget_1minimized-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>isMinimized</name></member>
+      <member refid="qwidget_1modal-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>isModal</name></member>
+      <member refid="qobject_1isSignalConnected" prot="protected" virt="non-virtual"><scope>Window</scope><name>isSignalConnected</name></member>
+      <member refid="qwidget-obsolete_1isTopLevel" prot="public" virt="non-virtual"><scope>Window</scope><name>isTopLevel</name></member>
+      <member refid="qwidget_1visible-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>isVisible</name></member>
+      <member refid="qwidget_1isVisibleTo" prot="public" virt="non-virtual"><scope>Window</scope><name>isVisibleTo</name></member>
+      <member refid="qobject_1isWidgetType" prot="public" virt="non-virtual"><scope>Window</scope><name>isWidgetType</name></member>
+      <member refid="qwidget_1isWindow" prot="public" virt="non-virtual"><scope>Window</scope><name>isWindow</name></member>
+      <member refid="qwidget_1windowModified-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>isWindowModified</name></member>
+      <member refid="qobject_1isWindowType" prot="public" virt="non-virtual"><scope>Window</scope><name>isWindowType</name></member>
+      <member refid="qwidget_1keyboardGrabber" prot="public" virt="non-virtual"><scope>Window</scope><name>keyboardGrabber</name></member>
+      <member refid="qwidget_1keyPressEvent" prot="protected" virt="virtual"><scope>Window</scope><name>keyPressEvent</name></member>
+      <member refid="qwidget_1keyReleaseEvent" prot="protected" virt="virtual"><scope>Window</scope><name>keyReleaseEvent</name></member>
+      <member refid="qobject_1killTimer" prot="public" virt="non-virtual"><scope>Window</scope><name>killTimer</name></member>
+      <member refid="qwidget_1layout" prot="public" virt="non-virtual"><scope>Window</scope><name>layout</name></member>
+      <member refid="qwidget_1layoutDirection-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>layoutDirection</name></member>
+      <member refid="qwidget_1layoutDirection-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>layoutDirection</name></member>
+      <member refid="qwidget_1leaveEvent" prot="protected" virt="virtual"><scope>Window</scope><name>leaveEvent</name></member>
+      <member refid="qwidget_1locale-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>locale</name></member>
+      <member refid="qwidget_1locale-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>locale</name></member>
+      <member refid="qpaintdevice_1logicalDpiX" prot="public" virt="non-virtual"><scope>Window</scope><name>logicalDpiX</name></member>
+      <member refid="qpaintdevice_1logicalDpiY" prot="public" virt="non-virtual"><scope>Window</scope><name>logicalDpiY</name></member>
+      <member refid="qwidget_1lower" prot="public" virt="non-virtual"><scope>Window</scope><name>lower</name></member>
+      <member refid="qwidget_1mapFrom" prot="public" virt="non-virtual"><scope>Window</scope><name>mapFrom</name></member>
+      <member refid="qwidget_1mapFromGlobal" prot="public" virt="non-virtual"><scope>Window</scope><name>mapFromGlobal</name></member>
+      <member refid="qwidget_1mapFromParent" prot="public" virt="non-virtual"><scope>Window</scope><name>mapFromParent</name></member>
+      <member refid="qwidget_1mapTo" prot="public" virt="non-virtual"><scope>Window</scope><name>mapTo</name></member>
+      <member refid="qwidget_1mapToGlobal" prot="public" virt="non-virtual"><scope>Window</scope><name>mapToGlobal</name></member>
+      <member refid="qwidget_1mapToParent" prot="public" virt="non-virtual"><scope>Window</scope><name>mapToParent</name></member>
+      <member refid="qwidget_1mask" prot="public" virt="non-virtual"><scope>Window</scope><name>mask</name></member>
+      <member refid="qwidget_1maximized-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>maximized</name></member>
+      <member refid="qwidget_1maximumHeight-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>maximumHeight</name></member>
+      <member refid="qwidget_1maximumHeight-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>maximumHeight</name></member>
+      <member refid="qwidget_1maximumSize-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>maximumSize</name></member>
+      <member refid="qwidget_1maximumSize-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>maximumSize</name></member>
+      <member refid="qwidget_1maximumWidth-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>maximumWidth</name></member>
+      <member refid="qwidget_1maximumWidth-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>maximumWidth</name></member>
+      <member refid="qobject_1metaObject" prot="public" virt="virtual"><scope>Window</scope><name>metaObject</name></member>
+      <member refid="qwidget_1metric" prot="protected" virt="virtual"><scope>Window</scope><name>metric</name></member>
+      <member refid="qwidget_1minimized-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>minimized</name></member>
+      <member refid="qwidget_1minimumHeight-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>minimumHeight</name></member>
+      <member refid="qwidget_1minimumHeight-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>minimumHeight</name></member>
+      <member refid="qwidget_1minimumSize-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>minimumSize</name></member>
+      <member refid="qwidget_1minimumSize-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>minimumSize</name></member>
+      <member refid="qwidget_1minimumSizeHint-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>minimumSizeHint</name></member>
+      <member refid="qwidget_1minimumSizeHint-prop" prot="public" virt="virtual"><scope>Window</scope><name>minimumSizeHint</name></member>
+      <member refid="qwidget_1minimumWidth-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>minimumWidth</name></member>
+      <member refid="qwidget_1minimumWidth-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>minimumWidth</name></member>
+      <member refid="qwidget_1modal-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>modal</name></member>
+      <member refid="qwidget_1mouseDoubleClickEvent" prot="protected" virt="virtual"><scope>Window</scope><name>mouseDoubleClickEvent</name></member>
+      <member refid="qwidget_1mouseGrabber" prot="public" virt="non-virtual"><scope>Window</scope><name>mouseGrabber</name></member>
+      <member refid="qwidget_1mouseMoveEvent" prot="protected" virt="virtual"><scope>Window</scope><name>mouseMoveEvent</name></member>
+      <member refid="qwidget_1mousePressEvent" prot="protected" virt="virtual"><scope>Window</scope><name>mousePressEvent</name></member>
+      <member refid="qwidget_1mouseReleaseEvent" prot="protected" virt="virtual"><scope>Window</scope><name>mouseReleaseEvent</name></member>
+      <member refid="qwidget_1mouseTracking-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>mouseTracking</name></member>
+      <member refid="qwidget_1move-1" prot="public" virt="non-virtual"><scope>Window</scope><name>move</name></member>
+      <member refid="qwidget_1pos-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>move</name></member>
+      <member refid="qwidget_1moveEvent" prot="protected" virt="virtual"><scope>Window</scope><name>moveEvent</name></member>
+      <member refid="qobject_1moveToThread" prot="public" virt="non-virtual"><scope>Window</scope><name>moveToThread</name></member>
+      <member refid="qwidget_1nativeEvent" prot="protected" virt="virtual"><scope>Window</scope><name>nativeEvent</name></member>
+      <member refid="qwidget_1nativeParentWidget" prot="public" virt="non-virtual"><scope>Window</scope><name>nativeParentWidget</name></member>
+      <member refid="qwidget_1nextInFocusChain" prot="public" virt="non-virtual"><scope>Window</scope><name>nextInFocusChain</name></member>
+      <member refid="qwidget_1normalGeometry-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>normalGeometry</name></member>
+      <member refid="qwidget_1normalGeometry-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>normalGeometry</name></member>
+      <member refid="qobject_1objectName-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>objectName</name></member>
+      <member refid="qobject_1objectName-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>objectName</name></member>
+      <member refid="qobject_1objectNameChanged" prot="public" virt="non-virtual"><scope>Window</scope><name>objectNameChanged</name></member>
+      <member refid="qwidget_1overrideWindowFlags" prot="public" virt="non-virtual"><scope>Window</scope><name>overrideWindowFlags</name></member>
+      <member refid="qwidget_1paintEngine" prot="public" virt="virtual"><scope>Window</scope><name>paintEngine</name></member>
+      <member refid="qwidget_1paintEvent" prot="protected" virt="virtual"><scope>Window</scope><name>paintEvent</name></member>
+      <member refid="qpaintdevice_1paintingActive" prot="public" virt="non-virtual"><scope>Window</scope><name>paintingActive</name></member>
+      <member refid="qwidget_1palette-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>palette</name></member>
+      <member refid="qwidget_1palette-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>palette</name></member>
+      <member refid="qobject_1parent" prot="public" virt="non-virtual"><scope>Window</scope><name>parent</name></member>
+      <member refid="qwidget_1parentWidget" prot="public" virt="non-virtual"><scope>Window</scope><name>parentWidget</name></member>
+      <member refid="qpaintdevice_1physicalDpiX" prot="public" virt="non-virtual"><scope>Window</scope><name>physicalDpiX</name></member>
+      <member refid="qpaintdevice_1physicalDpiY" prot="public" virt="non-virtual"><scope>Window</scope><name>physicalDpiY</name></member>
+      <member refid="class_window_1ac930f3c9fd48aeb627204e7aeaf80573" prot="private" virt="non-virtual"><scope>Window</scope><name>plot1</name></member>
+      <member refid="class_window_1a10bbc5d8730ee6c5bb4f4a956225533c" prot="private" virt="non-virtual"><scope>Window</scope><name>plot2</name></member>
+      <member refid="class_window_1a9908e75f132d5ac3f23b4ff9a4832c63" prot="private" virt="non-virtual"><scope>Window</scope><name>plotDataSize</name></member>
+      <member refid="class_window_1ad7445be21c77c9944b3dba2e146bb989" prot="public" virt="non-virtual"><scope>Window</scope><name>plotrefresh</name></member>
+      <member refid="qwidget_1pos-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>pos</name></member>
+      <member refid="qwidget_1pos-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>pos</name></member>
+      <member refid="qwidget_1previousInFocusChain" prot="public" virt="non-virtual"><scope>Window</scope><name>previousInFocusChain</name></member>
+      <member refid="qobject_1property" prot="public" virt="non-virtual"><scope>Window</scope><name>property</name></member>
+      <member refid="qobject_1QObject" prot="public" virt="non-virtual"><scope>Window</scope><name>QObject</name></member>
+      <member refid="qpaintdevice_1QPaintDevice" prot="protected" virt="non-virtual"><scope>Window</scope><name>QPaintDevice</name></member>
+      <member refid="qwidget_1QWidget" prot="public" virt="non-virtual"><scope>Window</scope><name>QWidget</name></member>
+      <member refid="qwidget_1raise" prot="public" virt="non-virtual"><scope>Window</scope><name>raise</name></member>
+      <member refid="qobject_1receivers" prot="protected" virt="non-virtual"><scope>Window</scope><name>receivers</name></member>
+      <member refid="qwidget_1rect-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>rect</name></member>
+      <member refid="qwidget_1rect-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>rect</name></member>
+      <member refid="qwidget_1releaseKeyboard" prot="public" virt="non-virtual"><scope>Window</scope><name>releaseKeyboard</name></member>
+      <member refid="qwidget_1releaseMouse" prot="public" virt="non-virtual"><scope>Window</scope><name>releaseMouse</name></member>
+      <member refid="qwidget_1releaseShortcut" prot="public" virt="non-virtual"><scope>Window</scope><name>releaseShortcut</name></member>
+      <member refid="qwidget_1removeAction" prot="public" virt="non-virtual"><scope>Window</scope><name>removeAction</name></member>
+      <member refid="qobject_1removeEventFilter" prot="public" virt="non-virtual"><scope>Window</scope><name>removeEventFilter</name></member>
+      <member refid="qwidget_1render" prot="public" virt="non-virtual"><scope>Window</scope><name>render</name></member>
+      <member refid="qwidget_1render-1" prot="public" virt="non-virtual"><scope>Window</scope><name>render</name></member>
+      <member refid="qwidget_1RenderFlag-enum" prot="public" virt="non-virtual"><scope>Window</scope><name>RenderFlags</name></member>
+      <member refid="qwidget_1repaint" prot="public" virt="non-virtual"><scope>Window</scope><name>repaint</name></member>
+      <member refid="qwidget_1repaint-1" prot="public" virt="non-virtual"><scope>Window</scope><name>repaint</name></member>
+      <member refid="qwidget_1repaint-2" prot="public" virt="non-virtual"><scope>Window</scope><name>repaint</name></member>
+      <member refid="qwidget_1repaint-3" prot="public" virt="non-virtual"><scope>Window</scope><name>repaint</name></member>
+      <member refid="qwidget_1resize-1" prot="public" virt="non-virtual"><scope>Window</scope><name>resize</name></member>
+      <member refid="qwidget_1size-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>resize</name></member>
+      <member refid="qwidget_1resizeEvent" prot="protected" virt="virtual"><scope>Window</scope><name>resizeEvent</name></member>
+      <member refid="qwidget_1restoreGeometry" prot="public" virt="non-virtual"><scope>Window</scope><name>restoreGeometry</name></member>
+      <member refid="class_window_1a703d58d30da77e83166ef37942ad8602" prot="public" virt="non-virtual"><scope>Window</scope><name>rftimer</name></member>
+      <member refid="qwidget_1saveGeometry" prot="public" virt="non-virtual"><scope>Window</scope><name>saveGeometry</name></member>
+      <member refid="qwidget_1scroll" prot="public" virt="non-virtual"><scope>Window</scope><name>scroll</name></member>
+      <member refid="qwidget_1scroll-1" prot="public" virt="non-virtual"><scope>Window</scope><name>scroll</name></member>
+      <member refid="class_window_1ad0125c79705223e60f695c194166f312" prot="public" virt="non-virtual"><scope>Window</scope><name>sdersc</name></member>
+      <member refid="qobject_1sender" prot="protected" virt="non-virtual"><scope>Window</scope><name>sender</name></member>
+      <member refid="qobject_1senderSignalIndex" prot="protected" virt="non-virtual"><scope>Window</scope><name>senderSignalIndex</name></member>
+      <member refid="qwidget_1acceptDrops-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>setAcceptDrops</name></member>
+      <member refid="qwidget_1accessibleDescription-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>setAccessibleDescription</name></member>
+      <member refid="qwidget_1accessibleName-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>setAccessibleName</name></member>
+      <member refid="qwidget_1setAttribute" prot="public" virt="non-virtual"><scope>Window</scope><name>setAttribute</name></member>
+      <member refid="qwidget_1autoFillBackground-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>setAutoFillBackground</name></member>
+      <member refid="qwidget_1setBackgroundRole" prot="public" virt="non-virtual"><scope>Window</scope><name>setBackgroundRole</name></member>
+      <member refid="qwidget_1baseSize-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>setBaseSize</name></member>
+      <member refid="qwidget_1setBaseSize-1" prot="public" virt="non-virtual"><scope>Window</scope><name>setBaseSize</name></member>
+      <member refid="qwidget_1setContentsMargins" prot="public" virt="non-virtual"><scope>Window</scope><name>setContentsMargins</name></member>
+      <member refid="qwidget_1setContentsMargins-1" prot="public" virt="non-virtual"><scope>Window</scope><name>setContentsMargins</name></member>
+      <member refid="qwidget_1contextMenuPolicy-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>setContextMenuPolicy</name></member>
+      <member refid="qwidget_1cursor-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>setCursor</name></member>
+      <member refid="qwidget_1setDisabled" prot="public" virt="non-virtual"><scope>Window</scope><name>setDisabled</name></member>
+      <member refid="qwidget_1setEditFocus" prot="public" virt="non-virtual"><scope>Window</scope><name>setEditFocus</name></member>
+      <member refid="qwidget_1enabled-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>setEnabled</name></member>
+      <member refid="qwidget_1setFixedHeight" prot="public" virt="non-virtual"><scope>Window</scope><name>setFixedHeight</name></member>
+      <member refid="qwidget_1setFixedSize" prot="public" virt="non-virtual"><scope>Window</scope><name>setFixedSize</name></member>
+      <member refid="qwidget_1setFixedSize-1" prot="public" virt="non-virtual"><scope>Window</scope><name>setFixedSize</name></member>
+      <member refid="qwidget_1setFixedWidth" prot="public" virt="non-virtual"><scope>Window</scope><name>setFixedWidth</name></member>
+      <member refid="qwidget_1setFocus-1" prot="public" virt="non-virtual"><scope>Window</scope><name>setFocus</name></member>
+      <member refid="qwidget_1setFocus" prot="public" virt="non-virtual"><scope>Window</scope><name>setFocus</name></member>
+      <member refid="qwidget_1focusPolicy-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>setFocusPolicy</name></member>
+      <member refid="qwidget_1setFocusProxy" prot="public" virt="non-virtual"><scope>Window</scope><name>setFocusProxy</name></member>
+      <member refid="qwidget_1font-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>setFont</name></member>
+      <member refid="qwidget_1setForegroundRole" prot="public" virt="non-virtual"><scope>Window</scope><name>setForegroundRole</name></member>
+      <member refid="qwidget_1setGeometry-1" prot="public" virt="non-virtual"><scope>Window</scope><name>setGeometry</name></member>
+      <member refid="qwidget_1geometry-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>setGeometry</name></member>
+      <member refid="qwidget_1setGraphicsEffect" prot="public" virt="non-virtual"><scope>Window</scope><name>setGraphicsEffect</name></member>
+      <member refid="qwidget_1setHidden" prot="public" virt="non-virtual"><scope>Window</scope><name>setHidden</name></member>
+      <member refid="qwidget_1inputMethodHints-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>setInputMethodHints</name></member>
+      <member refid="qwidget_1setLayout" prot="public" virt="non-virtual"><scope>Window</scope><name>setLayout</name></member>
+      <member refid="qwidget_1layoutDirection-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>setLayoutDirection</name></member>
+      <member refid="qwidget_1locale-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>setLocale</name></member>
+      <member refid="qwidget_1setMask" prot="public" virt="non-virtual"><scope>Window</scope><name>setMask</name></member>
+      <member refid="qwidget_1setMask-1" prot="public" virt="non-virtual"><scope>Window</scope><name>setMask</name></member>
+      <member refid="qwidget_1maximumHeight-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>setMaximumHeight</name></member>
+      <member refid="qwidget_1maximumSize-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>setMaximumSize</name></member>
+      <member refid="qwidget_1setMaximumSize-1" prot="public" virt="non-virtual"><scope>Window</scope><name>setMaximumSize</name></member>
+      <member refid="qwidget_1maximumWidth-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>setMaximumWidth</name></member>
+      <member refid="qwidget_1minimumHeight-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>setMinimumHeight</name></member>
+      <member refid="qwidget_1minimumSize-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>setMinimumSize</name></member>
+      <member refid="qwidget_1setMinimumSize-1" prot="public" virt="non-virtual"><scope>Window</scope><name>setMinimumSize</name></member>
+      <member refid="qwidget_1minimumWidth-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>setMinimumWidth</name></member>
+      <member refid="qwidget_1mouseTracking-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>setMouseTracking</name></member>
+      <member refid="qobject_1objectName-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>setObjectName</name></member>
+      <member refid="qwidget_1palette-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>setPalette</name></member>
+      <member refid="qwidget_1setParent" prot="public" virt="non-virtual"><scope>Window</scope><name>setParent</name></member>
+      <member refid="qwidget_1setParent-1" prot="public" virt="non-virtual"><scope>Window</scope><name>setParent</name></member>
+      <member refid="qobject_1setParent" prot="public" virt="non-virtual" ambiguityscope="QObject::"><scope>Window</scope><name>setParent</name></member>
+      <member refid="qobject_1setProperty" prot="public" virt="non-virtual"><scope>Window</scope><name>setProperty</name></member>
+      <member refid="qwidget_1setShortcutAutoRepeat" prot="public" virt="non-virtual"><scope>Window</scope><name>setShortcutAutoRepeat</name></member>
+      <member refid="qwidget_1setShortcutEnabled" prot="public" virt="non-virtual"><scope>Window</scope><name>setShortcutEnabled</name></member>
+      <member refid="qwidget_1sizeIncrement-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>setSizeIncrement</name></member>
+      <member refid="qwidget_1setSizeIncrement-1" prot="public" virt="non-virtual"><scope>Window</scope><name>setSizeIncrement</name></member>
+      <member refid="qwidget_1sizePolicy-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>setSizePolicy</name></member>
+      <member refid="qwidget_1setSizePolicy-1" prot="public" virt="non-virtual"><scope>Window</scope><name>setSizePolicy</name></member>
+      <member refid="qwidget_1statusTip-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>setStatusTip</name></member>
+      <member refid="qwidget_1setStyle" prot="public" virt="non-virtual"><scope>Window</scope><name>setStyle</name></member>
+      <member refid="qwidget_1styleSheet-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>setStyleSheet</name></member>
+      <member refid="qwidget_1tabletTracking-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>setTabletTracking</name></member>
+      <member refid="qwidget_1setTabOrder" prot="public" virt="non-virtual"><scope>Window</scope><name>setTabOrder</name></member>
+      <member refid="qwidget_1toolTip-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>setToolTip</name></member>
+      <member refid="qwidget_1toolTipDuration-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>setToolTipDuration</name></member>
+      <member refid="qwidget_1updatesEnabled-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>setUpdatesEnabled</name></member>
+      <member refid="qwidget_1setupUi" prot="public" virt="non-virtual"><scope>Window</scope><name>setupUi</name></member>
+      <member refid="qwidget_1visible-prop" prot="public" virt="virtual"><scope>Window</scope><name>setVisible</name></member>
+      <member refid="qwidget_1whatsThis-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>setWhatsThis</name></member>
+      <member refid="qwidget_1windowFilePath-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>setWindowFilePath</name></member>
+      <member refid="qwidget_1setWindowFlag" prot="public" virt="non-virtual"><scope>Window</scope><name>setWindowFlag</name></member>
+      <member refid="qwidget_1windowFlags-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>setWindowFlags</name></member>
+      <member refid="qwidget_1windowIcon-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>setWindowIcon</name></member>
+      <member refid="qwidget-obsolete_1windowIconText-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>setWindowIconText</name></member>
+      <member refid="qwidget_1windowModality-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>setWindowModality</name></member>
+      <member refid="qwidget_1windowModified-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>setWindowModified</name></member>
+      <member refid="qwidget_1windowOpacity-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>setWindowOpacity</name></member>
+      <member refid="qwidget_1setWindowRole" prot="public" virt="non-virtual"><scope>Window</scope><name>setWindowRole</name></member>
+      <member refid="qwidget_1setWindowState" prot="public" virt="non-virtual"><scope>Window</scope><name>setWindowState</name></member>
+      <member refid="qwidget_1windowTitle-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>setWindowTitle</name></member>
+      <member refid="qwidget_1show" prot="public" virt="non-virtual"><scope>Window</scope><name>show</name></member>
+      <member refid="qwidget_1showEvent" prot="protected" virt="virtual"><scope>Window</scope><name>showEvent</name></member>
+      <member refid="qwidget_1showFullScreen" prot="public" virt="non-virtual"><scope>Window</scope><name>showFullScreen</name></member>
+      <member refid="qwidget_1showMaximized" prot="public" virt="non-virtual"><scope>Window</scope><name>showMaximized</name></member>
+      <member refid="qwidget_1showMinimized" prot="public" virt="non-virtual"><scope>Window</scope><name>showMinimized</name></member>
+      <member refid="qwidget_1showNormal" prot="public" virt="non-virtual"><scope>Window</scope><name>showNormal</name></member>
+      <member refid="qobject_1signalsBlocked" prot="public" virt="non-virtual"><scope>Window</scope><name>signalsBlocked</name></member>
+      <member refid="qwidget_1size-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>size</name></member>
+      <member refid="qwidget_1size-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>size</name></member>
+      <member refid="qwidget_1sizeHint-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>sizeHint</name></member>
+      <member refid="qwidget_1sizeHint-prop" prot="public" virt="virtual"><scope>Window</scope><name>sizeHint</name></member>
+      <member refid="qwidget_1sizeIncrement-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>sizeIncrement</name></member>
+      <member refid="qwidget_1sizeIncrement-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>sizeIncrement</name></member>
+      <member refid="qwidget_1sizePolicy-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>sizePolicy</name></member>
+      <member refid="qwidget_1sizePolicy-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>sizePolicy</name></member>
+      <member refid="qwidget_1stackUnder" prot="public" virt="non-virtual"><scope>Window</scope><name>stackUnder</name></member>
+      <member refid="qobject_1startTimer" prot="public" virt="non-virtual"><scope>Window</scope><name>startTimer</name></member>
+      <member refid="qobject_1startTimer-1" prot="public" virt="non-virtual"><scope>Window</scope><name>startTimer</name></member>
+      <member refid="qwidget_1statusTip-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>statusTip</name></member>
+      <member refid="qwidget_1statusTip-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>statusTip</name></member>
+      <member refid="qwidget_1style" prot="public" virt="non-virtual"><scope>Window</scope><name>style</name></member>
+      <member refid="qwidget_1styleSheet-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>styleSheet</name></member>
+      <member refid="qwidget_1styleSheet-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>styleSheet</name></member>
+      <member refid="class_window_1ab9f0f7ea3db5d4d0fa70c915590e4c72" prot="private" virt="non-virtual"><scope>Window</scope><name>sumpower</name></member>
+      <member refid="qwidget_1tabletEvent" prot="protected" virt="virtual"><scope>Window</scope><name>tabletEvent</name></member>
+      <member refid="qwidget_1tabletTracking-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>tabletTracking</name></member>
+      <member refid="qwidget_1testAttribute" prot="public" virt="non-virtual"><scope>Window</scope><name>testAttribute</name></member>
+      <member refid="qobject_1thread" prot="public" virt="non-virtual"><scope>Window</scope><name>thread</name></member>
+      <member refid="qobject_1timerEvent" prot="protected" virt="virtual"><scope>Window</scope><name>timerEvent</name></member>
+      <member refid="qwidget_1toolTip-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>toolTip</name></member>
+      <member refid="qwidget_1toolTip-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>toolTip</name></member>
+      <member refid="qwidget_1toolTipDuration-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>toolTipDuration</name></member>
+      <member refid="qwidget_1toolTipDuration-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>toolTipDuration</name></member>
+      <member refid="qwidget-obsolete_1topLevelWidget" prot="public" virt="non-virtual"><scope>Window</scope><name>topLevelWidget</name></member>
+      <member refid="qobject_1tr" prot="public" virt="non-virtual"><scope>Window</scope><name>tr</name></member>
+      <member refid="qobject-obsolete_1trUtf8" prot="public" virt="non-virtual"><scope>Window</scope><name>trUtf8</name></member>
+      <member refid="qwidget_1underMouse" prot="public" virt="non-virtual"><scope>Window</scope><name>underMouse</name></member>
+      <member refid="qwidget_1ungrabGesture" prot="public" virt="non-virtual"><scope>Window</scope><name>ungrabGesture</name></member>
+      <member refid="qwidget_1cursor-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>unsetCursor</name></member>
+      <member refid="qwidget_1layoutDirection-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>unsetLayoutDirection</name></member>
+      <member refid="qwidget_1locale-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>unsetLocale</name></member>
+      <member refid="qwidget_1update" prot="public" virt="non-virtual"><scope>Window</scope><name>update</name></member>
+      <member refid="qwidget_1update-1" prot="public" virt="non-virtual"><scope>Window</scope><name>update</name></member>
+      <member refid="qwidget_1update-2" prot="public" virt="non-virtual"><scope>Window</scope><name>update</name></member>
+      <member refid="qwidget_1update-3" prot="public" virt="non-virtual"><scope>Window</scope><name>update</name></member>
+      <member refid="qwidget_1updateGeometry" prot="public" virt="non-virtual"><scope>Window</scope><name>updateGeometry</name></member>
+      <member refid="qwidget_1updateMicroFocus" prot="protected" virt="non-virtual"><scope>Window</scope><name>updateMicroFocus</name></member>
+      <member refid="qwidget_1updatesEnabled-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>updatesEnabled</name></member>
+      <member refid="qwidget_1updatesEnabled-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>updatesEnabled</name></member>
+      <member refid="qwidget_1visible-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>visible</name></member>
+      <member refid="qwidget_1visibleRegion" prot="public" virt="non-virtual"><scope>Window</scope><name>visibleRegion</name></member>
+      <member refid="qwidget_1whatsThis-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>whatsThis</name></member>
+      <member refid="qwidget_1whatsThis-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>whatsThis</name></member>
+      <member refid="qwidget_1wheelEvent" prot="protected" virt="virtual"><scope>Window</scope><name>wheelEvent</name></member>
+      <member refid="qwidget_1width-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>width</name></member>
+      <member refid="qwidget_1width-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>width</name></member>
+      <member refid="qpaintdevice_1widthMM" prot="public" virt="non-virtual"><scope>Window</scope><name>widthMM</name></member>
+      <member refid="qwidget_1window" prot="public" virt="non-virtual"><scope>Window</scope><name>window</name></member>
+      <member refid="class_window_1ab27fe44e0834066236f79f244b02f67e" prot="public" virt="non-virtual"><scope>Window</scope><name>Window</name></member>
+      <member refid="qwidget_1windowFilePath-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>windowFilePath</name></member>
+      <member refid="qwidget_1windowFilePath-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>windowFilePath</name></member>
+      <member refid="qwidget_1windowFlags-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>windowFlags</name></member>
+      <member refid="qwidget_1windowFlags-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>windowFlags</name></member>
+      <member refid="qwidget_1windowHandle" prot="public" virt="non-virtual"><scope>Window</scope><name>windowHandle</name></member>
+      <member refid="qwidget_1windowIcon-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>windowIcon</name></member>
+      <member refid="qwidget_1windowIcon-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>windowIcon</name></member>
+      <member refid="qwidget_1windowIconChanged" prot="public" virt="non-virtual"><scope>Window</scope><name>windowIconChanged</name></member>
+      <member refid="qwidget-obsolete_1windowIconText-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>windowIconText</name></member>
+      <member refid="qwidget-obsolete_1windowIconText-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>windowIconText</name></member>
+      <member refid="qwidget-obsolete_1windowIconTextChanged" prot="public" virt="non-virtual"><scope>Window</scope><name>windowIconTextChanged</name></member>
+      <member refid="qwidget_1windowModality-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>windowModality</name></member>
+      <member refid="qwidget_1windowModality-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>windowModality</name></member>
+      <member refid="qwidget_1windowModified-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>windowModified</name></member>
+      <member refid="qwidget_1windowOpacity-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>windowOpacity</name></member>
+      <member refid="qwidget_1windowOpacity-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>windowOpacity</name></member>
+      <member refid="qwidget_1windowRole" prot="public" virt="non-virtual"><scope>Window</scope><name>windowRole</name></member>
+      <member refid="qwidget_1windowState" prot="public" virt="non-virtual"><scope>Window</scope><name>windowState</name></member>
+      <member refid="qwidget_1windowTitle-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>windowTitle</name></member>
+      <member refid="qwidget_1windowTitle-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>windowTitle</name></member>
+      <member refid="qwidget_1windowTitleChanged" prot="public" virt="non-virtual"><scope>Window</scope><name>windowTitleChanged</name></member>
+      <member refid="qwidget_1windowType" prot="public" virt="non-virtual"><scope>Window</scope><name>windowType</name></member>
+      <member refid="qwidget_1winId" prot="public" virt="non-virtual"><scope>Window</scope><name>winId</name></member>
+      <member refid="qwidget_1x-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>x</name></member>
+      <member refid="qwidget_1x-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>x</name></member>
+      <member refid="class_window_1a13ad2a2a6dd2fa6a8943e92fb08629a1" prot="private" virt="non-virtual"><scope>Window</scope><name>xData1</name></member>
+      <member refid="class_window_1a7b0d44a397ca90add463e2093f4a1423" prot="private" virt="non-virtual"><scope>Window</scope><name>xData2</name></member>
+      <member refid="class_window_1a66e60e4413d120313000c1d744c904f1" prot="private" virt="non-virtual"><scope>Window</scope><name>xData3</name></member>
+      <member refid="qwidget_1y-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>y</name></member>
+      <member refid="qwidget_1y-prop" prot="public" virt="non-virtual"><scope>Window</scope><name>y</name></member>
+      <member refid="class_window_1a9baba6757f9e1a5c25e2c8bcf291ad32" prot="private" virt="non-virtual"><scope>Window</scope><name>yData1</name></member>
+      <member refid="class_window_1a25e229e2503d02a9904f56fb730d4744" prot="private" virt="non-virtual"><scope>Window</scope><name>yData2</name></member>
+      <member refid="class_window_1a7f1854f46d87a6bfd6b53806be12ba1c" prot="private" virt="non-virtual"><scope>Window</scope><name>yData3</name></member>
+      <member refid="qobject_1dtor.QObject" prot="public" virt="virtual"><scope>Window</scope><name>~QObject</name></member>
+      <member refid="qpaintdevice_1dtor.QPaintDevice" prot="public" virt="virtual"><scope>Window</scope><name>~QPaintDevice</name></member>
+      <member refid="qwidget_1dtor.QWidget" prot="public" virt="non-virtual"><scope>Window</scope><name>~QWidget</name></member>
+      <member refid="class_window_1a245d821e6016fa1f6970ccbbedd635f6" prot="public" virt="non-virtual"><scope>Window</scope><name>~Window</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

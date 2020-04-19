@@ -1,0 +1,134 @@
+.TH "ads1115" 3 "Sun Apr 19 2020" "Muscle Power Gaming" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ads1115 \- Allows control over the ADS1115 ADC\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ads1115\&.h>\fP
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBreadyread\fP (float \fBvoltage\fP)"
+.br
+.RI "The signal that transmits the ADS output\&. "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBads1115\fP (uchar addr, \fBQObject\fP *\fBparent\fP=0)"
+.br
+.RI "Configures the ADS1115 into continuous conversion mode\&. "
+.ti -1c
+.RI "void \fBendads\fP ()"
+.br
+.RI "Attempts to exit the continuous mode of the ADS1115\&. "
+.ti -1c
+.RI "float \fBreadsig\fP ()"
+.br
+.RI "Reads the digital conversion of the analogue EMG input\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBfd\fP"
+.br
+.RI "A reference device identifier obtained using 'wiringPiI2CSetup()'\&. "
+.ti -1c
+.RI "uchar \fBiicaddr\fP"
+.br
+.RI "A reference to the I2C address pin\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Allows control over the ADS1115 ADC\&. 
+
+Handles all aspects of controlling the ADS1115 device\&. Responsible for configuring the device into continuous mode, gathering, handling and relaying the signals from input channels, and self abortion\&. 
+.PP
+Definition at line 374 of file ads1115\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ads1115::ads1115 (uchar addr, \fBQObject\fP * parent = \fC0\fP)\fC [explicit]\fP"
+
+.PP
+Configures the ADS1115 into continuous conversion mode\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIaddr\fP The I2C address of the device (see address pin macros)
+.RE
+.PP
+Uses the I2C address for device identification\&. The appropriate configuration options are applied to instantiate continuous conversion and confirms operation through use of the wiringPiI2C library 
+.PP
+Definition at line 65 of file ads1115\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void ads1115::endads ()"
+
+.PP
+Attempts to exit the continuous mode of the ADS1115\&. Updates the 'config' variable to change the CONFIG_MODE setting to END_CON\&. The 'load_config()' function then converts from a hexadecimal to binary representation\&. The 'rcr' variable resets to 0 (success) before being set to the returned value from the "wiringPiI2CWriteReg16() function\&. A return value of -1 (non-zero) indicates a failure to exit continuous conversion mode\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIvoid\fP 
+.RE
+.PP
+
+.PP
+Definition at line 186 of file ads1115\&.cpp\&.
+.SS "float ads1115::readsig ()"
+
+.PP
+Reads the digital conversion of the analogue EMG input\&. Selects the conversion register and uses the 'WiringPiI2CReadReg16()' function to read the data contained therein\&. The data is then processed before being emitted through the readyrread() signal\&.
+.PP
+WiringPi doesn't include stdint so values are int32\&. Conversions are performed to account for this in producing the voltage output
+.PP
+\fBParameters\fP
+.RS 4
+\fIvoid\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The read voltage converted from the raw signal input 
+.RE
+.PP
+
+.PP
+Definition at line 152 of file ads1115\&.cpp\&.
+.SS "void ads1115::readyread (float voltage)\fC [signal]\fP"
+
+.PP
+The signal that transmits the ADS output\&. After calling \fBreadsig()\fP, the signal is emitted and transmits the ADS output\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIvoltage\fP The output voltage from processed EMG signal 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "int ads1115::fd"
+
+.PP
+A reference device identifier obtained using 'wiringPiI2CSetup()'\&. 'wiringPiI2CSetup(int devID)' initialises the I2C system with the given device identifier (I2C number of the device)\&. The I2C number is one of the address pin macros found in \fBads1115\&.h\fP\&. The return value, stored in fd, is -1 if any error occurs, or the standard Linux filehandle otherwise\&. 
+.PP
+Definition at line 394 of file ads1115\&.h\&.
+.SS "uchar ads1115::iicaddr"
+
+.PP
+A reference to the I2C address pin\&. The 'wiringPiI2CSetup()' function returns a reference device ID\&. This address has to then be used when writing and reading to the device registers using the wiringPi library\&. iicaddr is an explicit reference to the I2C address pin of the device (0x48, 0x49, 0x4A, 0x4B)\&. 
+.PP
+Definition at line 402 of file ads1115\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Muscle Power Gaming from the source code\&.

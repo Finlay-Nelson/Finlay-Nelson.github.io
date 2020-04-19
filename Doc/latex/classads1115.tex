@@ -1,0 +1,172 @@
+\hypertarget{classads1115}{}\doxysection{ads1115 Class Reference}
+\label{classads1115}\index{ads1115@{ads1115}}
+
+
+Allows control over the A\+D\+S1115 A\+DC.  
+
+
+
+
+{\ttfamily \#include $<$ads1115.\+h$>$}
+
+
+
+Collaboration diagram for ads1115\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=133pt]{classads1115__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classads1115_ae7c50fb698f1b87ba229929fc61f5e2f}{readyread}} (float \mbox{\hyperlink{ads1115_8cpp_a47061fcae597f83f8a0a99d4b7b5a5c1}{voltage}})
+\begin{DoxyCompactList}\small\item\em The signal that transmits the A\+DS output. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classads1115_aeacdf3467cad67cd8a186ad43cbeee53}{ads1115}} (uchar addr, \textbf{ Q\+Object} $\ast$\textbf{ parent}=0)
+\begin{DoxyCompactList}\small\item\em Configures the A\+D\+S1115 into continuous conversion mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classads1115_a53a254dcd5d6d6ff6e787688c730ae4b}{endads}} ()
+\begin{DoxyCompactList}\small\item\em Attempts to exit the continuous mode of the A\+D\+S1115. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classads1115_a761c3ec573fc59956d7eca446841c18d}{readsig}} ()
+\begin{DoxyCompactList}\small\item\em Reads the digital conversion of the analogue E\+MG input. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classads1115_a3eac1506c2c00580e5563827d9dcd260}{fd}}
+\begin{DoxyCompactList}\small\item\em A reference device identifier obtained using \char`\"{}wiring\+Pi\+I2\+C\+Setup()\char`\"{}. \end{DoxyCompactList}\item 
+uchar \mbox{\hyperlink{classads1115_a2cf1674f5b1f77bd4b5709702aec7244}{iicaddr}}
+\begin{DoxyCompactList}\small\item\em A reference to the I2C address pin. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Allows control over the A\+D\+S1115 A\+DC. 
+
+Handles all aspects of controlling the A\+D\+S1115 device. Responsible for configuring the device into continuous mode, gathering, handling and relaying the signals from input channels, and self abortion. 
+
+Definition at line 374 of file ads1115.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classads1115_aeacdf3467cad67cd8a186ad43cbeee53}\label{classads1115_aeacdf3467cad67cd8a186ad43cbeee53}} 
+\index{ads1115@{ads1115}!ads1115@{ads1115}}
+\index{ads1115@{ads1115}!ads1115@{ads1115}}
+\doxysubsubsection{\texorpdfstring{ads1115()}{ads1115()}}
+{\footnotesize\ttfamily ads1115\+::ads1115 (\begin{DoxyParamCaption}\item[{uchar}]{addr,  }\item[{\textbf{ Q\+Object} $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Configures the A\+D\+S1115 into continuous conversion mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em addr} & The I2C address of the device (see address pin macros)\\
+\hline
+\end{DoxyParams}
+Uses the I2C address for device identification. The appropriate configuration options are applied to instantiate continuous conversion and confirms operation through use of the wiring\+Pi\+I2C library 
+
+Definition at line 65 of file ads1115.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classads1115_a53a254dcd5d6d6ff6e787688c730ae4b}\label{classads1115_a53a254dcd5d6d6ff6e787688c730ae4b}} 
+\index{ads1115@{ads1115}!endads@{endads}}
+\index{endads@{endads}!ads1115@{ads1115}}
+\doxysubsubsection{\texorpdfstring{endads()}{endads()}}
+{\footnotesize\ttfamily void ads1115\+::endads (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Attempts to exit the continuous mode of the A\+D\+S1115. 
+
+Updates the \char`\"{}config\char`\"{} variable to change the C\+O\+N\+F\+I\+G\+\_\+\+M\+O\+DE setting to E\+N\+D\+\_\+\+C\+ON. The \char`\"{}load\+\_\+config()\char`\"{} function then converts from a hexadecimal to binary representation. The \char`\"{}rcr\char`\"{} variable resets to 0 (success) before being set to the returned value from the "wiring\+Pi\+I2\+C\+Write\+Reg16() function. A return value of -\/1 (non-\/zero) indicates a failure to exit continuous conversion mode.
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 186 of file ads1115.\+cpp.
+
+\mbox{\Hypertarget{classads1115_a761c3ec573fc59956d7eca446841c18d}\label{classads1115_a761c3ec573fc59956d7eca446841c18d}} 
+\index{ads1115@{ads1115}!readsig@{readsig}}
+\index{readsig@{readsig}!ads1115@{ads1115}}
+\doxysubsubsection{\texorpdfstring{readsig()}{readsig()}}
+{\footnotesize\ttfamily float ads1115\+::readsig (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reads the digital conversion of the analogue E\+MG input. 
+
+Selects the conversion register and uses the \char`\"{}\+Wiring\+Pi\+I2\+C\+Read\+Reg16()\char`\"{} function to read the data contained therein. The data is then processed before being emitted through the readyrread() signal.
+
+Wiring\+Pi doesn\textquotesingle{}t include stdint so values are int32. Conversions are performed to account for this in producing the voltage output
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The read voltage converted from the raw signal input 
+\end{DoxyReturn}
+
+
+Definition at line 152 of file ads1115.\+cpp.
+
+\mbox{\Hypertarget{classads1115_ae7c50fb698f1b87ba229929fc61f5e2f}\label{classads1115_ae7c50fb698f1b87ba229929fc61f5e2f}} 
+\index{ads1115@{ads1115}!readyread@{readyread}}
+\index{readyread@{readyread}!ads1115@{ads1115}}
+\doxysubsubsection{\texorpdfstring{readyread}{readyread}}
+{\footnotesize\ttfamily void ads1115\+::readyread (\begin{DoxyParamCaption}\item[{float}]{voltage }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+The signal that transmits the A\+DS output. 
+
+After calling \mbox{\hyperlink{classads1115_a761c3ec573fc59956d7eca446841c18d}{readsig()}}, the signal is emitted and transmits the A\+DS output.
+
+
+\begin{DoxyParams}{Parameters}
+{\em voltage} & The output voltage from processed E\+MG signal \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classads1115_a3eac1506c2c00580e5563827d9dcd260}\label{classads1115_a3eac1506c2c00580e5563827d9dcd260}} 
+\index{ads1115@{ads1115}!fd@{fd}}
+\index{fd@{fd}!ads1115@{ads1115}}
+\doxysubsubsection{\texorpdfstring{fd}{fd}}
+{\footnotesize\ttfamily int ads1115\+::fd}
+
+
+
+A reference device identifier obtained using \char`\"{}wiring\+Pi\+I2\+C\+Setup()\char`\"{}. 
+
+\char`\"{}wiring\+Pi\+I2\+C\+Setup(int dev\+I\+D)\char`\"{} initialises the I2C system with the given device identifier (I2C number of the device). The I2C number is one of the address pin macros found in \mbox{\hyperlink{ads1115_8h}{ads1115.\+h}}. The return value, stored in fd, is -\/1 if any error occurs, or the standard Linux filehandle otherwise. 
+
+Definition at line 394 of file ads1115.\+h.
+
+\mbox{\Hypertarget{classads1115_a2cf1674f5b1f77bd4b5709702aec7244}\label{classads1115_a2cf1674f5b1f77bd4b5709702aec7244}} 
+\index{ads1115@{ads1115}!iicaddr@{iicaddr}}
+\index{iicaddr@{iicaddr}!ads1115@{ads1115}}
+\doxysubsubsection{\texorpdfstring{iicaddr}{iicaddr}}
+{\footnotesize\ttfamily uchar ads1115\+::iicaddr}
+
+
+
+A reference to the I2C address pin. 
+
+The \char`\"{}wiring\+Pi\+I2\+C\+Setup()\char`\"{} function returns a reference device ID. This address has to then be used when writing and reading to the device registers using the wiring\+Pi library. iicaddr is an explicit reference to the I2C address pin of the device (0x48, 0x49, 0x4A, 0x4B). 
+
+Definition at line 402 of file ads1115.\+h.
+

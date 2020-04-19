@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="group__group5" kind="group">
+    <compoundname>group5</compoundname>
+    <title>ADS1115: PROGRAMMABLE GAIN AMPLIFIER CONFIGURATION</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__group5_1gab6fc5aa2e0ced7acd38dd5c30d2f6f29" prot="public" static="no">
+        <name>ADS1015_REG_CONFIG_PGA_6_144V</name>
+        <initializer>(0x0000)</initializer>
+        <briefdescription>
+<para>+/-6.144V range = Gain 2/3 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="222" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="222" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group5_1ga6ed67863634add41314604de916b6ed6" prot="public" static="no">
+        <name>ADS1015_REG_CONFIG_PGA_4_096V</name>
+        <initializer>(0x0200)</initializer>
+        <briefdescription>
+<para>+/-4.096V range = Gain 1 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="223" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="223" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group5_1ga871217d93b9a7614cd921d6aced54338" prot="public" static="no">
+        <name>ADS1015_REG_CONFIG_PGA_2_048V</name>
+        <initializer>(0x0400)</initializer>
+        <briefdescription>
+<para>+/-2.048V range = Gain 2 (DEFAULT) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="224" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="224" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group5_1ga84b06e45d01519b8073dcb59dd46b4ac" prot="public" static="no">
+        <name>ADS1015_REG_CONFIG_PGA_1_024V</name>
+        <initializer>(0x0600)</initializer>
+        <briefdescription>
+<para>+/-1.024V range = Gain 4 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="225" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="225" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group5_1gad6305868e7343c5d83f68acd45a0967f" prot="public" static="no">
+        <name>ADS1015_REG_CONFIG_PGA_0_512V</name>
+        <initializer>(0x0800)</initializer>
+        <briefdescription>
+<para>+/-0.512V range = Gain 8 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="226" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="226" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group5_1ga7d41c826b50b0b019ddb02e8093287a1" prot="public" static="no">
+        <name>ADS1015_REG_CONFIG_PGA_0_256V</name>
+        <initializer>(0x0A00)</initializer>
+        <briefdescription>
+<para>+/-0.256V range = Gain 16 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="227" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="227" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>ADS1115 Bit[11-9]. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>These bits configure the programmable gain amplifier.<itemizedlist>
+<listitem><para>+-6.144V</para>
+</listitem><listitem><para>+-4.096V</para>
+</listitem><listitem><para>+-2.048V</para>
+</listitem><listitem><para>+-1.024V</para>
+</listitem><listitem><para>+-0.512V</para>
+</listitem><listitem><para>+-0.256V</para>
+</listitem></itemizedlist>
+The DEFAULT setting is +-2.048V. </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

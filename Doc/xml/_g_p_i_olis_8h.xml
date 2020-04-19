@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="_g_p_i_olis_8h" kind="file" language="C++">
+    <compoundname>GPIOlis.h</compoundname>
+    <includes local="no">GThread</includes>
+    <includes refid="ads1115_8h" local="yes">ads1115.h</includes>
+    <includedby refid="_g_p_i_olis_8cpp" local="yes">/home/finlay/RTEP1/Rpi_end/Rpi_end_together/GPIOlis.cpp</includedby>
+    <includedby refid="window_8h" local="yes">/home/finlay/RTEP1/Rpi_end/Rpi_end_together/window.h</includedby>
+    <includedby refid="window_8cpp" local="yes">/home/finlay/RTEP1/Rpi_end/Rpi_end_together/window.cpp</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>QObject</label>
+      </node>
+      <node id="6">
+        <label>string</label>
+      </node>
+      <node id="1">
+        <label>/home/finlay/RTEP1/Rpi_end/Rpi_end_together/GPIOlis.h</label>
+        <link refid="_g_p_i_olis_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ads1115.h</label>
+        <link refid="ads1115_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>GThread</label>
+      </node>
+      <node id="5">
+        <label>iostream</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4">
+        <label>/home/finlay/RTEP1/Rpi_end/Rpi_end_together/main.cpp</label>
+        <link refid="_rpi__end_2_rpi__end__together_2main_8cpp"/>
+      </node>
+      <node id="5">
+        <label>/home/finlay/RTEP1/Rpi_end/Rpi_end_together/window.cpp</label>
+        <link refid="window_8cpp"/>
+      </node>
+      <node id="1">
+        <label>/home/finlay/RTEP1/Rpi_end/Rpi_end_together/GPIOlis.h</label>
+        <link refid="_g_p_i_olis_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/finlay/RTEP1/Rpi_end/Rpi_end_together/GPIOlis.cpp</label>
+        <link refid="_g_p_i_olis_8cpp"/>
+      </node>
+      <node id="3">
+        <label>/home/finlay/RTEP1/Rpi_end/Rpi_end_together/window.h</label>
+        <link refid="window_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_g_p_i_olis" prot="public">GPIOlis</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_g_p_i_olis_8h_1a6715efeafc8103a65e244026d957b70b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gpipinterrupt</definition>
+        <argsstring></argsstring>
+        <name>gpipinterrupt</name>
+        <briefdescription>
+<para>Stores a binary value relating to the interrupt state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The resting value of this variable remains 0 until an interrupt is called. This changes the &quot;gpipinterrupt&quot; value to 1, triggering the non-conditional elements of the <ref refid="class_g_p_i_olis_1a65d2d0d0faf0d9edc0b31ddb51e88d2b" kindref="member">GPIOlis::run()</ref> function. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/GPIOlis.h" line="26" column="12" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/GPIOlis.cpp" bodystart="32" bodyend="-1" declfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/GPIOlis.h" declline="26" declcolumn="12"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A collection of useful C++ classes for use of an ADS1115 device in UDP transmission and an Android Pong game. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Listens to the Alert pin of the ADS1115 in continuous mode, interrupts every time an AD conversion is ready, then sends data and triggers processing through the signal-slot mechanism. <ref refid="class_g_p_i_olis_1a65d2d0d0faf0d9edc0b31ddb51e88d2b" kindref="member">GPIOlis::run</ref> listens to the interrupt and calls back the interrupt every time it is detected before sleeping for 1ms. interrupt() reads in data and sends back a readyread signal.</para>
+<para><simplesect kind="author"><para>Zonghan Gan </para>
+</simplesect>
+<simplesect kind="author"><para>Finlay Nelson </para>
+</simplesect>
+<simplesect kind="author"><para>Henry Cowan </para>
+</simplesect>
+<simplesect kind="date"><para>11 April 2020 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="14"><highlight class="preprocessor">#ifndef<sp/>GPIOlis_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIOlis_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">/*--Includes--*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;GThread&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ads1115_8h" kindref="compound">ads1115.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_g_p_i_olis_8h_1a6715efeafc8103a65e244026d957b70b" kindref="member">gpipinterrupt</ref>;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="class_g_p_i_olis" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_g_p_i_olis" kindref="compound">GPIOlis</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="qthread" kindref="compound" external="/home/finlay/Repo/doc/qtcore/qtcore.tags">QThread</ref></highlight></codeline>
+<codeline lineno="38"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_OBJECT</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="class_g_p_i_olis_1ae86ee364670cfe22722a5d9f612e9aa4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_g_p_i_olis_1ae86ee364670cfe22722a5d9f612e9aa4" kindref="member">flag</ref>=1;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_g_p_i_olis_1a428a2f8c4b0bd64b769f1526c61c5dac" kindref="member">GPIOlis</ref>(<ref refid="qobject" kindref="compound" external="/home/finlay/Repo/doc/qtcore/qtcore.tags">QObject</ref><sp/>*<ref refid="qobject_1parent" kindref="member" external="/home/finlay/Repo/doc/qtcore/qtcore.tags">parent</ref>=0);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_g_p_i_olis_1a9095dfa3056b0f1c4026f6018f0f7ba7" kindref="member">~GPIOlis</ref>();</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_g_p_i_olis_1a844470403deaa7436a19b8aef29eac5b" kindref="member">interrupt</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="class_g_p_i_olis_1a81e5f98d39e2ae03bf0ab38466ad24bd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_g_p_i_olis_1a81e5f98d39e2ae03bf0ab38466ad24bd" kindref="member">count</ref>;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_g_p_i_olis_1a06b2b0dbfd20843e43a5015c2c1cf829" kindref="member">quit</ref>();</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="class_g_p_i_olis_1a4dd64eebb025a26b454d17176e70aaf8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classads1115" kindref="compound">ads1115</ref>*<sp/><ref refid="class_g_p_i_olis_1a4dd64eebb025a26b454d17176e70aaf8" kindref="member">ads1</ref>;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_g_p_i_olis_1a65d2d0d0faf0d9edc0b31ddb51e88d2b" kindref="member">run</ref>();</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal">signals:</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115" refid="class_g_p_i_olis_1a1e658d32e43003c3612ba46bd99a1732" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_g_p_i_olis_1a1e658d32e43003c3612ba46bd99a1732" kindref="member">ready</ref>();</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126" refid="class_g_p_i_olis_1ac36d3b9264536731e3458ed295666719" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_g_p_i_olis_1ac36d3b9264536731e3458ed295666719" kindref="member">readyread</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="ads1115_8cpp_1a47061fcae597f83f8a0a99d4b7b5a5c1" kindref="member">voltage</ref>);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>GPIOLIS_H</highlight></codeline>
+    </programlisting>
+    <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/GPIOlis.h"/>
+  </compounddef>
+</doxygen>

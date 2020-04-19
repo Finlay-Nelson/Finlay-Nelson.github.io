@@ -1,0 +1,189 @@
+\hypertarget{ads1115_8h}{}\doxysection{/home/finlay/\+R\+T\+E\+P1/\+Rpi\+\_\+end/\+Rpi\+\_\+end\+\_\+together/ads1115.h File Reference}
+\label{ads1115_8h}\index{/home/finlay/RTEP1/Rpi\_end/Rpi\_end\_together/ads1115.h@{/home/finlay/RTEP1/Rpi\_end/Rpi\_end\_together/ads1115.h}}
+
+
+Defines a set of macros for use in configuring the A\+D\+S1115 and a class for controlling the configured device.  
+
+
+{\ttfamily \#include $<$Q\+Object$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classads1115}{ads1115}}
+\begin{DoxyCompactList}\small\item\em Allows control over the A\+D\+S1115 A\+DC. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__group1_gae55d158023984e8f0ddc80b58d5b30dc}{A\+D\+S1015\+\_\+\+A\+D\+D\+R\+E\+SS}}~(0x48)
+\begin{DoxyCompactList}\small\item\em I2C address pin low (G\+ND). \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group2_ga0f462c806b353bd682fa3c2d67e66622}{A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+C\+O\+N\+V\+E\+RT}}~(0x00)
+\begin{DoxyCompactList}\small\item\em Select the conversion register. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group2_gab9abb781632542a0e7d8b058292f26b1}{A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+C\+O\+N\+F\+IG}}~(0x01)
+\begin{DoxyCompactList}\small\item\em Select the config register. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group2_ga01582fe1e67b55686d35818696925480}{A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+L\+O\+W\+T\+H\+R\+E\+SH}}~(0x02)
+\begin{DoxyCompactList}\small\item\em Select the Lo\+\_\+thresh register. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group2_ga89000549c6dfe50337c7962b7b3677cb}{A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+H\+I\+T\+H\+R\+E\+SH}}~(0x03)
+\begin{DoxyCompactList}\small\item\em Select the Lo\+\_\+thresh register. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group3_ga13f4550d061699b1cf4bd49520fc4a9c}{A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+O\+S\+\_\+\+S\+I\+N\+G\+LE}}~(0x8000)
+\begin{DoxyCompactList}\small\item\em Write\+: Set to start a single-\/conversion. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group3_gaab6ae96215401637a9435c030e1919a9}{A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+O\+S\+\_\+\+B\+U\+SY}}~(0x0000)
+\begin{DoxyCompactList}\small\item\em Read\+: 0 when conversion is in progress. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group3_ga7744f0dffe0c80b9052a31b1f1d4d4d3}{A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+O\+S\+\_\+\+N\+O\+T\+B\+U\+SY}}~(0x8000)
+\begin{DoxyCompactList}\small\item\em Read\+: 1 when device is not performing a conversion. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group4_ga7db34e6ba1050094aa2f5895594fa473}{A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+U\+X\+\_\+\+D\+I\+F\+F\+\_\+0\+\_\+1}}~(0x0000)
+\begin{DoxyCompactList}\small\item\em Differential input with positive input from A\+I\+N0 and negative input from A\+I\+N1 (D\+E\+F\+A\+U\+LT). \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group4_ga467ee1de37d13577785e33fb6d67e93d}{A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+U\+X\+\_\+\+D\+I\+F\+F\+\_\+0\+\_\+3}}~(0x1000)
+\begin{DoxyCompactList}\small\item\em Differential input with positive input from A\+I\+N0 and negative input from A\+I\+N3. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group4_ga59f246f973620f2d59f917187c9aeeb1}{A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+U\+X\+\_\+\+D\+I\+F\+F\+\_\+1\+\_\+3}}~(0x2000)
+\begin{DoxyCompactList}\small\item\em Differential input with positive input from A\+I\+N1 and negative input from A\+I\+N3. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group4_ga438ac41e1655d0c8e10a62b36d803696}{A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+U\+X\+\_\+\+D\+I\+F\+F\+\_\+2\+\_\+3}}~(0x3000)
+\begin{DoxyCompactList}\small\item\em Differential input with positive input from A\+I\+N2 and negative input from A\+I\+N3. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group4_ga95d034ea82362b3f6573492209aac4f2}{A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+U\+X\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+0}}~(0x4000)
+\begin{DoxyCompactList}\small\item\em Single-\/ended input with positive input from A\+I\+N0 with reference to G\+ND. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group4_ga2db511c8817fda53e31b5d1f72601909}{A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+U\+X\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+1}}~(0x5000)
+\begin{DoxyCompactList}\small\item\em Single-\/ended input with positive input from A\+I\+N1 with reference to G\+ND. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group4_gae31fb46fbe9801ae7bb9210e88b7162d}{A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+U\+X\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+2}}~(0x6000)
+\begin{DoxyCompactList}\small\item\em Single-\/ended input with positive input from A\+I\+N2 with reference to G\+ND. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group4_ga9cb6f8bf1d45341e508cece5bcbc7841}{A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+U\+X\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+3}}~(0x7000)
+\begin{DoxyCompactList}\small\item\em Single-\/ended input with positive input from A\+I\+N3 with reference to G\+ND. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group5_gab6fc5aa2e0ced7acd38dd5c30d2f6f29}{A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+G\+A\+\_\+6\+\_\+144V}}~(0x0000)
+\begin{DoxyCompactList}\small\item\em +/-\/6.144V range = Gain 2/3 \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group5_ga6ed67863634add41314604de916b6ed6}{A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+G\+A\+\_\+4\+\_\+096V}}~(0x0200)
+\begin{DoxyCompactList}\small\item\em +/-\/4.096V range = Gain 1 \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group5_ga871217d93b9a7614cd921d6aced54338}{A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+G\+A\+\_\+2\+\_\+048V}}~(0x0400)
+\begin{DoxyCompactList}\small\item\em +/-\/2.048V range = Gain 2 (D\+E\+F\+A\+U\+LT) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group5_ga84b06e45d01519b8073dcb59dd46b4ac}{A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+G\+A\+\_\+1\+\_\+024V}}~(0x0600)
+\begin{DoxyCompactList}\small\item\em +/-\/1.024V range = Gain 4 \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group5_gad6305868e7343c5d83f68acd45a0967f}{A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+G\+A\+\_\+0\+\_\+512V}}~(0x0800)
+\begin{DoxyCompactList}\small\item\em +/-\/0.512V range = Gain 8 \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group5_ga7d41c826b50b0b019ddb02e8093287a1}{A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+G\+A\+\_\+0\+\_\+256V}}~(0x0\+A00)
+\begin{DoxyCompactList}\small\item\em +/-\/0.256V range = Gain 16 \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group6_gafbb1b96a1b61fae1301ed075330d3a20}{A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+O\+D\+E\+\_\+\+C\+O\+N\+T\+IN}}~(0x0000)
+\begin{DoxyCompactList}\small\item\em Continuous conversion mode. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group6_ga20780c08ce2027ce7833f27e65d9bb9d}{A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+O\+D\+E\+\_\+\+E\+N\+D\+C\+ON}}~(0x8583)
+\begin{DoxyCompactList}\small\item\em Shut down continuous conversion. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group6_ga50168c1821f075b7296745be1d4d346f}{A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+O\+D\+E\+\_\+\+S\+I\+N\+G\+LE}}~(0x0100)
+\begin{DoxyCompactList}\small\item\em Power-\/down single-\/shot mode (D\+E\+F\+A\+U\+LT) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group7_gaff870cc204f306e3aae724e8231f8fdc}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+D\+R\+\_\+8\+S\+PS}}~(0x0000)
+\begin{DoxyCompactList}\small\item\em 8 samples per second \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group7_ga482e8bf3819885a814010acb4107f6e1}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+D\+R\+\_\+16\+S\+PS}}~(0x0020)
+\begin{DoxyCompactList}\small\item\em 16 samples per second \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group7_ga309e0ecf42b27c5a38126efa61f8a09f}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+D\+R\+\_\+32\+S\+PS}}~(0x0040)
+\begin{DoxyCompactList}\small\item\em 32 samples per second \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group7_ga0a53b32fa67a8d36b57f7aceda32efb9}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+D\+R\+\_\+64\+S\+PS}}~(0x0060)
+\begin{DoxyCompactList}\small\item\em 64 samples per second \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group7_ga4aff8d5b1b4ac9585952d26ca25385e6}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+D\+R\+\_\+128\+S\+PS}}~(0x0080)
+\begin{DoxyCompactList}\small\item\em 128 samples per second \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group7_gac533241f793b44ed72385f71dec1aa25}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+D\+R\+\_\+250\+S\+PS}}~(0x00\+A0)
+\begin{DoxyCompactList}\small\item\em 250 samples per second (D\+E\+F\+A\+U\+LT) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group7_ga8eed720123d6bd52580826c2c9ad9e28}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+D\+R\+\_\+475\+S\+PS}}~(0x00\+C0)
+\begin{DoxyCompactList}\small\item\em 475 samples per second \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group7_ga9308f41d4c2ff024bbd201efc3b7ff69}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+D\+R\+\_\+860\+S\+PS}}~(0x00\+E0)
+\begin{DoxyCompactList}\small\item\em 860 samples per second \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group8_gafb5240325d7ec757ccad7b098a2b93c3}{A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+M\+O\+D\+E\+\_\+\+T\+R\+AD}}~(0x0000)
+\begin{DoxyCompactList}\small\item\em Traditional comparator with hysteresis (D\+E\+F\+A\+U\+LT) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group8_ga49d39ffb8fb66bdb877d0f2546137cce}{A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+M\+O\+D\+E\+\_\+\+W\+I\+N\+D\+OW}}~(0x0010)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_window}{Window}} comparator. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group9_ga775f732c7e97574b38858820b96cf771}{A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+P\+O\+L\+\_\+\+A\+C\+T\+V\+L\+OW}}~(0x0000)
+\begin{DoxyCompactList}\small\item\em A\+L\+E\+R\+T/\+R\+DY pin is active low (D\+E\+F\+A\+U\+LT) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group9_ga81494a3f6eaf337f4132cc32bba9f28d}{A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+P\+O\+L\+\_\+\+A\+C\+T\+V\+HI}}~(0x0008)
+\begin{DoxyCompactList}\small\item\em A\+L\+E\+R\+T/\+R\+DY pin is active high. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group10_ga98757804761f1d945f4cf6ca40e30457}{A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+L\+A\+T\+\_\+\+N\+O\+N\+L\+AT}}~(0x0000)
+\begin{DoxyCompactList}\small\item\em Non-\/latching comparator (D\+E\+F\+A\+U\+LT) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group10_gaf7f9528dd1aee135afad4c44d771b9f6}{A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+L\+A\+T\+\_\+\+L\+A\+T\+CH}}~(0x0004)
+\begin{DoxyCompactList}\small\item\em Latching comparator. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group11_ga4889b7e8a019906eb7c2670ec2466917}{A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+Q\+U\+E\+\_\+1\+C\+O\+NV}}~(0x0000)
+\begin{DoxyCompactList}\small\item\em Assert after one conversion. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group11_ga88a73e81b13059b1f4756cf5c8a342a3}{A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+Q\+U\+E\+\_\+2\+C\+O\+NV}}~(0x0001)
+\begin{DoxyCompactList}\small\item\em Assert after two conversions. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group11_gad14f479d9c6f636631444de22dd7b133}{A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+Q\+U\+E\+\_\+4\+C\+O\+NV}}~(0x0002)
+\begin{DoxyCompactList}\small\item\em Assert after four conversions. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group11_gaa52ede69f39daf837bb2ebbe639dbef9}{A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+Q\+U\+E\+\_\+\+N\+O\+NE}}~(0x0003)
+\begin{DoxyCompactList}\small\item\em Disable comparator (D\+E\+F\+A\+U\+LT) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group12_gacc3350d9056e6b44520992c3244ec45b}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+T\+H\+R\+E\+S\+H\+\_\+\+M\+S\+B\+\_\+1}}~(0x8000)
+\begin{DoxyCompactList}\small\item\em Set M\+SB to 1. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group12_ga1a0131797adb1ee39337b6f9de55fa9e}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+T\+H\+R\+E\+S\+H\+\_\+\+M\+S\+B\+\_\+0}}~(0x7\+F\+FF)
+\begin{DoxyCompactList}\small\item\em Set M\+SB to 0. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines a set of macros for use in configuring the A\+D\+S1115 and a class for controlling the configured device. 
+
+Provides a detailed library of the programmable characteristics of the A\+D\+S1115. These characterstics are listed below and the macro associated with each configuration is listed in this header.
+\begin{DoxyItemize}
+\item Multiplexer configuration
+\begin{DoxyItemize}
+\item A\+I\+Np = A\+I\+N0 and A\+I\+Nn = A\+I\+N1
+\item A\+I\+Np = A\+I\+N0 and A\+I\+Nn = A\+I\+N3
+\item A\+I\+Np = A\+I\+N1 and A\+I\+Nn = A\+I\+N3
+\item A\+I\+Np = A\+I\+N2 and A\+I\+Nn = A\+I\+N3
+\item A\+I\+Np = A\+I\+N0 and A\+I\+Nn = G\+ND
+\item A\+I\+Np = A\+I\+N1 and A\+I\+Nn = G\+ND
+\item A\+I\+Np = A\+I\+N2 and A\+I\+Nn = G\+ND
+\item A\+I\+Np = A\+I\+N3 and A\+I\+Nn = G\+ND
+\end{DoxyItemize}
+\item Programmable gain amplifier configuration
+\begin{DoxyItemize}
+\item +-\/6.\+144V
+\item +-\/4.\+096V
+\item +-\/2.\+048V (D\+E\+F\+A\+U\+LT)
+\item +-\/1.\+024V
+\item +-\/0.\+512V
+\item +-\/0.\+256V
+\end{DoxyItemize}
+\item Device operating mode
+\begin{DoxyItemize}
+\item Continuous conversion mode
+\item Power-\/down single-\/shot mode (D\+E\+F\+A\+U\+LT)
+\end{DoxyItemize}
+\item Data rate
+\begin{DoxyItemize}
+\item 8S\+PS
+\item 16S\+PS
+\item 32S\+PS
+\item 64S\+PS
+\item 128S\+PS (D\+E\+F\+A\+U\+LT)
+\item 250S\+PS
+\item 475S\+PS
+\item 860S\+PS
+\end{DoxyItemize}
+\item Comparator mode
+\begin{DoxyItemize}
+\item Traditional comparator with hysteresis (D\+E\+F\+A\+U\+LT)
+\item \char`\"{}\+Window\char`\"{} comparator
+\end{DoxyItemize}
+\item Comparator polarity
+\begin{DoxyItemize}
+\item Active low (D\+E\+F\+A\+U\+LT)
+\item Active high
+\end{DoxyItemize}
+\item Latching comparator
+\begin{DoxyItemize}
+\item Non-\/latching comparator (D\+E\+F\+A\+U\+LT)
+\item Latching comparator
+\end{DoxyItemize}
+\item Comparator queue and disable
+\begin{DoxyItemize}
+\item Assert after one conversion
+\item Assert after two conversions
+\item Assert after four conversions
+\item Disable comparator (D\+E\+F\+A\+U\+LT)
+\end{DoxyItemize}
+\end{DoxyItemize}The addresses associated with tying the address pin to available lines are listed. The available lines are listed below\+:
+\begin{DoxyItemize}
+\item I2C address pin low
+\item I2C address pin high
+\item I2C address pin tied to the S\+DA line
+\item I2C address pin tied to the S\+CL line
+\end{DoxyItemize}\begin{DoxyAuthor}{Author}
+Zonghan Gan 
+
+Finlay Nelson 
+
+Henry Cowan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11 April 2020 
+\end{DoxyDate}

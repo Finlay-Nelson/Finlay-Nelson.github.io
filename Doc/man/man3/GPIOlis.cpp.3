@@ -1,0 +1,93 @@
+.TH "/home/finlay/RTEP1/Rpi_end/Rpi_end_together/GPIOlis.cpp" 3 "Sun Apr 19 2020" "Muscle Power Gaming" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/home/finlay/RTEP1/Rpi_end/Rpi_end_together/GPIOlis.cpp \- Controls the interupt and threading features of the signal reading\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <QDebug>\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include <errno\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <wiringPi\&.h>\fP
+.br
+\fC#include <iostream>\fP
+.br
+\fC#include <functional>\fP
+.br
+\fC#include 'GPIOlis\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinterrupt2\fP (void)"
+.br
+.RI "Called in response to an interrupt, to alter the value of the flag 'gpipinterrupt'\&. "
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "int \fBgpipinterrupt\fP =0"
+.br
+.RI "Stores a binary value relating to the interrupt state\&. "
+.ti -1c
+.RI "std::mutex \fBcmdmtx\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Controls the interupt and threading features of the signal reading\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Zonghan Gan 
+.PP
+Finlay Nelson 
+.PP
+Henry Cowan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+16 April 2020
+.RE
+.PP
+Details 
+.PP
+Definition in file \fBGPIOlis\&.cpp\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "void interrupt2 (void)"
+
+.PP
+Called in response to an interrupt, to alter the value of the flag 'gpipinterrupt'\&. 
+.PP
+Definition at line 42 of file GPIOlis\&.cpp\&.
+.SH "Variable Documentation"
+.PP 
+.SS "std::mutex cmdmtx"
+
+.PP
+Definition at line 34 of file GPIOlis\&.cpp\&.
+.SS "int gpipinterrupt =0"
+
+.PP
+Stores a binary value relating to the interrupt state\&. The resting value of this variable remains 0 until an interrupt is called\&. This changes the 'gpipinterrupt' value to 1, triggering the non-conditional elements of the \fBGPIOlis::run()\fP function\&. 
+.PP
+Definition at line 32 of file GPIOlis\&.cpp\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Muscle Power Gaming from the source code\&.

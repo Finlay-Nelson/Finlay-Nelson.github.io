@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="dir_055a16307f33c4427eac748495cdd32d" kind="dir">
+    <compoundname>/home/finlay/RTEP1/Rpi_end</compoundname>
+    <innerdir refid="dir_a80cae09569d41fde799f8f633ccf779">/home/finlay/RTEP1/Rpi_end/Rpi_end_together</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/finlay/RTEP1/Rpi_end/"/>
+  </compounddef>
+</doxygen>

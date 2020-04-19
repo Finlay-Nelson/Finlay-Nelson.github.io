@@ -1,0 +1,156 @@
+.TH "/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.cpp" 3 "Sun Apr 19 2020" "Muscle Power Gaming" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.cpp \- Sets the ADS1115 to the correct configurations and operates accordingly\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <wiringPi\&.h>\fP
+.br
+\fC#include <wiringPiI2C\&.h>\fP
+.br
+\fC#include <QElapsedTimer>\fP
+.br
+\fC#include <QDebug>\fP
+.br
+\fC#include <QApplication>\fP
+.br
+\fC#include 'ads1115\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBload_config\fP (int \fBconfig\fP)"
+.br
+.RI "Converts 'config' from hexadecimal to binary and returns the result\&. "
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "int \fBlow\fP"
+.br
+.RI "A variable used in conversion from hexadecimal to binary forms\&. "
+.ti -1c
+.RI "int \fBhigh\fP"
+.br
+.RI "A variable used in conversion from hexadecimal to binary forms\&. "
+.ti -1c
+.RI "int \fBconfig\fP"
+.br
+.RI "Stores the 16-bit config register data for the ADS1115\&. "
+.ti -1c
+.RI "int \fBhigh_config\fP"
+.br
+.RI "Sets the low_threshold register\&. "
+.ti -1c
+.RI "int \fBlow_config\fP"
+.br
+.RI "Sets the high_threshold register\&. "
+.ti -1c
+.RI "float \fBvoltage\fP"
+.br
+.ti -1c
+.RI "int \fBrcr\fP"
+.br
+.RI "A boolean variable to evaluate the success of writing to a register\&. "
+.ti -1c
+.RI "int \fBvalue\fP"
+.br
+.RI "Stores the contents of the conversion register of the designated device\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Sets the ADS1115 to the correct configurations and operates accordingly\&. 
+
+The configuration options are outlined in the header file \fBads1115\&.h\fP, and the selected macros for this purpose set the ADC to continuous coversion mode, a data rate of 860 SPS, a volatge range of +-4\&.096V, single-ended input from AIN0, and disables the comparator\&.
+.PP
+\fBAuthor\fP
+.RS 4
+Zonghan Gan 
+.PP
+Finlay Nelson 
+.PP
+Henry Cowan 
+.RE
+.PP
+
+.PP
+Definition in file \fBads1115\&.cpp\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "int load_config (int config)"
+
+.PP
+Converts 'config' from hexadecimal to binary and returns the result\&. Takes the hexadecimal format of the ADC configuration described in 'config' and converts it to a binary representation\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIconfig\fP The hexadecimal representation of the ADS1115 configuration\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Overwrites config to produce the binary representation of the ADS1115 configuration\&. 
+.RE
+.PP
+
+.PP
+Definition at line 56 of file ads1115\&.cpp\&.
+.SH "Variable Documentation"
+.PP 
+.SS "int config"
+
+.PP
+Stores the 16-bit config register data for the ADS1115\&. 
+.PP
+Definition at line 25 of file ads1115\&.cpp\&.
+.SS "int high"
+
+.PP
+A variable used in conversion from hexadecimal to binary forms\&. 
+.PP
+Definition at line 24 of file ads1115\&.cpp\&.
+.SS "int high_config"
+
+.PP
+Sets the low_threshold register\&. 
+.PP
+Definition at line 27 of file ads1115\&.cpp\&.
+.SS "int low"
+
+.PP
+A variable used in conversion from hexadecimal to binary forms\&. 
+.PP
+Definition at line 23 of file ads1115\&.cpp\&.
+.SS "int low_config"
+
+.PP
+Sets the high_threshold register\&. 
+.PP
+Definition at line 28 of file ads1115\&.cpp\&.
+.SS "int rcr"
+
+.PP
+A boolean variable to evaluate the success of writing to a register\&. 'wiringPiI2CWriteReg16(int fd, int reg, int data)' writes a 16-bit data value into the device register indicated\&.
+.PP
+'rcr' stores the output of the 'wiringPiI2CWriteReg16' function\&. If the result is 0, the set-up procedure has been successful, whilst if the value is non-zero the write has failed\&. 
+.PP
+Definition at line 39 of file ads1115\&.cpp\&.
+.SS "int value"
+
+.PP
+Stores the contents of the conversion register of the designated device\&. 'wiringPiI2CReadReg16' reads the 16-bit coversion register associated with the device address, fd\&. The register stores the last conversion made, in binary twos complement format\&. 
+.PP
+Definition at line 46 of file ads1115\&.cpp\&.
+.SS "float voltage"
+
+.PP
+Definition at line 30 of file ads1115\&.cpp\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Muscle Power Gaming from the source code\&.

@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="class_q_basic_atomic_integer" kind="class" language="Unknown" prot="public">
+    <compoundname>QBasicAtomicInteger</compoundname>
+    <derivedcompoundref refid="qatomicinteger" prot="public" virt="non-virtual">QAtomicInteger</derivedcompoundref>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>QBasicAtomicInteger</label>
+        <link refid="class_q_basic_atomic_integer"/>
+      </node>
+      <node id="2">
+        <label>QAtomicInteger</label>
+        <link refid="qatomicinteger" external="/home/finlay/RTEP1/Doc/doc/qtcore/qtcore.tags"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>QAtomicInt</label>
+        <link refid="qatomicint" external="/home/finlay/RTEP1/Doc/doc/qtcore/qtcore.tags"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>QBasicAtomicInteger</label>
+        <link refid="class_q_basic_atomic_integer"/>
+      </node>
+    </collaborationgraph>
+    <location file="" line="1" column="1"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

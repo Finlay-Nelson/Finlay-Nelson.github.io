@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="class_q_paint_engine_ex" kind="class" language="Unknown" prot="public">
+    <compoundname>QPaintEngineEx</compoundname>
+    <derivedcompoundref refid="qrasterpaintengine" prot="public" virt="non-virtual">QRasterPaintEngine</derivedcompoundref>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>QRasterPaintEngine</label>
+        <link refid="qrasterpaintengine" external="/home/finlay/RTEP1/Doc/doc/qtgui/qtgui.tags"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>QPaintEngineEx</label>
+        <link refid="class_q_paint_engine_ex"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>QPaintEngineEx</label>
+        <link refid="class_q_paint_engine_ex"/>
+      </node>
+    </collaborationgraph>
+    <location file="" line="1" column="1"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,256 @@
+.TH "Window" 3 "Sun Apr 19 2020" "Muscle Power Gaming" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Window \- Generates and updates the components of the Pong game's GUI window\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <window\&.h>\fP
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBdatapros\fP (float)"
+.br
+.RI "Performs the data processing and filtering of the input signals\&. "
+.ti -1c
+.RI "void \fBplotrefresh\fP ()"
+.br
+.RI "Refreshes the GUI window plot every 20ms\&. "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBWindow\fP (\fBQWidget\fP *\fBparent\fP=0)"
+.br
+.RI "\fBWindow\fP default constructor\&. "
+.ti -1c
+.RI "\fB~Window\fP ()"
+.br
+.RI "\fBWindow\fP destructor\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBQUdpSocket\fP * \fBsdersc\fP"
+.br
+.RI "A pointer to the \fBQUdpSocket\fP class\&. "
+.ti -1c
+.RI "\fBGPIOlis\fP * \fBgpiolis1\fP"
+.br
+.RI "gpiolis1 is a pointer to the \fBGPIOlis\fP function "
+.ti -1c
+.RI "\fBQTimer\fP * \fBrftimer\fP"
+.br
+.RI "rftimer is a pointer to the \fBQTimer\fP function "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QwtPlot * \fBplot1\fP"
+.br
+.RI "\fBQt\fP widget: First plot\&. "
+.ti -1c
+.RI "QwtPlot * \fBplot2\fP"
+.br
+.RI "QT widget: Second plot\&. "
+.ti -1c
+.RI "QwtPlotCurve * \fBcurve1\fP"
+.br
+.RI "QT widget: First curve\&. "
+.ti -1c
+.RI "QwtPlotCurve * \fBcurve2\fP"
+.br
+.RI "QT widget: Second curve\&. "
+.ti -1c
+.RI "\fBQHBoxLayout\fP * \fBhLayout\fP"
+.br
+.RI "Horizontal layout\&. "
+.ti -1c
+.RI "double \fBxData1\fP [\fBplotDataSize\fP]"
+.br
+.RI "Data array for xData1\&. "
+.ti -1c
+.RI "double \fByData1\fP [\fBplotDataSize\fP]"
+.br
+.RI "Data array for yData1\&. "
+.ti -1c
+.RI "double \fBxData2\fP [\fBplotDataSize\fP]"
+.br
+.RI "Data array for xData2\&. "
+.ti -1c
+.RI "double \fByData2\fP [\fBplotDataSize\fP]"
+.br
+.RI "Data array for yData2\&. "
+.ti -1c
+.RI "double \fBxData3\fP [\fBplotDataSize\fP]"
+.br
+.RI "Data array for xData3\&. "
+.ti -1c
+.RI "double \fByData3\fP [\fBplotDataSize\fP]"
+.br
+.RI "Data array for yData3\&. "
+.ti -1c
+.RI "double \fBsumpower\fP"
+.br
+.RI "Stores the result of the pow() function in signal processing\&. "
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static const int \fBplotDataSize\fP = 5"
+.br
+.RI "The size of variable storage in data arrays\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Generates and updates the components of the Pong game's GUI window\&. 
+
+This class instantiates the game components (the GUI scene, paddles, ball and scoreboard), and updates them based on the incoming EMG signal through the \fBQt\fP signal slot mechanism\&. 
+.PP
+Definition at line 52 of file window\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Window::Window (\fBQWidget\fP * parent = \fC0\fP)\fC [explicit]\fP"
+
+.PP
+\fBWindow\fP default constructor\&. Initialises data buffers for incoming EMG data, and generates plot objects to which buffers attach\&. The constructor also defines a highpass Butterworth filter, creates appropriate files in which to store log data, and initialises the ADC and UDP\&. 
+.PP
+Definition at line 47 of file window\&.cpp\&.
+.SS "Window::~Window ()"
+
+.PP
+\fBWindow\fP destructor\&. Exits the \fBGPIOlis()\fP object and deletes the GUI window and it's components 
+.PP
+Definition at line 115 of file window\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void Window::datapros (float inval)\fC [slot]\fP"
+
+.PP
+Performs the data processing and filtering of the input signals\&. 'hp1' is an instance of a high pass Butterworth IIR filer, of order given by the input parameter\&. The time-smoothed power of the signal is calculated, added to the plots through the memmove() function, and saved\&. A 1 channel UDP is sent to test control of the game\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIinval\fP The IIR filter order for processing\&. 
+.RE
+.PP
+
+.PP
+Definition at line 138 of file window\&.cpp\&.
+.SS "void Window::plotrefresh ()\fC [slot]\fP"
+
+.PP
+Refreshes the GUI window plot every 20ms\&. 
+.PP
+Definition at line 190 of file window\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "QwtPlotCurve* Window::curve1\fC [private]\fP"
+
+.PP
+QT widget: First curve\&. 
+.PP
+Definition at line 108 of file window\&.h\&.
+.SS "QwtPlotCurve* Window::curve2\fC [private]\fP"
+
+.PP
+QT widget: Second curve\&. 
+.PP
+Definition at line 109 of file window\&.h\&.
+.SS "\fBGPIOlis\fP* Window::gpiolis1"
+
+.PP
+gpiolis1 is a pointer to the \fBGPIOlis\fP function 
+.PP
+Definition at line 81 of file window\&.h\&.
+.SS "\fBQHBoxLayout\fP* Window::hLayout\fC [private]\fP"
+
+.PP
+Horizontal layout\&. 
+.PP
+Definition at line 111 of file window\&.h\&.
+.SS "QwtPlot* Window::plot1\fC [private]\fP"
+
+.PP
+\fBQt\fP widget: First plot\&. 
+.PP
+Definition at line 106 of file window\&.h\&.
+.SS "QwtPlot* Window::plot2\fC [private]\fP"
+
+.PP
+QT widget: Second plot\&. 
+.PP
+Definition at line 107 of file window\&.h\&.
+.SS "const int Window::plotDataSize = 5\fC [static]\fP, \fC [private]\fP"
+
+.PP
+The size of variable storage in data arrays\&. 
+.PP
+Definition at line 113 of file window\&.h\&.
+.SS "\fBQTimer\fP* Window::rftimer"
+
+.PP
+rftimer is a pointer to the \fBQTimer\fP function 
+.PP
+Definition at line 83 of file window\&.h\&.
+.SS "\fBQUdpSocket\fP* Window::sdersc"
+
+.PP
+A pointer to the \fBQUdpSocket\fP class\&. The \fBQUdpSocket\fP class is a subclass of \fBQAbstractSocket\fP that allows the sending and receiving of UDP (User Datagram Protocol) datagrams\&. Used to bind an adress and port to transfer data\&. 
+.PP
+Definition at line 63 of file window\&.h\&.
+.SS "double Window::sumpower\fC [private]\fP"
+
+.PP
+Stores the result of the pow() function in signal processing\&. 
+.PP
+Definition at line 121 of file window\&.h\&.
+.SS "double Window::xData1[\fBplotDataSize\fP]\fC [private]\fP"
+
+.PP
+Data array for xData1\&. 
+.PP
+Definition at line 115 of file window\&.h\&.
+.SS "double Window::xData2[\fBplotDataSize\fP]\fC [private]\fP"
+
+.PP
+Data array for xData2\&. 
+.PP
+Definition at line 117 of file window\&.h\&.
+.SS "double Window::xData3[\fBplotDataSize\fP]\fC [private]\fP"
+
+.PP
+Data array for xData3\&. 
+.PP
+Definition at line 119 of file window\&.h\&.
+.SS "double Window::yData1[\fBplotDataSize\fP]\fC [private]\fP"
+
+.PP
+Data array for yData1\&. 
+.PP
+Definition at line 116 of file window\&.h\&.
+.SS "double Window::yData2[\fBplotDataSize\fP]\fC [private]\fP"
+
+.PP
+Data array for yData2\&. 
+.PP
+Definition at line 118 of file window\&.h\&.
+.SS "double Window::yData3[\fBplotDataSize\fP]\fC [private]\fP"
+
+.PP
+Data array for yData3\&. 
+.PP
+Definition at line 120 of file window\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Muscle Power Gaming from the source code\&.

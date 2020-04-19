@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="md__home_finlay__r_t_e_p1__rpi_end__rpi_end_together__r_e_a_d_m_e" kind="page">
+    <compoundname>md__home_finlay_RTEP1_Rpi_end_Rpi_end_together_README</compoundname>
+    <title>README</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Unit-tested: rpi end code together</para>
+<para>This is the work sample for raspberryPi+ads1115 of all rpi end code together, including: ads driver thread monitering gpio interrupt rt plot iir power time smooth internet sending (UDP) unit test video <ulink url="https://www.youtube.com/watch?v=j-3AxjxNN2I">https://www.youtube.com/watch?v=j-3AxjxNN2I</ulink> <ulink url="https://www.youtube.com/watch?v=jThJus-PdIQ">https://www.youtube.com/watch?v=jThJus-PdIQ</ulink> </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

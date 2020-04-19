@@ -1,0 +1,53 @@
+.TH "group3" 3 "Sun Apr 19 2020" "Muscle Power Gaming" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+group3 \- ADS1115 Bit[15]\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBADS1015_REG_CONFIG_OS_SINGLE\fP   (0x8000)"
+.br
+.RI "Write: Set to start a single-conversion\&. "
+.ti -1c
+.RI "#define \fBADS1015_REG_CONFIG_OS_BUSY\fP   (0x0000)"
+.br
+.RI "Read: 0 when conversion is in progress\&. "
+.ti -1c
+.RI "#define \fBADS1015_REG_CONFIG_OS_NOTBUSY\fP   (0x8000)"
+.br
+.RI "Read: 1 when device is not performing a conversion\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+ADS1115 Bit[15]\&. 
+
+This bit determines the operational status of the device\&. It can only be written when in power-down mode 
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define ADS1015_REG_CONFIG_OS_BUSY   (0x0000)"
+
+.PP
+Read: 0 when conversion is in progress\&. 
+.PP
+Definition at line 163 of file ads1115\&.h\&.
+.SS "#define ADS1015_REG_CONFIG_OS_NOTBUSY   (0x8000)"
+
+.PP
+Read: 1 when device is not performing a conversion\&. 
+.PP
+Definition at line 164 of file ads1115\&.h\&.
+.SS "#define ADS1015_REG_CONFIG_OS_SINGLE   (0x8000)"
+
+.PP
+Write: Set to start a single-conversion\&. 
+.PP
+Definition at line 162 of file ads1115\&.h\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Muscle Power Gaming from the source code\&.

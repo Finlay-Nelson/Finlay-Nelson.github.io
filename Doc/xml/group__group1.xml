@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="group__group1" kind="group">
+    <compoundname>group1</compoundname>
+    <title>ADS1115: ADDRESS PINS</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__group1_1gae55d158023984e8f0ddc80b58d5b30dc" prot="public" static="no">
+        <name>ADS1015_ADDRESS</name>
+        <initializer>(0x48)</initializer>
+        <briefdescription>
+<para>I2C address pin low (GND). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="99" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The addresses when tying the I2C address pin. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The configurations for tying the address pin are;</para>
+<para><itemizedlist>
+<listitem><para>I2C address pin low<itemizedlist>
+<listitem><para>Address pin connected to GND (0X48)</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>I2C address pin high<itemizedlist>
+<listitem><para>Address pin connected to VDD (0X49)</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>I2C address pin tied to the SDA line (0X4A)</para>
+</listitem><listitem><para>I2C address pin tied to the SCL line (0X4B)</para>
+</listitem></itemizedlist>
+</para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

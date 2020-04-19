@@ -1,0 +1,405 @@
+.TH "MainWindow" 3 "Sun Apr 19 2020" "Muscle Power Gaming" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+MainWindow \- Contains the functions and variables relating to the GUI window\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <mainwindow\&.h>\fP
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBrefreshScore\fP (int count)"
+.br
+.RI "Refresh the game score\&. "
+.ti -1c
+.RI "void \fBPosition\fP ()"
+.br
+.RI "Calculates and refreshes the position of the paddles and ball (GUI refresh)\&. "
+.ti -1c
+.RI "void \fBreceive\fP ()"
+.br
+.RI "Calculates the direction of the player paddle\&. "
+.in -1c
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBgoal\fP (int player)"
+.br
+.RI "Signal to update the game score\&. "
+.ti -1c
+.RI "void \fBrfsh\fP ()"
+.br
+.RI "Signal to refresh the GUI\&. "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMainWindow\fP (int scrnwidth, int scrnheight, \fBQWidget\fP *\fBparent\fP=0)"
+.br
+.RI "Generates the UI and the associated feature\&. "
+.ti -1c
+.RI "\fB~MainWindow\fP ()"
+.br
+.RI "GUI window destructor\&. "
+.ti -1c
+.RI "qreal \fBCpuP1Motion\fP ()"
+.br
+.RI "Control of Paddle 1 by the CPU\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::MainWindow * \fBui\fP"
+.br
+.ti -1c
+.RI "int \fBiScore\fP"
+.br
+.RI "A simple counter to monitor game score\&. "
+.ti -1c
+.RI "\fBQGraphicsScene\fP * \fBiScene\fP"
+.br
+.RI "Provides a surface for managing a number of 2D items\&. "
+.ti -1c
+.RI "\fBQGraphicsRectItem\fP * \fBiP2\fP"
+.br
+.RI "The paddle for the Player to control with EMG input\&. "
+.ti -1c
+.RI "\fBQGraphicsRectItem\fP * \fBiP1\fP"
+.br
+.RI "The paddle for the CPU\&. "
+.ti -1c
+.RI "\fBQGraphicsEllipseItem\fP * \fBiBall\fP"
+.br
+.RI "The Pong ball\&. "
+.ti -1c
+.RI "\fBQTimer\fP * \fBiTimer\fP"
+.br
+.ti -1c
+.RI "\fBQElapsedTimer\fP \fBtimer_measure\fP"
+.br
+.ti -1c
+.RI "\fBQPointF\fP \fBiBallMotion\fP"
+.br
+.RI "The direction of motion of the ball\&. "
+.ti -1c
+.RI "qreal \fBiP2Motion\fP"
+.br
+.RI "The direction of motion of paddle 2 in the X direction\&. "
+.ti -1c
+.RI "qreal \fBiP1Motion\fP"
+.br
+.RI "The direction of motion of paddle 1 in the X direction\&. "
+.ti -1c
+.RI "qreal \fBXprime\fP"
+.br
+.RI "The new X position of the ball\&. "
+.ti -1c
+.RI "qreal \fBYprime\fP"
+.br
+.RI "The new Y position of the ball\&. "
+.ti -1c
+.RI "qreal \fBP2Xprime\fP"
+.br
+.RI "The new position of the Player paddle\&. "
+.ti -1c
+.RI "qreal \fBP1Xprime\fP"
+.br
+.RI "The new position of the CPU paddle\&. "
+.ti -1c
+.RI "int \fBrfshcount\fP =0"
+.br
+.RI "Counter to monitor GUI refreshes\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBQUdpSocket\fP * \fBrsverSocket\fP"
+.br
+.RI "\fBQUdpSocket\fP with ip and port to receive UDP signal (EMG signal) "
+.ti -1c
+.RI "int \fBwdwidth\fP"
+.br
+.RI "The GUI window width, partially smaller than the screen width\&. Used in defining the dimensions of the game boundary display\&. "
+.ti -1c
+.RI "int \fBwdheight\fP"
+.br
+.RI "The GUI window height, partially smaller than the screen height\&. Used in defining the dimensions of the game boundary display\&. "
+.ti -1c
+.RI "int \fBtotalHeight\fP = 350"
+.br
+.ti -1c
+.RI "int \fBtotalWidth\fP = 320"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Contains the functions and variables relating to the GUI window\&. 
+
+Member functions
+.IP "\(bu" 2
+\fBMainWindow()\fP
+.IP "  \(bu" 4
+This function proudces the UI and it's features using the \fBQt\fP toolkit\&. These features include the background, scoreboard, paddles, and ball\&. It allows visualisation of the pong game, as well as communicating with an Anrdoid host via the UDP\&.
+.PP
+
+.PP
+.IP "\(bu" 2
+\fBCpuP1Motion()\fP
+.PP
+Slots
+.IP "\(bu" 2
+\fBrefreshScore()\fP
+.IP "  \(bu" 4
+Upon receiving the \fBgoal()\fP signal, the slot executes to refresh the member 'iscore', updating according to the signal value\&. The lcdNumber of the UI is used to display the 'iscore'\&.
+.PP
+
+.PP
+.IP "\(bu" 2
+\fBPosition()\fP
+.IP "\(bu" 2
+\fBreceive()\fP
+.PP
+Signals
+.IP "\(bu" 2
+\fBgoal()\fP
+.PP
+.IP "\(bu" 2
+\fBrfsh()\fP
+.PP
+
+.PP
+Definition at line 87 of file mainwindow\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "MainWindow::MainWindow (int scrnwidth, int scrnheight, \fBQWidget\fP * parent = \fC0\fP)\fC [explicit]\fP"
+
+.PP
+Generates the UI and the associated feature\&. This function proudces the UI and it's features using the \fBQt\fP toolkit\&. These features include the background, scoreboard, paddles, and ball\&. It allows visualisation of the pong game, as well as communicating with an Android host via the UDP\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIscrnwidth\fP The width of the screen 
+.br
+\fIscrnheight\fP The height of the screen 
+.RE
+.PP
+
+.PP
+Definition at line 32 of file mainwindow\&.cpp\&.
+.SS "MainWindow::~MainWindow ()"
+
+.PP
+GUI window destructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvoid\fP Deletes the GUI window and frees up the associated memory\&. 
+.RE
+.PP
+
+.PP
+Definition at line 108 of file mainwindow\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "qreal MainWindow::CpuP1Motion ()"
+
+.PP
+Control of Paddle 1 by the CPU\&. Details 
+.PP
+Definition at line 199 of file mainwindow\&.cpp\&.
+.SS "void MainWindow::goal (int player)\fC [signal]\fP"
+
+.PP
+Signal to update the game score\&. Connects to the \fBrefreshScore()\fP slot, and emitted by the \fBPosition()\fP slot when the ball hits a boundary instead of a paddle\&. The value taken is +1 for hitting the bottom wall and -1 for hitting the top wall and is given by the sign of 'Yprime'\&. 
+.SS "void MainWindow::Position ()\fC [slot]\fP"
+
+.PP
+Calculates and refreshes the position of the paddles and ball (GUI refresh)\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvoid\fP Executed when receiving the \fBrfsh()\fP signal, this slot refreshes the GUI, calculating and updating the positions and values of GUI objects\&. Emits the \fBgoal()\fP signal after the ball hits a boundary\&. 
+.RE
+.PP
+
+.PP
+Definition at line 131 of file mainwindow\&.cpp\&.
+.SS "void MainWindow::receive ()\fC [slot]\fP"
+
+.PP
+Calculates the direction of the player paddle\&. Receives and processes the EMG signal through the UDP\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIvoid\fP Executed when receiving the 'readyread()' signal for the \fBQUdpSocket\fP 'rsversc'\&. This slot calculates the direction of the player paddle based on input EMG signal\&.
+.br
+\fIvoid\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+void 
+.RE
+.PP
+< Store the number of channels
+.PP
+< Difference between output values to control the position of the user controlled paddle
+.PP
+Definition at line 232 of file mainwindow\&.cpp\&.
+.SS "void MainWindow::refreshScore (int count)\fC [slot]\fP"
+
+.PP
+Refresh the game score\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcount\fP A score increment (+1 or -1)
+.RE
+.PP
+Upon receiving the \fBgoal()\fP signal, the slot executes to refresh the member 'iscore', updating according to the signal value\&. The lcdNumber of the UI is used to display the 'iscore'\&. 
+.PP
+Definition at line 121 of file mainwindow\&.cpp\&.
+.SS "void MainWindow::rfsh ()\fC [signal]\fP"
+
+.PP
+Signal to refresh the GUI\&. Connects to the \fBPosition()\fP slot, and emitted by the \fBreceive()\fP slot if 'rfshcount' > 5 samples\&. With a sampling frequency of 860Hz as used in the recommended configuration of the ADS1115, the delay equates to 5\&.8ms\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBQGraphicsEllipseItem\fP* MainWindow::iBall"
+
+.PP
+The Pong ball\&. iBall is an instance of the class \fBQGraphicsEllipseItem\fP which generates an ellipse item to add to a \fBQGraphicsScene\fP\&. This acts as the ball for the game\&.
+.PP
+setBrush() sets the item's brush to 'brush', which is used to fill the item\&. The brush can then be set using \fBQBrush\fP
+.PP
+moveBy() is inherited from \fBQGraphicsItem\fP, and moves the item by dx points horizontally, and dy points vertically\&. 
+.PP
+Definition at line 158 of file mainwindow\&.h\&.
+.SS "\fBQPointF\fP MainWindow::iBallMotion"
+
+.PP
+The direction of motion of the ball\&. A point is specified by an X coordinate and a Y coordinate which can be accessed using the X() and Y() functions\&. The coordinates of the point are specified using floating point numbers for accuracy\&. The isNull() function returns true if both X and Y values are set to 0\&.0\&. The coordinates can be set using the setX() and setY() functions\&. 
+.PP
+Definition at line 173 of file mainwindow\&.h\&.
+.SS "\fBQGraphicsRectItem\fP* MainWindow::iP1"
+
+.PP
+The paddle for the CPU\&. iP1 is a instance of the QGraphicsRecItem class\&. \fBQGraphicsRectItem\fP generates a rectangular item to add to a \fBQGraphicsScene\fP\&. \fBQGraphicsRectItem\fP is constructed with a default ractangle, and the given 'width' and 'height'\&. This is the paddle for the CPU\&. 
+.PP
+Definition at line 147 of file mainwindow\&.h\&.
+.SS "qreal MainWindow::iP1Motion"
+
+.PP
+The direction of motion of paddle 1 in the X direction\&. 
+.PP
+Definition at line 179 of file mainwindow\&.h\&.
+.SS "\fBQGraphicsRectItem\fP* MainWindow::iP2"
+
+.PP
+The paddle for the Player to control with EMG input\&. iP2 is an instance of the QGraphicsRecItem class\&. \fBQGraphicsRectItem\fP generates a rectangular item to add to a \fBQGraphicsScene\fP\&. This is the paddle for the Player to control with EMG input\&. 
+.PP
+Definition at line 140 of file mainwindow\&.h\&.
+.SS "qreal MainWindow::iP2Motion"
+
+.PP
+The direction of motion of paddle 2 in the X direction\&. 
+.PP
+Definition at line 177 of file mainwindow\&.h\&.
+.SS "\fBQGraphicsScene\fP* MainWindow::iScene"
+
+.PP
+Provides a surface for managing a number of 2D items\&. The class serves as a container for QGraphicsItems\&. It is used together with \fBQGraphicsView\fP for visualising graphical items such as lines and rectangles on a 2D surface\&.
+.PP
+Items can be added to the \fBQGraphicsScene\fP by calling addItem() and returns a pointer to the newly added item\&. The \fBwidth()\fP and \fBheight()\fP functions can be used to declare the position of a QItem\&. \fBQGraphicsView\fP can then be used to visualize the scene\&.
+.PP
+The scene rectangle defines the extent of the scene\&. It is primarily used by \fBQGraphicsView\fP to determine the view's default scrollable area, and by \fBQGraphicsScene\fP to manage item indexing\&. setSceneRect(qreal x, qreal y, qreal w, qreal h)\&. 
+.PP
+Definition at line 133 of file mainwindow\&.h\&.
+.SS "int MainWindow::iScore"
+
+.PP
+A simple counter to monitor game score\&. When the EMG controlled paddle wins a point, the value of iscore increments 
+.PP
+Definition at line 122 of file mainwindow\&.h\&.
+.SS "\fBQTimer\fP* MainWindow::iTimer"
+
+.PP
+Definition at line 162 of file mainwindow\&.h\&.
+.SS "qreal MainWindow::P1Xprime"
+
+.PP
+The new position of the CPU paddle\&. 
+.PP
+Definition at line 187 of file mainwindow\&.h\&.
+.SS "qreal MainWindow::P2Xprime"
+
+.PP
+The new position of the Player paddle\&. 
+.PP
+Definition at line 185 of file mainwindow\&.h\&.
+.SS "int MainWindow::rfshcount =0"
+
+.PP
+Counter to monitor GUI refreshes\&. Unlike Linux, the Android system uses a polling time to control the refresh of its GUI\&. It is more prudent to use signal counting instead of a C++ timer for an Android system\&. Used in the \fBMainWindow::receive()\fP function, 'rfshcount' increments to monnitor the number of GUI refreshes that have occurred\&. 
+.PP
+Definition at line 201 of file mainwindow\&.h\&.
+.SS "\fBQUdpSocket\fP* MainWindow::rsverSocket\fC [private]\fP"
+
+.PP
+\fBQUdpSocket\fP with ip and port to receive UDP signal (EMG signal) 
+.PP
+Definition at line 275 of file mainwindow\&.h\&.
+.SS "\fBQElapsedTimer\fP MainWindow::timer_measure"
+
+.PP
+Definition at line 163 of file mainwindow\&.h\&.
+.SS "int MainWindow::totalHeight = 350\fC [private]\fP"
+
+.PP
+Definition at line 279 of file mainwindow\&.h\&.
+.SS "int MainWindow::totalWidth = 320\fC [private]\fP"
+
+.PP
+Definition at line 280 of file mainwindow\&.h\&.
+.SS "Ui::MainWindow* MainWindow::ui"
+
+.PP
+Definition at line 114 of file mainwindow\&.h\&.
+.SS "int MainWindow::wdheight\fC [private]\fP"
+
+.PP
+The GUI window height, partially smaller than the screen height\&. Used in defining the dimensions of the game boundary display\&. 
+.PP
+Definition at line 278 of file mainwindow\&.h\&.
+.SS "int MainWindow::wdwidth\fC [private]\fP"
+
+.PP
+The GUI window width, partially smaller than the screen width\&. Used in defining the dimensions of the game boundary display\&. 
+.PP
+Definition at line 277 of file mainwindow\&.h\&.
+.SS "qreal MainWindow::Xprime"
+
+.PP
+The new X position of the ball\&. 
+.PP
+Definition at line 181 of file mainwindow\&.h\&.
+.SS "qreal MainWindow::Yprime"
+
+.PP
+The new Y position of the ball\&. 
+.PP
+Definition at line 183 of file mainwindow\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Muscle Power Gaming from the source code\&.

@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="class_q_future_watcher_base" kind="class" language="Unknown" prot="public">
+    <compoundname>QFutureWatcherBase</compoundname>
+    <derivedcompoundref refid="qfuturewatcher" prot="public" virt="non-virtual">QFutureWatcher</derivedcompoundref>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>QFutureWatcherBase</label>
+        <link refid="class_q_future_watcher_base"/>
+      </node>
+      <node id="2">
+        <label>QFutureWatcher</label>
+        <link refid="qfuturewatcher" external="/home/finlay/RTEP1/Doc/doc/qtcore/qtcore.tags"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>QFutureWatcherBase</label>
+        <link refid="class_q_future_watcher_base"/>
+      </node>
+    </collaborationgraph>
+    <location file="" line="1" column="1"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

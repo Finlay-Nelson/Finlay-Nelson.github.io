@@ -1,0 +1,88 @@
+\hypertarget{group__group2}{}\doxysection{A\+D\+S1115\+: P\+O\+I\+N\+T\+ER R\+E\+G\+I\+S\+T\+ER}
+\label{group__group2}\index{ADS1115: POINTER REGISTER@{ADS1115: POINTER REGISTER}}
+
+
+The addresses of the registers of the A\+D\+S1115.  
+
+
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__group2_ga0f462c806b353bd682fa3c2d67e66622}{A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+C\+O\+N\+V\+E\+RT}}~(0x00)
+\begin{DoxyCompactList}\small\item\em Select the conversion register. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group2_gab9abb781632542a0e7d8b058292f26b1}{A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+C\+O\+N\+F\+IG}}~(0x01)
+\begin{DoxyCompactList}\small\item\em Select the config register. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group2_ga01582fe1e67b55686d35818696925480}{A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+L\+O\+W\+T\+H\+R\+E\+SH}}~(0x02)
+\begin{DoxyCompactList}\small\item\em Select the Lo\+\_\+thresh register. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group2_ga89000549c6dfe50337c7962b7b3677cb}{A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+H\+I\+T\+H\+R\+E\+SH}}~(0x03)
+\begin{DoxyCompactList}\small\item\em Select the Lo\+\_\+thresh register. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The addresses of the registers of the A\+D\+S1115. 
+
+The A\+D\+S1115 has four registers that are accessible via the I2C port. The Conversion register contains the result of the last conversion. The Config register allows the user the change the A\+D\+S1115 operating modes and query the status of the devices. The Lo\+\_\+thresh and Hi\+\_\+thresh registers set the threshold values used for the comparator function.
+\begin{DoxyItemize}
+\item Conversion register
+\item Config register
+\item Lo\+\_\+thresh register
+\item Hi\+\_\+thresh register
+\end{DoxyItemize}
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__group2_gab9abb781632542a0e7d8b058292f26b1}\label{group__group2_gab9abb781632542a0e7d8b058292f26b1}} 
+\index{ADS1115: POINTER REGISTER@{ADS1115: POINTER REGISTER}!ADS1015\_REG\_POINTER\_CONFIG@{ADS1015\_REG\_POINTER\_CONFIG}}
+\index{ADS1015\_REG\_POINTER\_CONFIG@{ADS1015\_REG\_POINTER\_CONFIG}!ADS1115: POINTER REGISTER@{ADS1115: POINTER REGISTER}}
+\doxysubsubsection{\texorpdfstring{ADS1015\_REG\_POINTER\_CONFIG}{ADS1015\_REG\_POINTER\_CONFIG}}
+{\footnotesize\ttfamily \#define A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+C\+O\+N\+F\+IG~(0x01)}
+
+
+
+Select the config register. 
+
+The 16-\/bit config register can be used to control the A\+D\+S1115 operating mode, input selection, data rate, P\+GA settings, and comparator modes. 
+
+Definition at line 132 of file ads1115.\+h.
+
+\mbox{\Hypertarget{group__group2_ga0f462c806b353bd682fa3c2d67e66622}\label{group__group2_ga0f462c806b353bd682fa3c2d67e66622}} 
+\index{ADS1115: POINTER REGISTER@{ADS1115: POINTER REGISTER}!ADS1015\_REG\_POINTER\_CONVERT@{ADS1015\_REG\_POINTER\_CONVERT}}
+\index{ADS1015\_REG\_POINTER\_CONVERT@{ADS1015\_REG\_POINTER\_CONVERT}!ADS1115: POINTER REGISTER@{ADS1115: POINTER REGISTER}}
+\doxysubsubsection{\texorpdfstring{ADS1015\_REG\_POINTER\_CONVERT}{ADS1015\_REG\_POINTER\_CONVERT}}
+{\footnotesize\ttfamily \#define A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+C\+O\+N\+V\+E\+RT~(0x00)}
+
+
+
+Select the conversion register. 
+
+The 16-\/bit conversion register contains the result of the last conversion in binary twos complement format. Following reset or power-\/up, the Conversion register is cleared to \textquotesingle{}0\textquotesingle{}, and remains \textquotesingle{}0\textquotesingle{} until the first conversion is completed. 
+
+Definition at line 126 of file ads1115.\+h.
+
+\mbox{\Hypertarget{group__group2_ga89000549c6dfe50337c7962b7b3677cb}\label{group__group2_ga89000549c6dfe50337c7962b7b3677cb}} 
+\index{ADS1115: POINTER REGISTER@{ADS1115: POINTER REGISTER}!ADS1015\_REG\_POINTER\_HITHRESH@{ADS1015\_REG\_POINTER\_HITHRESH}}
+\index{ADS1015\_REG\_POINTER\_HITHRESH@{ADS1015\_REG\_POINTER\_HITHRESH}!ADS1115: POINTER REGISTER@{ADS1115: POINTER REGISTER}}
+\doxysubsubsection{\texorpdfstring{ADS1015\_REG\_POINTER\_HITHRESH}{ADS1015\_REG\_POINTER\_HITHRESH}}
+{\footnotesize\ttfamily \#define A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+H\+I\+T\+H\+R\+E\+SH~(0x03)}
+
+
+
+Select the Lo\+\_\+thresh register. 
+
+The upper threshold value used by the comparator is stored in this 16-\/bit register. The register stores values in the same format that the output register displays values; that is, they are stored in twos complement format. Because it is implemented as a digital comparator, special attention should be taken to readjust values whenever P\+GA settings are changed. 
+
+Definition at line 144 of file ads1115.\+h.
+
+\mbox{\Hypertarget{group__group2_ga01582fe1e67b55686d35818696925480}\label{group__group2_ga01582fe1e67b55686d35818696925480}} 
+\index{ADS1115: POINTER REGISTER@{ADS1115: POINTER REGISTER}!ADS1015\_REG\_POINTER\_LOWTHRESH@{ADS1015\_REG\_POINTER\_LOWTHRESH}}
+\index{ADS1015\_REG\_POINTER\_LOWTHRESH@{ADS1015\_REG\_POINTER\_LOWTHRESH}!ADS1115: POINTER REGISTER@{ADS1115: POINTER REGISTER}}
+\doxysubsubsection{\texorpdfstring{ADS1015\_REG\_POINTER\_LOWTHRESH}{ADS1015\_REG\_POINTER\_LOWTHRESH}}
+{\footnotesize\ttfamily \#define A\+D\+S1015\+\_\+\+R\+E\+G\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+L\+O\+W\+T\+H\+R\+E\+SH~(0x02)}
+
+
+
+Select the Lo\+\_\+thresh register. 
+
+The lower threshold value used by the comparator is stored in this 16-\/bit register. The register stores values in the same format that the output register displays values; that is, they are stored in twos complement format. Because it is implemented as a digital comparator, special attention should be taken to readjust values whenever P\+GA settings are changed. 
+
+Definition at line 138 of file ads1115.\+h.
+

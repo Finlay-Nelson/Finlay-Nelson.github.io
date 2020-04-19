@@ -1,0 +1,175 @@
+.TH "GPIOlis" 3 "Sun Apr 19 2020" "Muscle Power Gaming" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+GPIOlis \- This class is responsible for the data communications and threading involved with conversion and processing of input data to the ADS1115\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <GPIOlis\&.h>\fP
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBready\fP ()"
+.br
+.ti -1c
+.RI "void \fBreadyread\fP (float \fBvoltage\fP)"
+.br
+.RI "A signal containing the voltage result from signal processing and conversion\&. "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGPIOlis\fP (\fBQObject\fP *\fBparent\fP=0)"
+.br
+.RI "The constructor of the \fBGPIOlis\fP object\&. "
+.ti -1c
+.RI "\fB~GPIOlis\fP ()"
+.br
+.RI "The destructor of the \fBGPIOlis\fP object\&. "
+.ti -1c
+.RI "void \fBinterrupt\fP (void)"
+.br
+.RI "Emits the \fBreadyread()\fP signal with a measured voltage in response to an interrupt\&. "
+.ti -1c
+.RI "void \fBquit\fP ()"
+.br
+.RI "Exit continuous conversion mode of the ADC and exits the existing thread\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBcount\fP"
+.br
+.RI "A simple counter for monitoring the iterrations of the \fBinterrupt()\fP function\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBrun\fP ()"
+.br
+.RI "A call back function to execute \fBGPIOlis::interrupt()\fP "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBflag\fP =1"
+.br
+.RI "Denotes whether data can successfully be read using the wiringpi library\&. Within the \fBGPIOlis::run()\fP function, 'flag' takes the value of 0 if an error is returned during execution of either of the wiringPiSetup() or wiringPiISR() functions\&. For as long as the value of 'flag' remains 1 after initialisation of the \fBrun()\fP function, the callback in the \fBGPIOlis::run()\fP function is exdcutred\&. 'flag' takes an initial value of 1 such that only an unsuccssful (false) execution of the wiringPi functions results in a 0 value\&. "
+.ti -1c
+.RI "\fBads1115\fP * \fBads1\fP"
+.br
+.RI "An instance of the \fBads1115\fP class\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+This class is responsible for the data communications and threading involved with conversion and processing of input data to the ADS1115\&. 
+
+The GPIOlisten class monitors the ALERT/RDY pin and triggers an interrupt each time an AD conversion is ready\&. The data is then processed before sleeping until the next interrupt\&. Important member functions include:
+.IP "\(bu" 2
+\fBGPIOlis()\fP
+.IP "\(bu" 2
+\fBinterrupt()\fP
+.IP "\(bu" 2
+\fBrun()\fP
+.IP "\(bu" 2
+\fBquit()\fP 
+.PP
+
+.PP
+Definition at line 37 of file GPIOlis\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "GPIOlis::GPIOlis (\fBQObject\fP * parent = \fC0\fP)"
+
+.PP
+The constructor of the \fBGPIOlis\fP object\&. Creates an instance of the \fBads1115\fP class\&. The constructor also instantiates a counter to track the number of conversions performed\&. < A new instance of the class \fBads1115\fP
+.PP
+Definition at line 55 of file GPIOlis\&.cpp\&.
+.SS "GPIOlis::~GPIOlis ()"
+
+.PP
+The destructor of the \fBGPIOlis\fP object\&. Destroys the \fBGPIOlis\fP object\&. 
+.PP
+Definition at line 71 of file GPIOlis\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void GPIOlis::interrupt (void)"
+
+.PP
+Emits the \fBreadyread()\fP signal with a measured voltage in response to an interrupt\&. Uses the readsig() function of the \fBads1115\fP class to measure an input voltage before emitting the \fBreadyread()\fP signal containing the voltage result\&. A counter keeps track of the number of conversions performed (uses of the \fBinterrupt()\fP function), each time alerting the onset of conversion through the qDebug() slot\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIvoid\fP 
+.RE
+.PP
+
+.PP
+Definition at line 62 of file GPIOlis\&.cpp\&.
+.SS "void GPIOlis::quit ()"
+
+.PP
+Exit continuous conversion mode of the ADC and exits the existing thread\&. Applies the GPIOlis::endads() function to the \fBads1115\fP object, exiting the continuous conversion mode of the ADC\&. The object is then deleted before exiting the thread\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIvoid\fP 
+.RE
+.PP
+
+.PP
+Definition at line 113 of file GPIOlis\&.cpp\&.
+.SS "void GPIOlis::ready ()\fC [signal]\fP"
+
+.SS "void GPIOlis::readyread (float voltage)\fC [signal]\fP"
+
+.PP
+A signal containing the voltage result from signal processing and conversion\&. 'voltage' is the return value of the \fBads1115::readsig()\fP function, post-processing and conversion\&. This is then the input parameter for the \fBreadyread()\fP signal\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIvoltage\fP The post-processing converted input EMG signal\&. 
+.RE
+.PP
+
+.SS "void GPIOlis::run ()\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+A call back function to execute \fBGPIOlis::interrupt()\fP If use of the wiringPiSetup() and wiringPiISR() functions does not return an error, and 'gpipinterrupt' takes the value of 1, the \fBGPIOlis::interrupt()\fP function is triggered\&.\&. 
+.PP
+Reimplemented from \fBQThread\fP\&.
+.PP
+Definition at line 74 of file GPIOlis\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBads1115\fP* GPIOlis::ads1\fC [private]\fP"
+
+.PP
+An instance of the \fBads1115\fP class\&. This object allows access to the members of the \fBads1115\fP class, for signal read and conversion\&. 
+.PP
+Definition at line 100 of file GPIOlis\&.h\&.
+.SS "int GPIOlis::count"
+
+.PP
+A simple counter for monitoring the iterrations of the \fBinterrupt()\fP function\&. Instantiates through the \fBGPIOlis()\fP function to keep track of the number of interrupts performe\&. The value increments each time the \fBGPIOlis::interrupt()\fP function is executed\&. 
+.PP
+Definition at line 80 of file GPIOlis\&.h\&.
+.SS "int GPIOlis::flag =1\fC [private]\fP"
+
+.PP
+Denotes whether data can successfully be read using the wiringpi library\&. Within the \fBGPIOlis::run()\fP function, 'flag' takes the value of 0 if an error is returned during execution of either of the wiringPiSetup() or wiringPiISR() functions\&. For as long as the value of 'flag' remains 1 after initialisation of the \fBrun()\fP function, the callback in the \fBGPIOlis::run()\fP function is exdcutred\&. 'flag' takes an initial value of 1 such that only an unsuccssful (false) execution of the wiringPi functions results in a 0 value\&. 
+.PP
+Definition at line 46 of file GPIOlis\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Muscle Power Gaming from the source code\&.

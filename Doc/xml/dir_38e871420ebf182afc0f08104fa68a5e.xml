@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="dir_38e871420ebf182afc0f08104fa68a5e" kind="dir">
+    <compoundname>/home/finlay/RTEP1/Server_end/0301_Pong_GUI</compoundname>
+    <innerfile refid="_server__end_20301___pong___g_u_i_2main_8cpp">main.cpp</innerfile>
+    <innerfile refid="mainwindow_8cpp">mainwindow.cpp</innerfile>
+    <innerfile refid="mainwindow_8h">mainwindow.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/finlay/RTEP1/Server_end/0301_Pong_GUI/"/>
+  </compounddef>
+</doxygen>

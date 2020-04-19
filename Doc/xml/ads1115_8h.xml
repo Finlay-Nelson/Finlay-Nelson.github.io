@@ -1,0 +1,828 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="ads1115_8h" kind="file" language="C++">
+    <compoundname>ads1115.h</compoundname>
+    <includes local="no">QObject</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">string</includes>
+    <includedby refid="ads1115_8cpp" local="yes">/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.cpp</includedby>
+    <includedby refid="_g_p_i_olis_8h" local="yes">/home/finlay/RTEP1/Rpi_end/Rpi_end_together/GPIOlis.h</includedby>
+    <includedby refid="window_8h" local="yes">/home/finlay/RTEP1/Rpi_end/Rpi_end_together/window.h</includedby>
+    <includedby refid="window_8cpp" local="yes">/home/finlay/RTEP1/Rpi_end/Rpi_end_together/window.cpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>QObject</label>
+      </node>
+      <node id="4">
+        <label>string</label>
+      </node>
+      <node id="1">
+        <label>/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h</label>
+        <link refid="ads1115_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>iostream</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="6">
+        <label>/home/finlay/RTEP1/Rpi_end/Rpi_end_together/main.cpp</label>
+        <link refid="_rpi__end_2_rpi__end__together_2main_8cpp"/>
+      </node>
+      <node id="7">
+        <label>/home/finlay/RTEP1/Rpi_end/Rpi_end_together/window.cpp</label>
+        <link refid="window_8cpp"/>
+      </node>
+      <node id="2">
+        <label>/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.cpp</label>
+        <link refid="ads1115_8cpp"/>
+      </node>
+      <node id="3">
+        <label>/home/finlay/RTEP1/Rpi_end/Rpi_end_together/GPIOlis.h</label>
+        <link refid="_g_p_i_olis_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>/home/finlay/RTEP1/Rpi_end/Rpi_end_together/GPIOlis.cpp</label>
+        <link refid="_g_p_i_olis_8cpp"/>
+      </node>
+      <node id="1">
+        <label>/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h</label>
+        <link refid="ads1115_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>/home/finlay/RTEP1/Rpi_end/Rpi_end_together/window.h</label>
+        <link refid="window_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classads1115" prot="public">ads1115</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__group1_1gae55d158023984e8f0ddc80b58d5b30dc" prot="public" static="no">
+        <name>ADS1015_ADDRESS</name>
+        <initializer>(0x48)</initializer>
+        <briefdescription>
+<para>I2C address pin low (GND). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="99" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group2_1ga0f462c806b353bd682fa3c2d67e66622" prot="public" static="no">
+        <name>ADS1015_REG_POINTER_CONVERT</name>
+        <initializer>(0x00)</initializer>
+        <briefdescription>
+<para>Select the conversion register. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The 16-bit conversion register contains the result of the last conversion in binary twos complement format. Following reset or power-up, the Conversion register is cleared to &apos;0&apos;, and remains &apos;0&apos; until the first conversion is completed. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="125" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group2_1gab9abb781632542a0e7d8b058292f26b1" prot="public" static="no">
+        <name>ADS1015_REG_POINTER_CONFIG</name>
+        <initializer>(0x01)</initializer>
+        <briefdescription>
+<para>Select the config register. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The 16-bit config register can be used to control the ADS1115 operating mode, input selection, data rate, PGA settings, and comparator modes. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="131" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group2_1ga01582fe1e67b55686d35818696925480" prot="public" static="no">
+        <name>ADS1015_REG_POINTER_LOWTHRESH</name>
+        <initializer>(0x02)</initializer>
+        <briefdescription>
+<para>Select the Lo_thresh register. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The lower threshold value used by the comparator is stored in this 16-bit register. The register stores values in the same format that the output register displays values; that is, they are stored in twos complement format. Because it is implemented as a digital comparator, special attention should be taken to readjust values whenever PGA settings are changed. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="137" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group2_1ga89000549c6dfe50337c7962b7b3677cb" prot="public" static="no">
+        <name>ADS1015_REG_POINTER_HITHRESH</name>
+        <initializer>(0x03)</initializer>
+        <briefdescription>
+<para>Select the Lo_thresh register. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The upper threshold value used by the comparator is stored in this 16-bit register. The register stores values in the same format that the output register displays values; that is, they are stored in twos complement format. Because it is implemented as a digital comparator, special attention should be taken to readjust values whenever PGA settings are changed. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="143" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group3_1ga13f4550d061699b1cf4bd49520fc4a9c" prot="public" static="no">
+        <name>ADS1015_REG_CONFIG_OS_SINGLE</name>
+        <initializer>(0x8000)</initializer>
+        <briefdescription>
+<para>Write: Set to start a single-conversion. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="161" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group3_1gaab6ae96215401637a9435c030e1919a9" prot="public" static="no">
+        <name>ADS1015_REG_CONFIG_OS_BUSY</name>
+        <initializer>(0x0000)</initializer>
+        <briefdescription>
+<para>Read: 0 when conversion is in progress. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="162" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group3_1ga7744f0dffe0c80b9052a31b1f1d4d4d3" prot="public" static="no">
+        <name>ADS1015_REG_CONFIG_OS_NOTBUSY</name>
+        <initializer>(0x8000)</initializer>
+        <briefdescription>
+<para>Read: 1 when device is not performing a conversion. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="163" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group4_1ga7db34e6ba1050094aa2f5895594fa473" prot="public" static="no">
+        <name>ADS1015_REG_CONFIG_MUX_DIFF_0_1</name>
+        <initializer>(0x0000)</initializer>
+        <briefdescription>
+<para>Differential input with positive input from AIN0 and negative input from AIN1 (DEFAULT). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="193" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="193" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group4_1ga467ee1de37d13577785e33fb6d67e93d" prot="public" static="no">
+        <name>ADS1015_REG_CONFIG_MUX_DIFF_0_3</name>
+        <initializer>(0x1000)</initializer>
+        <briefdescription>
+<para>Differential input with positive input from AIN0 and negative input from AIN3. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="194" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="194" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group4_1ga59f246f973620f2d59f917187c9aeeb1" prot="public" static="no">
+        <name>ADS1015_REG_CONFIG_MUX_DIFF_1_3</name>
+        <initializer>(0x2000)</initializer>
+        <briefdescription>
+<para>Differential input with positive input from AIN1 and negative input from AIN3. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="195" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="195" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group4_1ga438ac41e1655d0c8e10a62b36d803696" prot="public" static="no">
+        <name>ADS1015_REG_CONFIG_MUX_DIFF_2_3</name>
+        <initializer>(0x3000)</initializer>
+        <briefdescription>
+<para>Differential input with positive input from AIN2 and negative input from AIN3. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="196" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="196" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group4_1ga95d034ea82362b3f6573492209aac4f2" prot="public" static="no">
+        <name>ADS1015_REG_CONFIG_MUX_SINGLE_0</name>
+        <initializer>(0x4000)</initializer>
+        <briefdescription>
+<para>Single-ended input with positive input from AIN0 with reference to GND. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="197" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="197" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group4_1ga2db511c8817fda53e31b5d1f72601909" prot="public" static="no">
+        <name>ADS1015_REG_CONFIG_MUX_SINGLE_1</name>
+        <initializer>(0x5000)</initializer>
+        <briefdescription>
+<para>Single-ended input with positive input from AIN1 with reference to GND. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="198" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="198" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group4_1gae31fb46fbe9801ae7bb9210e88b7162d" prot="public" static="no">
+        <name>ADS1015_REG_CONFIG_MUX_SINGLE_2</name>
+        <initializer>(0x6000)</initializer>
+        <briefdescription>
+<para>Single-ended input with positive input from AIN2 with reference to GND. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="199" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="199" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group4_1ga9cb6f8bf1d45341e508cece5bcbc7841" prot="public" static="no">
+        <name>ADS1015_REG_CONFIG_MUX_SINGLE_3</name>
+        <initializer>(0x7000)</initializer>
+        <briefdescription>
+<para>Single-ended input with positive input from AIN3 with reference to GND. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="200" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="200" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group5_1gab6fc5aa2e0ced7acd38dd5c30d2f6f29" prot="public" static="no">
+        <name>ADS1015_REG_CONFIG_PGA_6_144V</name>
+        <initializer>(0x0000)</initializer>
+        <briefdescription>
+<para>+/-6.144V range = Gain 2/3 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="222" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="222" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group5_1ga6ed67863634add41314604de916b6ed6" prot="public" static="no">
+        <name>ADS1015_REG_CONFIG_PGA_4_096V</name>
+        <initializer>(0x0200)</initializer>
+        <briefdescription>
+<para>+/-4.096V range = Gain 1 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="223" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="223" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group5_1ga871217d93b9a7614cd921d6aced54338" prot="public" static="no">
+        <name>ADS1015_REG_CONFIG_PGA_2_048V</name>
+        <initializer>(0x0400)</initializer>
+        <briefdescription>
+<para>+/-2.048V range = Gain 2 (DEFAULT) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="224" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="224" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group5_1ga84b06e45d01519b8073dcb59dd46b4ac" prot="public" static="no">
+        <name>ADS1015_REG_CONFIG_PGA_1_024V</name>
+        <initializer>(0x0600)</initializer>
+        <briefdescription>
+<para>+/-1.024V range = Gain 4 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="225" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="225" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group5_1gad6305868e7343c5d83f68acd45a0967f" prot="public" static="no">
+        <name>ADS1015_REG_CONFIG_PGA_0_512V</name>
+        <initializer>(0x0800)</initializer>
+        <briefdescription>
+<para>+/-0.512V range = Gain 8 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="226" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="226" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group5_1ga7d41c826b50b0b019ddb02e8093287a1" prot="public" static="no">
+        <name>ADS1015_REG_CONFIG_PGA_0_256V</name>
+        <initializer>(0x0A00)</initializer>
+        <briefdescription>
+<para>+/-0.256V range = Gain 16 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="227" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="227" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group6_1gafbb1b96a1b61fae1301ed075330d3a20" prot="public" static="no">
+        <name>ADS1015_REG_CONFIG_MODE_CONTIN</name>
+        <initializer>(0x0000)</initializer>
+        <briefdescription>
+<para>Continuous conversion mode. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="243" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="243" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group6_1ga20780c08ce2027ce7833f27e65d9bb9d" prot="public" static="no">
+        <name>ADS1015_REG_CONFIG_MODE_ENDCON</name>
+        <initializer>(0x8583)</initializer>
+        <briefdescription>
+<para>Shut down continuous conversion. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="244" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="244" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group6_1ga50168c1821f075b7296745be1d4d346f" prot="public" static="no">
+        <name>ADS1015_REG_CONFIG_MODE_SINGLE</name>
+        <initializer>(0x0100)</initializer>
+        <briefdescription>
+<para>Power-down single-shot mode (DEFAULT) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="245" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="245" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group7_1gaff870cc204f306e3aae724e8231f8fdc" prot="public" static="no">
+        <name>ADS1115_REG_CONFIG_DR_8SPS</name>
+        <initializer>(0x0000)</initializer>
+        <briefdescription>
+<para>8 samples per second </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="268" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="268" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group7_1ga482e8bf3819885a814010acb4107f6e1" prot="public" static="no">
+        <name>ADS1115_REG_CONFIG_DR_16SPS</name>
+        <initializer>(0x0020)</initializer>
+        <briefdescription>
+<para>16 samples per second </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="269" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="269" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group7_1ga309e0ecf42b27c5a38126efa61f8a09f" prot="public" static="no">
+        <name>ADS1115_REG_CONFIG_DR_32SPS</name>
+        <initializer>(0x0040)</initializer>
+        <briefdescription>
+<para>32 samples per second </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="270" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="270" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group7_1ga0a53b32fa67a8d36b57f7aceda32efb9" prot="public" static="no">
+        <name>ADS1115_REG_CONFIG_DR_64SPS</name>
+        <initializer>(0x0060)</initializer>
+        <briefdescription>
+<para>64 samples per second </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="271" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="271" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group7_1ga4aff8d5b1b4ac9585952d26ca25385e6" prot="public" static="no">
+        <name>ADS1115_REG_CONFIG_DR_128SPS</name>
+        <initializer>(0x0080)</initializer>
+        <briefdescription>
+<para>128 samples per second </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="272" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="272" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group7_1gac533241f793b44ed72385f71dec1aa25" prot="public" static="no">
+        <name>ADS1115_REG_CONFIG_DR_250SPS</name>
+        <initializer>(0x00A0)</initializer>
+        <briefdescription>
+<para>250 samples per second (DEFAULT) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="273" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="273" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group7_1ga8eed720123d6bd52580826c2c9ad9e28" prot="public" static="no">
+        <name>ADS1115_REG_CONFIG_DR_475SPS</name>
+        <initializer>(0x00C0)</initializer>
+        <briefdescription>
+<para>475 samples per second </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="274" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="274" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group7_1ga9308f41d4c2ff024bbd201efc3b7ff69" prot="public" static="no">
+        <name>ADS1115_REG_CONFIG_DR_860SPS</name>
+        <initializer>(0x00E0)</initializer>
+        <briefdescription>
+<para>860 samples per second </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="275" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="275" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group8_1gafb5240325d7ec757ccad7b098a2b93c3" prot="public" static="no">
+        <name>ADS1015_REG_CONFIG_CMODE_TRAD</name>
+        <initializer>(0x0000)</initializer>
+        <briefdescription>
+<para>Traditional comparator with hysteresis (DEFAULT) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="291" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="291" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group8_1ga49d39ffb8fb66bdb877d0f2546137cce" prot="public" static="no">
+        <name>ADS1015_REG_CONFIG_CMODE_WINDOW</name>
+        <initializer>(0x0010)</initializer>
+        <briefdescription>
+<para><ref refid="class_window" kindref="compound">Window</ref> comparator. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="292" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="292" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group9_1ga775f732c7e97574b38858820b96cf771" prot="public" static="no">
+        <name>ADS1015_REG_CONFIG_CPOL_ACTVLOW</name>
+        <initializer>(0x0000)</initializer>
+        <briefdescription>
+<para>ALERT/RDY pin is active low (DEFAULT) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="308" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="308" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group9_1ga81494a3f6eaf337f4132cc32bba9f28d" prot="public" static="no">
+        <name>ADS1015_REG_CONFIG_CPOL_ACTVHI</name>
+        <initializer>(0x0008)</initializer>
+        <briefdescription>
+<para>ALERT/RDY pin is active high. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="309" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="309" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group10_1ga98757804761f1d945f4cf6ca40e30457" prot="public" static="no">
+        <name>ADS1015_REG_CONFIG_CLAT_NONLAT</name>
+        <initializer>(0x0000)</initializer>
+        <briefdescription>
+<para>Non-latching comparator (DEFAULT) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="324" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="324" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group10_1gaf7f9528dd1aee135afad4c44d771b9f6" prot="public" static="no">
+        <name>ADS1015_REG_CONFIG_CLAT_LATCH</name>
+        <initializer>(0x0004)</initializer>
+        <briefdescription>
+<para>Latching comparator. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="325" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="325" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group11_1ga4889b7e8a019906eb7c2670ec2466917" prot="public" static="no">
+        <name>ADS1015_REG_CONFIG_CQUE_1CONV</name>
+        <initializer>(0x0000)</initializer>
+        <briefdescription>
+<para>Assert after one conversion. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="340" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="340" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group11_1ga88a73e81b13059b1f4756cf5c8a342a3" prot="public" static="no">
+        <name>ADS1015_REG_CONFIG_CQUE_2CONV</name>
+        <initializer>(0x0001)</initializer>
+        <briefdescription>
+<para>Assert after two conversions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="341" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="341" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group11_1gad14f479d9c6f636631444de22dd7b133" prot="public" static="no">
+        <name>ADS1015_REG_CONFIG_CQUE_4CONV</name>
+        <initializer>(0x0002)</initializer>
+        <briefdescription>
+<para>Assert after four conversions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="342" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="342" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group11_1gaa52ede69f39daf837bb2ebbe639dbef9" prot="public" static="no">
+        <name>ADS1015_REG_CONFIG_CQUE_NONE</name>
+        <initializer>(0x0003)</initializer>
+        <briefdescription>
+<para>Disable comparator (DEFAULT) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="343" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="343" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group12_1gacc3350d9056e6b44520992c3244ec45b" prot="public" static="no">
+        <name>ADS1115_REG_THRESH_MSB_1</name>
+        <initializer>(0x8000)</initializer>
+        <briefdescription>
+<para>Set MSB to 1. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="361" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="361" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group12_1ga1a0131797adb1ee39337b6f9de55fa9e" prot="public" static="no">
+        <name>ADS1115_REG_THRESH_MSB_0</name>
+        <initializer>(0x7FFF)</initializer>
+        <briefdescription>
+<para>Set MSB to 0. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="362" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="362" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Defines a set of macros for use in configuring the ADS1115 and a class for controlling the configured device. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Provides a detailed library of the programmable characteristics of the ADS1115. These characterstics are listed below and the macro associated with each configuration is listed in this header.<itemizedlist>
+<listitem><para>Multiplexer configuration<itemizedlist>
+<listitem><para>AINp = AIN0 and AINn = AIN1</para>
+</listitem><listitem><para>AINp = AIN0 and AINn = AIN3</para>
+</listitem><listitem><para>AINp = AIN1 and AINn = AIN3</para>
+</listitem><listitem><para>AINp = AIN2 and AINn = AIN3</para>
+</listitem><listitem><para>AINp = AIN0 and AINn = GND</para>
+</listitem><listitem><para>AINp = AIN1 and AINn = GND</para>
+</listitem><listitem><para>AINp = AIN2 and AINn = GND</para>
+</listitem><listitem><para>AINp = AIN3 and AINn = GND</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>Programmable gain amplifier configuration<itemizedlist>
+<listitem><para>+-6.144V</para>
+</listitem><listitem><para>+-4.096V</para>
+</listitem><listitem><para>+-2.048V (DEFAULT)</para>
+</listitem><listitem><para>+-1.024V</para>
+</listitem><listitem><para>+-0.512V</para>
+</listitem><listitem><para>+-0.256V</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>Device operating mode<itemizedlist>
+<listitem><para>Continuous conversion mode</para>
+</listitem><listitem><para>Power-down single-shot mode (DEFAULT)</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>Data rate<itemizedlist>
+<listitem><para>8SPS</para>
+</listitem><listitem><para>16SPS</para>
+</listitem><listitem><para>32SPS</para>
+</listitem><listitem><para>64SPS</para>
+</listitem><listitem><para>128SPS (DEFAULT)</para>
+</listitem><listitem><para>250SPS</para>
+</listitem><listitem><para>475SPS</para>
+</listitem><listitem><para>860SPS</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>Comparator mode<itemizedlist>
+<listitem><para>Traditional comparator with hysteresis (DEFAULT)</para>
+</listitem><listitem><para>&quot;Window&quot; comparator</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>Comparator polarity<itemizedlist>
+<listitem><para>Active low (DEFAULT)</para>
+</listitem><listitem><para>Active high</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>Latching comparator<itemizedlist>
+<listitem><para>Non-latching comparator (DEFAULT)</para>
+</listitem><listitem><para>Latching comparator</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>Comparator queue and disable<itemizedlist>
+<listitem><para>Assert after one conversion</para>
+</listitem><listitem><para>Assert after two conversions</para>
+</listitem><listitem><para>Assert after four conversions</para>
+</listitem><listitem><para>Disable comparator (DEFAULT)</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+The addresses associated with tying the address pin to available lines are listed. The available lines are listed below:<itemizedlist>
+<listitem><para>I2C address pin low</para>
+</listitem><listitem><para>I2C address pin high</para>
+</listitem><listitem><para>I2C address pin tied to the SDA line</para>
+</listitem><listitem><para>I2C address pin tied to the SCL line</para>
+</listitem></itemizedlist>
+<simplesect kind="author"><para>Zonghan Gan </para>
+</simplesect>
+<simplesect kind="author"><para>Finlay Nelson </para>
+</simplesect>
+<simplesect kind="author"><para>Henry Cowan </para>
+</simplesect>
+<simplesect kind="date"><para>11 April 2020 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="70"><highlight class="preprocessor">#ifndef<sp/>ADS1115_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADS1115_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="comment">/*Includes*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QObject&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="comment">/*MACROS*/</highlight></codeline>
+<codeline lineno="97"><highlight class="comment">/*Address<sp/>Macros*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="comment">/*==============================*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADS1015_ADDRESS<sp/>(0x48)<sp/></highlight></codeline>
+<codeline lineno="100" refid="group__group1_1gae55d158023984e8f0ddc80b58d5b30dc" refkind="member"><highlight class="preprocessor"></highlight><highlight class="comment">/*==============================*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="comment">/*Pointer<sp/>Registers*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="comment">/*==============================*/</highlight></codeline>
+<codeline lineno="125"><highlight class="preprocessor">#define<sp/>ADS1015_REG_POINTER_CONVERT<sp/><sp/><sp/>(0x00)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126" refid="group__group2_1ga0f462c806b353bd682fa3c2d67e66622" refkind="member"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="preprocessor">#define<sp/>ADS1015_REG_POINTER_CONFIG<sp/><sp/><sp/><sp/>(0x01)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132" refid="group__group2_1gab9abb781632542a0e7d8b058292f26b1" refkind="member"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="preprocessor">#define<sp/>ADS1015_REG_POINTER_LOWTHRESH<sp/>(0x02)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138" refid="group__group2_1ga01582fe1e67b55686d35818696925480" refkind="member"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="preprocessor">#define<sp/>ADS1015_REG_POINTER_HITHRESH<sp/><sp/>(0x03)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144" refid="group__group2_1ga89000549c6dfe50337c7962b7b3677cb" refkind="member"><highlight class="normal"></highlight><highlight class="comment">/*==============================*/</highlight></codeline>
+<codeline lineno="158"><highlight class="comment">/*Config<sp/>Registers*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight><highlight class="comment">/*==============================*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight><highlight class="comment">/*Bit[15]-OS:<sp/>Operational<sp/>status*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADS1015_REG_CONFIG_OS_SINGLE<sp/><sp/>(0x8000)<sp/></highlight></codeline>
+<codeline lineno="162" refid="group__group3_1ga13f4550d061699b1cf4bd49520fc4a9c" refkind="member"><highlight class="preprocessor">#define<sp/>ADS1015_REG_CONFIG_OS_BUSY<sp/><sp/><sp/><sp/>(0x0000)<sp/></highlight></codeline>
+<codeline lineno="163" refid="group__group3_1gaab6ae96215401637a9435c030e1919a9" refkind="member"><highlight class="preprocessor">#define<sp/>ADS1015_REG_CONFIG_OS_NOTBUSY<sp/>(0x8000)<sp/></highlight></codeline>
+<codeline lineno="164" refid="group__group3_1ga7744f0dffe0c80b9052a31b1f1d4d4d3" refkind="member"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="192"><highlight class="preprocessor"></highlight><highlight class="comment">/*Bits[14:12]-MUX[2:0]:<sp/>Input<sp/>multiplexer<sp/>configuration*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADS1015_REG_CONFIG_MUX_DIFF_0_1<sp/><sp/>(0x0000)<sp/></highlight></codeline>
+<codeline lineno="194" refid="group__group4_1ga7db34e6ba1050094aa2f5895594fa473" refkind="member"><highlight class="preprocessor">#define<sp/>ADS1015_REG_CONFIG_MUX_DIFF_0_3<sp/><sp/>(0x1000)<sp/></highlight></codeline>
+<codeline lineno="195" refid="group__group4_1ga467ee1de37d13577785e33fb6d67e93d" refkind="member"><highlight class="preprocessor">#define<sp/>ADS1015_REG_CONFIG_MUX_DIFF_1_3<sp/><sp/>(0x2000)<sp/></highlight></codeline>
+<codeline lineno="196" refid="group__group4_1ga59f246f973620f2d59f917187c9aeeb1" refkind="member"><highlight class="preprocessor">#define<sp/>ADS1015_REG_CONFIG_MUX_DIFF_2_3<sp/><sp/>(0x3000)<sp/></highlight></codeline>
+<codeline lineno="197" refid="group__group4_1ga438ac41e1655d0c8e10a62b36d803696" refkind="member"><highlight class="preprocessor">#define<sp/>ADS1015_REG_CONFIG_MUX_SINGLE_0<sp/>(0x4000)<sp/></highlight></codeline>
+<codeline lineno="198" refid="group__group4_1ga95d034ea82362b3f6573492209aac4f2" refkind="member"><highlight class="preprocessor">#define<sp/>ADS1015_REG_CONFIG_MUX_SINGLE_1<sp/>(0x5000)<sp/></highlight></codeline>
+<codeline lineno="199" refid="group__group4_1ga2db511c8817fda53e31b5d1f72601909" refkind="member"><highlight class="preprocessor">#define<sp/>ADS1015_REG_CONFIG_MUX_SINGLE_2<sp/>(0x6000)<sp/></highlight></codeline>
+<codeline lineno="200" refid="group__group4_1gae31fb46fbe9801ae7bb9210e88b7162d" refkind="member"><highlight class="preprocessor">#define<sp/>ADS1015_REG_CONFIG_MUX_SINGLE_3<sp/>(0x7000)<sp/></highlight></codeline>
+<codeline lineno="201" refid="group__group4_1ga9cb6f8bf1d45341e508cece5bcbc7841" refkind="member"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="221"><highlight class="preprocessor"></highlight><highlight class="comment">/*Bits[11:9]-PGA[2:0]:<sp/>Programmable<sp/>gain<sp/>amplifier<sp/>configuration*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADS1015_REG_CONFIG_PGA_6_144V<sp/>(0x0000)<sp/></highlight></codeline>
+<codeline lineno="223" refid="group__group5_1gab6fc5aa2e0ced7acd38dd5c30d2f6f29" refkind="member"><highlight class="preprocessor">#define<sp/>ADS1015_REG_CONFIG_PGA_4_096V<sp/>(0x0200)<sp/></highlight></codeline>
+<codeline lineno="224" refid="group__group5_1ga6ed67863634add41314604de916b6ed6" refkind="member"><highlight class="preprocessor">#define<sp/>ADS1015_REG_CONFIG_PGA_2_048V<sp/>(0x0400)<sp/></highlight></codeline>
+<codeline lineno="225" refid="group__group5_1ga871217d93b9a7614cd921d6aced54338" refkind="member"><highlight class="preprocessor">#define<sp/>ADS1015_REG_CONFIG_PGA_1_024V<sp/>(0x0600)<sp/></highlight></codeline>
+<codeline lineno="226" refid="group__group5_1ga84b06e45d01519b8073dcb59dd46b4ac" refkind="member"><highlight class="preprocessor">#define<sp/>ADS1015_REG_CONFIG_PGA_0_512V<sp/>(0x0800)<sp/></highlight></codeline>
+<codeline lineno="227" refid="group__group5_1gad6305868e7343c5d83f68acd45a0967f" refkind="member"><highlight class="preprocessor">#define<sp/>ADS1015_REG_CONFIG_PGA_0_256V<sp/>(0x0A00)<sp/></highlight></codeline>
+<codeline lineno="228" refid="group__group5_1ga7d41c826b50b0b019ddb02e8093287a1" refkind="member"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="242"><highlight class="preprocessor"></highlight><highlight class="comment">/*Bit[8]-MODE:<sp/>Device<sp/>operating<sp/>mode*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADS1015_REG_CONFIG_MODE_CONTIN<sp/>(0x0000)<sp/></highlight></codeline>
+<codeline lineno="244" refid="group__group6_1gafbb1b96a1b61fae1301ed075330d3a20" refkind="member"><highlight class="preprocessor">#define<sp/>ADS1015_REG_CONFIG_MODE_ENDCON<sp/>(0x8583)<sp/></highlight></codeline>
+<codeline lineno="245" refid="group__group6_1ga20780c08ce2027ce7833f27e65d9bb9d" refkind="member"><highlight class="preprocessor">#define<sp/>ADS1015_REG_CONFIG_MODE_SINGLE<sp/>(0x0100)<sp/></highlight></codeline>
+<codeline lineno="246" refid="group__group6_1ga50168c1821f075b7296745be1d4d346f" refkind="member"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="267"><highlight class="preprocessor"></highlight><highlight class="comment">/*Bits[7:5]-DR[2:0]:<sp/>Data<sp/>rate*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADS1115_REG_CONFIG_DR_8SPS<sp/>(0x0000)<sp/></highlight></codeline>
+<codeline lineno="269" refid="group__group7_1gaff870cc204f306e3aae724e8231f8fdc" refkind="member"><highlight class="preprocessor">#define<sp/>ADS1115_REG_CONFIG_DR_16SPS<sp/>(0x0020)<sp/></highlight></codeline>
+<codeline lineno="270" refid="group__group7_1ga482e8bf3819885a814010acb4107f6e1" refkind="member"><highlight class="preprocessor">#define<sp/>ADS1115_REG_CONFIG_DR_32SPS<sp/>(0x0040)<sp/></highlight></codeline>
+<codeline lineno="271" refid="group__group7_1ga309e0ecf42b27c5a38126efa61f8a09f" refkind="member"><highlight class="preprocessor">#define<sp/>ADS1115_REG_CONFIG_DR_64SPS<sp/>(0x0060)<sp/></highlight></codeline>
+<codeline lineno="272" refid="group__group7_1ga0a53b32fa67a8d36b57f7aceda32efb9" refkind="member"><highlight class="preprocessor">#define<sp/>ADS1115_REG_CONFIG_DR_128SPS<sp/>(0x0080)<sp/></highlight></codeline>
+<codeline lineno="273" refid="group__group7_1ga4aff8d5b1b4ac9585952d26ca25385e6" refkind="member"><highlight class="preprocessor">#define<sp/>ADS1115_REG_CONFIG_DR_250SPS<sp/>(0x00A0)<sp/></highlight></codeline>
+<codeline lineno="274" refid="group__group7_1gac533241f793b44ed72385f71dec1aa25" refkind="member"><highlight class="preprocessor">#define<sp/>ADS1115_REG_CONFIG_DR_475SPS<sp/>(0x00C0)<sp/></highlight></codeline>
+<codeline lineno="275" refid="group__group7_1ga8eed720123d6bd52580826c2c9ad9e28" refkind="member"><highlight class="preprocessor">#define<sp/>ADS1115_REG_CONFIG_DR_860SPS<sp/>(0x00E0)<sp/></highlight></codeline>
+<codeline lineno="276" refid="group__group7_1ga9308f41d4c2ff024bbd201efc3b7ff69" refkind="member"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="290"><highlight class="preprocessor"></highlight><highlight class="comment">/*Bit[4]-COMP_MODE:<sp/>Comparator<sp/>mode*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADS1015_REG_CONFIG_CMODE_TRAD<sp/><sp/>(0x0000)<sp/></highlight></codeline>
+<codeline lineno="292" refid="group__group8_1gafb5240325d7ec757ccad7b098a2b93c3" refkind="member"><highlight class="preprocessor">#define<sp/>ADS1015_REG_CONFIG_CMODE_WINDOW<sp/>(0x0010)<sp/></highlight></codeline>
+<codeline lineno="293" refid="group__group8_1ga49d39ffb8fb66bdb877d0f2546137cce" refkind="member"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="307"><highlight class="preprocessor"></highlight><highlight class="comment">/*Bit[3]-COMP_POL:<sp/>Comparator<sp/>polarity*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="308"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADS1015_REG_CONFIG_CPOL_ACTVLOW<sp/><sp/>(0x0000)<sp/></highlight></codeline>
+<codeline lineno="309" refid="group__group9_1ga775f732c7e97574b38858820b96cf771" refkind="member"><highlight class="preprocessor">#define<sp/>ADS1015_REG_CONFIG_CPOL_ACTVHI<sp/>(0x0008)<sp/></highlight></codeline>
+<codeline lineno="310" refid="group__group9_1ga81494a3f6eaf337f4132cc32bba9f28d" refkind="member"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="323"><highlight class="preprocessor"></highlight><highlight class="comment">/*Bit[2]-COMP_LAT:<sp/>Latching<sp/>comparator*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="324"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADS1015_REG_CONFIG_CLAT_NONLAT<sp/><sp/>(0x0000)<sp/></highlight></codeline>
+<codeline lineno="325" refid="group__group10_1ga98757804761f1d945f4cf6ca40e30457" refkind="member"><highlight class="preprocessor">#define<sp/>ADS1015_REG_CONFIG_CLAT_LATCH<sp/><sp/><sp/>(0x0004)<sp/></highlight></codeline>
+<codeline lineno="326" refid="group__group10_1gaf7f9528dd1aee135afad4c44d771b9f6" refkind="member"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="339"><highlight class="preprocessor"></highlight><highlight class="comment">/*Bit[1:0]-COMP_QUE:<sp/>Comparator<sp/>queue<sp/>and<sp/>disable*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="340"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADS1015_REG_CONFIG_CQUE_1CONV<sp/>(0x0000)<sp/></highlight></codeline>
+<codeline lineno="341" refid="group__group11_1ga4889b7e8a019906eb7c2670ec2466917" refkind="member"><highlight class="preprocessor">#define<sp/>ADS1015_REG_CONFIG_CQUE_2CONV<sp/>(0x0001)<sp/></highlight></codeline>
+<codeline lineno="342" refid="group__group11_1ga88a73e81b13059b1f4756cf5c8a342a3" refkind="member"><highlight class="preprocessor">#define<sp/>ADS1015_REG_CONFIG_CQUE_4CONV<sp/>(0x0002)<sp/></highlight></codeline>
+<codeline lineno="343" refid="group__group11_1gad14f479d9c6f636631444de22dd7b133" refkind="member"><highlight class="preprocessor">#define<sp/>ADS1015_REG_CONFIG_CQUE_NONE<sp/>(0x0003)<sp/></highlight></codeline>
+<codeline lineno="344" refid="group__group11_1gaa52ede69f39daf837bb2ebbe639dbef9" refkind="member"><highlight class="preprocessor"></highlight><highlight class="comment">/*==============================*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="345"><highlight class="normal"></highlight></codeline>
+<codeline lineno="359"><highlight class="comment">/*Threshold<sp/>Registers*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="360"><highlight class="normal"></highlight><highlight class="comment">/*==============================*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="361"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADS1115_REG_THRESH_MSB_1<sp/>(0x8000)<sp/></highlight></codeline>
+<codeline lineno="362" refid="group__group12_1gacc3350d9056e6b44520992c3244ec45b" refkind="member"><highlight class="preprocessor">#define<sp/>ADS1115_REG_THRESH_MSB_0<sp/>(0x7FFF)<sp/></highlight></codeline>
+<codeline lineno="363" refid="group__group12_1ga1a0131797adb1ee39337b6f9de55fa9e" refkind="member"><highlight class="preprocessor"></highlight><highlight class="comment">/*==============================*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="364"><highlight class="normal"></highlight></codeline>
+<codeline lineno="374" refid="classads1115" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classads1115" kindref="compound">ads1115</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="qobject" kindref="compound" external="/home/finlay/Repo/doc/qtcore/qtcore.tags">QObject</ref></highlight></codeline>
+<codeline lineno="375"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_OBJECT</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="378"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"></highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classads1115_1aeacdf3467cad67cd8a186ad43cbeee53" kindref="member">ads1115</ref>(uchar<sp/>addr,<sp/><ref refid="qobject" kindref="compound" external="/home/finlay/Repo/doc/qtcore/qtcore.tags">QObject</ref><sp/>*<ref refid="qobject_1parent" kindref="member" external="/home/finlay/Repo/doc/qtcore/qtcore.tags">parent</ref><sp/>=<sp/>0);</highlight></codeline>
+<codeline lineno="388"><highlight class="normal"></highlight></codeline>
+<codeline lineno="394" refid="classads1115_1a3eac1506c2c00580e5563827d9dcd260" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classads1115_1a3eac1506c2c00580e5563827d9dcd260" kindref="member">fd</ref>;</highlight></codeline>
+<codeline lineno="395"><highlight class="normal"></highlight></codeline>
+<codeline lineno="396"><highlight class="normal"></highlight></codeline>
+<codeline lineno="402" refid="classads1115_1a2cf1674f5b1f77bd4b5709702aec7244" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uchar<sp/><ref refid="classads1115_1a2cf1674f5b1f77bd4b5709702aec7244" kindref="member">iicaddr</ref>;<sp/></highlight></codeline>
+<codeline lineno="403"><highlight class="normal"></highlight></codeline>
+<codeline lineno="404"><highlight class="normal"></highlight></codeline>
+<codeline lineno="405"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="413"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classads1115_1a53a254dcd5d6d6ff6e787688c730ae4b" kindref="member">endads</ref>();</highlight></codeline>
+<codeline lineno="414"><highlight class="normal"></highlight></codeline>
+<codeline lineno="425"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classads1115_1a761c3ec573fc59956d7eca446841c18d" kindref="member">readsig</ref>();</highlight></codeline>
+<codeline lineno="426"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="427"><highlight class="normal">signals:</highlight></codeline>
+<codeline lineno="428"><highlight class="normal"></highlight></codeline>
+<codeline lineno="436" refid="classads1115_1ae7c50fb698f1b87ba229929fc61f5e2f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classads1115_1ae7c50fb698f1b87ba229929fc61f5e2f" kindref="member">readyread</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="ads1115_8cpp_1a47061fcae597f83f8a0a99d4b7b5a5c1" kindref="member">voltage</ref>);</highlight></codeline>
+<codeline lineno="437"><highlight class="normal"></highlight></codeline>
+<codeline lineno="438"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="439"><highlight class="normal"></highlight></codeline>
+<codeline lineno="440"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>ADS1115_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h"/>
+  </compounddef>
+</doxygen>

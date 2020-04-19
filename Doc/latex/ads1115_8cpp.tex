@@ -1,0 +1,191 @@
+\hypertarget{ads1115_8cpp}{}\doxysection{/home/finlay/\+R\+T\+E\+P1/\+Rpi\+\_\+end/\+Rpi\+\_\+end\+\_\+together/ads1115.cpp File Reference}
+\label{ads1115_8cpp}\index{/home/finlay/RTEP1/Rpi\_end/Rpi\_end\_together/ads1115.cpp@{/home/finlay/RTEP1/Rpi\_end/Rpi\_end\_together/ads1115.cpp}}
+
+
+Sets the A\+D\+S1115 to the correct configurations and operates accordingly.  
+
+
+{\ttfamily \#include $<$wiring\+Pi.\+h$>$}\newline
+{\ttfamily \#include $<$wiring\+Pi\+I2\+C.\+h$>$}\newline
+{\ttfamily \#include $<$Q\+Elapsed\+Timer$>$}\newline
+{\ttfamily \#include $<$Q\+Debug$>$}\newline
+{\ttfamily \#include $<$Q\+Application$>$}\newline
+{\ttfamily \#include \char`\"{}ads1115.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{ads1115_8cpp_aeedb5ce0b7eff5eb547a36a07859575c}{load\+\_\+config}} (int \mbox{\hyperlink{ads1115_8cpp_a4b95d85a2e012a6f680d7fcbebecffb9}{config}})
+\begin{DoxyCompactList}\small\item\em Converts \char`\"{}config\char`\"{} from hexadecimal to binary and returns the result. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{ads1115_8cpp_a582ad3e71a0125d122e77eb54d2277b4}{low}}
+\begin{DoxyCompactList}\small\item\em A variable used in conversion from hexadecimal to binary forms. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{ads1115_8cpp_aae03a5bfee63ef73c818b660e31146a9}{high}}
+\begin{DoxyCompactList}\small\item\em A variable used in conversion from hexadecimal to binary forms. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{ads1115_8cpp_a4b95d85a2e012a6f680d7fcbebecffb9}{config}}
+\begin{DoxyCompactList}\small\item\em Stores the 16-\/bit config register data for the A\+D\+S1115. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{ads1115_8cpp_a858a3d60a2d99fd3d2928c5843530456}{high\+\_\+config}}
+\begin{DoxyCompactList}\small\item\em Sets the low\+\_\+threshold register. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{ads1115_8cpp_a7ec714dbe564c5a0a805f20c0ee10f2b}{low\+\_\+config}}
+\begin{DoxyCompactList}\small\item\em Sets the high\+\_\+threshold register. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{ads1115_8cpp_a47061fcae597f83f8a0a99d4b7b5a5c1}{voltage}}
+\item 
+int \mbox{\hyperlink{ads1115_8cpp_a99d7469ce0b9bcacba018a9d61fa964e}{rcr}}
+\begin{DoxyCompactList}\small\item\em A boolean variable to evaluate the success of writing to a register. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{ads1115_8cpp_ac4f474c82e82cbb89ca7c36dd52be0ed}{value}}
+\begin{DoxyCompactList}\small\item\em Stores the contents of the conversion register of the designated device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Sets the A\+D\+S1115 to the correct configurations and operates accordingly. 
+
+The configuration options are outlined in the header file \mbox{\hyperlink{ads1115_8h}{ads1115.\+h}}, and the selected macros for this purpose set the A\+DC to continuous coversion mode, a data rate of 860 S\+PS, a volatge range of +-\/4.\+096V, single-\/ended input from A\+I\+N0, and disables the comparator.
+
+\begin{DoxyAuthor}{Author}
+Zonghan Gan 
+
+Finlay Nelson 
+
+Henry Cowan 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{ads1115_8cpp_aeedb5ce0b7eff5eb547a36a07859575c}\label{ads1115_8cpp_aeedb5ce0b7eff5eb547a36a07859575c}} 
+\index{ads1115.cpp@{ads1115.cpp}!load\_config@{load\_config}}
+\index{load\_config@{load\_config}!ads1115.cpp@{ads1115.cpp}}
+\doxysubsubsection{\texorpdfstring{load\_config()}{load\_config()}}
+{\footnotesize\ttfamily int load\+\_\+config (\begin{DoxyParamCaption}\item[{int}]{config }\end{DoxyParamCaption})}
+
+
+
+Converts \char`\"{}config\char`\"{} from hexadecimal to binary and returns the result. 
+
+Takes the hexadecimal format of the A\+DC configuration described in \char`\"{}config\char`\"{} and converts it to a binary representation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & The hexadecimal representation of the A\+D\+S1115 configuration. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Overwrites config to produce the binary representation of the A\+D\+S1115 configuration. 
+\end{DoxyReturn}
+
+
+Definition at line 56 of file ads1115.\+cpp.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{ads1115_8cpp_a4b95d85a2e012a6f680d7fcbebecffb9}\label{ads1115_8cpp_a4b95d85a2e012a6f680d7fcbebecffb9}} 
+\index{ads1115.cpp@{ads1115.cpp}!config@{config}}
+\index{config@{config}!ads1115.cpp@{ads1115.cpp}}
+\doxysubsubsection{\texorpdfstring{config}{config}}
+{\footnotesize\ttfamily int config}
+
+
+
+Stores the 16-\/bit config register data for the A\+D\+S1115. 
+
+
+
+Definition at line 25 of file ads1115.\+cpp.
+
+\mbox{\Hypertarget{ads1115_8cpp_aae03a5bfee63ef73c818b660e31146a9}\label{ads1115_8cpp_aae03a5bfee63ef73c818b660e31146a9}} 
+\index{ads1115.cpp@{ads1115.cpp}!high@{high}}
+\index{high@{high}!ads1115.cpp@{ads1115.cpp}}
+\doxysubsubsection{\texorpdfstring{high}{high}}
+{\footnotesize\ttfamily int high}
+
+
+
+A variable used in conversion from hexadecimal to binary forms. 
+
+
+
+Definition at line 24 of file ads1115.\+cpp.
+
+\mbox{\Hypertarget{ads1115_8cpp_a858a3d60a2d99fd3d2928c5843530456}\label{ads1115_8cpp_a858a3d60a2d99fd3d2928c5843530456}} 
+\index{ads1115.cpp@{ads1115.cpp}!high\_config@{high\_config}}
+\index{high\_config@{high\_config}!ads1115.cpp@{ads1115.cpp}}
+\doxysubsubsection{\texorpdfstring{high\_config}{high\_config}}
+{\footnotesize\ttfamily int high\+\_\+config}
+
+
+
+Sets the low\+\_\+threshold register. 
+
+
+
+Definition at line 27 of file ads1115.\+cpp.
+
+\mbox{\Hypertarget{ads1115_8cpp_a582ad3e71a0125d122e77eb54d2277b4}\label{ads1115_8cpp_a582ad3e71a0125d122e77eb54d2277b4}} 
+\index{ads1115.cpp@{ads1115.cpp}!low@{low}}
+\index{low@{low}!ads1115.cpp@{ads1115.cpp}}
+\doxysubsubsection{\texorpdfstring{low}{low}}
+{\footnotesize\ttfamily int low}
+
+
+
+A variable used in conversion from hexadecimal to binary forms. 
+
+
+
+Definition at line 23 of file ads1115.\+cpp.
+
+\mbox{\Hypertarget{ads1115_8cpp_a7ec714dbe564c5a0a805f20c0ee10f2b}\label{ads1115_8cpp_a7ec714dbe564c5a0a805f20c0ee10f2b}} 
+\index{ads1115.cpp@{ads1115.cpp}!low\_config@{low\_config}}
+\index{low\_config@{low\_config}!ads1115.cpp@{ads1115.cpp}}
+\doxysubsubsection{\texorpdfstring{low\_config}{low\_config}}
+{\footnotesize\ttfamily int low\+\_\+config}
+
+
+
+Sets the high\+\_\+threshold register. 
+
+
+
+Definition at line 28 of file ads1115.\+cpp.
+
+\mbox{\Hypertarget{ads1115_8cpp_a99d7469ce0b9bcacba018a9d61fa964e}\label{ads1115_8cpp_a99d7469ce0b9bcacba018a9d61fa964e}} 
+\index{ads1115.cpp@{ads1115.cpp}!rcr@{rcr}}
+\index{rcr@{rcr}!ads1115.cpp@{ads1115.cpp}}
+\doxysubsubsection{\texorpdfstring{rcr}{rcr}}
+{\footnotesize\ttfamily int rcr}
+
+
+
+A boolean variable to evaluate the success of writing to a register. 
+
+\char`\"{}wiring\+Pi\+I2\+C\+Write\+Reg16(int fd, int reg, int data)\char`\"{} writes a 16-\/bit data value into the device register indicated.
+
+\char`\"{}rcr\char`\"{} stores the output of the \char`\"{}wiring\+Pi\+I2\+C\+Write\+Reg16\char`\"{} function. If the result is 0, the set-\/up procedure has been successful, whilst if the value is non-\/zero the write has failed. 
+
+Definition at line 39 of file ads1115.\+cpp.
+
+\mbox{\Hypertarget{ads1115_8cpp_ac4f474c82e82cbb89ca7c36dd52be0ed}\label{ads1115_8cpp_ac4f474c82e82cbb89ca7c36dd52be0ed}} 
+\index{ads1115.cpp@{ads1115.cpp}!value@{value}}
+\index{value@{value}!ads1115.cpp@{ads1115.cpp}}
+\doxysubsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily int value}
+
+
+
+Stores the contents of the conversion register of the designated device. 
+
+\char`\"{}wiring\+Pi\+I2\+C\+Read\+Reg16\char`\"{} reads the 16-\/bit coversion register associated with the device address, fd. The register stores the last conversion made, in binary twos complement format. 
+
+Definition at line 46 of file ads1115.\+cpp.
+
+\mbox{\Hypertarget{ads1115_8cpp_a47061fcae597f83f8a0a99d4b7b5a5c1}\label{ads1115_8cpp_a47061fcae597f83f8a0a99d4b7b5a5c1}} 
+\index{ads1115.cpp@{ads1115.cpp}!voltage@{voltage}}
+\index{voltage@{voltage}!ads1115.cpp@{ads1115.cpp}}
+\doxysubsubsection{\texorpdfstring{voltage}{voltage}}
+{\footnotesize\ttfamily float voltage}
+
+
+
+Definition at line 30 of file ads1115.\+cpp.
+

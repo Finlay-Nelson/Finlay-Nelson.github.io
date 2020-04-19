@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="group__group6" kind="group">
+    <compoundname>group6</compoundname>
+    <title>ADS1115: DEVICE OPERATING MODE</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__group6_1gafbb1b96a1b61fae1301ed075330d3a20" prot="public" static="no">
+        <name>ADS1015_REG_CONFIG_MODE_CONTIN</name>
+        <initializer>(0x0000)</initializer>
+        <briefdescription>
+<para>Continuous conversion mode. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="243" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="243" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group6_1ga20780c08ce2027ce7833f27e65d9bb9d" prot="public" static="no">
+        <name>ADS1015_REG_CONFIG_MODE_ENDCON</name>
+        <initializer>(0x8583)</initializer>
+        <briefdescription>
+<para>Shut down continuous conversion. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="244" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="244" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group6_1ga50168c1821f075b7296745be1d4d346f" prot="public" static="no">
+        <name>ADS1015_REG_CONFIG_MODE_SINGLE</name>
+        <initializer>(0x0100)</initializer>
+        <briefdescription>
+<para>Power-down single-shot mode (DEFAULT) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="245" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="245" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>ADS1115 Bit[8]. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This bit controls the operational mode of the ADS1115.</para>
+<para>The DEFAULT setting is power-down single-shot mode. </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

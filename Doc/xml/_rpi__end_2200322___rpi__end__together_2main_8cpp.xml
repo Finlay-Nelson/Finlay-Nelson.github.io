@@ -1,0 +1,160 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="_rpi__end_2200322___rpi__end__together_2main_8cpp" kind="file" language="C++">
+    <compoundname>main.cpp</compoundname>
+    <includes refid="window_8h" local="no">window.h</includes>
+    <includes local="no">QApplication</includes>
+    <incdepgraph>
+      <node id="16">
+        <label>GPIOlis.h</label>
+        <link refid="_g_p_i_olis_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>ads1115.h</label>
+        <link refid="ads1115_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>QObject</label>
+      </node>
+      <node id="3">
+        <label>qwt/qwt_thermo.h</label>
+      </node>
+      <node id="2">
+        <label>window.h</label>
+        <link refid="window_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>string</label>
+      </node>
+      <node id="1">
+        <label>/home/finlay/RTEP1/Rpi_end/200322_Rpi_end_together/main.cpp</label>
+        <link refid="_rpi__end_2200322___rpi__end__together_2main_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>Iir.h</label>
+      </node>
+      <node id="18">
+        <label>QApplication</label>
+      </node>
+      <node id="9">
+        <label>QTimer</label>
+      </node>
+      <node id="10">
+        <label>QWidget</label>
+      </node>
+      <node id="6">
+        <label>qwt/qwt_plot_curve.h</label>
+      </node>
+      <node id="17">
+        <label>GThread</label>
+      </node>
+      <node id="4">
+        <label>qwt/qwt_knob.h</label>
+      </node>
+      <node id="8">
+        <label>QUdpSocket</label>
+      </node>
+      <node id="5">
+        <label>qwt/qwt_plot.h</label>
+      </node>
+      <node id="14">
+        <label>iostream</label>
+      </node>
+      <node id="7">
+        <label>QBoxLayout</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_rpi__end_2200322___rpi__end__together_2main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(int argc, char *argv[])</argsstring>
+        <name>main</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>argv</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/200322_Rpi_end_together/main.cpp" line="15" column="5" bodyfile="/home/finlay/RTEP1/Rpi_end/200322_Rpi_end_together/main.cpp" bodystart="15" bodyend="29"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This demo is to test the <ref refid="classads1115" kindref="compound">ads1115</ref> lib self-written to sample continously no such lib for <ref refid="classads1115" kindref="compound">ads1115</ref> in c++ yet. In this test demo the ads sampling is controlled by timer instead of interrupt. This is not because we can&apos;t. This is to separate the lib and expose if any bug the interrupt thread unit will soon comes out</para>
+<para><simplesect kind="author"><para>Zonghan Gan </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="10"><highlight class="comment">/*Includes*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="window_8h" kindref="compound">window.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QApplication&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="_rpi__end_2200322___rpi__end__together_2main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_rpi__end_2200322___rpi__end__together_2main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kindref="member">main</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*argv[])</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*Create<sp/>an<sp/>instance<sp/>of<sp/>the<sp/>QApplication<sp/>class,<sp/>&quot;app&quot;<sp/>with<sp/>exec()<sp/>member<sp/>function*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="qapplication" kindref="compound" external="/home/finlay/RTEP1/Doc/doc/qtwidgets/qtwidgets.tags">QApplication</ref><sp/>app(argc,<sp/>argv);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*create<sp/>the<sp/>window*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_window" kindref="compound">Window</ref><sp/>window;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>window.<ref refid="qwidget_1showMaximized" kindref="member" external="/home/finlay/RTEP1/Doc/doc/qtwidgets/qtwidgets.tags">showMaximized</ref>();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*call<sp/>the<sp/>window.timerEvent<sp/>function<sp/>every<sp/>40<sp/>ms*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>window.<ref refid="qobject_1startTimer" kindref="member" external="/home/finlay/RTEP1/Doc/doc/qtcore/qtcore.tags">startTimer</ref>(1);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*execute<sp/>the<sp/>application*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>app.<ref refid="qapplication_1exec" kindref="member" external="/home/finlay/RTEP1/Doc/doc/qtwidgets/qtwidgets.tags">exec</ref>();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/finlay/RTEP1/Rpi_end/200322_Rpi_end_together/main.cpp"/>
+  </compounddef>
+</doxygen>

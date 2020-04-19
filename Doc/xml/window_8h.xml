@@ -1,0 +1,222 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="window_8h" kind="file" language="C++">
+    <compoundname>window.h</compoundname>
+    <includes local="no">qwt/qwt_thermo.h</includes>
+    <includes local="no">qwt/qwt_knob.h</includes>
+    <includes local="no">qwt/qwt_plot.h</includes>
+    <includes local="no">qwt/qwt_plot_curve.h</includes>
+    <includes local="no">QBoxLayout</includes>
+    <includes local="no">QUdpSocket</includes>
+    <includes local="no">QTimer</includes>
+    <includes local="no">QWidget</includes>
+    <includes local="no">Iir.h</includes>
+    <includes refid="ads1115_8h" local="yes">ads1115.h</includes>
+    <includes refid="_g_p_i_olis_8h" local="yes">GPIOlis.h</includes>
+    <includedby refid="_rpi__end_2_rpi__end__together_2main_8cpp" local="no">/home/finlay/RTEP1/Rpi_end/Rpi_end_together/main.cpp</includedby>
+    <includedby refid="window_8cpp" local="yes">/home/finlay/RTEP1/Rpi_end/Rpi_end_together/window.cpp</includedby>
+    <incdepgraph>
+      <node id="12">
+        <label>QObject</label>
+      </node>
+      <node id="2">
+        <label>qwt/qwt_thermo.h</label>
+      </node>
+      <node id="14">
+        <label>string</label>
+      </node>
+      <node id="15">
+        <label>GPIOlis.h</label>
+        <link refid="_g_p_i_olis_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>ads1115.h</label>
+        <link refid="ads1115_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/finlay/RTEP1/Rpi_end/Rpi_end_together/window.h</label>
+        <link refid="window_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>Iir.h</label>
+      </node>
+      <node id="8">
+        <label>QTimer</label>
+      </node>
+      <node id="9">
+        <label>QWidget</label>
+      </node>
+      <node id="5">
+        <label>qwt/qwt_plot_curve.h</label>
+      </node>
+      <node id="16">
+        <label>GThread</label>
+      </node>
+      <node id="3">
+        <label>qwt/qwt_knob.h</label>
+      </node>
+      <node id="7">
+        <label>QUdpSocket</label>
+      </node>
+      <node id="4">
+        <label>qwt/qwt_plot.h</label>
+      </node>
+      <node id="13">
+        <label>iostream</label>
+      </node>
+      <node id="6">
+        <label>QBoxLayout</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/finlay/RTEP1/Rpi_end/Rpi_end_together/main.cpp</label>
+        <link refid="_rpi__end_2_rpi__end__together_2main_8cpp"/>
+      </node>
+      <node id="3">
+        <label>/home/finlay/RTEP1/Rpi_end/Rpi_end_together/window.cpp</label>
+        <link refid="window_8cpp"/>
+      </node>
+      <node id="1">
+        <label>/home/finlay/RTEP1/Rpi_end/Rpi_end_together/window.h</label>
+        <link refid="window_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_window" prot="public">Window</innerclass>
+    <briefdescription>
+<para>Provides the framework for the production of the GUI window for the EMG controlled Pong game. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Defines the <ref refid="class_window" kindref="compound">Window</ref> class, responsible for producing and updating the game GUI based on the incoming EMG signal.</para>
+<para><simplesect kind="author"><para>Zonghan Gan </para>
+</simplesect>
+<simplesect kind="author"><para>Finlay Nelson </para>
+</simplesect>
+<simplesect kind="author"><para>Henry Cowan </para>
+</simplesect>
+<simplesect kind="date"><para>11 April 2020 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="12"><highlight class="preprocessor">#ifndef<sp/>WINDOW_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WINDOW_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">/*--Includes--*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;qwt/qwt_thermo.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;qwt/qwt_knob.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;qwt/qwt_plot.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;qwt/qwt_plot_curve.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QBoxLayout&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QUdpSocket&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QTimer&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QWidget&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Iir.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ads1115_8h" kindref="compound">ads1115.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_g_p_i_olis_8h" kindref="compound">GPIOlis.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">//<sp/>class<sp/>definition<sp/>&apos;Window&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="qtimer" kindref="compound" external="/home/finlay/Repo/doc/qtcore/qtcore.tags">QTimer</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">/************************************************************\</highlight></codeline>
+<codeline lineno="34"><highlight class="comment"><sp/>*<sp/>class:<sp/>ads1115(up<sp/>to<sp/>4)</highlight></codeline>
+<codeline lineno="35"><highlight class="comment"><sp/>*<sp/>feature:<sp/>define<sp/>a<sp/>ads1115<sp/>device<sp/>with<sp/>an<sp/>iic<sp/>adress<sp/>(0x48,<sp/>0x49,<sp/>0x4A,<sp/>0X4B)</highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/>*<sp/>function:</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>datapros()<sp/>-<sp/>filter,<sp/>power<sp/>and<sp/>time<sp/>smooth<sp/>of<sp/>data</highlight></codeline>
+<codeline lineno="38"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>plotrefresh()<sp/>-<sp/>refresh<sp/>plot<sp/>with<sp/>new<sp/>data</highlight></codeline>
+<codeline lineno="39"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="40"><highlight class="comment"><sp/>*<sp/>Author:<sp/>Bernd<sp/>Porr;<sp/>Zonghan<sp/>Gan</highlight></codeline>
+<codeline lineno="41"><highlight class="comment"><sp/>*<sp/><sp/>version<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>date<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>des</highlight></codeline>
+<codeline lineno="42"><highlight class="comment"><sp/>*<sp/><sp/>v4.0.0<sp/><sp/><sp/><sp/>2020-3-19-00-16<sp/><sp/><sp/><sp/><sp/>test<sp/>of<sp/>adslib,<sp/>controlled<sp/>by<sp/>timer</highlight></codeline>
+<codeline lineno="43"><highlight class="comment">\************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="class_window" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_window" kindref="compound">Window</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="qwidget" kindref="compound" external="/home/finlay/Repo/doc/qtwidgets/qtwidgets.tags">QWidget</ref></highlight></codeline>
+<codeline lineno="53"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>Q_OBJECT</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="class_window_1ad0125c79705223e60f695c194166f312" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="qudpsocket" kindref="compound" external="/home/finlay/Repo/doc/qtnetwork/qtnetwork.tags">QUdpSocket</ref><sp/>*<ref refid="class_window_1ad0125c79705223e60f695c194166f312" kindref="member">sdersc</ref>;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="class_window" kindref="compound">Window</ref>(<ref refid="qwidget" kindref="compound" external="/home/finlay/Repo/doc/qtwidgets/qtwidgets.tags">QWidget</ref><sp/>*parent<sp/>=<sp/>0);<sp/></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/>~<ref refid="class_window" kindref="compound">Window</ref>();</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="class_window_1a99a930e8fdf9c009aca0d1bed1bdcd8f" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_g_p_i_olis" kindref="compound">GPIOlis</ref><sp/>*<ref refid="class_window_1a99a930e8fdf9c009aca0d1bed1bdcd8f" kindref="member">gpiolis1</ref>;<sp/></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="class_window_1a703d58d30da77e83166ef37942ad8602" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="qtimer" kindref="compound" external="/home/finlay/Repo/doc/qtcore/qtcore.tags">QTimer</ref><sp/>*<ref refid="class_window_1a703d58d30da77e83166ef37942ad8602" kindref="member">rftimer</ref>;<sp/></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>slots:</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>datapros(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>plotrefresh();</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106" refid="class_window_1ac930f3c9fd48aeb627204e7aeaf80573" refkind="member"><highlight class="normal"><sp/><sp/>QwtPlot<sp/><sp/><sp/><sp/><sp/><sp/>*<ref refid="class_window_1ac930f3c9fd48aeb627204e7aeaf80573" kindref="member">plot1</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="107" refid="class_window_1a10bbc5d8730ee6c5bb4f4a956225533c" refkind="member"><highlight class="normal"><sp/><sp/>QwtPlot<sp/><sp/><sp/><sp/><sp/><sp/>*<ref refid="class_window_1a10bbc5d8730ee6c5bb4f4a956225533c" kindref="member">plot2</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="108" refid="class_window_1a112c8681462cb0339faf1b3a5e8d312c" refkind="member"><highlight class="normal"><sp/><sp/>QwtPlotCurve<sp/>*<ref refid="class_window_1a112c8681462cb0339faf1b3a5e8d312c" kindref="member">curve1</ref>;<sp/></highlight></codeline>
+<codeline lineno="109" refid="class_window_1ad6c1bf613b3e5a026fba544ed567a87b" refkind="member"><highlight class="normal"><sp/><sp/>QwtPlotCurve<sp/>*<ref refid="class_window_1ad6c1bf613b3e5a026fba544ed567a87b" kindref="member">curve2</ref>;<sp/></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="111" refid="class_window_1a088e83054c444170282461344174f30b" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="qhboxlayout" kindref="compound" external="/home/finlay/Repo/doc/qtwidgets/qtwidgets.tags">QHBoxLayout</ref><sp/><sp/>*<ref refid="class_window_1a088e83054c444170282461344174f30b" kindref="member">hLayout</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113" refid="class_window_1a9908e75f132d5ac3f23b4ff9a4832c63" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>plotDataSize<sp/>=<sp/>5;<sp/></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115" refid="class_window_1a13ad2a2a6dd2fa6a8943e92fb08629a1" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>xData1[plotDataSize];<sp/></highlight></codeline>
+<codeline lineno="116" refid="class_window_1a9baba6757f9e1a5c25e2c8bcf291ad32" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>yData1[plotDataSize];<sp/></highlight></codeline>
+<codeline lineno="117" refid="class_window_1a7b0d44a397ca90add463e2093f4a1423" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>xData2[plotDataSize];<sp/></highlight></codeline>
+<codeline lineno="118" refid="class_window_1a25e229e2503d02a9904f56fb730d4744" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>yData2[plotDataSize];<sp/></highlight></codeline>
+<codeline lineno="119" refid="class_window_1a66e60e4413d120313000c1d744c904f1" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>xData3[plotDataSize];<sp/></highlight></codeline>
+<codeline lineno="120" refid="class_window_1a7f1854f46d87a6bfd6b53806be12ba1c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>yData3[plotDataSize];<sp/></highlight></codeline>
+<codeline lineno="121" refid="class_window_1ab9f0f7ea3db5d4d0fa70c915590e4c72" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_window_1ab9f0f7ea3db5d4d0fa70c915590e4c72" kindref="member">sumpower</ref>;<sp/></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>WINDOW_H</highlight></codeline>
+    </programlisting>
+    <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/window.h"/>
+  </compounddef>
+</doxygen>

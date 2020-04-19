@@ -1,0 +1,50 @@
+\hypertarget{mainwindow_8cpp}{}\doxysection{/home/finlay/\+R\+T\+E\+P1/\+Server\+\_\+end/\+Server\+\_\+\+Pong\+\_\+\+G\+U\+I\+\_\+all\+\_\+together/mainwindow.cpp File Reference}
+\label{mainwindow_8cpp}\index{/home/finlay/RTEP1/Server\_end/Server\_Pong\_GUI\_all\_together/mainwindow.cpp@{/home/finlay/RTEP1/Server\_end/Server\_Pong\_GUI\_all\_together/mainwindow.cpp}}
+
+
+Realisation of the E\+M\+G-\/controlled Pong G\+UI.  
+
+
+{\ttfamily \#include \char`\"{}mainwindow.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ui\+\_\+mainwindow.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$Q\+Graphics\+Scene$>$}\newline
+{\ttfamily \#include $<$Q\+Graphics\+Rect\+Item$>$}\newline
+{\ttfamily \#include $<$Q\+Graphics\+Ellipse\+Item$>$}\newline
+{\ttfamily \#include $<$Q\+Pen$>$}\newline
+{\ttfamily \#include $<$Q\+Resize\+Event$>$}\newline
+{\ttfamily \#include $<$Q\+Debug$>$}\newline
+{\ttfamily \#include $<$Q\+Timer$>$}\newline
+{\ttfamily \#include $<$Q\+Object$>$}\newline
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const quint16 \mbox{\hyperlink{mainwindow_8cpp_a751e9208ccfadf03cebca9cdcf8bc8ef}{rs\+Port}} = 1112
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Realisation of the E\+M\+G-\/controlled Pong G\+UI. 
+
+\begin{DoxyAuthor}{Author}
+Zonghan Gan 
+
+Finlay Nelson 
+
+Henry Cowan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11 April 2020
+\end{DoxyDate}
+Uses the mainwindow class defined in mainwidnow.\+cpp and the \textbf{ Qt} toolkit to generate, update and control the Pong G\+UI according to incoming E\+MG signals. The \mbox{\hyperlink{class_main_window}{Main\+Window()}} function is used to instantiate the game window, and generate a \textbf{ Q\+Graphics\+Scene()} object in which to place the G\+UI items. The server socket and host ip address are bound to allow U\+DP communication. 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{mainwindow_8cpp_a751e9208ccfadf03cebca9cdcf8bc8ef}\label{mainwindow_8cpp_a751e9208ccfadf03cebca9cdcf8bc8ef}} 
+\index{mainwindow.cpp@{mainwindow.cpp}!rsPort@{rsPort}}
+\index{rsPort@{rsPort}!mainwindow.cpp@{mainwindow.cpp}}
+\doxysubsubsection{\texorpdfstring{rsPort}{rsPort}}
+{\footnotesize\ttfamily const quint16 rs\+Port = 1112}
+
+
+
+Definition at line 28 of file mainwindow.\+cpp.
+

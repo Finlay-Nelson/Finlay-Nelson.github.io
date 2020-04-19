@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="group__group2" kind="group">
+    <compoundname>group2</compoundname>
+    <title>ADS1115: POINTER REGISTER</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__group2_1ga0f462c806b353bd682fa3c2d67e66622" prot="public" static="no">
+        <name>ADS1015_REG_POINTER_CONVERT</name>
+        <initializer>(0x00)</initializer>
+        <briefdescription>
+<para>Select the conversion register. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The 16-bit conversion register contains the result of the last conversion in binary twos complement format. Following reset or power-up, the Conversion register is cleared to &apos;0&apos;, and remains &apos;0&apos; until the first conversion is completed. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="125" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group2_1gab9abb781632542a0e7d8b058292f26b1" prot="public" static="no">
+        <name>ADS1015_REG_POINTER_CONFIG</name>
+        <initializer>(0x01)</initializer>
+        <briefdescription>
+<para>Select the config register. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The 16-bit config register can be used to control the ADS1115 operating mode, input selection, data rate, PGA settings, and comparator modes. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="131" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group2_1ga01582fe1e67b55686d35818696925480" prot="public" static="no">
+        <name>ADS1015_REG_POINTER_LOWTHRESH</name>
+        <initializer>(0x02)</initializer>
+        <briefdescription>
+<para>Select the Lo_thresh register. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The lower threshold value used by the comparator is stored in this 16-bit register. The register stores values in the same format that the output register displays values; that is, they are stored in twos complement format. Because it is implemented as a digital comparator, special attention should be taken to readjust values whenever PGA settings are changed. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="137" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group2_1ga89000549c6dfe50337c7962b7b3677cb" prot="public" static="no">
+        <name>ADS1015_REG_POINTER_HITHRESH</name>
+        <initializer>(0x03)</initializer>
+        <briefdescription>
+<para>Select the Lo_thresh register. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The upper threshold value used by the comparator is stored in this 16-bit register. The register stores values in the same format that the output register displays values; that is, they are stored in twos complement format. Because it is implemented as a digital comparator, special attention should be taken to readjust values whenever PGA settings are changed. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="143" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The addresses of the registers of the ADS1115. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The ADS1115 has four registers that are accessible via the I2C port. The Conversion register contains the result of the last conversion. The Config register allows the user the change the ADS1115 operating modes and query the status of the devices. The Lo_thresh and Hi_thresh registers set the threshold values used for the comparator function.<itemizedlist>
+<listitem><para>Conversion register</para>
+</listitem><listitem><para>Config register</para>
+</listitem><listitem><para>Lo_thresh register</para>
+</listitem><listitem><para>Hi_thresh register</para>
+</listitem></itemizedlist>
+</para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

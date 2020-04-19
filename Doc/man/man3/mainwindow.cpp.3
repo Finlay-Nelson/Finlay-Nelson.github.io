@@ -1,0 +1,69 @@
+.TH "/home/finlay/RTEP1/Server_end/Server_Pong_GUI_all_together/mainwindow.cpp" 3 "Sun Apr 19 2020" "Muscle Power Gaming" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/home/finlay/RTEP1/Server_end/Server_Pong_GUI_all_together/mainwindow.cpp \- Realisation of the EMG-controlled Pong GUI\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'mainwindow\&.h'\fP
+.br
+\fC#include 'ui_mainwindow\&.h'\fP
+.br
+\fC#include <QGraphicsScene>\fP
+.br
+\fC#include <QGraphicsRectItem>\fP
+.br
+\fC#include <QGraphicsEllipseItem>\fP
+.br
+\fC#include <QPen>\fP
+.br
+\fC#include <QResizeEvent>\fP
+.br
+\fC#include <QDebug>\fP
+.br
+\fC#include <QTimer>\fP
+.br
+\fC#include <QObject>\fP
+.br
+
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "const quint16 \fBrsPort\fP = 1112"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Realisation of the EMG-controlled Pong GUI\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Zonghan Gan 
+.PP
+Finlay Nelson 
+.PP
+Henry Cowan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+11 April 2020
+.RE
+.PP
+Uses the mainwindow class defined in mainwidnow\&.cpp and the \fBQt\fP toolkit to generate, update and control the Pong GUI according to incoming EMG signals\&. The \fBMainWindow()\fP function is used to instantiate the game window, and generate a \fBQGraphicsScene()\fP object in which to place the GUI items\&. The server socket and host ip address are bound to allow UDP communication\&. 
+.PP
+Definition in file \fBmainwindow\&.cpp\fP\&.
+.SH "Variable Documentation"
+.PP 
+.SS "const quint16 rsPort = 1112"
+
+.PP
+Definition at line 28 of file mainwindow\&.cpp\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Muscle Power Gaming from the source code\&.

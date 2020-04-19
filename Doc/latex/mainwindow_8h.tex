@@ -1,0 +1,53 @@
+\hypertarget{mainwindow_8h}{}\doxysection{/home/finlay/\+R\+T\+E\+P1/\+Server\+\_\+end/\+Server\+\_\+\+Pong\+\_\+\+G\+U\+I\+\_\+all\+\_\+together/mainwindow.h File Reference}
+\label{mainwindow_8h}\index{/home/finlay/RTEP1/Server\_end/Server\_Pong\_GUI\_all\_together/mainwindow.h@{/home/finlay/RTEP1/Server\_end/Server\_Pong\_GUI\_all\_together/mainwindow.h}}
+
+
+Produces the G\+UI window from which the E\+M\+G-\/controlled Pong game can be played.  
+
+
+{\ttfamily \#include $<$Q\+Object$>$}\newline
+{\ttfamily \#include $<$Q\+Graphics\+Scene$>$}\newline
+{\ttfamily \#include $<$Q\+Main\+Window$>$}\newline
+{\ttfamily \#include $<$Q\+Udp\+Socket$>$}\newline
+{\ttfamily \#include $<$Q\+Elapsed\+Timer$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_main_window}{Main\+Window}}
+\begin{DoxyCompactList}\small\item\em Contains the functions and variables relating to the G\+UI window. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespace_ui}{Ui}}
+\begin{DoxyCompactList}\small\item\em Defines a namespace for declaration of window functions specific to the game G\+UI. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Produces the G\+UI window from which the E\+M\+G-\/controlled Pong game can be played. 
+
+\begin{DoxyAuthor}{Author}
+Zognhan Gan 
+
+Finlay Nelson 
+
+Henry Cowan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11 April 2020 This file contains all the information surrounding the production of the G\+UI for the E\+M\+G-\/based Pong game. The \textbf{ Qt} toolkit is used to generate simple rectangle objects to act as the paddles and an ellipse object for the ball, placing them into a graphics scene. These objects can then be moved around the graphics scene according to the processed A\+DC output (filtered E\+MG signal).
+\end{DoxyDate}
+Include files\+:
+\begin{DoxyItemize}
+\item \textbf{ Q\+Object}
+\item \textbf{ Q\+Graphics\+Scene}
+\item \textbf{ Q\+Main\+Window}
+\item \textbf{ Q\+Udp\+Socket}
+\item \textbf{ Q\+Elapsed\+Timer}
+\end{DoxyItemize}Member Functions\+:
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{class_main_window}{Main\+Window()}}
+\item $\sim$\+Main\+Window()
+\item refresh\+Score()
+\item Position()
+\item Cpu\+P1\+Motion()
+\item receive()
+\end{DoxyItemize}

@@ -1,0 +1,344 @@
+.TH "/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" 3 "Sun Apr 19 2020" "Muscle Power Gaming" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h \- Defines a set of macros for use in configuring the ADS1115 and a class for controlling the configured device\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <QObject>\fP
+.br
+\fC#include <iostream>\fP
+.br
+\fC#include <string>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBads1115\fP"
+.br
+.RI "Allows control over the ADS1115 ADC\&. "
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBADS1015_ADDRESS\fP   (0x48)"
+.br
+.RI "I2C address pin low (GND)\&. "
+.ti -1c
+.RI "#define \fBADS1015_REG_POINTER_CONVERT\fP   (0x00)"
+.br
+.RI "Select the conversion register\&. "
+.ti -1c
+.RI "#define \fBADS1015_REG_POINTER_CONFIG\fP   (0x01)"
+.br
+.RI "Select the config register\&. "
+.ti -1c
+.RI "#define \fBADS1015_REG_POINTER_LOWTHRESH\fP   (0x02)"
+.br
+.RI "Select the Lo_thresh register\&. "
+.ti -1c
+.RI "#define \fBADS1015_REG_POINTER_HITHRESH\fP   (0x03)"
+.br
+.RI "Select the Lo_thresh register\&. "
+.ti -1c
+.RI "#define \fBADS1015_REG_CONFIG_OS_SINGLE\fP   (0x8000)"
+.br
+.RI "Write: Set to start a single-conversion\&. "
+.ti -1c
+.RI "#define \fBADS1015_REG_CONFIG_OS_BUSY\fP   (0x0000)"
+.br
+.RI "Read: 0 when conversion is in progress\&. "
+.ti -1c
+.RI "#define \fBADS1015_REG_CONFIG_OS_NOTBUSY\fP   (0x8000)"
+.br
+.RI "Read: 1 when device is not performing a conversion\&. "
+.ti -1c
+.RI "#define \fBADS1015_REG_CONFIG_MUX_DIFF_0_1\fP   (0x0000)"
+.br
+.RI "Differential input with positive input from AIN0 and negative input from AIN1 (DEFAULT)\&. "
+.ti -1c
+.RI "#define \fBADS1015_REG_CONFIG_MUX_DIFF_0_3\fP   (0x1000)"
+.br
+.RI "Differential input with positive input from AIN0 and negative input from AIN3\&. "
+.ti -1c
+.RI "#define \fBADS1015_REG_CONFIG_MUX_DIFF_1_3\fP   (0x2000)"
+.br
+.RI "Differential input with positive input from AIN1 and negative input from AIN3\&. "
+.ti -1c
+.RI "#define \fBADS1015_REG_CONFIG_MUX_DIFF_2_3\fP   (0x3000)"
+.br
+.RI "Differential input with positive input from AIN2 and negative input from AIN3\&. "
+.ti -1c
+.RI "#define \fBADS1015_REG_CONFIG_MUX_SINGLE_0\fP   (0x4000)"
+.br
+.RI "Single-ended input with positive input from AIN0 with reference to GND\&. "
+.ti -1c
+.RI "#define \fBADS1015_REG_CONFIG_MUX_SINGLE_1\fP   (0x5000)"
+.br
+.RI "Single-ended input with positive input from AIN1 with reference to GND\&. "
+.ti -1c
+.RI "#define \fBADS1015_REG_CONFIG_MUX_SINGLE_2\fP   (0x6000)"
+.br
+.RI "Single-ended input with positive input from AIN2 with reference to GND\&. "
+.ti -1c
+.RI "#define \fBADS1015_REG_CONFIG_MUX_SINGLE_3\fP   (0x7000)"
+.br
+.RI "Single-ended input with positive input from AIN3 with reference to GND\&. "
+.ti -1c
+.RI "#define \fBADS1015_REG_CONFIG_PGA_6_144V\fP   (0x0000)"
+.br
+.RI "+/-6\&.144V range = Gain 2/3 "
+.ti -1c
+.RI "#define \fBADS1015_REG_CONFIG_PGA_4_096V\fP   (0x0200)"
+.br
+.RI "+/-4\&.096V range = Gain 1 "
+.ti -1c
+.RI "#define \fBADS1015_REG_CONFIG_PGA_2_048V\fP   (0x0400)"
+.br
+.RI "+/-2\&.048V range = Gain 2 (DEFAULT) "
+.ti -1c
+.RI "#define \fBADS1015_REG_CONFIG_PGA_1_024V\fP   (0x0600)"
+.br
+.RI "+/-1\&.024V range = Gain 4 "
+.ti -1c
+.RI "#define \fBADS1015_REG_CONFIG_PGA_0_512V\fP   (0x0800)"
+.br
+.RI "+/-0\&.512V range = Gain 8 "
+.ti -1c
+.RI "#define \fBADS1015_REG_CONFIG_PGA_0_256V\fP   (0x0A00)"
+.br
+.RI "+/-0\&.256V range = Gain 16 "
+.ti -1c
+.RI "#define \fBADS1015_REG_CONFIG_MODE_CONTIN\fP   (0x0000)"
+.br
+.RI "Continuous conversion mode\&. "
+.ti -1c
+.RI "#define \fBADS1015_REG_CONFIG_MODE_ENDCON\fP   (0x8583)"
+.br
+.RI "Shut down continuous conversion\&. "
+.ti -1c
+.RI "#define \fBADS1015_REG_CONFIG_MODE_SINGLE\fP   (0x0100)"
+.br
+.RI "Power-down single-shot mode (DEFAULT) "
+.ti -1c
+.RI "#define \fBADS1115_REG_CONFIG_DR_8SPS\fP   (0x0000)"
+.br
+.RI "8 samples per second "
+.ti -1c
+.RI "#define \fBADS1115_REG_CONFIG_DR_16SPS\fP   (0x0020)"
+.br
+.RI "16 samples per second "
+.ti -1c
+.RI "#define \fBADS1115_REG_CONFIG_DR_32SPS\fP   (0x0040)"
+.br
+.RI "32 samples per second "
+.ti -1c
+.RI "#define \fBADS1115_REG_CONFIG_DR_64SPS\fP   (0x0060)"
+.br
+.RI "64 samples per second "
+.ti -1c
+.RI "#define \fBADS1115_REG_CONFIG_DR_128SPS\fP   (0x0080)"
+.br
+.RI "128 samples per second "
+.ti -1c
+.RI "#define \fBADS1115_REG_CONFIG_DR_250SPS\fP   (0x00A0)"
+.br
+.RI "250 samples per second (DEFAULT) "
+.ti -1c
+.RI "#define \fBADS1115_REG_CONFIG_DR_475SPS\fP   (0x00C0)"
+.br
+.RI "475 samples per second "
+.ti -1c
+.RI "#define \fBADS1115_REG_CONFIG_DR_860SPS\fP   (0x00E0)"
+.br
+.RI "860 samples per second "
+.ti -1c
+.RI "#define \fBADS1015_REG_CONFIG_CMODE_TRAD\fP   (0x0000)"
+.br
+.RI "Traditional comparator with hysteresis (DEFAULT) "
+.ti -1c
+.RI "#define \fBADS1015_REG_CONFIG_CMODE_WINDOW\fP   (0x0010)"
+.br
+.RI "\fBWindow\fP comparator\&. "
+.ti -1c
+.RI "#define \fBADS1015_REG_CONFIG_CPOL_ACTVLOW\fP   (0x0000)"
+.br
+.RI "ALERT/RDY pin is active low (DEFAULT) "
+.ti -1c
+.RI "#define \fBADS1015_REG_CONFIG_CPOL_ACTVHI\fP   (0x0008)"
+.br
+.RI "ALERT/RDY pin is active high\&. "
+.ti -1c
+.RI "#define \fBADS1015_REG_CONFIG_CLAT_NONLAT\fP   (0x0000)"
+.br
+.RI "Non-latching comparator (DEFAULT) "
+.ti -1c
+.RI "#define \fBADS1015_REG_CONFIG_CLAT_LATCH\fP   (0x0004)"
+.br
+.RI "Latching comparator\&. "
+.ti -1c
+.RI "#define \fBADS1015_REG_CONFIG_CQUE_1CONV\fP   (0x0000)"
+.br
+.RI "Assert after one conversion\&. "
+.ti -1c
+.RI "#define \fBADS1015_REG_CONFIG_CQUE_2CONV\fP   (0x0001)"
+.br
+.RI "Assert after two conversions\&. "
+.ti -1c
+.RI "#define \fBADS1015_REG_CONFIG_CQUE_4CONV\fP   (0x0002)"
+.br
+.RI "Assert after four conversions\&. "
+.ti -1c
+.RI "#define \fBADS1015_REG_CONFIG_CQUE_NONE\fP   (0x0003)"
+.br
+.RI "Disable comparator (DEFAULT) "
+.ti -1c
+.RI "#define \fBADS1115_REG_THRESH_MSB_1\fP   (0x8000)"
+.br
+.RI "Set MSB to 1\&. "
+.ti -1c
+.RI "#define \fBADS1115_REG_THRESH_MSB_0\fP   (0x7FFF)"
+.br
+.RI "Set MSB to 0\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Defines a set of macros for use in configuring the ADS1115 and a class for controlling the configured device\&. 
+
+Provides a detailed library of the programmable characteristics of the ADS1115\&. These characterstics are listed below and the macro associated with each configuration is listed in this header\&.
+.IP "\(bu" 2
+Multiplexer configuration
+.IP "  \(bu" 4
+AINp = AIN0 and AINn = AIN1
+.IP "  \(bu" 4
+AINp = AIN0 and AINn = AIN3
+.IP "  \(bu" 4
+AINp = AIN1 and AINn = AIN3
+.IP "  \(bu" 4
+AINp = AIN2 and AINn = AIN3
+.IP "  \(bu" 4
+AINp = AIN0 and AINn = GND
+.IP "  \(bu" 4
+AINp = AIN1 and AINn = GND
+.IP "  \(bu" 4
+AINp = AIN2 and AINn = GND
+.IP "  \(bu" 4
+AINp = AIN3 and AINn = GND
+.PP
+
+.IP "\(bu" 2
+Programmable gain amplifier configuration
+.IP "  \(bu" 4
++-6\&.144V
+.IP "  \(bu" 4
++-4\&.096V
+.IP "  \(bu" 4
++-2\&.048V (DEFAULT)
+.IP "  \(bu" 4
++-1\&.024V
+.IP "  \(bu" 4
++-0\&.512V
+.IP "  \(bu" 4
++-0\&.256V
+.PP
+
+.IP "\(bu" 2
+Device operating mode
+.IP "  \(bu" 4
+Continuous conversion mode
+.IP "  \(bu" 4
+Power-down single-shot mode (DEFAULT)
+.PP
+
+.IP "\(bu" 2
+Data rate
+.IP "  \(bu" 4
+8SPS
+.IP "  \(bu" 4
+16SPS
+.IP "  \(bu" 4
+32SPS
+.IP "  \(bu" 4
+64SPS
+.IP "  \(bu" 4
+128SPS (DEFAULT)
+.IP "  \(bu" 4
+250SPS
+.IP "  \(bu" 4
+475SPS
+.IP "  \(bu" 4
+860SPS
+.PP
+
+.IP "\(bu" 2
+Comparator mode
+.IP "  \(bu" 4
+Traditional comparator with hysteresis (DEFAULT)
+.IP "  \(bu" 4
+'Window' comparator
+.PP
+
+.IP "\(bu" 2
+Comparator polarity
+.IP "  \(bu" 4
+Active low (DEFAULT)
+.IP "  \(bu" 4
+Active high
+.PP
+
+.IP "\(bu" 2
+Latching comparator
+.IP "  \(bu" 4
+Non-latching comparator (DEFAULT)
+.IP "  \(bu" 4
+Latching comparator
+.PP
+
+.IP "\(bu" 2
+Comparator queue and disable
+.IP "  \(bu" 4
+Assert after one conversion
+.IP "  \(bu" 4
+Assert after two conversions
+.IP "  \(bu" 4
+Assert after four conversions
+.IP "  \(bu" 4
+Disable comparator (DEFAULT)
+.PP
+
+.PP
+The addresses associated with tying the address pin to available lines are listed\&. The available lines are listed below:
+.IP "\(bu" 2
+I2C address pin low
+.IP "\(bu" 2
+I2C address pin high
+.IP "\(bu" 2
+I2C address pin tied to the SDA line
+.IP "\(bu" 2
+I2C address pin tied to the SCL line
+.PP
+\fBAuthor\fP
+.RS 4
+Zonghan Gan 
+.PP
+Finlay Nelson 
+.PP
+Henry Cowan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+11 April 2020 
+.RE
+.PP
+
+.PP
+Definition in file \fBads1115\&.h\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Muscle Power Gaming from the source code\&.

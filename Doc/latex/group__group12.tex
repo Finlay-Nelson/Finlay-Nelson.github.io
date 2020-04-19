@@ -1,0 +1,52 @@
+\hypertarget{group__group12}{}\doxysection{A\+D\+S1115\+: T\+H\+R\+E\+S\+H\+O\+LD R\+E\+G\+I\+S\+T\+E\+RS}
+\label{group__group12}\index{ADS1115: THRESHOLD REGISTERS@{ADS1115: THRESHOLD REGISTERS}}
+
+
+Dictates the M\+SB.  
+
+
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__group12_gacc3350d9056e6b44520992c3244ec45b}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+T\+H\+R\+E\+S\+H\+\_\+\+M\+S\+B\+\_\+1}}~(0x8000)
+\begin{DoxyCompactList}\small\item\em Set M\+SB to 1. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group12_ga1a0131797adb1ee39337b6f9de55fa9e}{A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+T\+H\+R\+E\+S\+H\+\_\+\+M\+S\+B\+\_\+0}}~(0x7\+F\+FF)
+\begin{DoxyCompactList}\small\item\em Set M\+SB to 0. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Dictates the M\+SB. 
+
+This bit controls whether the A\+L\+E\+R\+T/\+R\+DY pin latches once asserted or clears once conversions are within the margin of the upper and lower threshold values. When C\+O\+M\+P\+\_\+\+L\+AT = \textquotesingle{}0\textquotesingle{}, the A\+L\+E\+R\+T/\+R\+DY pin does not latch when asserted. When C\+O\+M\+P\+\_\+\+L\+AT = \textquotesingle{}1\textquotesingle{}, the asserted A\+L\+E\+R\+T/\+R\+DY pin remains latched until conversion data are read by the master or an appropriate S\+M\+Bus alert response is sent by the master, the device responds with its address, and it is the lowest address currently asserting the A\+L\+E\+R\+T/\+R\+DY bus line.
+
+The D\+E\+F\+A\+U\+LT setting holds the A\+L\+E\+R\+T/\+R\+DY pin active low 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__group12_ga1a0131797adb1ee39337b6f9de55fa9e}\label{group__group12_ga1a0131797adb1ee39337b6f9de55fa9e}} 
+\index{ADS1115: THRESHOLD REGISTERS@{ADS1115: THRESHOLD REGISTERS}!ADS1115\_REG\_THRESH\_MSB\_0@{ADS1115\_REG\_THRESH\_MSB\_0}}
+\index{ADS1115\_REG\_THRESH\_MSB\_0@{ADS1115\_REG\_THRESH\_MSB\_0}!ADS1115: THRESHOLD REGISTERS@{ADS1115: THRESHOLD REGISTERS}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_THRESH\_MSB\_0}{ADS1115\_REG\_THRESH\_MSB\_0}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+T\+H\+R\+E\+S\+H\+\_\+\+M\+S\+B\+\_\+0~(0x7\+F\+FF)}
+
+
+
+Set M\+SB to 0. 
+
+
+
+Definition at line 363 of file ads1115.\+h.
+
+\mbox{\Hypertarget{group__group12_gacc3350d9056e6b44520992c3244ec45b}\label{group__group12_gacc3350d9056e6b44520992c3244ec45b}} 
+\index{ADS1115: THRESHOLD REGISTERS@{ADS1115: THRESHOLD REGISTERS}!ADS1115\_REG\_THRESH\_MSB\_1@{ADS1115\_REG\_THRESH\_MSB\_1}}
+\index{ADS1115\_REG\_THRESH\_MSB\_1@{ADS1115\_REG\_THRESH\_MSB\_1}!ADS1115: THRESHOLD REGISTERS@{ADS1115: THRESHOLD REGISTERS}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_REG\_THRESH\_MSB\_1}{ADS1115\_REG\_THRESH\_MSB\_1}}
+{\footnotesize\ttfamily \#define A\+D\+S1115\+\_\+\+R\+E\+G\+\_\+\+T\+H\+R\+E\+S\+H\+\_\+\+M\+S\+B\+\_\+1~(0x8000)}
+
+
+
+Set M\+SB to 1. 
+
+
+
+Definition at line 362 of file ads1115.\+h.
+

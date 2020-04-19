@@ -1,0 +1,259 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="_g_p_i_olis_8cpp" kind="file" language="C++">
+    <compoundname>GPIOlis.cpp</compoundname>
+    <includes local="no">QDebug</includes>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">string.h</includes>
+    <includes local="no">errno.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">wiringPi.h</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">functional</includes>
+    <includes refid="_g_p_i_olis_8h" local="yes">GPIOlis.h</includes>
+    <incdepgraph>
+      <node id="9">
+        <label>functional</label>
+      </node>
+      <node id="7">
+        <label>wiringPi.h</label>
+      </node>
+      <node id="13">
+        <label>QObject</label>
+      </node>
+      <node id="6">
+        <label>stdlib.h</label>
+      </node>
+      <node id="5">
+        <label>errno.h</label>
+      </node>
+      <node id="14">
+        <label>string</label>
+      </node>
+      <node id="10">
+        <label>GPIOlis.h</label>
+        <link refid="_g_p_i_olis_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/finlay/RTEP1/Rpi_end/Rpi_end_together/GPIOlis.cpp</label>
+        <link refid="_g_p_i_olis_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>ads1115.h</label>
+        <link refid="ads1115_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>string.h</label>
+      </node>
+      <node id="2">
+        <label>QDebug</label>
+      </node>
+      <node id="11">
+        <label>GThread</label>
+      </node>
+      <node id="8">
+        <label>iostream</label>
+      </node>
+      <node id="3">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacestd">std</innernamespace>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_g_p_i_olis_8cpp_1a6715efeafc8103a65e244026d957b70b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gpipinterrupt</definition>
+        <argsstring></argsstring>
+        <name>gpipinterrupt</name>
+        <initializer>=0</initializer>
+        <briefdescription>
+<para>Stores a binary value relating to the interrupt state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The resting value of this variable remains 0 until an interrupt is called. This changes the &quot;gpipinterrupt&quot; value to 1, triggering the non-conditional elements of the <ref refid="class_g_p_i_olis_1a65d2d0d0faf0d9edc0b31ddb51e88d2b" kindref="member">GPIOlis::run()</ref> function. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/GPIOlis.cpp" line="32" column="5" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/GPIOlis.cpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_g_p_i_olis_8cpp_1a4f14f0593fff5e3ca0491b3962e6544f" prot="public" static="no" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex cmdmtx</definition>
+        <argsstring></argsstring>
+        <name>cmdmtx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/GPIOlis.cpp" line="34" column="12" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/GPIOlis.cpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_g_p_i_olis_8cpp_1ad7831c642a7240a6d74f929a1158d448" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void interrupt2</definition>
+        <argsstring>(void)</argsstring>
+        <name>interrupt2</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Called in response to an interrupt, to alter the value of the flag &quot;gpipinterrupt&quot;. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/GPIOlis.cpp" line="42" column="6" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/GPIOlis.cpp" bodystart="42" bodyend="47"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Controls the interupt and threading features of the signal reading. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Zonghan Gan </para>
+</simplesect>
+<simplesect kind="author"><para>Finlay Nelson </para>
+</simplesect>
+<simplesect kind="author"><para>Henry Cowan </para>
+</simplesect>
+<simplesect kind="date"><para>16 April 2020</para>
+</simplesect>
+Details </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="17"><highlight class="comment">/*Includes*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QDebug&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;errno.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;wiringPi.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;functional&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_g_p_i_olis_8h" kindref="compound">GPIOlis.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>*<sp/>@brief<sp/>A<sp/>flag<sp/>to<sp/>denote<sp/>the<sp/>activation<sp/>of<sp/>the<sp/>threading<sp/>operation</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="_g_p_i_olis_8h_1a6715efeafc8103a65e244026d957b70b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_g_p_i_olis_8cpp_1a6715efeafc8103a65e244026d957b70b" kindref="member">gpipinterrupt</ref>=0;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="_g_p_i_olis_8cpp_1a4f14f0593fff5e3ca0491b3962e6544f" refkind="member"><highlight class="normal">std::mutex<sp/><ref refid="_g_p_i_olis_8cpp_1a4f14f0593fff5e3ca0491b3962e6544f" kindref="member">cmdmtx</ref>;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="_g_p_i_olis_8cpp_1ad7831c642a7240a6d74f929a1158d448" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_g_p_i_olis_8cpp_1ad7831c642a7240a6d74f929a1158d448" kindref="member">interrupt2</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><ref refid="_g_p_i_olis_8cpp_1a4f14f0593fff5e3ca0491b3962e6544f" kindref="member">cmdmtx</ref>.lock();</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><ref refid="_g_p_i_olis_8cpp_1a6715efeafc8103a65e244026d957b70b" kindref="member">gpipinterrupt</ref><sp/>=1;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><ref refid="_g_p_i_olis_8cpp_1a4f14f0593fff5e3ca0491b3962e6544f" kindref="member">cmdmtx</ref>.unlock();</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Function<sp/>to<sp/>initialise<sp/>thread</highlight></codeline>
+<codeline lineno="51"><highlight class="comment">*===================================*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="class_g_p_i_olis_1a428a2f8c4b0bd64b769f1526c61c5dac" refkind="member"><highlight class="normal"><ref refid="class_g_p_i_olis_1a428a2f8c4b0bd64b769f1526c61c5dac" kindref="member">GPIOlis::GPIOlis</ref>(<ref refid="qobject" kindref="compound" external="/home/finlay/Repo/doc/qtcore/qtcore.tags">QObject</ref><sp/>*parent):<sp/><ref refid="qthread" kindref="compound" external="/home/finlay/Repo/doc/qtcore/qtcore.tags">QThread</ref>(parent)</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><ref refid="class_g_p_i_olis_1a4dd64eebb025a26b454d17176e70aaf8" kindref="member">ads1</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classads1115" kindref="compound">ads1115</ref>(0x48);<sp/></highlight></codeline>
+<codeline lineno="58"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="class_g_p_i_olis_1a844470403deaa7436a19b8aef29eac5b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_g_p_i_olis_1a844470403deaa7436a19b8aef29eac5b" kindref="member">GPIOlis::interrupt</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_g_p_i_olis_1a81e5f98d39e2ae03bf0ab38466ad24bd" kindref="member">count</ref><sp/>++;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>qDebug()&lt;&lt;</highlight><highlight class="stringliteral">&quot;gpio<sp/>awake,<sp/>conversion<sp/>ready&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_g_p_i_olis_8cpp_1a6715efeafc8103a65e244026d957b70b" kindref="member">gpipinterrupt</ref>=0;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="ads1115_8cpp_1a47061fcae597f83f8a0a99d4b7b5a5c1" kindref="member">voltage</ref>=<ref refid="class_g_p_i_olis_1a4dd64eebb025a26b454d17176e70aaf8" kindref="member">ads1</ref>-&gt;<ref refid="classads1115_1a761c3ec573fc59956d7eca446841c18d" kindref="member">readsig</ref>();</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>emit<sp/><ref refid="class_g_p_i_olis_1ac36d3b9264536731e3458ed295666719" kindref="member">readyread</ref>(<ref refid="ads1115_8cpp_1a47061fcae597f83f8a0a99d4b7b5a5c1" kindref="member">voltage</ref>);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="71" refid="class_g_p_i_olis_1a9095dfa3056b0f1c4026f6018f0f7ba7" refkind="member"><highlight class="normal"><ref refid="class_g_p_i_olis_1a9095dfa3056b0f1c4026f6018f0f7ba7" kindref="member">GPIOlis::~GPIOlis</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="class_g_p_i_olis_1a65d2d0d0faf0d9edc0b31ddb51e88d2b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_g_p_i_olis_1a65d2d0d0faf0d9edc0b31ddb51e88d2b" kindref="member">GPIOlis::run</ref>()</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*If<sp/>the<sp/>wiringPiSetup<sp/>function<sp/>returns<sp/>-1,<sp/>an<sp/>error<sp/>has<sp/>occured<sp/>in<sp/>the<sp/>setup<sp/>and<sp/>the<sp/>flag<sp/>value<sp/>set<sp/>to<sp/>0.*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(wiringPiSetup<sp/>()<sp/>&lt;<sp/>0)</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>qDebug()&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Unable<sp/>to<sp/>setup<sp/>wiringPi&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_g_p_i_olis_1ae86ee364670cfe22722a5d9f612e9aa4" kindref="member">flag</ref>=0;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//call<sp/>back<sp/>when<sp/>interrupt</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//even<sp/>if<sp/>the<sp/>waitforinterrupt<sp/>func<sp/>abandoned<sp/>by<sp/>wiringpi</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//we<sp/>can<sp/>borrow<sp/>the<sp/>idea<sp/>to<sp/>return<sp/>a<sp/>flag<sp/>and<sp/>in<sp/>according<sp/>doing<sp/>the<sp/>executions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>int<sp/>wiringPiISR(int<sp/>pin,<sp/>int<sp/>edgeType,<sp/>void(*function)(void))*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Registers<sp/>a<sp/>function<sp/>to<sp/>receive<sp/>interrupts<sp/>on<sp/>the<sp/>specified<sp/>pin*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Similarly<sp/>if<sp/>the<sp/>returned<sp/>output<sp/>is<sp/>-1<sp/>then<sp/>an<sp/>error<sp/>has<sp/>occurred*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>wiringPiISR<sp/>(1,<sp/>INT_EDGE_RISING,<sp/>&amp;<ref refid="_g_p_i_olis_8cpp_1ad7831c642a7240a6d74f929a1158d448" kindref="member">interrupt2</ref>)<sp/>&lt;<sp/>0<sp/>)</highlight><highlight class="comment">//call<sp/>back<sp/>when<sp/>interrupt</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>qDebug()&lt;&lt;</highlight><highlight class="stringliteral">&quot;unable<sp/>to<sp/>set<sp/>up<sp/>listensing&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_g_p_i_olis_1ae86ee364670cfe22722a5d9f612e9aa4" kindref="member">flag</ref>=0;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(<ref refid="class_g_p_i_olis_1ae86ee364670cfe22722a5d9f612e9aa4" kindref="member">flag</ref>)</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_g_p_i_olis_8cpp_1a4f14f0593fff5e3ca0491b3962e6544f" kindref="member">cmdmtx</ref>.lock();</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="_g_p_i_olis_8cpp_1a6715efeafc8103a65e244026d957b70b" kindref="member">gpipinterrupt</ref>)</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_g_p_i_olis_1a844470403deaa7436a19b8aef29eac5b" kindref="member">interrupt</ref>();</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_g_p_i_olis_8cpp_1a4f14f0593fff5e3ca0491b3962e6544f" kindref="member">cmdmtx</ref>.unlock();<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;<ref refid="qthread_1usleep" kindref="member" external="/home/finlay/Repo/doc/qtcore/qtcore.tags">usleep</ref>(1000);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113" refid="class_g_p_i_olis_1a06b2b0dbfd20843e43a5015c2c1cf829" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_g_p_i_olis_1a06b2b0dbfd20843e43a5015c2c1cf829" kindref="member">GPIOlis::quit</ref>()</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_g_p_i_olis_1a4dd64eebb025a26b454d17176e70aaf8" kindref="member">ads1</ref><sp/>-&gt;<sp/>endads();</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/><ref refid="class_g_p_i_olis_1a4dd64eebb025a26b454d17176e70aaf8" kindref="member">ads1</ref>;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="qthread_1quit" kindref="member" external="/home/finlay/Repo/doc/qtcore/qtcore.tags">QThread::quit</ref>();</highlight></codeline>
+<codeline lineno="118"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/GPIOlis.cpp"/>
+  </compounddef>
+</doxygen>

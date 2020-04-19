@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="_rpi__end_2_rpi__end__together_2_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">Unit-tested:<sp/>rpi<sp/>end<sp/>code<sp/>together</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>is<sp/>the<sp/>work<sp/>sample<sp/>for<sp/>raspberryPi+ads1115<sp/>of<sp/>all<sp/>rpi<sp/>end<sp/>code<sp/>together,<sp/>including:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ads<sp/>driver</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>thread<sp/>monitering<sp/>gpio<sp/>interrupt</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>rt<sp/>plot</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>iir</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>power<sp/>time<sp/>smooth</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>internet<sp/>sending<sp/>(UDP)</highlight></codeline>
+<codeline><highlight class="normal">unit<sp/>test<sp/>video</highlight></codeline>
+<codeline><highlight class="normal">https://www.youtube.com/watch?v=j-3AxjxNN2I</highlight></codeline>
+<codeline><highlight class="normal">https://www.youtube.com/watch?v=jThJus-PdIQ</highlight></codeline>
+    </programlisting>
+    <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/README.md"/>
+  </compounddef>
+</doxygen>

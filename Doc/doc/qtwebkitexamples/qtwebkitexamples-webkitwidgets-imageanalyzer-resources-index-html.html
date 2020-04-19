@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>index.html Example File | Qt WebKit Examples 5.9</title>
+  <link rel="stylesheet" type="text/css" href="style/offline-simple.css" />
+  <script type="text/javascript">
+    window.onload = function(){document.getElementsByTagName("link").item(0).setAttribute("href", "style/offline.css");};
+  </script>
+</head>
+<body>
+<div class="header" id="qtdocheader">
+  <div class="main">
+    <div class="main-rounded">
+      <div class="navigationbar">
+        <table><tr>
+<td >Qt 5.9</td><td ><a href="qtwebkitexamples-index.html">Qt WebKit Examples</a></td><td ><a href="qtwebkitexamples-webkitwidgets-imageanalyzer-example.html">The Webkit Bridge Tutorial - Hybrid Client Application</a></td><td >index.html Example File</td></tr></table><table class="buildversion"><tr>
+<td id="buildversion" width="100%" align="right">Qt 5.9.1 Reference Documentation</td>
+        </tr></table>
+      </div>
+    </div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="sidebar"><div class="sidebar-content" id="sidebar-content"></div></div>
+<h1 class="title">index.html Example File</h1>
+<span class="subtitle">webkitwidgets/imageanalyzer/resources/index.html</span>
+<!-- $$$webkitwidgets/imageanalyzer/resources/index.html-description -->
+<div class="descr"> <a name="details"></a>
+<pre class="cpp">
+
+  &lt;html&gt;
+      &lt;body&gt;
+          &lt;div style=&quot;float:right; width:50%; border-left: solid 1px black&quot;&gt;
+              &lt;div id=&quot;listdiv&quot; align=&quot;center&quot;&gt;
+                  &lt;h5&gt;Images to be analyzed:&lt;/h5&gt;
+                  &lt;select multiple size=10 id=imglist style=&quot;width:80%&quot;&gt;&lt;/select&gt;
+                  &lt;br /&gt;
+                  &lt;input type=&quot;button&quot; id=&quot;evalbutton&quot; value=&quot;Analyze&quot; onclick=&quot;analyzeImages()&quot; /&gt;
+              &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div style=&quot;width:50%&quot;&gt;
+              &lt;div id=&quot;titleblock&quot; align=&quot;center&quot;&gt;
+                  &lt;h2&gt;Image Analyzer&lt;/h2&gt;
+              &lt;/div&gt;
+              &lt;div id=outputdiv align=center&gt;
+                  &lt;h4&gt;Status: &lt;span id=status&gt;Idle&lt;/span&gt;&lt;/h4&gt;
+                  &lt;h5&gt;
+                      Latest Results:&lt;br /&gt;
+                      Red: &lt;span id=redval style=&quot;color:red&quot;&gt;n/a&lt;/span&gt;&lt;br /&gt;
+                      Green: &lt;span id=greenval style=&quot;color:green&quot;&gt;n/a&lt;/span&gt;&lt;br /&gt;
+                      Blue: &lt;span id=blueval style=&quot;color:blue&quot;&gt;n/a&lt;/span&gt;&lt;br /&gt;
+                  &lt;/h5&gt;
+                  &lt;h3&gt;Click on images below to select for analysis&lt;/h3&gt;
+              &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div id=imagediv style=&quot;clear:both; text-align:center&quot;&gt;
+          &lt;hr/&gt;
+              &lt;img src=&quot;images/mtRainier.jpg&quot; height=150px onclick='return addImage(this);' /&gt;
+              &lt;img src=&quot;images/bellaCoola.jpg&quot; height=150px onclick='return addImage(this);'/&gt;
+              &lt;img src=&quot;images/seaShell.jpg&quot; height=150px onclick='return addImage(this);'/&gt;
+              &lt;img src=&quot;images/flower.jpg&quot; height=150px onclick='return addImage(this);'/&gt;
+              &lt;img src=&quot;images/trees.jpg&quot; height=150px onclick='return addImage(this);'/&gt;
+          &lt;/div&gt;
+
+      &lt;/body&gt;
+  &lt;/html&gt;
+
+  &lt;script type=&quot;text/javascript&quot;&gt;
+      var remaining = 0;
+      var connected = false;
+      //We use this function because connect statements resolve their target once, imediately
+      //not at signal emission so they must be connected once the imageAnalyzer object has been added to the frame
+      //! &lt;!--  [ connect slots ] --&gt;
+      function connectSlots()
+      {
+          if ( !connected ) {
+              connected = true;
+              imageAnalyzer.finishedAnalysis.connect(this, finished);
+              imageAnalyzer.updateProgress.connect(this, updateProg);
+          }
+      }
+      //! &lt;!--  [ connect slots ] --&gt;
+
+      function finished() {
+          setStatus('Idle');
+          setResults(imageAnalyzer.red.toFixed(2), imageAnalyzer.green.toFixed(2), imageAnalyzer.blue.toFixed(2));
+      }
+      //This will function as the recieving &quot;slot&quot; for the progress signal
+      function updateProg(complete, max)
+      {
+          var oldRemaining = remaining;
+          remaining = max - complete;
+          pullList(oldRemaining - remaining);
+          //Prevent results getting messed up if we don't get signals in order
+          if( imageAnalyzer.busy ) {
+              setStatus('Processing (' + complete + ' of ' + max + ' completed)');
+              setResults('Calculating','Calculating','Calculating');
+          }
+      }
+
+  //! &lt;!--  [ analyzeImages ] --&gt;
+  function analyzeImages() {
+      connectSlots();
+      var imglist = document.getElementsByTagName('option');
+      if (imglist.length &gt; 0) {
+          stringlist = [];
+          for(var i=0; i&lt;imglist.length; i++) {
+              stringlist[i]=imglist[i].value;
+          }
+          if (!imageAnalyzer.busy) {
+              remaining = stringlist.length;
+              imageAnalyzer.startAnalysis(stringlist);
+          } else {
+              alert(&quot;Processing, please wait until finished.&quot;);
+          }
+  //! &lt;!--  [ analyzeImages ] --&gt;
+      } else {
+          alert('No images selected. Click on one or more images to select them for analysis.');
+      }
+  }
+  function clearList() {
+      var imglist = document.getElementById('imglist');
+      while(imglist.length &gt; 0) {
+          imglist.removeChild(imglist.childNodes[0]);
+      }
+  }
+  function pullList(count) {
+      var imglist = document.getElementById('imglist');
+      while(imglist.length &gt; 0 &amp;&amp; count &gt; 0) {
+          imglist.removeChild(imglist.childNodes[0]);
+          count--;
+      }
+  }
+  function setStatus(statusString) {
+      document.getElementById('status').innerHTML = statusString;
+  }
+
+  function setResults(red, green, blue) {
+      if (! isNaN(red) ) { red += &quot; %&quot;; }
+      if (! isNaN(green) ) { green += &quot; %&quot;; }
+      if (! isNaN(blue) ) { blue += &quot; %&quot;; }
+      document.getElementById('redval').innerHTML = red;
+      document.getElementById('greenval').innerHTML = green;
+      document.getElementById('blueval').innerHTML = blue;
+  }
+  //! &lt;!--  [ addImage ] --&gt;
+  function addImage(newimg) {
+      var imglist = document.getElementById('imglist');
+      var curChildren = imglist.childNodes;
+      var newline = document.createElement('option');
+      newline.innerHTML = newimg.src.substring(newimg.src.lastIndexOf('/')+1);
+      newline.value = newimg.src;
+      imglist.appendChild(newline);
+  }
+  //! &lt;!--  [ addImage ] --&gt;
+  &lt;/script&gt;
+
+</pre>
+</div>
+<!-- @@@webkitwidgets/imageanalyzer/resources/index.html -->
+        </div>
+       </div>
+   </div>
+   </div>
+</div>
+<div class="footer">
+   <p>
+   <acronym title="Copyright">&copy;</acronym> 2017 The Qt Company Ltd.
+   Documentation contributions included herein are the copyrights of
+   their respective owners.<br>    The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.<br>    Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</div>
+</body>
+</html>

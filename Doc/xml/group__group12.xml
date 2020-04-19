@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="group__group12" kind="group">
+    <compoundname>group12</compoundname>
+    <title>ADS1115: THRESHOLD REGISTERS</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__group12_1gacc3350d9056e6b44520992c3244ec45b" prot="public" static="no">
+        <name>ADS1115_REG_THRESH_MSB_1</name>
+        <initializer>(0x8000)</initializer>
+        <briefdescription>
+<para>Set MSB to 1. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="361" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="361" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group12_1ga1a0131797adb1ee39337b6f9de55fa9e" prot="public" static="no">
+        <name>ADS1115_REG_THRESH_MSB_0</name>
+        <initializer>(0x7FFF)</initializer>
+        <briefdescription>
+<para>Set MSB to 0. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="362" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="362" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Dictates the MSB. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This bit controls whether the ALERT/RDY pin latches once asserted or clears once conversions are within the margin of the upper and lower threshold values. When COMP_LAT = &apos;0&apos;, the ALERT/RDY pin does not latch when asserted. When COMP_LAT = &apos;1&apos;, the asserted ALERT/RDY pin remains latched until conversion data are read by the master or an appropriate SMBus alert response is sent by the master, the device responds with its address, and it is the lowest address currently asserting the ALERT/RDY bus line.</para>
+<para>The DEFAULT setting holds the ALERT/RDY pin active low </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

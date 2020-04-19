@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="group__group3" kind="group">
+    <compoundname>group3</compoundname>
+    <title>ADS1115: OPERATIONAL STATUS</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__group3_1ga13f4550d061699b1cf4bd49520fc4a9c" prot="public" static="no">
+        <name>ADS1015_REG_CONFIG_OS_SINGLE</name>
+        <initializer>(0x8000)</initializer>
+        <briefdescription>
+<para>Write: Set to start a single-conversion. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="161" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group3_1gaab6ae96215401637a9435c030e1919a9" prot="public" static="no">
+        <name>ADS1015_REG_CONFIG_OS_BUSY</name>
+        <initializer>(0x0000)</initializer>
+        <briefdescription>
+<para>Read: 0 when conversion is in progress. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="162" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group3_1ga7744f0dffe0c80b9052a31b1f1d4d4d3" prot="public" static="no">
+        <name>ADS1015_REG_CONFIG_OS_NOTBUSY</name>
+        <initializer>(0x8000)</initializer>
+        <briefdescription>
+<para>Read: 1 when device is not performing a conversion. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="163" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>ADS1115 Bit[15]. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This bit determines the operational status of the device. It can only be written when in power-down mode </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">##<sp/>Muscle<sp/>Power<sp/>Gaming:<sp/>Get<sp/>Flexing!<sp/>\emoji<sp/>joystick</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">A<sp/>repository<sp/>to<sp/>demomstrate<sp/>the<sp/>use<sp/>of<sp/>a<sp/>Raspberry<sp/>Pi<sp/>in<sp/>controlling<sp/>a<sp/>video<sp/>game<sp/>with<sp/>realtime<sp/>EMG<sp/>signals.<sp/>This<sp/>is<sp/>part<sp/>of<sp/>a<sp/>course<sp/>hosted<sp/>by<sp/>the<sp/>University<sp/>of<sp/>Glasgow<sp/>in<sp/>Real<sp/>Time<sp/>Embedded<sp/>Programming.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>repository<sp/>describes<sp/>how<sp/>to<sp/>measure<sp/>EMG<sp/>signals<sp/>from<sp/>the<sp/>user&apos;s<sp/>bicep<sp/>and/or<sp/>ticep<sp/>muscles<sp/>:muscle:,<sp/>and<sp/>how<sp/>these<sp/>are<sp/>then<sp/>used<sp/>in<sp/>turn<sp/>to<sp/>control<sp/>the<sp/>movement<sp/>of<sp/>a<sp/>paddle<sp/>in<sp/>the<sp/>classic<sp/>game<sp/>Pong<sp/>\emoji<sp/>:ping_pong:<sp/>(the<sp/>principles<sp/>being<sp/>completely<sp/>transferrable<sp/>to<sp/>other<sp/>relatively<sp/>rudimentary<sp/>games).<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Premise</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>simplest<sp/>video<sp/>games<sp/>have<sp/>very<sp/>limited<sp/>inputs.<sp/>For<sp/>some<sp/>this<sp/>is<sp/>simply<sp/>left/right,<sp/>while<sp/>for<sp/>others<sp/>it<sp/>may<sp/>be<sp/>up/down/left/right.<sp/>This<sp/>makes<sp/>it<sp/>relatively<sp/>straightforward<sp/>to<sp/>hack<sp/>these<sp/>inputs<sp/>to<sp/>be<sp/>controlled<sp/>by<sp/>EMG<sp/>signals<sp/>(one<sp/>muscle<sp/>controls<sp/>left,<sp/>another<sp/>right,<sp/>etc).<sp/>With<sp/>a<sp/>4<sp/>channel<sp/>system,<sp/>we<sp/>hope<sp/>to<sp/>be<sp/>able<sp/>to<sp/>accomodate<sp/>single-player<sp/>versions<sp/>of<sp/>games<sp/>requiring<sp/>4<sp/>input<sp/>options,<sp/>or<sp/>multiplayer<sp/>versions<sp/>of<sp/>games<sp/>requiring<sp/>only<sp/>2<sp/>(a<sp/>safe<sp/>outlet<sp/>for<sp/>any<sp/>pent<sp/>up<sp/>testosterone!).</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>primary<sp/>use<sp/>of<sp/>this<sp/>system<sp/>is<sp/>to<sp/>increase<sp/>the<sp/>level<sp/>of<sp/>submersion<sp/>the<sp/>player<sp/>feels<sp/>within<sp/>the<sp/>gaming<sp/>environment,<sp/>providing<sp/>a<sp/>new<sp/>challenge,<sp/>and<sp/>adding<sp/>a<sp/>new<sp/>dimension<sp/>to<sp/>the<sp/>gaming<sp/>experience.<sp/>The<sp/>system<sp/>also<sp/>has<sp/>potential<sp/>application<sp/>in<sp/>the<sp/>field<sp/>of<sp/>rehabilitation,<sp/>encouraging<sp/>persistence<sp/>with<sp/>otherwise<sp/>unpleasent<sp/>rehabilitation<sp/>regimes.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>EMG<sp/>Measurement</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Here<sp/>we<sp/>provide<sp/>a<sp/>description<sp/>of<sp/>the<sp/>methods<sp/>that<sp/>should<sp/>be<sp/>employed<sp/>in<sp/>measuring<sp/>user<sp/>EMG.<sp/>In<sp/>light<sp/>of<sp/>the<sp/>recent<sp/>Covid-19<sp/>outbreak,<sp/>the<sp/>hardware<sp/>components<sp/>of<sp/>this<sp/>project<sp/>remain<sp/>incomplete<sp/>and<sp/>as<sp/>such<sp/>sample<sp/>EMG<sp/>data<sp/>was<sp/>instead<sp/>obtained<sp/>using<sp/>a<sp/>[USB-DUX](https://www.linux-usb-daq.co.uk/order2/)<sp/>and<sp/>bioamplifier<sp/>for<sp/>software<sp/>testing<sp/>purposes.<sp/>The<sp/>acquired<sp/>EMG<sp/>data<sp/>has<sp/>been<sp/>deposited<sp/>in<sp/>Gitlab,<sp/>and<sp/>can<sp/>be<sp/>found<sp/>through<sp/>the<sp/>link<sp/>below,<sp/>along<sp/>with<sp/>an<sp/>example<sp/>Python<sp/>script<sp/>for<sp/>filtering<sp/>and<sp/>plotting.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[Sample<sp/>Data](https://gitlab.com/HenryCowan/rte-emg-signals/-/tree/master)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Standard<sp/>Ag/AgCl<sp/>electrodes<sp/>should<sp/>be<sp/>place<sp/>approximately<sp/>20cm<sp/>apart<sp/>on<sp/>the<sp/>chosen<sp/>muscle(s).<sp/>In<sp/>our<sp/>case,<sp/>measuring<sp/>4<sp/>channels,<sp/>this<sp/>required<sp/>a<sp/>pair<sp/>of<sp/>electrodes<sp/>on<sp/>each<sp/>bicep<sp/>and<sp/>a<sp/>pair<sp/>on<sp/>each<sp/>tricep,<sp/>with<sp/>a<sp/>further<sp/>electrode<sp/>attached<sp/>to<sp/>the<sp/>ankle<sp/>to<sp/>act<sp/>as<sp/>ground<sp/>(9<sp/>total).<sp/>For<sp/>a<sp/>2<sp/>channel<sp/>approach,<sp/>any<sp/>2<sp/>pairs<sp/>of<sp/>electrodes<sp/>may<sp/>be<sp/>discounted,<sp/>leaving<sp/>5<sp/>total.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Had<sp/>the<sp/>hardware<sp/>components<sp/>been<sp/>completed,<sp/>these<sp/>signals<sp/>would<sp/>be<sp/>sent<sp/>through<sp/>a<sp/>two<sp/>stage<sp/>amplifer,<sp/>the<sp/>first<sp/>a<sp/>differential<sp/>stage<sp/>and<sp/>the<sp/>second<sp/>a<sp/>gain<sp/>stage.<sp/>The<sp/>output<sp/>from<sp/>the<sp/>amplifier<sp/>is<sp/>sent<sp/>to<sp/>an<sp/>ADC<sp/>(ADS1115)<sp/>and<sp/>passed<sp/>to<sp/>a<sp/>Raspberry<sp/>Pi<sp/>via<sp/>the<sp/>I2C<sp/>bus<sp/>protocol<sp/>for<sp/>post-processing<sp/>and<sp/>game<sp/>connection.<sp/>Using<sp/>the<sp/>sample<sp/>EMG<sp/>data,<sp/>the<sp/>amplifification<sp/>stage<sp/>was<sp/>subverted,<sp/>applying<sp/>directly<sp/>to<sp/>the<sp/>ADC<sp/>component.<sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Outcomes</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>A<sp/>PCB<sp/>using<sp/>the<sp/>AD7705<sp/>has<sp/>been<sp/>produced<sp/>to<sp/>read<sp/>an<sp/>artificial<sp/>stream<sp/>of<sp/>data.<sp/>This<sp/>will<sp/>allow<sp/>data<sp/>handling<sp/>to<sp/>be<sp/>explored<sp/>while<sp/>fabricating<sp/>and<sp/>testing<sp/>components<sp/>associated<sp/>with<sp/>acquiring<sp/>EMG<sp/>data.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>The<sp/>ADC<sp/>for<sp/>the<sp/>EMG<sp/>recording<sp/>has<sp/>been<sp/>selected<sp/>as<sp/>the<sp/>ADS1115,<sp/>and<sp/>is<sp/>being<sp/>implemented<sp/>into<sp/>a<sp/>custom<sp/>PCB<sp/>with<sp/>4<sp/>channel<sp/>inputs.<sp/>The<sp/>specifications<sp/>of<sp/>the<sp/>ADS1115<sp/>can<sp/>be<sp/>found<sp/>through<sp/>the<sp/>link<sp/>below:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[ADS1115<sp/>Spec<sp/>Sheet](http://www.ti.com/lit/ds/symlink/ads1114.pdf)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Through<sp/>use<sp/>of<sp/>the<sp/>QT<sp/>toolkit,<sp/>a<sp/>realtime<sp/>plotting<sp/>script<sp/>has<sp/>been<sp/>tested.<sp/>It<sp/>is<sp/>thought<sp/>that<sp/>presenting<sp/>this<sp/>to<sp/>the<sp/>user<sp/>as<sp/>a<sp/>form<sp/>of<sp/>biofeedback<sp/>could<sp/>act<sp/>as<sp/>an<sp/>effective<sp/>means<sp/>of<sp/>encouragement.<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>The<sp/>PCB<sp/>using<sp/>the<sp/>ADS1115<sp/>now<sp/>detects<sp/>data<sp/>in<sp/>realtime<sp/>from<sp/>1<sp/>channel<sp/>using<sp/>I2C.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>RPI-end<sp/>software</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>[ADS1115<sp/>driver](https://github.com/TheUltraSoundGuys/RTEP/tree/master/Rpi_end/Ads1115ContinousDriver)<sp/>reads<sp/>in<sp/>continuous<sp/>data.<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>Interrupt<sp/>based<sp/>sampling<sp/>achieved<sp/>using<sp/>the<sp/>[GPIOlis<sp/>command](https://github.com/TheUltraSoundGuys/RTEP/tree/master/Rpi_end/Rpi%20end%20together).</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>Working<sp/>[IIR<sp/>filter](https://github.com/TheUltraSoundGuys/RTEP/tree/master/Rpi_end/unit%20tests%20in%20RPI%20end/Data%20filter%2Budp%20sending%20unit).</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>[Time<sp/>smoothing](https://github.com/TheUltraSoundGuys/RTEP/tree/master/Rpi_end/unit%20tests%20in%20RPI%20end/Data%20filter%2Budp%20sending%20unit)<sp/>of<sp/>EMG<sp/>data<sp/>acheived<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>Transmission<sp/>of<sp/>filtered<sp/>and<sp/>smoothed<sp/>EMG<sp/>data<sp/>via<sp/>[UDP](https://github.com/TheUltraSoundGuys/RTEP/blob/master/Rpi_end/unit%20tests%20in%20RPI%20end/Data%20filter%2Budp%20sending%20unit/window.cpp).</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>[Plotting](https://github.com/TheUltraSoundGuys/RTEP/blob/master/Rpi_end/unit%20tests%20in%20RPI%20end/Data%20filter%2Budp%20sending%20unit/window.cpp)<sp/>of<sp/>the<sp/>EMG<sp/>data<sp/>achieved.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Server<sp/>end<sp/>(Android)<sp/>software</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>[Pong<sp/>game](https://github.com/TheUltraSoundGuys/RTEP/tree/master/Server_end/Server%20Pong%20GUI-all%20together)<sp/>controlled<sp/>by<sp/>EMG<sp/>signal<sp/>(2<sp/>channel,<sp/>for<sp/>single<sp/>channel<sp/>see<sp/>branch<sp/>single-ch).</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**And<sp/>all<sp/>of<sp/>this<sp/>done<sp/>synchronously<sp/>and<sp/>in<sp/>real-time!<sp/>For<sp/>an<sp/>example<sp/>video<sp/>of<sp/>each<sp/>process,<sp/>see<sp/>the<sp/>README<sp/>in<sp/>each<sp/>folder**<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Social<sp/>Media</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Below<sp/>are<sp/>the<sp/>links<sp/>to<sp/>our<sp/>Facebook<sp/>and<sp/>Twitter<sp/>pages<sp/>where<sp/>you<sp/>can<sp/>keep<sp/>up<sp/>to<sp/>date<sp/>with<sp/>all<sp/>our<sp/>latest<sp/>and<sp/>most<sp/>exciting<sp/>developments!</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[Muscle<sp/>Power<sp/>Gaming<sp/>-<sp/>Facebook](https://www.facebook.com/EMGamingRPI/)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[Muscle<sp/>Power<sp/>Gaming<sp/>-<sp/>Twitter](https://twitter.com/emg_pi)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>COVID<sp/>Disruption</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Due<sp/>to<sp/>the<sp/>current<sp/>circumstances,<sp/>sections<sp/>of<sp/>the<sp/>project<sp/>could<sp/>not<sp/>be<sp/>completed,<sp/>primarily<sp/>the<sp/>hardware<sp/>component.<sp/>As<sp/>can<sp/>be<sp/>seen<sp/>from<sp/>the<sp/>Wiki<sp/>page<sp/>much<sp/>effort<sp/>was<sp/>given<sp/>in<sp/>the<sp/>hardware<sp/>design<sp/>and<sp/>construction<sp/>however<sp/>there<sp/>was<sp/>a<sp/>fault<sp/>with<sp/>the<sp/>final<sp/>PCB<sp/>displayed.<sp/>The<sp/>amplification<sp/>step<sp/>was<sp/>working<sp/>and<sp/>clock<sp/>and<sp/>data<sp/>signals<sp/>were<sp/>being<sp/>read<sp/>succesfully<sp/>from<sp/>a<sp/>signal<sp/>generator<sp/>however<sp/>the<sp/>RPi<sp/>was<sp/>unable<sp/>to<sp/>detect<sp/>any<sp/>i2c<sp/>devices<sp/>connected.<sp/>The<sp/>last<sp/>few<sp/>days<sp/>we<sp/>had<sp/>before<sp/>the<sp/>university<sp/>closuer<sp/>were<sp/>spent<sp/>trying<sp/>to<sp/>resolve<sp/>this<sp/>issue<sp/>but<sp/>to<sp/>no<sp/>avail.<sp/>As<sp/>the<sp/>group<sp/>had<sp/>no<sp/>access<sp/>to<sp/>soldering<sp/>irons<sp/>or<sp/>components<sp/>and<sp/>the<sp/>hardware<sp/>and<sp/>software<sp/>developer<sp/>were<sp/>in<sp/>different<sp/>cities,<sp/>this<sp/>made<sp/>development<sp/>of<sp/>the<sp/>hardware<sp/>impossible.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>solution<sp/>to<sp/>this<sp/>frustrating<sp/>issue<sp/>was<sp/>to<sp/>provide<sp/>rigorous<sp/>unit<sp/>tests<sp/>with<sp/>firstly<sp/>a<sp/>matrix<sp/>board<sp/>that<sp/>we<sp/>had<sp/>developed<sp/>earlier<sp/>in<sp/>the<sp/>project.<sp/>This<sp/>board<sp/>has<sp/>a<sp/>ADS1115<sp/>chip<sp/>attached<sp/>with<sp/>floating<sp/>inputs<sp/>and<sp/>an<sp/>output<sp/>that<sp/>was<sp/>connected<sp/>to<sp/>the<sp/>RPi.<sp/>From<sp/>this<sp/>board<sp/>we<sp/>could<sp/>present<sp/>real-time<sp/>interrupt<sp/>based<sp/>sampling<sp/>from<sp/>interaction<sp/>with<sp/>one<sp/>of<sp/>the<sp/>GPIO<sp/>outputs<sp/>of<sp/>the<sp/>RPi.<sp/>The<sp/>inputs<sp/>of<sp/>the<sp/>board<sp/>were<sp/>connected<sp/>to<sp/>a<sp/>signal<sp/>generator<sp/>and<sp/>realtime<sp/>filtering,<sp/>time-smoothing<sp/>and<sp/>interrupt<sp/>based<sp/>samping<sp/>was<sp/>presented<sp/>as<sp/>well<sp/>as<sp/>this<sp/>signal<sp/>being<sp/>sent<sp/>to<sp/>the<sp/>internet<sp/>via<sp/>UDP.<sp/>We<sp/>also<sp/>managed<sp/>to<sp/>achieve<sp/>signal<sp/>integration<sp/>with<sp/>the<sp/>game<sp/>as<sp/>shown<sp/>in...<sp/>by<sp/>using<sp/>pre-recorded<sp/>EMG<sp/>signals<sp/>we<sp/>captured<sp/>before<sp/>lab<sp/>closure.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">If<sp/>the<sp/>issue<sp/>of<sp/>the<sp/>I2C<sp/>address<sp/>detection<sp/>was<sp/>solved<sp/>with<sp/>the<sp/>final<sp/>PCB,<sp/>the<sp/>board<sp/>would<sp/>have<sp/>been<sp/>working<sp/>in<sp/>full.<sp/>Hopefully<sp/>from<sp/>these<sp/>unit<sp/>test<sp/>videos<sp/>it<sp/>can<sp/>be<sp/>seen<sp/>just<sp/>how<sp/>frustratingly<sp/>close<sp/>we<sp/>were!</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Contribution</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Henry<sp/>Cowan</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>Circuit<sp/>Design</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>Schematic<sp/>draw-up</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>PCB<sp/>Design</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>PCB<sp/>Construction</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>Component<sp/>Selection</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>Hardware<sp/>Documentation</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>Wiki<sp/>Page</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>EMG<sp/>Signal<sp/>Gitlab<sp/>Repo</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>General<sp/>Github<sp/>Maintenance</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Zonghan<sp/>Gan</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>Data<sp/>Processing</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>UDP<sp/>Transmission</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>ADC<sp/>driver</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>GPIO<sp/>Interrupt<sp/>System</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>Android<sp/>Server</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>The<sp/>Game</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Finlay<sp/>Nelson</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>Software<sp/>Documentation</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>EMG<sp/>Test<sp/>Signal<sp/>Recording</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>Social<sp/>Media<sp/>Presence</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>Github<sp/>Maintenance</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+    </programlisting>
+    <location file="/home/finlay/RTEP1/README.md"/>
+  </compounddef>
+</doxygen>

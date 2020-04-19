@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="_server__end_2_server___pong___g_u_i__all__together_2main_8cpp" kind="file" language="C++">
+    <compoundname>main.cpp</compoundname>
+    <includes local="no">QApplication</includes>
+    <includes refid="mainwindow_8h" local="yes">mainwindow.h</includes>
+    <includes local="no">QScreen</includes>
+    <incdepgraph>
+      <node id="4">
+        <label>QObject</label>
+      </node>
+      <node id="8">
+        <label>QElapsedTimer</label>
+      </node>
+      <node id="3">
+        <label>mainwindow.h</label>
+        <link refid="mainwindow_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>QMainWindow</label>
+      </node>
+      <node id="9">
+        <label>QScreen</label>
+      </node>
+      <node id="2">
+        <label>QApplication</label>
+      </node>
+      <node id="5">
+        <label>QGraphicsScene</label>
+      </node>
+      <node id="7">
+        <label>QUdpSocket</label>
+      </node>
+      <node id="1">
+        <label>/home/finlay/RTEP1/Server_end/Server_Pong_GUI_all_together/main.cpp</label>
+        <link refid="_server__end_2_server___pong___g_u_i__all__together_2main_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_server__end_2_server___pong___g_u_i__all__together_2main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(int argc, char *argv[])</argsstring>
+        <name>main</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>argv</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The <computeroutput>main</computeroutput> function is used to find and update the mainwindow with the optimum screen and display size for android applications using <ref refid="qt" kindref="compound" external="/home/finlay/Repo/doc/qtcore/qtcore.tags">Qt</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Server_end/Server_Pong_GUI_all_together/main.cpp" line="10" column="5" bodyfile="/home/finlay/RTEP1/Server_end/Server_Pong_GUI_all_together/main.cpp" bodystart="10" bodyend="25"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;QApplication&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mainwindow_8h" kindref="compound">mainwindow.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QScreen&gt;</highlight></codeline>
+<codeline lineno="10" refid="_server__end_2_server___pong___g_u_i__all__together_2main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" refkind="member"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_rpi__end_2_rpi__end__together_2main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kindref="member">main</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*argv[])</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//*automatically<sp/>adjust<sp/>dpi<sp/>of<sp/>display*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="qcoreapplication_1setAttribute" kindref="member" external="/home/finlay/Repo/doc/qtcore/qtcore.tags">QCoreApplication::setAttribute</ref>(Qt::AA_EnableHighDpiScaling);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="qapplication" kindref="compound" external="/home/finlay/Repo/doc/qtwidgets/qtwidgets.tags">QApplication</ref><sp/>a(argc,<sp/>argv);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*Detecting<sp/>the<sp/>screen<sp/>size<sp/>and<sp/>adjust<sp/>the<sp/>display<sp/>size<sp/>in<sp/>according</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/><sp/><sp/><sp/>**It&apos;s<sp/>extremely<sp/>important<sp/>in<sp/>Qt<sp/>for<sp/>android</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="qscreen" kindref="compound" external="/home/finlay/Repo/doc/qtgui/qtgui.tags">QScreen</ref><sp/>*iScreen<sp/>=<sp/>a.<ref refid="qguiapplication_1primaryScreen-prop" kindref="member" external="/home/finlay/Repo/doc/qtgui/qtgui.tags">primaryScreen</ref>();</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="qsize" kindref="compound" external="/home/finlay/Repo/doc/qtcore/qtcore.tags">QSize</ref><sp/>rScreenSize<sp/>=<sp/>iScreen-&gt;<ref refid="qscreen_1size-prop" kindref="member" external="/home/finlay/Repo/doc/qtgui/qtgui.tags">size</ref>();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//*pass<sp/>screen<sp/>size<sp/>to<sp/>mainwindow<sp/>as<sp/>argument*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window" kindref="compound">MainWindow</ref><sp/>w(rScreenSize.<ref refid="qsize_1rwidth" kindref="member" external="/home/finlay/Repo/doc/qtcore/qtcore.tags">rwidth</ref>(),rScreenSize.<ref refid="qsize_1rheight" kindref="member" external="/home/finlay/Repo/doc/qtcore/qtcore.tags">rheight</ref>());</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>w.<ref refid="qwidget_1show" kindref="member" external="/home/finlay/Repo/doc/qtwidgets/qtwidgets.tags">show</ref>();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>a.<ref refid="qapplication_1exec" kindref="member" external="/home/finlay/Repo/doc/qtwidgets/qtwidgets.tags">exec</ref>();</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/finlay/RTEP1/Server_end/Server_Pong_GUI_all_together/main.cpp"/>
+  </compounddef>
+</doxygen>

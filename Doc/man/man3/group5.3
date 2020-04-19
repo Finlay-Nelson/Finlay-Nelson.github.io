@@ -1,0 +1,97 @@
+.TH "group5" 3 "Sun Apr 19 2020" "Muscle Power Gaming" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+group5 \- ADS1115 Bit[11-9]\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBADS1015_REG_CONFIG_PGA_6_144V\fP   (0x0000)"
+.br
+.RI "+/-6\&.144V range = Gain 2/3 "
+.ti -1c
+.RI "#define \fBADS1015_REG_CONFIG_PGA_4_096V\fP   (0x0200)"
+.br
+.RI "+/-4\&.096V range = Gain 1 "
+.ti -1c
+.RI "#define \fBADS1015_REG_CONFIG_PGA_2_048V\fP   (0x0400)"
+.br
+.RI "+/-2\&.048V range = Gain 2 (DEFAULT) "
+.ti -1c
+.RI "#define \fBADS1015_REG_CONFIG_PGA_1_024V\fP   (0x0600)"
+.br
+.RI "+/-1\&.024V range = Gain 4 "
+.ti -1c
+.RI "#define \fBADS1015_REG_CONFIG_PGA_0_512V\fP   (0x0800)"
+.br
+.RI "+/-0\&.512V range = Gain 8 "
+.ti -1c
+.RI "#define \fBADS1015_REG_CONFIG_PGA_0_256V\fP   (0x0A00)"
+.br
+.RI "+/-0\&.256V range = Gain 16 "
+.in -1c
+.SH "Detailed Description"
+.PP 
+ADS1115 Bit[11-9]\&. 
+
+These bits configure the programmable gain amplifier\&.
+.IP "\(bu" 2
++-6\&.144V
+.IP "\(bu" 2
++-4\&.096V
+.IP "\(bu" 2
++-2\&.048V
+.IP "\(bu" 2
++-1\&.024V
+.IP "\(bu" 2
++-0\&.512V
+.IP "\(bu" 2
++-0\&.256V
+.PP
+The DEFAULT setting is +-2\&.048V\&. 
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define ADS1015_REG_CONFIG_PGA_0_256V   (0x0A00)"
+
+.PP
++/-0\&.256V range = Gain 16 
+.PP
+Definition at line 228 of file ads1115\&.h\&.
+.SS "#define ADS1015_REG_CONFIG_PGA_0_512V   (0x0800)"
+
+.PP
++/-0\&.512V range = Gain 8 
+.PP
+Definition at line 227 of file ads1115\&.h\&.
+.SS "#define ADS1015_REG_CONFIG_PGA_1_024V   (0x0600)"
+
+.PP
++/-1\&.024V range = Gain 4 
+.PP
+Definition at line 226 of file ads1115\&.h\&.
+.SS "#define ADS1015_REG_CONFIG_PGA_2_048V   (0x0400)"
+
+.PP
++/-2\&.048V range = Gain 2 (DEFAULT) 
+.PP
+Definition at line 225 of file ads1115\&.h\&.
+.SS "#define ADS1015_REG_CONFIG_PGA_4_096V   (0x0200)"
+
+.PP
++/-4\&.096V range = Gain 1 
+.PP
+Definition at line 224 of file ads1115\&.h\&.
+.SS "#define ADS1015_REG_CONFIG_PGA_6_144V   (0x0000)"
+
+.PP
++/-6\&.144V range = Gain 2/3 
+.PP
+Definition at line 223 of file ads1115\&.h\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Muscle Power Gaming from the source code\&.

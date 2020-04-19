@@ -1,0 +1,365 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="mainwindow_8cpp" kind="file" language="C++">
+    <compoundname>mainwindow.cpp</compoundname>
+    <includes refid="mainwindow_8h" local="yes">mainwindow.h</includes>
+    <includes local="yes">ui_mainwindow.h</includes>
+    <includes local="no">QGraphicsScene</includes>
+    <includes local="no">QGraphicsRectItem</includes>
+    <includes local="no">QGraphicsEllipseItem</includes>
+    <includes local="no">QPen</includes>
+    <includes local="no">QResizeEvent</includes>
+    <includes local="no">QDebug</includes>
+    <includes local="no">QTimer</includes>
+    <includes local="no">QObject</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/finlay/RTEP1/Server_end/Server_Pong_GUI_all_together/mainwindow.cpp</label>
+        <link refid="mainwindow_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>QObject</label>
+      </node>
+      <node id="7">
+        <label>QElapsedTimer</label>
+      </node>
+      <node id="2">
+        <label>mainwindow.h</label>
+        <link refid="mainwindow_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>QMainWindow</label>
+      </node>
+      <node id="9">
+        <label>QGraphicsRectItem</label>
+      </node>
+      <node id="12">
+        <label>QResizeEvent</label>
+      </node>
+      <node id="8">
+        <label>ui_mainwindow.h</label>
+      </node>
+      <node id="13">
+        <label>QDebug</label>
+      </node>
+      <node id="4">
+        <label>QGraphicsScene</label>
+      </node>
+      <node id="14">
+        <label>QTimer</label>
+      </node>
+      <node id="6">
+        <label>QUdpSocket</label>
+      </node>
+      <node id="10">
+        <label>QGraphicsEllipseItem</label>
+      </node>
+      <node id="11">
+        <label>QPen</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="mainwindow_8cpp_1a751e9208ccfadf03cebca9cdcf8bc8ef" prot="public" static="no" mutable="no">
+        <type>const quint16</type>
+        <definition>const quint16 rsPort</definition>
+        <argsstring></argsstring>
+        <name>rsPort</name>
+        <initializer>= 1112</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Server_end/Server_Pong_GUI_all_together/mainwindow.cpp" line="28" column="15" bodyfile="/home/finlay/RTEP1/Server_end/Server_Pong_GUI_all_together/mainwindow.cpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Realisation of the EMG-controlled Pong GUI. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Zonghan Gan </para>
+</simplesect>
+<simplesect kind="author"><para>Finlay Nelson </para>
+</simplesect>
+<simplesect kind="author"><para>Henry Cowan </para>
+</simplesect>
+<simplesect kind="date"><para>11 April 2020</para>
+</simplesect>
+Uses the mainwindow class defined in mainwidnow.cpp and the <ref refid="qt" kindref="compound" external="/home/finlay/Repo/doc/qtcore/qtcore.tags">Qt</ref> toolkit to generate, update and control the Pong GUI according to incoming EMG signals. The <ref refid="class_main_window" kindref="compound">MainWindow()</ref> function is used to instantiate the game window, and generate a <ref refid="qgraphicsscene" kindref="compound" external="/home/finlay/Repo/doc/qtwidgets/qtwidgets.tags">QGraphicsScene()</ref> object in which to place the GUI items. The server socket and host ip address are bound to allow UDP communication. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="14"><highlight class="comment">/*--Includes--*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mainwindow_8h" kindref="compound">mainwindow.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ui_mainwindow.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QGraphicsScene&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QGraphicsRectItem&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QGraphicsEllipseItem&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QPen&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QResizeEvent&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QDebug&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QTimer&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QObject&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">/*Used<sp/>in<sp/>the<sp/>bind()<sp/>function<sp/>to<sp/>connect<sp/>an<sp/>ip<sp/>address<sp/>to<sp/>the<sp/>input<sp/>port*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="mainwindow_8cpp_1a751e9208ccfadf03cebca9cdcf8bc8ef" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>quint16<sp/><ref refid="mainwindow_8cpp_1a751e9208ccfadf03cebca9cdcf8bc8ef" kindref="member">rsPort</ref><sp/>=<sp/>1112;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="class_main_window_1a33775e00c8964ce95697f48cd6f7509b" refkind="member"><highlight class="normal"><ref refid="class_main_window_1a33775e00c8964ce95697f48cd6f7509b" kindref="member">MainWindow::MainWindow</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>scrnwidth,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>scrnheight,<sp/><ref refid="qwidget" kindref="compound" external="/home/finlay/Repo/doc/qtwidgets/qtwidgets.tags">QWidget</ref><sp/>*parent)<sp/>:</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="qmainwindow" kindref="compound" external="/home/finlay/Repo/doc/qtwidgets/qtwidgets.tags">QMainWindow</ref>(parent),</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>ui(new<sp/><ref refid="namespace_ui" kindref="compound">Ui</ref>::<ref refid="class_main_window" kindref="compound">MainWindow</ref>),<sp/></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>iScore<sp/>(<sp/>0<sp/>),</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>iBallMotion<sp/>(<sp/>-2,<sp/>-2<sp/>),</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>iP2Motion(<sp/>0<sp/>),</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>iP1Motion(<sp/>0<sp/>)</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1a808fcf1fec443ec645b4377470fbdda8" kindref="member">wdwidth</ref>=scrnwidth-10;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1a4a5b3b6188f1a6b45c8ca2a18bf1f460" kindref="member">wdheight</ref>=scrnheight-10;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1a35466a70ed47252a0191168126a352a5" kindref="member">ui</ref>-&gt;setupUi(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="qwidget_1setFixedSize" kindref="member" external="/home/finlay/Repo/doc/qtwidgets/qtwidgets.tags">setFixedSize</ref>(<ref refid="class_main_window_1a808fcf1fec443ec645b4377470fbdda8" kindref="member">wdwidth</ref>,<ref refid="class_main_window_1a4a5b3b6188f1a6b45c8ca2a18bf1f460" kindref="member">wdheight</ref>);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1ac635937c03a5a7af86c1ad212c27a4eb" kindref="member">iScene</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="qgraphicsscene" kindref="compound" external="/home/finlay/Repo/doc/qtwidgets/qtwidgets.tags">QGraphicsScene</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*Create<sp/>a<sp/>new<sp/>rectangular<sp/>object<sp/>for<sp/>each<sp/>paddle*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1a32ae2ba16c3ef020cd23bc405faf6dc7" kindref="member">iP1</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="qgraphicsrectitem" kindref="compound" external="/home/finlay/Repo/doc/qtwidgets/qtwidgets.tags">QGraphicsRectItem</ref>(0,<sp/>0,<sp/>80,<sp/>20);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1a9a2efe9e5fd1003f44c1d77da6fc2717" kindref="member">iP2</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="qgraphicsrectitem" kindref="compound" external="/home/finlay/Repo/doc/qtwidgets/qtwidgets.tags">QGraphicsRectItem</ref>(0,<sp/>0,<sp/>80,<sp/>20);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*Set<sp/>the<sp/>colours<sp/>of<sp/>each<sp/>paddle*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1a32ae2ba16c3ef020cd23bc405faf6dc7" kindref="member">iP1</ref>-&gt;<ref refid="qabstractgraphicsshapeitem_1setBrush" kindref="member" external="/home/finlay/Repo/doc/qtwidgets/qtwidgets.tags">setBrush</ref>(<ref refid="qbrush" kindref="compound" external="/home/finlay/Repo/doc/qtgui/qtgui.tags">QBrush</ref>(Qt::green));</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1a9a2efe9e5fd1003f44c1d77da6fc2717" kindref="member">iP2</ref>-&gt;<ref refid="qabstractgraphicsshapeitem_1setBrush" kindref="member" external="/home/finlay/Repo/doc/qtwidgets/qtwidgets.tags">setBrush</ref>(<ref refid="qbrush" kindref="compound" external="/home/finlay/Repo/doc/qtgui/qtgui.tags">QBrush</ref>(Qt::blue));</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*Create<sp/>the<sp/>ball*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1ab7d9e890e4ec111fe09e02e840748196" kindref="member">iBall</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="qgraphicsellipseitem" kindref="compound" external="/home/finlay/Repo/doc/qtwidgets/qtwidgets.tags">QGraphicsEllipseItem</ref>(0,<sp/>0,<sp/>30,<sp/>30);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*Set<sp/>the<sp/>colour<sp/>of<sp/>the<sp/>ball*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1ab7d9e890e4ec111fe09e02e840748196" kindref="member">iBall</ref>-&gt;<ref refid="qabstractgraphicsshapeitem_1setBrush" kindref="member" external="/home/finlay/Repo/doc/qtwidgets/qtwidgets.tags">setBrush</ref>(<ref refid="qbrush" kindref="compound" external="/home/finlay/Repo/doc/qtgui/qtgui.tags">QBrush</ref>(Qt::green));</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*Set<sp/>the<sp/>bounds<sp/>of<sp/>the<sp/>GUI*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1ac635937c03a5a7af86c1ad212c27a4eb" kindref="member">iScene</ref>-&gt;<ref refid="qgraphicsscene_1sceneRect-prop" kindref="member" external="/home/finlay/Repo/doc/qtwidgets/qtwidgets.tags">setSceneRect</ref>(0,<sp/>0,<sp/><ref refid="class_main_window_1a808fcf1fec443ec645b4377470fbdda8" kindref="member">wdwidth</ref><sp/>*<sp/>0.95,<sp/><ref refid="class_main_window_1a4a5b3b6188f1a6b45c8ca2a18bf1f460" kindref="member">wdheight</ref><sp/>*<sp/>0.8);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*Set<sp/>the<sp/>positions<sp/>of<sp/>the<sp/>paddles*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1a32ae2ba16c3ef020cd23bc405faf6dc7" kindref="member">iP1</ref>-&gt;<ref refid="qgraphicsitem_1setPos" kindref="member" external="/home/finlay/Repo/doc/qtwidgets/qtwidgets.tags">setPos</ref>(<ref refid="class_main_window_1a808fcf1fec443ec645b4377470fbdda8" kindref="member">wdwidth</ref>*0.45,<sp/><sp/><ref refid="class_main_window_1a4a5b3b6188f1a6b45c8ca2a18bf1f460" kindref="member">wdheight</ref>*0.8150);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1a9a2efe9e5fd1003f44c1d77da6fc2717" kindref="member">iP2</ref>-&gt;<ref refid="qgraphicsitem_1setPos" kindref="member" external="/home/finlay/Repo/doc/qtwidgets/qtwidgets.tags">setPos</ref>(<ref refid="class_main_window_1a808fcf1fec443ec645b4377470fbdda8" kindref="member">wdwidth</ref>*0.45,<sp/>-<ref refid="class_main_window_1a4a5b3b6188f1a6b45c8ca2a18bf1f460" kindref="member">wdheight</ref>*0.0375);<sp/></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*Set<sp/>the<sp/>position<sp/>of<sp/>the<sp/>ball*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1ab7d9e890e4ec111fe09e02e840748196" kindref="member">iBall</ref>-&gt;<ref refid="qgraphicsitem_1setPos" kindref="member" external="/home/finlay/Repo/doc/qtwidgets/qtwidgets.tags">setPos</ref>(</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_main_window_1ac635937c03a5a7af86c1ad212c27a4eb" kindref="member">iScene</ref>-&gt;<ref refid="qgraphicsscene_1width" kindref="member" external="/home/finlay/Repo/doc/qtwidgets/qtwidgets.tags">width</ref>()<sp/>*<sp/>0.50,</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_main_window_1ac635937c03a5a7af86c1ad212c27a4eb" kindref="member">iScene</ref>-&gt;<ref refid="qgraphicsscene_1height" kindref="member" external="/home/finlay/Repo/doc/qtwidgets/qtwidgets.tags">height</ref>()<sp/>*<sp/>0.50</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*Add<sp/>the<sp/>paddles<sp/>and<sp/>ball<sp/>to<sp/>the<sp/>GUI*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1ac635937c03a5a7af86c1ad212c27a4eb" kindref="member">iScene</ref>-&gt;<ref refid="qgraphicsscene_1addItem" kindref="member" external="/home/finlay/Repo/doc/qtwidgets/qtwidgets.tags">addItem</ref>(<ref refid="class_main_window_1a9a2efe9e5fd1003f44c1d77da6fc2717" kindref="member">iP2</ref>);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1ac635937c03a5a7af86c1ad212c27a4eb" kindref="member">iScene</ref>-&gt;<ref refid="qgraphicsscene_1addItem" kindref="member" external="/home/finlay/Repo/doc/qtwidgets/qtwidgets.tags">addItem</ref>(<ref refid="class_main_window_1a32ae2ba16c3ef020cd23bc405faf6dc7" kindref="member">iP1</ref>);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1ac635937c03a5a7af86c1ad212c27a4eb" kindref="member">iScene</ref>-&gt;<ref refid="qgraphicsscene_1addItem" kindref="member" external="/home/finlay/Repo/doc/qtwidgets/qtwidgets.tags">addItem</ref>(<ref refid="class_main_window_1ab7d9e890e4ec111fe09e02e840748196" kindref="member">iBall</ref>);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1a35466a70ed47252a0191168126a352a5" kindref="member">ui</ref>-&gt;boardView-&gt;setScene(<ref refid="class_main_window_1ac635937c03a5a7af86c1ad212c27a4eb" kindref="member">iScene</ref>);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="qobject_1connect" kindref="member" external="/home/finlay/Repo/doc/qtcore/qtcore.tags">QObject::connect</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>SIGNAL(<ref refid="class_main_window_1a2f1a7f4643b4afc4d573ea439eb19f14" kindref="member">goal</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)),</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>SLOT(<ref refid="class_main_window_1a154bcffa7153d04371f0832193108731" kindref="member">refreshScore</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)));</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="comment">//receive<sp/>udp<sp/>sig</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1ac5ecc9473d3a01f67cdf77de41f5057d" kindref="member">rsverSocket</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="qudpsocket" kindref="compound" external="/home/finlay/Repo/doc/qtnetwork/qtnetwork.tags">QUdpSocket</ref>;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*Bind<sp/>the<sp/>IP<sp/>address<sp/>(local<sp/>hot<sp/>spot)<sp/>and<sp/>port<sp/>for<sp/>receiving*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bdrsvsc<sp/>=<sp/><ref refid="class_main_window_1ac5ecc9473d3a01f67cdf77de41f5057d" kindref="member">rsverSocket</ref>-&gt;<ref refid="qabstractsocket_1bind" kindref="member" external="/home/finlay/Repo/doc/qtnetwork/qtnetwork.tags">bind</ref>(<ref refid="qhostaddress" kindref="compound" external="/home/finlay/Repo/doc/qtnetwork/qtnetwork.tags">QHostAddress</ref>(</highlight><highlight class="stringliteral">&quot;192.168.43.161&quot;</highlight><highlight class="normal">),<sp/><ref refid="mainwindow_8cpp_1a751e9208ccfadf03cebca9cdcf8bc8ef" kindref="member">rsPort</ref>);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(bdrsvsc&gt;0)</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>qDebug()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;bind<sp/>success&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>qDebug()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;--receiving--&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>qDebug()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;bind<sp/>failed&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>qDebug()<sp/>&lt;&lt;<sp/><ref refid="class_main_window_1ac5ecc9473d3a01f67cdf77de41f5057d" kindref="member">rsverSocket</ref>-&gt;<ref refid="qabstractsocket_1error" kindref="member" external="/home/finlay/Repo/doc/qtnetwork/qtnetwork.tags">error</ref>();</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="qobject_1connect" kindref="member" external="/home/finlay/Repo/doc/qtcore/qtcore.tags">connect</ref>(<ref refid="class_main_window_1ac5ecc9473d3a01f67cdf77de41f5057d" kindref="member">rsverSocket</ref>,<sp/>SIGNAL(readyRead()),<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>SLOT(<ref refid="class_main_window_1aa4a61b706dc1ac7eafed167da9fb6cc3" kindref="member">receive</ref>()));</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="qobject_1connect" kindref="member" external="/home/finlay/Repo/doc/qtcore/qtcore.tags">connect</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>SIGNAL(<ref refid="class_main_window_1a14f7506762b59058b9b2b04f754557e7" kindref="member">rfsh</ref>()),<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>SLOT(<ref refid="class_main_window_1ad7e9c58ba60e7219d5348a4403b805d0" kindref="member">Position</ref>()));</highlight></codeline>
+<codeline lineno="104"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108" refid="class_main_window_1ae98d00a93bc118200eeef9f9bba1dba7" refkind="member"><highlight class="normal"><ref refid="class_main_window_1ae98d00a93bc118200eeef9f9bba1dba7" kindref="member">MainWindow::~MainWindow</ref>()</highlight></codeline>
+<codeline lineno="109"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/><ref refid="class_main_window_1a35466a70ed47252a0191168126a352a5" kindref="member">ui</ref>;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/><ref refid="class_main_window_1ac5ecc9473d3a01f67cdf77de41f5057d" kindref="member">rsverSocket</ref>;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/><ref refid="class_main_window_1ac635937c03a5a7af86c1ad212c27a4eb" kindref="member">iScene</ref>;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/><ref refid="class_main_window_1a32ae2ba16c3ef020cd23bc405faf6dc7" kindref="member">iP1</ref>;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/><ref refid="class_main_window_1a9a2efe9e5fd1003f44c1d77da6fc2717" kindref="member">iP2</ref>;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/><ref refid="class_main_window_1ab7d9e890e4ec111fe09e02e840748196" kindref="member">iBall</ref>;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/><ref refid="class_main_window_1a6940eadea7e5a3348f27464404f50ec8" kindref="member">iTimer</ref>;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="119"></codeline>
+<codeline lineno="121" refid="class_main_window_1a154bcffa7153d04371f0832193108731" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_main_window_1a154bcffa7153d04371f0832193108731" kindref="member">MainWindow::refreshScore</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count)</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1ab666d1d050708e71196c963e1f1b8c10" kindref="member">iScore</ref><sp/>+=<sp/>count;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1a35466a70ed47252a0191168126a352a5" kindref="member">ui</ref><sp/>-&gt;<sp/>lcdNumber<sp/>-&gt;<sp/>display(<ref refid="class_main_window_1ab666d1d050708e71196c963e1f1b8c10" kindref="member">iScore</ref>);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="comment">//Function<sp/>to<sp/>refresh<sp/>gui</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131" refid="class_main_window_1ad7e9c58ba60e7219d5348a4403b805d0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_main_window_1ad7e9c58ba60e7219d5348a4403b805d0" kindref="member">MainWindow::Position</ref>()</highlight></codeline>
+<codeline lineno="132"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*Set<sp/>ball<sp/>colour<sp/>to<sp/>magenta*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1ab7d9e890e4ec111fe09e02e840748196" kindref="member">iBall</ref><sp/>-&gt;<sp/>setBrush(<ref refid="qbrush" kindref="compound" external="/home/finlay/Repo/doc/qtgui/qtgui.tags">QBrush</ref>(Qt::magenta));</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*Update<sp/>the<sp/>balls<sp/>position<sp/>in<sp/>the<sp/>X<sp/>and<sp/>Y<sp/>directions*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>qreal<sp/><ref refid="class_main_window_1a05f46373bd9b7c48927c7caea6abdad8" kindref="member">Xprime</ref><sp/><sp/><sp/>=<sp/><ref refid="class_main_window_1ab7d9e890e4ec111fe09e02e840748196" kindref="member">iBall</ref><sp/>-&gt;<sp/><ref refid="qwidget_1pos-prop" kindref="member" external="/home/finlay/Repo/doc/qtwidgets/qtwidgets.tags">pos</ref>().x()<sp/>+<sp/><ref refid="class_main_window_1afdf01f0c6fdea31c1461f7e44b7edbef" kindref="member">iBallMotion</ref>.<ref refid="qpointf_1x" kindref="member" external="/home/finlay/Repo/doc/qtcore/qtcore.tags">x</ref>();</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>qreal<sp/><ref refid="class_main_window_1aa3243052c3f75d05e0695b4dda5c5201" kindref="member">Yprime</ref><sp/><sp/><sp/>=<sp/><ref refid="class_main_window_1ab7d9e890e4ec111fe09e02e840748196" kindref="member">iBall</ref><sp/>-&gt;<sp/><ref refid="qwidget_1pos-prop" kindref="member" external="/home/finlay/Repo/doc/qtwidgets/qtwidgets.tags">pos</ref>().y()<sp/>+<sp/><ref refid="class_main_window_1afdf01f0c6fdea31c1461f7e44b7edbef" kindref="member">iBallMotion</ref>.<ref refid="qpointf_1y" kindref="member" external="/home/finlay/Repo/doc/qtcore/qtcore.tags">y</ref>();</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*Update<sp/>the<sp/>paddle<sp/>positions<sp/>in<sp/>thed<sp/>X<sp/>and<sp/>Y<sp/>directions*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>qreal<sp/><ref refid="class_main_window_1ad4fc744b75c4d35e52fb59fa82aa3178" kindref="member">P2Xprime</ref><sp/>=<sp/><ref refid="class_main_window_1a9a2efe9e5fd1003f44c1d77da6fc2717" kindref="member">iP2</ref>-&gt;<ref refid="qgraphicsitem_1pos" kindref="member" external="/home/finlay/Repo/doc/qtwidgets/qtwidgets.tags">pos</ref>().<ref refid="qpointf_1x" kindref="member" external="/home/finlay/Repo/doc/qtcore/qtcore.tags">x</ref>()<sp/>+<sp/><ref refid="class_main_window_1afc63533a2041d39ea4b6effe1cb71c7a" kindref="member">iP2Motion</ref>;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>qreal<sp/><ref refid="class_main_window_1a7266f47cf9c4b85b27b5fcc10101ff91" kindref="member">P1Xprime</ref><sp/>=<sp/><ref refid="class_main_window_1a32ae2ba16c3ef020cd23bc405faf6dc7" kindref="member">iP1</ref>-&gt;<ref refid="qgraphicsitem_1pos" kindref="member" external="/home/finlay/Repo/doc/qtwidgets/qtwidgets.tags">pos</ref>().<ref refid="qpointf_1x" kindref="member" external="/home/finlay/Repo/doc/qtcore/qtcore.tags">x</ref>()<sp/>+<sp/><ref refid="class_main_window_1a121ed236a48b89f3539f7fe59c9b4c37" kindref="member">iP1Motion</ref>;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*Bouncing<sp/>conditions*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="class_main_window_1a05f46373bd9b7c48927c7caea6abdad8" kindref="member">Xprime</ref>&lt;0)||(<ref refid="class_main_window_1a05f46373bd9b7c48927c7caea6abdad8" kindref="member">Xprime</ref>+<ref refid="class_main_window_1ab7d9e890e4ec111fe09e02e840748196" kindref="member">iBall</ref>-&gt;<ref refid="qgraphicsellipseitem_1boundingRect" kindref="member" external="/home/finlay/Repo/doc/qtwidgets/qtwidgets.tags">boundingRect</ref>().<ref refid="qrectf_1right" kindref="member" external="/home/finlay/Repo/doc/qtcore/qtcore.tags">right</ref>()&gt;<ref refid="class_main_window_1ac635937c03a5a7af86c1ad212c27a4eb" kindref="member">iScene</ref>-&gt;<ref refid="qgraphicsscene_1sceneRect-prop" kindref="member" external="/home/finlay/Repo/doc/qtwidgets/qtwidgets.tags">sceneRect</ref>().right()))</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_main_window_1afdf01f0c6fdea31c1461f7e44b7edbef" kindref="member">iBallMotion</ref>.<ref refid="qpointf_1rx" kindref="member" external="/home/finlay/Repo/doc/qtcore/qtcore.tags">rx</ref>()<sp/>*=<sp/>-1;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>(<sp/><ref refid="class_main_window_1aa3243052c3f75d05e0695b4dda5c5201" kindref="member">Yprime</ref><sp/>&lt;<sp/>0<sp/>)<sp/>||<sp/>(<sp/><ref refid="class_main_window_1aa3243052c3f75d05e0695b4dda5c5201" kindref="member">Yprime</ref><sp/>+<sp/><ref refid="class_main_window_1ab7d9e890e4ec111fe09e02e840748196" kindref="member">iBall</ref>-&gt;<ref refid="qgraphicsellipseitem_1boundingRect" kindref="member" external="/home/finlay/Repo/doc/qtwidgets/qtwidgets.tags">boundingRect</ref>().<ref refid="qrectf_1bottom" kindref="member" external="/home/finlay/Repo/doc/qtcore/qtcore.tags">bottom</ref>()<sp/>&gt;<sp/><ref refid="class_main_window_1ac635937c03a5a7af86c1ad212c27a4eb" kindref="member">iScene</ref>-&gt;<ref refid="qgraphicsscene_1sceneRect-prop" kindref="member" external="/home/finlay/Repo/doc/qtwidgets/qtwidgets.tags">sceneRect</ref>().bottom()<sp/>)<sp/>)</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>1<sp/>for<sp/>hitting<sp/>the<sp/>bottom<sp/>wall,<sp/>-1<sp/>for<sp/>hitting<sp/>the<sp/>top<sp/>wall</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>emit<sp/><ref refid="class_main_window_1a2f1a7f4643b4afc4d573ea439eb19f14" kindref="member">goal</ref>(<ref refid="class_main_window_1aa3243052c3f75d05e0695b4dda5c5201" kindref="member">Yprime</ref><sp/>/<sp/>abs(<ref refid="class_main_window_1aa3243052c3f75d05e0695b4dda5c5201" kindref="member">Yprime</ref>));</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_main_window_1afdf01f0c6fdea31c1461f7e44b7edbef" kindref="member">iBallMotion</ref>.<ref refid="qpointf_1ry" kindref="member" external="/home/finlay/Repo/doc/qtcore/qtcore.tags">ry</ref>()<sp/>*=<sp/>-1;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>(<sp/><ref refid="class_main_window_1ad4fc744b75c4d35e52fb59fa82aa3178" kindref="member">P2Xprime</ref><sp/>&lt;<sp/>0<sp/>)<sp/>||<sp/>(<sp/><ref refid="class_main_window_1ad4fc744b75c4d35e52fb59fa82aa3178" kindref="member">P2Xprime</ref><sp/>+<sp/><ref refid="class_main_window_1a9a2efe9e5fd1003f44c1d77da6fc2717" kindref="member">iP2</ref>-&gt;<ref refid="qgraphicsrectitem_1boundingRect" kindref="member" external="/home/finlay/Repo/doc/qtwidgets/qtwidgets.tags">boundingRect</ref>().<ref refid="qrectf_1right" kindref="member" external="/home/finlay/Repo/doc/qtcore/qtcore.tags">right</ref>()<sp/>&gt;<sp/><ref refid="class_main_window_1ac635937c03a5a7af86c1ad212c27a4eb" kindref="member">iScene</ref>-&gt;<ref refid="qgraphicsscene_1sceneRect-prop" kindref="member" external="/home/finlay/Repo/doc/qtwidgets/qtwidgets.tags">sceneRect</ref>().right()<sp/>)<sp/>)</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_main_window_1afc63533a2041d39ea4b6effe1cb71c7a" kindref="member">iP2Motion</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>(<sp/><ref refid="class_main_window_1a7266f47cf9c4b85b27b5fcc10101ff91" kindref="member">P1Xprime</ref><sp/>&lt;<sp/>0<sp/>)<sp/>||<sp/>(<sp/><ref refid="class_main_window_1a7266f47cf9c4b85b27b5fcc10101ff91" kindref="member">P1Xprime</ref><sp/>+<sp/><ref refid="class_main_window_1a9a2efe9e5fd1003f44c1d77da6fc2717" kindref="member">iP2</ref>-&gt;<ref refid="qgraphicsrectitem_1boundingRect" kindref="member" external="/home/finlay/Repo/doc/qtwidgets/qtwidgets.tags">boundingRect</ref>().<ref refid="qrectf_1right" kindref="member" external="/home/finlay/Repo/doc/qtcore/qtcore.tags">right</ref>()<sp/>&gt;<sp/><ref refid="class_main_window_1ac635937c03a5a7af86c1ad212c27a4eb" kindref="member">iScene</ref>-&gt;<ref refid="qgraphicsscene_1sceneRect-prop" kindref="member" external="/home/finlay/Repo/doc/qtwidgets/qtwidgets.tags">sceneRect</ref>().right()<sp/>)<sp/>)</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_main_window_1a121ed236a48b89f3539f7fe59c9b4c37" kindref="member">iP1Motion</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>(<sp/><ref refid="class_main_window_1a9a2efe9e5fd1003f44c1d77da6fc2717" kindref="member">iP2</ref>-&gt;<ref refid="qgraphicsitem_1collidesWithItem" kindref="member" external="/home/finlay/Repo/doc/qtwidgets/qtwidgets.tags">collidesWithItem</ref>(<ref refid="class_main_window_1ab7d9e890e4ec111fe09e02e840748196" kindref="member">iBall</ref>)<sp/>)<sp/>&amp;&amp;<sp/>(<sp/><ref refid="class_main_window_1afdf01f0c6fdea31c1461f7e44b7edbef" kindref="member">iBallMotion</ref>.<ref refid="qpointf_1y" kindref="member" external="/home/finlay/Repo/doc/qtcore/qtcore.tags">y</ref>()<sp/>&lt;<sp/>0<sp/>)<sp/>)</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_main_window_1afdf01f0c6fdea31c1461f7e44b7edbef" kindref="member">iBallMotion</ref>.<ref refid="qpointf_1ry" kindref="member" external="/home/finlay/Repo/doc/qtcore/qtcore.tags">ry</ref>()<sp/>*=<sp/>-1;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>(<sp/><ref refid="class_main_window_1a32ae2ba16c3ef020cd23bc405faf6dc7" kindref="member">iP1</ref>-&gt;<ref refid="qgraphicsitem_1collidesWithItem" kindref="member" external="/home/finlay/Repo/doc/qtwidgets/qtwidgets.tags">collidesWithItem</ref>(<ref refid="class_main_window_1ab7d9e890e4ec111fe09e02e840748196" kindref="member">iBall</ref>)<sp/>)<sp/>&amp;&amp;<sp/>(<sp/><ref refid="class_main_window_1afdf01f0c6fdea31c1461f7e44b7edbef" kindref="member">iBallMotion</ref>.<ref refid="qpointf_1y" kindref="member" external="/home/finlay/Repo/doc/qtcore/qtcore.tags">y</ref>()<sp/>&gt;<sp/>0<sp/>)<sp/>)</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_main_window_1afdf01f0c6fdea31c1461f7e44b7edbef" kindref="member">iBallMotion</ref>.<ref refid="qpointf_1ry" kindref="member" external="/home/finlay/Repo/doc/qtcore/qtcore.tags">ry</ref>()<sp/>*=<sp/>-1;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>qrand()<sp/>%<sp/>10<sp/>==<sp/>0<sp/>)</highlight><highlight class="comment">//randomly<sp/>block<sp/>paddle1(cpu<sp/>controlled)<sp/>to<sp/>give<sp/>player<sp/>chance</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_main_window_1a121ed236a48b89f3539f7fe59c9b4c37" kindref="member">iP1Motion</ref><sp/>=<sp/><ref refid="class_main_window_1ab191051a7cc5f050d2ef2cb09a7aee34" kindref="member">CpuP1Motion</ref>();</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1ab7d9e890e4ec111fe09e02e840748196" kindref="member">iBall</ref><sp/>-&gt;<sp/>moveBy(<ref refid="class_main_window_1afdf01f0c6fdea31c1461f7e44b7edbef" kindref="member">iBallMotion</ref>.<ref refid="qpointf_1x" kindref="member" external="/home/finlay/Repo/doc/qtcore/qtcore.tags">x</ref>(),<sp/><ref refid="class_main_window_1afdf01f0c6fdea31c1461f7e44b7edbef" kindref="member">iBallMotion</ref>.<ref refid="qpointf_1y" kindref="member" external="/home/finlay/Repo/doc/qtcore/qtcore.tags">y</ref>());</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1a9a2efe9e5fd1003f44c1d77da6fc2717" kindref="member">iP2</ref><sp/>-&gt;<sp/>moveBy(<ref refid="class_main_window_1afc63533a2041d39ea4b6effe1cb71c7a" kindref="member">iP2Motion</ref>,<sp/>0);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1a32ae2ba16c3ef020cd23bc405faf6dc7" kindref="member">iP1</ref><sp/>-&gt;<sp/>moveBy(<ref refid="class_main_window_1a121ed236a48b89f3539f7fe59c9b4c37" kindref="member">iP1Motion</ref>,<sp/>0);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight><highlight class="comment">//Function<sp/>to<sp/>control<sp/>paddle<sp/>1<sp/>with<sp/>cpu</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199" refid="class_main_window_1ab191051a7cc5f050d2ef2cb09a7aee34" refkind="member"><highlight class="normal">qreal<sp/><ref refid="class_main_window_1ab191051a7cc5f050d2ef2cb09a7aee34" kindref="member">MainWindow::CpuP1Motion</ref>()</highlight></codeline>
+<codeline lineno="200"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/>qreal<sp/>dir<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="class_main_window_1ab7d9e890e4ec111fe09e02e840748196" kindref="member">iBall</ref>-&gt;<ref refid="qgraphicsitem_1pos" kindref="member" external="/home/finlay/Repo/doc/qtwidgets/qtwidgets.tags">pos</ref>().<ref refid="qpointf_1x" kindref="member" external="/home/finlay/Repo/doc/qtcore/qtcore.tags">x</ref>()<sp/>+<sp/><ref refid="class_main_window_1afdf01f0c6fdea31c1461f7e44b7edbef" kindref="member">iBallMotion</ref>.<ref refid="qpointf_1x" kindref="member" external="/home/finlay/Repo/doc/qtcore/qtcore.tags">x</ref>()<sp/>&gt;<sp/><ref refid="class_main_window_1a32ae2ba16c3ef020cd23bc405faf6dc7" kindref="member">iP1</ref>-&gt;<ref refid="qgraphicsitem_1sceneBoundingRect" kindref="member" external="/home/finlay/Repo/doc/qtwidgets/qtwidgets.tags">sceneBoundingRect</ref>().<ref refid="qrectf_1right" kindref="member" external="/home/finlay/Repo/doc/qtcore/qtcore.tags">right</ref>()<sp/>)</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>move<sp/>right</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dir<sp/>=<sp/>5.0;</highlight><highlight class="comment">//<sp/>/6.0;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="class_main_window_1ab7d9e890e4ec111fe09e02e840748196" kindref="member">iBall</ref>-&gt;<ref refid="qgraphicsitem_1pos" kindref="member" external="/home/finlay/Repo/doc/qtwidgets/qtwidgets.tags">pos</ref>().<ref refid="qpointf_1x" kindref="member" external="/home/finlay/Repo/doc/qtcore/qtcore.tags">x</ref>()<sp/>+<sp/><ref refid="class_main_window_1afdf01f0c6fdea31c1461f7e44b7edbef" kindref="member">iBallMotion</ref>.<ref refid="qpointf_1x" kindref="member" external="/home/finlay/Repo/doc/qtcore/qtcore.tags">x</ref>()<sp/>&lt;<sp/><ref refid="class_main_window_1a32ae2ba16c3ef020cd23bc405faf6dc7" kindref="member">iP1</ref>-&gt;<ref refid="qgraphicsitem_1sceneBoundingRect" kindref="member" external="/home/finlay/Repo/doc/qtwidgets/qtwidgets.tags">sceneBoundingRect</ref>().<ref refid="qrectf_1left" kindref="member" external="/home/finlay/Repo/doc/qtcore/qtcore.tags">left</ref>()<sp/>)</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>move<sp/>left</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dir<sp/>=<sp/>-5.0<sp/>;</highlight><highlight class="comment">//<sp/>/6.0;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>dir;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight><highlight class="comment">//Function<sp/>to<sp/>receive<sp/>and<sp/>process<sp/>emg<sp/>sig<sp/>through<sp/>udp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232" refid="class_main_window_1aa4a61b706dc1ac7eafed167da9fb6cc3" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_main_window_1aa4a61b706dc1ac7eafed167da9fb6cc3" kindref="member">MainWindow::receive</ref>()</highlight></codeline>
+<codeline lineno="233"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight><highlight class="comment">//reading<sp/>from<sp/>udp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(<ref refid="class_main_window_1ac5ecc9473d3a01f67cdf77de41f5057d" kindref="member">rsverSocket</ref>-&gt;<ref refid="qudpsocket_1hasPendingDatagrams" kindref="member" external="/home/finlay/Repo/doc/qtnetwork/qtnetwork.tags">hasPendingDatagrams</ref>())</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nofch=2;<sp/></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/>outval[nofch];</highlight><highlight class="comment">//output<sp/>arry</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_main_window_1ac5ecc9473d3a01f67cdf77de41f5057d" kindref="member">rsverSocket</ref>-&gt;<ref refid="qudpsocket_1readDatagram" kindref="member" external="/home/finlay/Repo/doc/qtnetwork/qtnetwork.tags">readDatagram</ref>((</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)outval,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(outval));</highlight><highlight class="comment">//read<sp/>and<sp/>convert<sp/>udp<sp/>char<sp/>as<sp/>float</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>delta<sp/>=<sp/>outval[0]-outval[1];<sp/></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>qDebug()&lt;&lt;delta;</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(delta&gt;0.3)</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_main_window_1afc63533a2041d39ea4b6effe1cb71c7a" kindref="member">iP2Motion</ref><sp/>=<sp/>(<ref refid="class_main_window_1afc63533a2041d39ea4b6effe1cb71c7a" kindref="member">iP2Motion</ref><sp/>==<sp/>0<sp/>?<sp/>-20<sp/>:<sp/>0);</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(delta&lt;-0.3)<sp/></highlight><highlight class="comment">//if<sp/>(outval&lt;0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_main_window_1afc63533a2041d39ea4b6effe1cb71c7a" kindref="member">iP2Motion</ref><sp/><sp/>=<sp/>(<ref refid="class_main_window_1afc63533a2041d39ea4b6effe1cb71c7a" kindref="member">iP2Motion</ref><sp/>==<sp/>0<sp/>?<sp/>20<sp/>:<sp/>0);</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_main_window_1a725ff3891e2e0e053150bd685209b808" kindref="member">rfshcount</ref>++;</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight><highlight class="comment">/*refresh<sp/>relies<sp/>on<sp/>count<sp/>of<sp/>frequency<sp/>to<sp/>get<sp/>rid<sp/>of<sp/>timer<sp/>in<sp/>android</highlight></codeline>
+<codeline lineno="261"><highlight class="comment">**Android<sp/>is<sp/>a<sp/>non-instant<sp/>sys<sp/>not<sp/>like<sp/>linux,<sp/>the<sp/>polling<sp/>time<sp/>&gt;5ms</highlight></codeline>
+<codeline lineno="262"><highlight class="comment">**refresh<sp/>every<sp/>5<sp/>samples.<sp/>if<sp/>f=1000hz,<sp/>t0=5ms;if<sp/>fs=860hz(ads1115),<sp/>t0=8.5ms</highlight></codeline>
+<codeline lineno="263"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(this-&gt;<ref refid="class_main_window_1a725ff3891e2e0e053150bd685209b808" kindref="member">rfshcount</ref>&gt;5)</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>emit<sp/><ref refid="class_main_window_1a14f7506762b59058b9b2b04f754557e7" kindref="member">rfsh</ref>();</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_main_window_1a725ff3891e2e0e053150bd685209b808" kindref="member">rfshcount</ref>=0;</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>qDebug()&lt;&lt;</highlight><highlight class="stringliteral">&quot;rfsh&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="270"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/finlay/RTEP1/Server_end/Server_Pong_GUI_all_together/mainwindow.cpp"/>
+  </compounddef>
+</doxygen>

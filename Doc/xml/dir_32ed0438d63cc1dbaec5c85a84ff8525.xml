@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="dir_32ed0438d63cc1dbaec5c85a84ff8525" kind="dir">
+    <compoundname>/home/finlay/RTEP1/Rpi_end/Rpi_end_together</compoundname>
+    <innerfile refid="ads1115_8cpp">ads1115.cpp</innerfile>
+    <innerfile refid="ads1115_8h">ads1115.h</innerfile>
+    <innerfile refid="_g_p_i_olis_8cpp">GPIOlis.cpp</innerfile>
+    <innerfile refid="_g_p_i_olis_8h">GPIOlis.h</innerfile>
+    <innerfile refid="_rpi__end_2_rpi__end__together_2main_8cpp">main.cpp</innerfile>
+    <innerfile refid="window_8cpp">window.cpp</innerfile>
+    <innerfile refid="window_8h">window.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/"/>
+  </compounddef>
+</doxygen>

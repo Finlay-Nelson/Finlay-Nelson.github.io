@@ -1,0 +1,253 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.18">
+  <compound refid="classads1115" kind="class"><name>ads1115</name>
+    <member refid="classads1115_1a3eac1506c2c00580e5563827d9dcd260" kind="variable"><name>fd</name></member>
+    <member refid="classads1115_1a2cf1674f5b1f77bd4b5709702aec7244" kind="variable"><name>iicaddr</name></member>
+    <member refid="classads1115_1aeacdf3467cad67cd8a186ad43cbeee53" kind="function"><name>ads1115</name></member>
+    <member refid="classads1115_1a53a254dcd5d6d6ff6e787688c730ae4b" kind="function"><name>endads</name></member>
+    <member refid="classads1115_1a761c3ec573fc59956d7eca446841c18d" kind="function"><name>readsig</name></member>
+    <member refid="classads1115_1ae7c50fb698f1b87ba229929fc61f5e2f" kind="signal"><name>readyread</name></member>
+  </compound>
+  <compound refid="class_g_p_i_olis" kind="class"><name>GPIOlis</name>
+    <member refid="class_g_p_i_olis_1ae86ee364670cfe22722a5d9f612e9aa4" kind="variable"><name>flag</name></member>
+    <member refid="class_g_p_i_olis_1a4dd64eebb025a26b454d17176e70aaf8" kind="variable"><name>ads1</name></member>
+    <member refid="class_g_p_i_olis_1a81e5f98d39e2ae03bf0ab38466ad24bd" kind="variable"><name>count</name></member>
+    <member refid="class_g_p_i_olis_1a428a2f8c4b0bd64b769f1526c61c5dac" kind="function"><name>GPIOlis</name></member>
+    <member refid="class_g_p_i_olis_1a9095dfa3056b0f1c4026f6018f0f7ba7" kind="function"><name>~GPIOlis</name></member>
+    <member refid="class_g_p_i_olis_1a844470403deaa7436a19b8aef29eac5b" kind="function"><name>interrupt</name></member>
+    <member refid="class_g_p_i_olis_1a06b2b0dbfd20843e43a5015c2c1cf829" kind="function"><name>quit</name></member>
+    <member refid="class_g_p_i_olis_1a65d2d0d0faf0d9edc0b31ddb51e88d2b" kind="function"><name>run</name></member>
+    <member refid="class_g_p_i_olis_1a1e658d32e43003c3612ba46bd99a1732" kind="signal"><name>ready</name></member>
+    <member refid="class_g_p_i_olis_1ac36d3b9264536731e3458ed295666719" kind="signal"><name>readyread</name></member>
+  </compound>
+  <compound refid="class_main_window" kind="class"><name>MainWindow</name>
+    <member refid="class_main_window_1a35466a70ed47252a0191168126a352a5" kind="variable"><name>ui</name></member>
+    <member refid="class_main_window_1ab666d1d050708e71196c963e1f1b8c10" kind="variable"><name>iScore</name></member>
+    <member refid="class_main_window_1ac635937c03a5a7af86c1ad212c27a4eb" kind="variable"><name>iScene</name></member>
+    <member refid="class_main_window_1a9a2efe9e5fd1003f44c1d77da6fc2717" kind="variable"><name>iP2</name></member>
+    <member refid="class_main_window_1a32ae2ba16c3ef020cd23bc405faf6dc7" kind="variable"><name>iP1</name></member>
+    <member refid="class_main_window_1ab7d9e890e4ec111fe09e02e840748196" kind="variable"><name>iBall</name></member>
+    <member refid="class_main_window_1a6940eadea7e5a3348f27464404f50ec8" kind="variable"><name>iTimer</name></member>
+    <member refid="class_main_window_1a4db7d07416fcafa0d9e7a9291b64f842" kind="variable"><name>timer_measure</name></member>
+    <member refid="class_main_window_1afdf01f0c6fdea31c1461f7e44b7edbef" kind="variable"><name>iBallMotion</name></member>
+    <member refid="class_main_window_1afc63533a2041d39ea4b6effe1cb71c7a" kind="variable"><name>iP2Motion</name></member>
+    <member refid="class_main_window_1a121ed236a48b89f3539f7fe59c9b4c37" kind="variable"><name>iP1Motion</name></member>
+    <member refid="class_main_window_1a05f46373bd9b7c48927c7caea6abdad8" kind="variable"><name>Xprime</name></member>
+    <member refid="class_main_window_1aa3243052c3f75d05e0695b4dda5c5201" kind="variable"><name>Yprime</name></member>
+    <member refid="class_main_window_1ad4fc744b75c4d35e52fb59fa82aa3178" kind="variable"><name>P2Xprime</name></member>
+    <member refid="class_main_window_1a7266f47cf9c4b85b27b5fcc10101ff91" kind="variable"><name>P1Xprime</name></member>
+    <member refid="class_main_window_1a725ff3891e2e0e053150bd685209b808" kind="variable"><name>rfshcount</name></member>
+    <member refid="class_main_window_1ac5ecc9473d3a01f67cdf77de41f5057d" kind="variable"><name>rsverSocket</name></member>
+    <member refid="class_main_window_1a808fcf1fec443ec645b4377470fbdda8" kind="variable"><name>wdwidth</name></member>
+    <member refid="class_main_window_1a4a5b3b6188f1a6b45c8ca2a18bf1f460" kind="variable"><name>wdheight</name></member>
+    <member refid="class_main_window_1ac30d3076a0577dd1c4fb9ca96cd7192a" kind="variable"><name>totalHeight</name></member>
+    <member refid="class_main_window_1a96ba56ac81ca9d1d972e107b0c0398be" kind="variable"><name>totalWidth</name></member>
+    <member refid="class_main_window_1a33775e00c8964ce95697f48cd6f7509b" kind="function"><name>MainWindow</name></member>
+    <member refid="class_main_window_1ae98d00a93bc118200eeef9f9bba1dba7" kind="function"><name>~MainWindow</name></member>
+    <member refid="class_main_window_1ab191051a7cc5f050d2ef2cb09a7aee34" kind="function"><name>CpuP1Motion</name></member>
+    <member refid="class_main_window_1a154bcffa7153d04371f0832193108731" kind="slot"><name>refreshScore</name></member>
+    <member refid="class_main_window_1ad7e9c58ba60e7219d5348a4403b805d0" kind="slot"><name>Position</name></member>
+    <member refid="class_main_window_1aa4a61b706dc1ac7eafed167da9fb6cc3" kind="slot"><name>receive</name></member>
+    <member refid="class_main_window_1a2f1a7f4643b4afc4d573ea439eb19f14" kind="signal"><name>goal</name></member>
+    <member refid="class_main_window_1a14f7506762b59058b9b2b04f754557e7" kind="signal"><name>rfsh</name></member>
+  </compound>
+  <compound refid="class_window" kind="class"><name>Window</name>
+    <member refid="class_window_1ad0125c79705223e60f695c194166f312" kind="variable"><name>sdersc</name></member>
+    <member refid="class_window_1a99a930e8fdf9c009aca0d1bed1bdcd8f" kind="variable"><name>gpiolis1</name></member>
+    <member refid="class_window_1a703d58d30da77e83166ef37942ad8602" kind="variable"><name>rftimer</name></member>
+    <member refid="class_window_1ac930f3c9fd48aeb627204e7aeaf80573" kind="variable"><name>plot1</name></member>
+    <member refid="class_window_1a10bbc5d8730ee6c5bb4f4a956225533c" kind="variable"><name>plot2</name></member>
+    <member refid="class_window_1a112c8681462cb0339faf1b3a5e8d312c" kind="variable"><name>curve1</name></member>
+    <member refid="class_window_1ad6c1bf613b3e5a026fba544ed567a87b" kind="variable"><name>curve2</name></member>
+    <member refid="class_window_1a088e83054c444170282461344174f30b" kind="variable"><name>hLayout</name></member>
+    <member refid="class_window_1a13ad2a2a6dd2fa6a8943e92fb08629a1" kind="variable"><name>xData1</name></member>
+    <member refid="class_window_1a9baba6757f9e1a5c25e2c8bcf291ad32" kind="variable"><name>yData1</name></member>
+    <member refid="class_window_1a7b0d44a397ca90add463e2093f4a1423" kind="variable"><name>xData2</name></member>
+    <member refid="class_window_1a25e229e2503d02a9904f56fb730d4744" kind="variable"><name>yData2</name></member>
+    <member refid="class_window_1a66e60e4413d120313000c1d744c904f1" kind="variable"><name>xData3</name></member>
+    <member refid="class_window_1a7f1854f46d87a6bfd6b53806be12ba1c" kind="variable"><name>yData3</name></member>
+    <member refid="class_window_1ab9f0f7ea3db5d4d0fa70c915590e4c72" kind="variable"><name>sumpower</name></member>
+    <member refid="class_window_1a9908e75f132d5ac3f23b4ff9a4832c63" kind="variable"><name>plotDataSize</name></member>
+    <member refid="class_window_1ab27fe44e0834066236f79f244b02f67e" kind="function"><name>Window</name></member>
+    <member refid="class_window_1a245d821e6016fa1f6970ccbbedd635f6" kind="function"><name>~Window</name></member>
+    <member refid="class_window_1aa0c78bd5a1a320ec6cf427e7441d9714" kind="slot"><name>datapros</name></member>
+    <member refid="class_window_1ad7445be21c77c9944b3dba2e146bb989" kind="slot"><name>plotrefresh</name></member>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="namespace_ui" kind="namespace"><name>Ui</name>
+  </compound>
+  <compound refid="_r_e_a_d_m_e_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="ads1115_8cpp" kind="file"><name>ads1115.cpp</name>
+    <member refid="ads1115_8cpp_1a582ad3e71a0125d122e77eb54d2277b4" kind="variable"><name>low</name></member>
+    <member refid="ads1115_8cpp_1aae03a5bfee63ef73c818b660e31146a9" kind="variable"><name>high</name></member>
+    <member refid="ads1115_8cpp_1a4b95d85a2e012a6f680d7fcbebecffb9" kind="variable"><name>config</name></member>
+    <member refid="ads1115_8cpp_1a858a3d60a2d99fd3d2928c5843530456" kind="variable"><name>high_config</name></member>
+    <member refid="ads1115_8cpp_1a7ec714dbe564c5a0a805f20c0ee10f2b" kind="variable"><name>low_config</name></member>
+    <member refid="ads1115_8cpp_1a47061fcae597f83f8a0a99d4b7b5a5c1" kind="variable"><name>voltage</name></member>
+    <member refid="ads1115_8cpp_1a99d7469ce0b9bcacba018a9d61fa964e" kind="variable"><name>rcr</name></member>
+    <member refid="ads1115_8cpp_1ac4f474c82e82cbb89ca7c36dd52be0ed" kind="variable"><name>value</name></member>
+    <member refid="ads1115_8cpp_1aeedb5ce0b7eff5eb547a36a07859575c" kind="function"><name>load_config</name></member>
+  </compound>
+  <compound refid="ads1115_8h" kind="file"><name>ads1115.h</name>
+    <member refid="group__group1_1gae55d158023984e8f0ddc80b58d5b30dc" kind="define"><name>ADS1015_ADDRESS</name></member>
+    <member refid="group__group2_1ga0f462c806b353bd682fa3c2d67e66622" kind="define"><name>ADS1015_REG_POINTER_CONVERT</name></member>
+    <member refid="group__group2_1gab9abb781632542a0e7d8b058292f26b1" kind="define"><name>ADS1015_REG_POINTER_CONFIG</name></member>
+    <member refid="group__group2_1ga01582fe1e67b55686d35818696925480" kind="define"><name>ADS1015_REG_POINTER_LOWTHRESH</name></member>
+    <member refid="group__group2_1ga89000549c6dfe50337c7962b7b3677cb" kind="define"><name>ADS1015_REG_POINTER_HITHRESH</name></member>
+    <member refid="group__group3_1ga13f4550d061699b1cf4bd49520fc4a9c" kind="define"><name>ADS1015_REG_CONFIG_OS_SINGLE</name></member>
+    <member refid="group__group3_1gaab6ae96215401637a9435c030e1919a9" kind="define"><name>ADS1015_REG_CONFIG_OS_BUSY</name></member>
+    <member refid="group__group3_1ga7744f0dffe0c80b9052a31b1f1d4d4d3" kind="define"><name>ADS1015_REG_CONFIG_OS_NOTBUSY</name></member>
+    <member refid="group__group4_1ga7db34e6ba1050094aa2f5895594fa473" kind="define"><name>ADS1015_REG_CONFIG_MUX_DIFF_0_1</name></member>
+    <member refid="group__group4_1ga467ee1de37d13577785e33fb6d67e93d" kind="define"><name>ADS1015_REG_CONFIG_MUX_DIFF_0_3</name></member>
+    <member refid="group__group4_1ga59f246f973620f2d59f917187c9aeeb1" kind="define"><name>ADS1015_REG_CONFIG_MUX_DIFF_1_3</name></member>
+    <member refid="group__group4_1ga438ac41e1655d0c8e10a62b36d803696" kind="define"><name>ADS1015_REG_CONFIG_MUX_DIFF_2_3</name></member>
+    <member refid="group__group4_1ga95d034ea82362b3f6573492209aac4f2" kind="define"><name>ADS1015_REG_CONFIG_MUX_SINGLE_0</name></member>
+    <member refid="group__group4_1ga2db511c8817fda53e31b5d1f72601909" kind="define"><name>ADS1015_REG_CONFIG_MUX_SINGLE_1</name></member>
+    <member refid="group__group4_1gae31fb46fbe9801ae7bb9210e88b7162d" kind="define"><name>ADS1015_REG_CONFIG_MUX_SINGLE_2</name></member>
+    <member refid="group__group4_1ga9cb6f8bf1d45341e508cece5bcbc7841" kind="define"><name>ADS1015_REG_CONFIG_MUX_SINGLE_3</name></member>
+    <member refid="group__group5_1gab6fc5aa2e0ced7acd38dd5c30d2f6f29" kind="define"><name>ADS1015_REG_CONFIG_PGA_6_144V</name></member>
+    <member refid="group__group5_1ga6ed67863634add41314604de916b6ed6" kind="define"><name>ADS1015_REG_CONFIG_PGA_4_096V</name></member>
+    <member refid="group__group5_1ga871217d93b9a7614cd921d6aced54338" kind="define"><name>ADS1015_REG_CONFIG_PGA_2_048V</name></member>
+    <member refid="group__group5_1ga84b06e45d01519b8073dcb59dd46b4ac" kind="define"><name>ADS1015_REG_CONFIG_PGA_1_024V</name></member>
+    <member refid="group__group5_1gad6305868e7343c5d83f68acd45a0967f" kind="define"><name>ADS1015_REG_CONFIG_PGA_0_512V</name></member>
+    <member refid="group__group5_1ga7d41c826b50b0b019ddb02e8093287a1" kind="define"><name>ADS1015_REG_CONFIG_PGA_0_256V</name></member>
+    <member refid="group__group6_1gafbb1b96a1b61fae1301ed075330d3a20" kind="define"><name>ADS1015_REG_CONFIG_MODE_CONTIN</name></member>
+    <member refid="group__group6_1ga20780c08ce2027ce7833f27e65d9bb9d" kind="define"><name>ADS1015_REG_CONFIG_MODE_ENDCON</name></member>
+    <member refid="group__group6_1ga50168c1821f075b7296745be1d4d346f" kind="define"><name>ADS1015_REG_CONFIG_MODE_SINGLE</name></member>
+    <member refid="group__group7_1gaff870cc204f306e3aae724e8231f8fdc" kind="define"><name>ADS1115_REG_CONFIG_DR_8SPS</name></member>
+    <member refid="group__group7_1ga482e8bf3819885a814010acb4107f6e1" kind="define"><name>ADS1115_REG_CONFIG_DR_16SPS</name></member>
+    <member refid="group__group7_1ga309e0ecf42b27c5a38126efa61f8a09f" kind="define"><name>ADS1115_REG_CONFIG_DR_32SPS</name></member>
+    <member refid="group__group7_1ga0a53b32fa67a8d36b57f7aceda32efb9" kind="define"><name>ADS1115_REG_CONFIG_DR_64SPS</name></member>
+    <member refid="group__group7_1ga4aff8d5b1b4ac9585952d26ca25385e6" kind="define"><name>ADS1115_REG_CONFIG_DR_128SPS</name></member>
+    <member refid="group__group7_1gac533241f793b44ed72385f71dec1aa25" kind="define"><name>ADS1115_REG_CONFIG_DR_250SPS</name></member>
+    <member refid="group__group7_1ga8eed720123d6bd52580826c2c9ad9e28" kind="define"><name>ADS1115_REG_CONFIG_DR_475SPS</name></member>
+    <member refid="group__group7_1ga9308f41d4c2ff024bbd201efc3b7ff69" kind="define"><name>ADS1115_REG_CONFIG_DR_860SPS</name></member>
+    <member refid="group__group8_1gafb5240325d7ec757ccad7b098a2b93c3" kind="define"><name>ADS1015_REG_CONFIG_CMODE_TRAD</name></member>
+    <member refid="group__group8_1ga49d39ffb8fb66bdb877d0f2546137cce" kind="define"><name>ADS1015_REG_CONFIG_CMODE_WINDOW</name></member>
+    <member refid="group__group9_1ga775f732c7e97574b38858820b96cf771" kind="define"><name>ADS1015_REG_CONFIG_CPOL_ACTVLOW</name></member>
+    <member refid="group__group9_1ga81494a3f6eaf337f4132cc32bba9f28d" kind="define"><name>ADS1015_REG_CONFIG_CPOL_ACTVHI</name></member>
+    <member refid="group__group10_1ga98757804761f1d945f4cf6ca40e30457" kind="define"><name>ADS1015_REG_CONFIG_CLAT_NONLAT</name></member>
+    <member refid="group__group10_1gaf7f9528dd1aee135afad4c44d771b9f6" kind="define"><name>ADS1015_REG_CONFIG_CLAT_LATCH</name></member>
+    <member refid="group__group11_1ga4889b7e8a019906eb7c2670ec2466917" kind="define"><name>ADS1015_REG_CONFIG_CQUE_1CONV</name></member>
+    <member refid="group__group11_1ga88a73e81b13059b1f4756cf5c8a342a3" kind="define"><name>ADS1015_REG_CONFIG_CQUE_2CONV</name></member>
+    <member refid="group__group11_1gad14f479d9c6f636631444de22dd7b133" kind="define"><name>ADS1015_REG_CONFIG_CQUE_4CONV</name></member>
+    <member refid="group__group11_1gaa52ede69f39daf837bb2ebbe639dbef9" kind="define"><name>ADS1015_REG_CONFIG_CQUE_NONE</name></member>
+    <member refid="group__group12_1gacc3350d9056e6b44520992c3244ec45b" kind="define"><name>ADS1115_REG_THRESH_MSB_1</name></member>
+    <member refid="group__group12_1ga1a0131797adb1ee39337b6f9de55fa9e" kind="define"><name>ADS1115_REG_THRESH_MSB_0</name></member>
+  </compound>
+  <compound refid="_g_p_i_olis_8cpp" kind="file"><name>GPIOlis.cpp</name>
+    <member refid="_g_p_i_olis_8cpp_1a6715efeafc8103a65e244026d957b70b" kind="variable"><name>gpipinterrupt</name></member>
+    <member refid="_g_p_i_olis_8cpp_1a4f14f0593fff5e3ca0491b3962e6544f" kind="variable"><name>cmdmtx</name></member>
+    <member refid="_g_p_i_olis_8cpp_1ad7831c642a7240a6d74f929a1158d448" kind="function"><name>interrupt2</name></member>
+  </compound>
+  <compound refid="_g_p_i_olis_8h" kind="file"><name>GPIOlis.h</name>
+    <member refid="_g_p_i_olis_8h_1a6715efeafc8103a65e244026d957b70b" kind="variable"><name>gpipinterrupt</name></member>
+  </compound>
+  <compound refid="_rpi__end_2_rpi__end__together_2main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="_rpi__end_2_rpi__end__together_2main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="_server__end_2_server___pong___g_u_i__all__together_2main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="_server__end_2_server___pong___g_u_i__all__together_2main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="window_8cpp" kind="file"><name>window.cpp</name>
+    <member refid="window_8cpp_1a1b7ba51c7dba40b32bb78cc0fd8074ca" kind="variable"><name>order</name></member>
+    <member refid="window_8cpp_1a072a980c304a396787f46c29aa3bd5f1" kind="variable"><name>samplingrate</name></member>
+    <member refid="window_8cpp_1a750b5d744c39a06bfb13e6eb010e35d0" kind="variable"><name>index</name></member>
+    <member refid="window_8cpp_1a9c9ab370a04018e645c8edafbf2113f1" kind="variable"><name>sderprt</name></member>
+    <member refid="window_8cpp_1aa9a1e71de06461b110d2c761035de556" kind="variable"><name>rscverprt</name></member>
+    <member refid="window_8cpp_1aa4d944473c2ce72052d24e8e4eaa96ce" kind="variable"><name>florigin</name></member>
+    <member refid="window_8cpp_1a89274b7113af845f693045514ab79d06" kind="variable"><name>flhp1</name></member>
+    <member refid="window_8cpp_1a9cdc0952ddae0cb682503cc9b5bb8019" kind="variable"><name>flpower</name></member>
+    <member refid="window_8cpp_1aedcba60e51029a554adc10c3097a6af8" kind="variable"><name>hp1</name></member>
+  </compound>
+  <compound refid="window_8h" kind="file"><name>window.h</name>
+  </compound>
+  <compound refid="mainwindow_8cpp" kind="file"><name>mainwindow.cpp</name>
+    <member refid="mainwindow_8cpp_1a751e9208ccfadf03cebca9cdcf8bc8ef" kind="variable"><name>rsPort</name></member>
+  </compound>
+  <compound refid="mainwindow_8h" kind="file"><name>mainwindow.h</name>
+  </compound>
+  <compound refid="group__group1" kind="group"><name>group1</name>
+    <member refid="group__group1_1gae55d158023984e8f0ddc80b58d5b30dc" kind="define"><name>ADS1015_ADDRESS</name></member>
+  </compound>
+  <compound refid="group__group2" kind="group"><name>group2</name>
+    <member refid="group__group2_1ga0f462c806b353bd682fa3c2d67e66622" kind="define"><name>ADS1015_REG_POINTER_CONVERT</name></member>
+    <member refid="group__group2_1gab9abb781632542a0e7d8b058292f26b1" kind="define"><name>ADS1015_REG_POINTER_CONFIG</name></member>
+    <member refid="group__group2_1ga01582fe1e67b55686d35818696925480" kind="define"><name>ADS1015_REG_POINTER_LOWTHRESH</name></member>
+    <member refid="group__group2_1ga89000549c6dfe50337c7962b7b3677cb" kind="define"><name>ADS1015_REG_POINTER_HITHRESH</name></member>
+  </compound>
+  <compound refid="group__group3" kind="group"><name>group3</name>
+    <member refid="group__group3_1ga13f4550d061699b1cf4bd49520fc4a9c" kind="define"><name>ADS1015_REG_CONFIG_OS_SINGLE</name></member>
+    <member refid="group__group3_1gaab6ae96215401637a9435c030e1919a9" kind="define"><name>ADS1015_REG_CONFIG_OS_BUSY</name></member>
+    <member refid="group__group3_1ga7744f0dffe0c80b9052a31b1f1d4d4d3" kind="define"><name>ADS1015_REG_CONFIG_OS_NOTBUSY</name></member>
+  </compound>
+  <compound refid="group__group4" kind="group"><name>group4</name>
+    <member refid="group__group4_1ga7db34e6ba1050094aa2f5895594fa473" kind="define"><name>ADS1015_REG_CONFIG_MUX_DIFF_0_1</name></member>
+    <member refid="group__group4_1ga467ee1de37d13577785e33fb6d67e93d" kind="define"><name>ADS1015_REG_CONFIG_MUX_DIFF_0_3</name></member>
+    <member refid="group__group4_1ga59f246f973620f2d59f917187c9aeeb1" kind="define"><name>ADS1015_REG_CONFIG_MUX_DIFF_1_3</name></member>
+    <member refid="group__group4_1ga438ac41e1655d0c8e10a62b36d803696" kind="define"><name>ADS1015_REG_CONFIG_MUX_DIFF_2_3</name></member>
+    <member refid="group__group4_1ga95d034ea82362b3f6573492209aac4f2" kind="define"><name>ADS1015_REG_CONFIG_MUX_SINGLE_0</name></member>
+    <member refid="group__group4_1ga2db511c8817fda53e31b5d1f72601909" kind="define"><name>ADS1015_REG_CONFIG_MUX_SINGLE_1</name></member>
+    <member refid="group__group4_1gae31fb46fbe9801ae7bb9210e88b7162d" kind="define"><name>ADS1015_REG_CONFIG_MUX_SINGLE_2</name></member>
+    <member refid="group__group4_1ga9cb6f8bf1d45341e508cece5bcbc7841" kind="define"><name>ADS1015_REG_CONFIG_MUX_SINGLE_3</name></member>
+  </compound>
+  <compound refid="group__group5" kind="group"><name>group5</name>
+    <member refid="group__group5_1gab6fc5aa2e0ced7acd38dd5c30d2f6f29" kind="define"><name>ADS1015_REG_CONFIG_PGA_6_144V</name></member>
+    <member refid="group__group5_1ga6ed67863634add41314604de916b6ed6" kind="define"><name>ADS1015_REG_CONFIG_PGA_4_096V</name></member>
+    <member refid="group__group5_1ga871217d93b9a7614cd921d6aced54338" kind="define"><name>ADS1015_REG_CONFIG_PGA_2_048V</name></member>
+    <member refid="group__group5_1ga84b06e45d01519b8073dcb59dd46b4ac" kind="define"><name>ADS1015_REG_CONFIG_PGA_1_024V</name></member>
+    <member refid="group__group5_1gad6305868e7343c5d83f68acd45a0967f" kind="define"><name>ADS1015_REG_CONFIG_PGA_0_512V</name></member>
+    <member refid="group__group5_1ga7d41c826b50b0b019ddb02e8093287a1" kind="define"><name>ADS1015_REG_CONFIG_PGA_0_256V</name></member>
+  </compound>
+  <compound refid="group__group6" kind="group"><name>group6</name>
+    <member refid="group__group6_1gafbb1b96a1b61fae1301ed075330d3a20" kind="define"><name>ADS1015_REG_CONFIG_MODE_CONTIN</name></member>
+    <member refid="group__group6_1ga20780c08ce2027ce7833f27e65d9bb9d" kind="define"><name>ADS1015_REG_CONFIG_MODE_ENDCON</name></member>
+    <member refid="group__group6_1ga50168c1821f075b7296745be1d4d346f" kind="define"><name>ADS1015_REG_CONFIG_MODE_SINGLE</name></member>
+  </compound>
+  <compound refid="group__group7" kind="group"><name>group7</name>
+    <member refid="group__group7_1gaff870cc204f306e3aae724e8231f8fdc" kind="define"><name>ADS1115_REG_CONFIG_DR_8SPS</name></member>
+    <member refid="group__group7_1ga482e8bf3819885a814010acb4107f6e1" kind="define"><name>ADS1115_REG_CONFIG_DR_16SPS</name></member>
+    <member refid="group__group7_1ga309e0ecf42b27c5a38126efa61f8a09f" kind="define"><name>ADS1115_REG_CONFIG_DR_32SPS</name></member>
+    <member refid="group__group7_1ga0a53b32fa67a8d36b57f7aceda32efb9" kind="define"><name>ADS1115_REG_CONFIG_DR_64SPS</name></member>
+    <member refid="group__group7_1ga4aff8d5b1b4ac9585952d26ca25385e6" kind="define"><name>ADS1115_REG_CONFIG_DR_128SPS</name></member>
+    <member refid="group__group7_1gac533241f793b44ed72385f71dec1aa25" kind="define"><name>ADS1115_REG_CONFIG_DR_250SPS</name></member>
+    <member refid="group__group7_1ga8eed720123d6bd52580826c2c9ad9e28" kind="define"><name>ADS1115_REG_CONFIG_DR_475SPS</name></member>
+    <member refid="group__group7_1ga9308f41d4c2ff024bbd201efc3b7ff69" kind="define"><name>ADS1115_REG_CONFIG_DR_860SPS</name></member>
+  </compound>
+  <compound refid="group__group8" kind="group"><name>group8</name>
+    <member refid="group__group8_1gafb5240325d7ec757ccad7b098a2b93c3" kind="define"><name>ADS1015_REG_CONFIG_CMODE_TRAD</name></member>
+    <member refid="group__group8_1ga49d39ffb8fb66bdb877d0f2546137cce" kind="define"><name>ADS1015_REG_CONFIG_CMODE_WINDOW</name></member>
+  </compound>
+  <compound refid="group__group9" kind="group"><name>group9</name>
+    <member refid="group__group9_1ga775f732c7e97574b38858820b96cf771" kind="define"><name>ADS1015_REG_CONFIG_CPOL_ACTVLOW</name></member>
+    <member refid="group__group9_1ga81494a3f6eaf337f4132cc32bba9f28d" kind="define"><name>ADS1015_REG_CONFIG_CPOL_ACTVHI</name></member>
+  </compound>
+  <compound refid="group__group10" kind="group"><name>group10</name>
+    <member refid="group__group10_1ga98757804761f1d945f4cf6ca40e30457" kind="define"><name>ADS1015_REG_CONFIG_CLAT_NONLAT</name></member>
+    <member refid="group__group10_1gaf7f9528dd1aee135afad4c44d771b9f6" kind="define"><name>ADS1015_REG_CONFIG_CLAT_LATCH</name></member>
+  </compound>
+  <compound refid="group__group11" kind="group"><name>group11</name>
+    <member refid="group__group11_1ga4889b7e8a019906eb7c2670ec2466917" kind="define"><name>ADS1015_REG_CONFIG_CQUE_1CONV</name></member>
+    <member refid="group__group11_1ga88a73e81b13059b1f4756cf5c8a342a3" kind="define"><name>ADS1015_REG_CONFIG_CQUE_2CONV</name></member>
+    <member refid="group__group11_1gad14f479d9c6f636631444de22dd7b133" kind="define"><name>ADS1015_REG_CONFIG_CQUE_4CONV</name></member>
+    <member refid="group__group11_1gaa52ede69f39daf837bb2ebbe639dbef9" kind="define"><name>ADS1015_REG_CONFIG_CQUE_NONE</name></member>
+  </compound>
+  <compound refid="group__group12" kind="group"><name>group12</name>
+    <member refid="group__group12_1gacc3350d9056e6b44520992c3244ec45b" kind="define"><name>ADS1115_REG_THRESH_MSB_1</name></member>
+    <member refid="group__group12_1ga1a0131797adb1ee39337b6f9de55fa9e" kind="define"><name>ADS1115_REG_THRESH_MSB_0</name></member>
+  </compound>
+  <compound refid="md__home_finlay__r_t_e_p1__r_e_a_d_m_e" kind="page"><name>md__home_finlay_RTEP1_README</name>
+  </compound>
+  <compound refid="dir_f4c6a60d396f8e1b9459245a709869c7" kind="dir"><name>/home/finlay/RTEP1/Rpi_end</name>
+  </compound>
+  <compound refid="dir_32ed0438d63cc1dbaec5c85a84ff8525" kind="dir"><name>/home/finlay/RTEP1/Rpi_end/Rpi_end_together</name>
+  </compound>
+  <compound refid="dir_4737b40e368aaeddf12f82af8316bda1" kind="dir"><name>/home/finlay/RTEP1</name>
+  </compound>
+  <compound refid="dir_1bb09fde301ad63eca39b934e96a578c" kind="dir"><name>/home/finlay/RTEP1/Server_end</name>
+  </compound>
+  <compound refid="dir_68b4530337b1df916aa0a76eefca12cb" kind="dir"><name>/home/finlay/RTEP1/Server_end/Server_Pong_GUI_all_together</name>
+  </compound>
+</doxygenindex>

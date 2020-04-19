@@ -1,0 +1,55 @@
+.TH "group6" 3 "Sun Apr 19 2020" "Muscle Power Gaming" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+group6 \- ADS1115 Bit[8]\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBADS1015_REG_CONFIG_MODE_CONTIN\fP   (0x0000)"
+.br
+.RI "Continuous conversion mode\&. "
+.ti -1c
+.RI "#define \fBADS1015_REG_CONFIG_MODE_ENDCON\fP   (0x8583)"
+.br
+.RI "Shut down continuous conversion\&. "
+.ti -1c
+.RI "#define \fBADS1015_REG_CONFIG_MODE_SINGLE\fP   (0x0100)"
+.br
+.RI "Power-down single-shot mode (DEFAULT) "
+.in -1c
+.SH "Detailed Description"
+.PP 
+ADS1115 Bit[8]\&. 
+
+This bit controls the operational mode of the ADS1115\&.
+.PP
+The DEFAULT setting is power-down single-shot mode\&. 
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define ADS1015_REG_CONFIG_MODE_CONTIN   (0x0000)"
+
+.PP
+Continuous conversion mode\&. 
+.PP
+Definition at line 244 of file ads1115\&.h\&.
+.SS "#define ADS1015_REG_CONFIG_MODE_ENDCON   (0x8583)"
+
+.PP
+Shut down continuous conversion\&. 
+.PP
+Definition at line 245 of file ads1115\&.h\&.
+.SS "#define ADS1015_REG_CONFIG_MODE_SINGLE   (0x0100)"
+
+.PP
+Power-down single-shot mode (DEFAULT) 
+.PP
+Definition at line 246 of file ads1115\&.h\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Muscle Power Gaming from the source code\&.

@@ -1,0 +1,117 @@
+.TH "/home/finlay/RTEP1/Rpi_end/Rpi_end_together/window.cpp" 3 "Sun Apr 19 2020" "Muscle Power Gaming" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/home/finlay/RTEP1/Rpi_end/Rpi_end_together/window.cpp \- Stuff\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <cmath>\fP
+.br
+\fC#include <QObject>\fP
+.br
+\fC#include <Iir\&.h>\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include 'window\&.h'\fP
+.br
+\fC#include 'ads1115\&.h'\fP
+.br
+\fC#include 'GPIOlis\&.h'\fP
+.br
+
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "const int \fBorder\fP = 40"
+.br
+.RI "Order of the IIR filter\&. "
+.ti -1c
+.RI "const float \fBsamplingrate\fP = 860"
+.br
+.RI "Data rate for sampling incoming signals\&. "
+.ti -1c
+.RI "int \fBindex\fP = 0"
+.br
+.RI "An index counter used in the for-loop within \fBWindow::Window\fP\&. "
+.ti -1c
+.RI "const quint16 \fBsderprt\fP = 1117"
+.br
+.ti -1c
+.RI "const quint16 \fBrscverprt\fP = 1112"
+.br
+.ti -1c
+.RI "FILE * \fBflorigin\fP = NULL"
+.br
+.ti -1c
+.RI "FILE * \fBflhp1\fP = NULL"
+.br
+.ti -1c
+.RI "FILE * \fBflpower\fP =NULL"
+.br
+.ti -1c
+.RI "Iir::Butterworth::HighPass< \fBorder\fP > \fBhp1\fP"
+.br
+.RI "A high-pass Butterworth IIR filter\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Stuff\&. 
+
+This demo is to test the \fBads1115\fP lib self-written to sample continously no such lib for \fBads1115\fP in c++ yet\&. In this test demo the ads sampling is controlled by timer instead of interrupt\&. This is not because we can't\&. This is to separate the lib and expose if any bug the interrupt thread unit will soon comes out 
+.PP
+Definition in file \fBwindow\&.cpp\fP\&.
+.SH "Variable Documentation"
+.PP 
+.SS "FILE* flhp1 = NULL"
+
+.PP
+Definition at line 35 of file window\&.cpp\&.
+.SS "FILE* florigin = NULL"
+
+.PP
+Definition at line 34 of file window\&.cpp\&.
+.SS "FILE* flpower =NULL"
+
+.PP
+Definition at line 36 of file window\&.cpp\&.
+.SS "Iir::Butterworth::HighPass<\fBorder\fP> hp1"
+
+.PP
+A high-pass Butterworth IIR filter\&. The order of this instance of the filter is defined by the 'order' variable 
+.PP
+Definition at line 44 of file window\&.cpp\&.
+.SS "int index = 0"
+
+.PP
+An index counter used in the for-loop within \fBWindow::Window\fP\&. 
+.PP
+Definition at line 29 of file window\&.cpp\&.
+.SS "const int order = 40"
+
+.PP
+Order of the IIR filter\&. 
+.PP
+Definition at line 25 of file window\&.cpp\&.
+.SS "const quint16 rscverprt = 1112"
+
+.PP
+Definition at line 32 of file window\&.cpp\&.
+.SS "const float samplingrate = 860"
+
+.PP
+Data rate for sampling incoming signals\&. 
+.PP
+Definition at line 27 of file window\&.cpp\&.
+.SS "const quint16 sderprt = 1117"
+
+.PP
+Definition at line 31 of file window\&.cpp\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Muscle Power Gaming from the source code\&.

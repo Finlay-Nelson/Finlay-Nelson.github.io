@@ -1,0 +1,101 @@
+A repository to demomstrate the use of a Raspberry Pi in controlling a video game with realtime E\+MG signals. This is part of a course hosted by the University of Glasgow in Real Time Embedded Programming.
+
+The repository describes how to measure E\+MG signals from the user\textquotesingle{}s bicep and/or ticep muscles \+:muscle\+:, and how these are then used in turn to control the movement of a paddle in the classic game Pong \doxygenemoji{\+:ping\+\_\+pong\+:}{ping_pong} (the principles being completely transferrable to other relatively rudimentary games).
+
+\doxysection*{Premise}
+
+The simplest video games have very limited inputs. For some this is simply left/right, while for others it may be up/down/left/right. This makes it relatively straightforward to hack these inputs to be controlled by E\+MG signals (one muscle controls left, another right, etc). With a 4 channel system, we hope to be able to accomodate single-\/player versions of games requiring 4 input options, or multiplayer versions of games requiring only 2 (a safe outlet for any pent up testosterone!).
+
+The primary use of this system is to increase the level of submersion the player feels within the gaming environment, providing a new challenge, and adding a new dimension to the gaming experience. The system also has potential application in the field of rehabilitation, encouraging persistence with otherwise unpleasent rehabilitation regimes.
+
+\doxysection*{E\+MG Measurement}
+
+Here we provide a description of the methods that should be employed in measuring user E\+MG. In light of the recent Covid-\/19 outbreak, the hardware components of this project remain incomplete and as such sample E\+MG data was instead obtained using a \href{https://www.linux-usb-daq.co.uk/order2/}{\texttt{ U\+S\+B-\/\+D\+UX}} and bioamplifier for software testing purposes. The acquired E\+MG data has been deposited in Gitlab, and can be found through the link below, along with an example Python script for filtering and plotting.
+
+\href{https://gitlab.com/HenryCowan/rte-emg-signals/-/tree/master}{\texttt{ Sample Data}}
+
+Standard Ag/\+Ag\+Cl electrodes should be place approximately 20cm apart on the chosen muscle(s). In our case, measuring 4 channels, this required a pair of electrodes on each bicep and a pair on each tricep, with a further electrode attached to the ankle to act as ground (9 total). For a 2 channel approach, any 2 pairs of electrodes may be discounted, leaving 5 total.
+
+Had the hardware components been completed, these signals would be sent through a two stage amplifer, the first a differential stage and the second a gain stage. The output from the amplifier is sent to an A\+DC (A\+D\+S1115) and passed to a Raspberry Pi via the I2C bus protocol for post-\/processing and game connection. Using the sample E\+MG data, the amplifification stage was subverted, applying directly to the A\+DC component. ~\newline
+
+
+\doxysubsection*{Outcomes}
+
+
+\begin{DoxyItemize}
+\item A P\+CB using the A\+D7705 has been produced to read an artificial stream of data. This will allow data handling to be explored while fabricating and testing components associated with acquiring E\+MG data.
+\item The A\+DC for the E\+MG recording has been selected as the A\+D\+S1115, and is being implemented into a custom P\+CB with 4 channel inputs. The specifications of the A\+D\+S1115 can be found through the link below\+:
+\end{DoxyItemize}
+
+\href{http://www.ti.com/lit/ds/symlink/ads1114.pdf}{\texttt{ A\+D\+S1115 Spec Sheet}}
+
+
+\begin{DoxyItemize}
+\item Through use of the QT toolkit, a realtime plotting script has been tested. It is thought that presenting this to the user as a form of biofeedback could act as an effective means of encouragement.
+\item The P\+CB using the A\+D\+S1115 now detects data in realtime from 1 channel using I2C.
+\item R\+P\+I-\/end software
+\begin{DoxyItemize}
+\item \href{https://github.com/TheUltraSoundGuys/RTEP/tree/master/Rpi_end/Ads1115ContinousDriver}{\texttt{ A\+D\+S1115 driver}} reads in continuous data.
+\item Interrupt based sampling achieved using the \href{https://github.com/TheUltraSoundGuys/RTEP/tree/master/Rpi_end/Rpi\%20end\%20together}{\texttt{ G\+P\+I\+Olis command}}.
+\item Working \href{https://github.com/TheUltraSoundGuys/RTEP/tree/master/Rpi_end/unit\%20tests\%20in\%20RPI\%20end/Data\%20filter\%2Budp\%20sending\%20unit}{\texttt{ I\+IR filter}}.
+\item \href{https://github.com/TheUltraSoundGuys/RTEP/tree/master/Rpi_end/unit\%20tests\%20in\%20RPI\%20end/Data\%20filter\%2Budp\%20sending\%20unit}{\texttt{ Time smoothing}} of E\+MG data acheived
+\item Transmission of filtered and smoothed E\+MG data via \href{https://github.com/TheUltraSoundGuys/RTEP/blob/master/Rpi_end/unit\%20tests\%20in\%20RPI\%20end/Data\%20filter\%2Budp\%20sending\%20unit/window.cpp}{\texttt{ U\+DP}}.
+\item \href{https://github.com/TheUltraSoundGuys/RTEP/blob/master/Rpi_end/unit\%20tests\%20in\%20RPI\%20end/Data\%20filter\%2Budp\%20sending\%20unit/window.cpp}{\texttt{ Plotting}} of the E\+MG data achieved.
+\end{DoxyItemize}
+\item Server end (Android) software
+\begin{DoxyItemize}
+\item \href{https://github.com/TheUltraSoundGuys/RTEP/tree/master/Server_end/Server\%20Pong\%20GUI-all\%20together}{\texttt{ Pong game}} controlled by E\+MG signal (2 channel, for single channel see branch single-\/ch).
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+{\bfseries{And all of this done synchronously and in real-\/time! For an example video of each process, see the R\+E\+A\+D\+ME in each folder}}
+
+\doxysubsection*{Social Media}
+
+Below are the links to our Facebook and Twitter pages where you can keep up to date with all our latest and most exciting developments!
+
+\href{https://www.facebook.com/EMGamingRPI/}{\texttt{ Muscle Power Gaming -\/ Facebook}}
+
+\href{https://twitter.com/emg_pi}{\texttt{ Muscle Power Gaming -\/ Twitter}}
+
+\doxysubsection*{C\+O\+V\+ID Disruption}
+
+Due to the current circumstances, sections of the project could not be completed, primarily the hardware component. As can be seen from the Wiki page much effort was given in the hardware design and construction however there was a fault with the final P\+CB displayed. The amplification step was working and clock and data signals were being read succesfully from a signal generator however the R\+Pi was unable to detect any i2c devices connected. The last few days we had before the university closuer were spent trying to resolve this issue but to no avail. As the group had no access to soldering irons or components and the hardware and software developer were in different cities, this made development of the hardware impossible.
+
+The solution to this frustrating issue was to provide rigorous unit tests with firstly a matrix board that we had developed earlier in the project. This board has a A\+D\+S1115 chip attached with floating inputs and an output that was connected to the R\+Pi. From this board we could present real-\/time interrupt based sampling from interaction with one of the G\+P\+IO outputs of the R\+Pi. The inputs of the board were connected to a signal generator and realtime filtering, time-\/smoothing and interrupt based samping was presented as well as this signal being sent to the internet via U\+DP. We also managed to achieve signal integration with the game as shown in... by using pre-\/recorded E\+MG signals we captured before lab closure.
+
+If the issue of the I2C address detection was solved with the final P\+CB, the board would have been working in full. Hopefully from these unit test videos it can be seen just how frustratingly close we were!
+
+\doxysubsection*{Contribution}
+
+
+\begin{DoxyItemize}
+\item Henry Cowan
+\begin{DoxyItemize}
+\item Circuit Design
+\item Schematic draw-\/up
+\item P\+CB Design
+\item P\+CB Construction
+\item Component Selection
+\item Hardware Documentation
+\item Wiki Page
+\item E\+MG Signal Gitlab Repo
+\item General Github Maintenance
+\end{DoxyItemize}
+\item Zonghan Gan
+\begin{DoxyItemize}
+\item Data Processing
+\item U\+DP Transmission
+\item A\+DC driver
+\item G\+P\+IO Interrupt System
+\item Android Server
+\item The Game
+\end{DoxyItemize}
+\item Finlay Nelson
+\begin{DoxyItemize}
+\item Software Documentation
+\item E\+MG Test Signal Recording
+\item Social Media Presence
+\item Github Maintenance 
+\end{DoxyItemize}
+\end{DoxyItemize}

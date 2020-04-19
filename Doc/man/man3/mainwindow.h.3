@@ -1,0 +1,88 @@
+.TH "/home/finlay/RTEP1/Server_end/Server_Pong_GUI_all_together/mainwindow.h" 3 "Sun Apr 19 2020" "Muscle Power Gaming" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/home/finlay/RTEP1/Server_end/Server_Pong_GUI_all_together/mainwindow.h \- Produces the GUI window from which the EMG-controlled Pong game can be played\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <QObject>\fP
+.br
+\fC#include <QGraphicsScene>\fP
+.br
+\fC#include <QMainWindow>\fP
+.br
+\fC#include <QUdpSocket>\fP
+.br
+\fC#include <QElapsedTimer>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBMainWindow\fP"
+.br
+.RI "Contains the functions and variables relating to the GUI window\&. "
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBUi\fP"
+.br
+.RI "Defines a namespace for declaration of window functions specific to the game GUI\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Produces the GUI window from which the EMG-controlled Pong game can be played\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Zognhan Gan 
+.PP
+Finlay Nelson 
+.PP
+Henry Cowan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+11 April 2020 This file contains all the information surrounding the production of the GUI for the EMG-based Pong game\&. The \fBQt\fP toolkit is used to generate simple rectangle objects to act as the paddles and an ellipse object for the ball, placing them into a graphics scene\&. These objects can then be moved around the graphics scene according to the processed ADC output (filtered EMG signal)\&.
+.RE
+.PP
+Include files:
+.IP "\(bu" 2
+\fBQObject\fP
+.IP "\(bu" 2
+\fBQGraphicsScene\fP
+.IP "\(bu" 2
+\fBQMainWindow\fP
+.IP "\(bu" 2
+\fBQUdpSocket\fP
+.IP "\(bu" 2
+\fBQElapsedTimer\fP
+.PP
+Member Functions:
+.IP "\(bu" 2
+\fBMainWindow()\fP
+.IP "\(bu" 2
+~MainWindow()
+.IP "\(bu" 2
+refreshScore()
+.IP "\(bu" 2
+Position()
+.IP "\(bu" 2
+CpuP1Motion()
+.IP "\(bu" 2
+receive()
+.PP
+
+.PP
+Definition in file \fBmainwindow\&.h\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Muscle Power Gaming from the source code\&.

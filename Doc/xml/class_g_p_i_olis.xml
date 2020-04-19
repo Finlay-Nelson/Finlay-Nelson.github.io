@@ -1,0 +1,368 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="class_g_p_i_olis" kind="class" language="C++" prot="public">
+    <compoundname>GPIOlis</compoundname>
+    <basecompoundref refid="qthread" prot="public" virt="non-virtual">QThread</basecompoundref>
+    <includes refid="_g_p_i_olis_8h" local="no">GPIOlis.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_g_p_i_olis_1ae86ee364670cfe22722a5d9f612e9aa4" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GPIOlis::flag</definition>
+        <argsstring></argsstring>
+        <name>flag</name>
+        <initializer>=1</initializer>
+        <briefdescription>
+<para>Denotes whether data can successfully be read using the wiringpi library. Within the <ref refid="class_g_p_i_olis_1a65d2d0d0faf0d9edc0b31ddb51e88d2b" kindref="member">GPIOlis::run()</ref> function, &quot;flag&quot; takes the value of 0 if an error is returned during execution of either of the wiringPiSetup() or wiringPiISR() functions. For as long as the value of &quot;flag&quot; remains 1 after initialisation of the <ref refid="class_g_p_i_olis_1a65d2d0d0faf0d9edc0b31ddb51e88d2b" kindref="member">run()</ref> function, the callback in the <ref refid="class_g_p_i_olis_1a65d2d0d0faf0d9edc0b31ddb51e88d2b" kindref="member">GPIOlis::run()</ref> function is exdcutred. &quot;flag&quot; takes an initial value of 1 such that only an unsuccssful (false) execution of the wiringPi functions results in a 0 value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/GPIOlis.h" line="46" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/GPIOlis.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_g_p_i_olis_1a4dd64eebb025a26b454d17176e70aaf8" prot="private" static="no" mutable="no">
+        <type><ref refid="classads1115" kindref="compound">ads1115</ref> *</type>
+        <definition>ads1115* GPIOlis::ads1</definition>
+        <argsstring></argsstring>
+        <name>ads1</name>
+        <briefdescription>
+<para>An instance of the <ref refid="classads1115" kindref="compound">ads1115</ref> class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This object allows access to the members of the <ref refid="classads1115" kindref="compound">ads1115</ref> class, for signal read and conversion. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/GPIOlis.h" line="100" column="13" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/GPIOlis.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_g_p_i_olis_1a81e5f98d39e2ae03bf0ab38466ad24bd" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GPIOlis::count</definition>
+        <argsstring></argsstring>
+        <name>count</name>
+        <briefdescription>
+<para>A simple counter for monitoring the iterrations of the <ref refid="class_g_p_i_olis_1a844470403deaa7436a19b8aef29eac5b" kindref="member">interrupt()</ref> function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Instantiates through the <ref refid="class_g_p_i_olis_1a428a2f8c4b0bd64b769f1526c61c5dac" kindref="member">GPIOlis()</ref> function to keep track of the number of interrupts performe. The value increments each time the <ref refid="class_g_p_i_olis_1a844470403deaa7436a19b8aef29eac5b" kindref="member">GPIOlis::interrupt()</ref> function is executed. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/GPIOlis.h" line="80" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/GPIOlis.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_g_p_i_olis_1a428a2f8c4b0bd64b769f1526c61c5dac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GPIOlis::GPIOlis</definition>
+        <argsstring>(QObject *parent=0)</argsstring>
+        <name>GPIOlis</name>
+        <param>
+          <type><ref refid="qobject" kindref="compound" external="/home/finlay/Repo/doc/qtcore/qtcore.tags">QObject</ref> *</type>
+          <declname>parent</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>The constructor of the <ref refid="class_g_p_i_olis" kindref="compound">GPIOlis</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates an instance of the <ref refid="classads1115" kindref="compound">ads1115</ref> class. The constructor also instantiates a counter to track the number of conversions performed. </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>&lt; A new instance of the class <ref refid="classads1115" kindref="compound">ads1115</ref></para>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/GPIOlis.h" line="55" column="5" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/GPIOlis.cpp" bodystart="55" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class_g_p_i_olis_1a9095dfa3056b0f1c4026f6018f0f7ba7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GPIOlis::~GPIOlis</definition>
+        <argsstring>()</argsstring>
+        <name>~GPIOlis</name>
+        <briefdescription>
+<para>The destructor of the <ref refid="class_g_p_i_olis" kindref="compound">GPIOlis</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Destroys the <ref refid="class_g_p_i_olis" kindref="compound">GPIOlis</ref> object. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/GPIOlis.h" line="62" column="5" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/GPIOlis.cpp" bodystart="71" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="class_g_p_i_olis_1a844470403deaa7436a19b8aef29eac5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GPIOlis::interrupt</definition>
+        <argsstring>(void)</argsstring>
+        <name>interrupt</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Emits the <ref refid="class_g_p_i_olis_1ac36d3b9264536731e3458ed295666719" kindref="member">readyread()</ref> signal with a measured voltage in response to an interrupt. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Uses the readsig() function of the <ref refid="classads1115" kindref="compound">ads1115</ref> class to measure an input voltage before emitting the <ref refid="class_g_p_i_olis_1ac36d3b9264536731e3458ed295666719" kindref="member">readyread()</ref> signal containing the voltage result. A counter keeps track of the number of conversions performed (uses of the <ref refid="class_g_p_i_olis_1a844470403deaa7436a19b8aef29eac5b" kindref="member">interrupt()</ref> function), each time alerting the onset of conversion through the qDebug() slot.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/GPIOlis.h" line="72" column="10" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/GPIOlis.cpp" bodystart="62" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="class_g_p_i_olis_1a06b2b0dbfd20843e43a5015c2c1cf829" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GPIOlis::quit</definition>
+        <argsstring>()</argsstring>
+        <name>quit</name>
+        <briefdescription>
+<para>Exit continuous conversion mode of the ADC and exits the existing thread. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Applies the GPIOlis::endads() function to the <ref refid="classads1115" kindref="compound">ads1115</ref> object, exiting the continuous conversion mode of the ADC. The object is then deleted before exiting the thread.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/GPIOlis.h" line="90" column="10" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/GPIOlis.cpp" bodystart="113" bodyend="118"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_g_p_i_olis_1a65d2d0d0faf0d9edc0b31ddb51e88d2b" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void GPIOlis::run</definition>
+        <argsstring>()</argsstring>
+        <name>run</name>
+        <reimplements refid="qthread_1run">run</reimplements>
+        <briefdescription>
+<para>A call back function to execute <ref refid="class_g_p_i_olis_1a844470403deaa7436a19b8aef29eac5b" kindref="member">GPIOlis::interrupt()</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If use of the wiringPiSetup() and wiringPiISR() functions does not return an error, and &quot;gpipinterrupt&quot; takes the value of 1, the <ref refid="class_g_p_i_olis_1a844470403deaa7436a19b8aef29eac5b" kindref="member">GPIOlis::interrupt()</ref> function is triggered.. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/GPIOlis.h" line="110" column="10" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/GPIOlis.cpp" bodystart="74" bodyend="110"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="signal">
+      <memberdef kind="signal" id="class_g_p_i_olis_1a1e658d32e43003c3612ba46bd99a1732" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GPIOlis::ready</definition>
+        <argsstring>()</argsstring>
+        <name>ready</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/GPIOlis.h" line="115" column="10"/>
+      </memberdef>
+      <memberdef kind="signal" id="class_g_p_i_olis_1ac36d3b9264536731e3458ed295666719" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GPIOlis::readyread</definition>
+        <argsstring>(float voltage)</argsstring>
+        <name>readyread</name>
+        <param>
+          <type>float</type>
+          <declname>voltage</declname>
+        </param>
+        <briefdescription>
+<para>A signal containing the voltage result from signal processing and conversion. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>&quot;voltage&quot; is the return value of the <ref refid="classads1115_1a761c3ec573fc59956d7eca446841c18d" kindref="member">ads1115::readsig()</ref> function, post-processing and conversion. This is then the input parameter for the <ref refid="class_g_p_i_olis_1ac36d3b9264536731e3458ed295666719" kindref="member">readyread()</ref> signal.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>voltage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The post-processing converted input EMG signal. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/GPIOlis.h" line="126" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class is responsible for the data communications and threading involved with conversion and processing of input data to the ADS1115. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The GPIOlisten class monitors the ALERT/RDY pin and triggers an interrupt each time an AD conversion is ready. The data is then processed before sleeping until the next interrupt. Important member functions include:<itemizedlist>
+<listitem><para><ref refid="class_g_p_i_olis_1a428a2f8c4b0bd64b769f1526c61c5dac" kindref="member">GPIOlis()</ref></para>
+</listitem><listitem><para><ref refid="class_g_p_i_olis_1a844470403deaa7436a19b8aef29eac5b" kindref="member">interrupt()</ref></para>
+</listitem><listitem><para><ref refid="class_g_p_i_olis_1a65d2d0d0faf0d9edc0b31ddb51e88d2b" kindref="member">run()</ref></para>
+</listitem><listitem><para><ref refid="class_g_p_i_olis_1a06b2b0dbfd20843e43a5015c2c1cf829" kindref="member">quit()</ref> </para>
+</listitem></itemizedlist>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>QObject</label>
+        <link refid="qobject" external="/home/finlay/Repo/doc/qtcore/qtcore.tags"/>
+      </node>
+      <node id="2">
+        <label>QThread</label>
+        <link refid="qthread" external="/home/finlay/Repo/doc/qtcore/qtcore.tags"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>GPIOlis</label>
+        <link refid="class_g_p_i_olis"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>QObject</label>
+        <link refid="qobject" external="/home/finlay/Repo/doc/qtcore/qtcore.tags"/>
+      </node>
+      <node id="2">
+        <label>QThread</label>
+        <link refid="qthread" external="/home/finlay/Repo/doc/qtcore/qtcore.tags"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>GPIOlis</label>
+        <link refid="class_g_p_i_olis"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>ads1</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>ads1115</label>
+        <link refid="classads1115"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/GPIOlis.h" line="37" column="1" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/GPIOlis.h" bodystart="38" bodyend="128"/>
+    <listofallmembers>
+      <member refid="class_g_p_i_olis_1a4dd64eebb025a26b454d17176e70aaf8" prot="private" virt="non-virtual"><scope>GPIOlis</scope><name>ads1</name></member>
+      <member refid="qobject_1blockSignals" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>blockSignals</name></member>
+      <member refid="qobject_1childEvent" prot="protected" virt="virtual"><scope>GPIOlis</scope><name>childEvent</name></member>
+      <member refid="qobject_1children" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>children</name></member>
+      <member refid="qobject_1connect" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>connect</name></member>
+      <member refid="qobject_1connect-1" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>connect</name></member>
+      <member refid="qobject_1connect-2" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>connect</name></member>
+      <member refid="qobject_1connect-3" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>connect</name></member>
+      <member refid="qobject_1connect-4" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>connect</name></member>
+      <member refid="qobject_1connect-5" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>connect</name></member>
+      <member refid="qobject_1connectNotify" prot="protected" virt="virtual"><scope>GPIOlis</scope><name>connectNotify</name></member>
+      <member refid="class_g_p_i_olis_1a81e5f98d39e2ae03bf0ab38466ad24bd" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>count</name></member>
+      <member refid="qthread_1currentThread" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>currentThread</name></member>
+      <member refid="qthread_1currentThreadId" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>currentThreadId</name></member>
+      <member refid="qobject_1customEvent" prot="protected" virt="virtual"><scope>GPIOlis</scope><name>customEvent</name></member>
+      <member refid="qobject_1deleteLater" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>deleteLater</name></member>
+      <member refid="qobject_1destroyed" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>destroyed</name></member>
+      <member refid="qobject_1disconnect" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>disconnect</name></member>
+      <member refid="qobject_1disconnect-1" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>disconnect</name></member>
+      <member refid="qobject_1disconnect-2" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>disconnect</name></member>
+      <member refid="qobject_1disconnect-3" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>disconnect</name></member>
+      <member refid="qobject_1disconnect-4" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>disconnect</name></member>
+      <member refid="qobject_1disconnect-5" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>disconnect</name></member>
+      <member refid="qobject_1disconnectNotify" prot="protected" virt="virtual"><scope>GPIOlis</scope><name>disconnectNotify</name></member>
+      <member refid="qobject-obsolete_1dumpObjectInfo-1" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>dumpObjectInfo</name></member>
+      <member refid="qobject_1dumpObjectInfo" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>dumpObjectInfo</name></member>
+      <member refid="qobject-obsolete_1dumpObjectTree-1" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>dumpObjectTree</name></member>
+      <member refid="qobject_1dumpObjectTree" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>dumpObjectTree</name></member>
+      <member refid="qobject_1dynamicPropertyNames" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>dynamicPropertyNames</name></member>
+      <member refid="qthread_1event" prot="public" virt="virtual"><scope>GPIOlis</scope><name>event</name></member>
+      <member refid="qthread_1eventDispatcher" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>eventDispatcher</name></member>
+      <member refid="qobject_1eventFilter" prot="public" virt="virtual"><scope>GPIOlis</scope><name>eventFilter</name></member>
+      <member refid="qthread_1exec" prot="protected" virt="non-virtual"><scope>GPIOlis</scope><name>exec</name></member>
+      <member refid="qthread_1exit" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>exit</name></member>
+      <member refid="qobject_1findChild" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>findChild</name></member>
+      <member refid="qobject_1findChildren" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>findChildren</name></member>
+      <member refid="qobject_1findChildren-1" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>findChildren</name></member>
+      <member refid="qobject_1findChildren-2" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>findChildren</name></member>
+      <member refid="qthread_1finished" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>finished</name></member>
+      <member refid="class_g_p_i_olis_1ae86ee364670cfe22722a5d9f612e9aa4" prot="private" virt="non-virtual"><scope>GPIOlis</scope><name>flag</name></member>
+      <member refid="class_g_p_i_olis_1a428a2f8c4b0bd64b769f1526c61c5dac" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>GPIOlis</name></member>
+      <member refid="qthread_1idealThreadCount" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>idealThreadCount</name></member>
+      <member refid="qobject_1inherits" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>inherits</name></member>
+      <member refid="qobject_1installEventFilter" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>installEventFilter</name></member>
+      <member refid="class_g_p_i_olis_1a844470403deaa7436a19b8aef29eac5b" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>interrupt</name></member>
+      <member refid="qthread_1isFinished" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>isFinished</name></member>
+      <member refid="qthread_1isInterruptionRequested" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>isInterruptionRequested</name></member>
+      <member refid="qthread_1isRunning" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>isRunning</name></member>
+      <member refid="qobject_1isSignalConnected" prot="protected" virt="non-virtual"><scope>GPIOlis</scope><name>isSignalConnected</name></member>
+      <member refid="qobject_1isWidgetType" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>isWidgetType</name></member>
+      <member refid="qobject_1isWindowType" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>isWindowType</name></member>
+      <member refid="qobject_1killTimer" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>killTimer</name></member>
+      <member refid="qthread_1loopLevel" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>loopLevel</name></member>
+      <member refid="qobject_1metaObject" prot="public" virt="virtual"><scope>GPIOlis</scope><name>metaObject</name></member>
+      <member refid="qobject_1moveToThread" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>moveToThread</name></member>
+      <member refid="qthread_1msleep" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>msleep</name></member>
+      <member refid="qobject_1objectName-prop" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>objectName</name></member>
+      <member refid="qobject_1objectName-prop" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>objectName</name></member>
+      <member refid="qobject_1objectNameChanged" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>objectNameChanged</name></member>
+      <member refid="qobject_1parent" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>parent</name></member>
+      <member refid="qthread_1priority" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>priority</name></member>
+      <member refid="qobject_1property" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>property</name></member>
+      <member refid="qobject_1QObject" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>QObject</name></member>
+      <member refid="qthread_1QThread" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>QThread</name></member>
+      <member refid="class_g_p_i_olis_1a06b2b0dbfd20843e43a5015c2c1cf829" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>quit</name></member>
+      <member refid="class_g_p_i_olis_1a1e658d32e43003c3612ba46bd99a1732" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>ready</name></member>
+      <member refid="class_g_p_i_olis_1ac36d3b9264536731e3458ed295666719" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>readyread</name></member>
+      <member refid="qobject_1receivers" prot="protected" virt="non-virtual"><scope>GPIOlis</scope><name>receivers</name></member>
+      <member refid="qobject_1removeEventFilter" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>removeEventFilter</name></member>
+      <member refid="qthread_1requestInterruption" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>requestInterruption</name></member>
+      <member refid="class_g_p_i_olis_1a65d2d0d0faf0d9edc0b31ddb51e88d2b" prot="protected" virt="virtual"><scope>GPIOlis</scope><name>run</name></member>
+      <member refid="qobject_1sender" prot="protected" virt="non-virtual"><scope>GPIOlis</scope><name>sender</name></member>
+      <member refid="qobject_1senderSignalIndex" prot="protected" virt="non-virtual"><scope>GPIOlis</scope><name>senderSignalIndex</name></member>
+      <member refid="qthread_1setEventDispatcher" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>setEventDispatcher</name></member>
+      <member refid="qobject_1objectName-prop" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>setObjectName</name></member>
+      <member refid="qobject_1setParent" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>setParent</name></member>
+      <member refid="qthread_1setPriority" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>setPriority</name></member>
+      <member refid="qobject_1setProperty" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>setProperty</name></member>
+      <member refid="qthread_1setStackSize" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>setStackSize</name></member>
+      <member refid="qthread_1setTerminationEnabled" prot="protected" virt="non-virtual"><scope>GPIOlis</scope><name>setTerminationEnabled</name></member>
+      <member refid="qobject_1signalsBlocked" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>signalsBlocked</name></member>
+      <member refid="qthread_1sleep" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>sleep</name></member>
+      <member refid="qthread_1stackSize" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>stackSize</name></member>
+      <member refid="qthread_1start" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>start</name></member>
+      <member refid="qthread_1started" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>started</name></member>
+      <member refid="qobject_1startTimer" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>startTimer</name></member>
+      <member refid="qobject_1startTimer-1" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>startTimer</name></member>
+      <member refid="qthread_1terminate" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>terminate</name></member>
+      <member refid="qobject_1thread" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>thread</name></member>
+      <member refid="qobject_1timerEvent" prot="protected" virt="virtual"><scope>GPIOlis</scope><name>timerEvent</name></member>
+      <member refid="qobject_1tr" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>tr</name></member>
+      <member refid="qobject-obsolete_1trUtf8" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>trUtf8</name></member>
+      <member refid="qthread_1usleep" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>usleep</name></member>
+      <member refid="qthread_1wait" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>wait</name></member>
+      <member refid="qthread_1yieldCurrentThread" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>yieldCurrentThread</name></member>
+      <member refid="class_g_p_i_olis_1a9095dfa3056b0f1c4026f6018f0f7ba7" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>~GPIOlis</name></member>
+      <member refid="qobject_1dtor.QObject" prot="public" virt="virtual"><scope>GPIOlis</scope><name>~QObject</name></member>
+      <member refid="qthread_1dtor.QThread" prot="public" virt="non-virtual"><scope>GPIOlis</scope><name>~QThread</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

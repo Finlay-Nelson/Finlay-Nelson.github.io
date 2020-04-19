@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="dir_448a74561f0efab6356107d418ecc187" kind="dir">
+    <compoundname>/home/finlay/RTEP1/Server_end</compoundname>
+    <innerdir refid="dir_eab6ef60698dca8c0700df7568e20baf">/home/finlay/RTEP1/Server_end/Server_Pong_GUI_all_together</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/finlay/RTEP1/Server_end/"/>
+  </compounddef>
+</doxygen>

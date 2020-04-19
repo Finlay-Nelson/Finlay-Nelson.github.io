@@ -1,0 +1,65 @@
+.TH "group11" 3 "Sun Apr 19 2020" "Muscle Power Gaming" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+group11 \- ADS1115 Bit[1-0]\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBADS1015_REG_CONFIG_CQUE_1CONV\fP   (0x0000)"
+.br
+.RI "Assert after one conversion\&. "
+.ti -1c
+.RI "#define \fBADS1015_REG_CONFIG_CQUE_2CONV\fP   (0x0001)"
+.br
+.RI "Assert after two conversions\&. "
+.ti -1c
+.RI "#define \fBADS1015_REG_CONFIG_CQUE_4CONV\fP   (0x0002)"
+.br
+.RI "Assert after four conversions\&. "
+.ti -1c
+.RI "#define \fBADS1015_REG_CONFIG_CQUE_NONE\fP   (0x0003)"
+.br
+.RI "Disable comparator (DEFAULT) "
+.in -1c
+.SH "Detailed Description"
+.PP 
+ADS1115 Bit[1-0]\&. 
+
+These bits perform two functions\&. When set to '11', they disable the comparator function and put the ALERT/RDY pin into a high state\&. When set to any other value, they control the number of successive conversions exceeding the upper or lower thresholds required before asserting the ALERT/RDY pin\&.
+.PP
+The DEFAULT setting disables the comparator 
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define ADS1015_REG_CONFIG_CQUE_1CONV   (0x0000)"
+
+.PP
+Assert after one conversion\&. 
+.PP
+Definition at line 341 of file ads1115\&.h\&.
+.SS "#define ADS1015_REG_CONFIG_CQUE_2CONV   (0x0001)"
+
+.PP
+Assert after two conversions\&. 
+.PP
+Definition at line 342 of file ads1115\&.h\&.
+.SS "#define ADS1015_REG_CONFIG_CQUE_4CONV   (0x0002)"
+
+.PP
+Assert after four conversions\&. 
+.PP
+Definition at line 343 of file ads1115\&.h\&.
+.SS "#define ADS1015_REG_CONFIG_CQUE_NONE   (0x0003)"
+
+.PP
+Disable comparator (DEFAULT) 
+.PP
+Definition at line 344 of file ads1115\&.h\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Muscle Power Gaming from the source code\&.

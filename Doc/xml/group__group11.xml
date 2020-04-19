@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="group__group11" kind="group">
+    <compoundname>group11</compoundname>
+    <title>ADS1115: COMPARATOR QUEUE AND DISABLE</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__group11_1ga4889b7e8a019906eb7c2670ec2466917" prot="public" static="no">
+        <name>ADS1015_REG_CONFIG_CQUE_1CONV</name>
+        <initializer>(0x0000)</initializer>
+        <briefdescription>
+<para>Assert after one conversion. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="340" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="340" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group11_1ga88a73e81b13059b1f4756cf5c8a342a3" prot="public" static="no">
+        <name>ADS1015_REG_CONFIG_CQUE_2CONV</name>
+        <initializer>(0x0001)</initializer>
+        <briefdescription>
+<para>Assert after two conversions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="341" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="341" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group11_1gad14f479d9c6f636631444de22dd7b133" prot="public" static="no">
+        <name>ADS1015_REG_CONFIG_CQUE_4CONV</name>
+        <initializer>(0x0002)</initializer>
+        <briefdescription>
+<para>Assert after four conversions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="342" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="342" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group11_1gaa52ede69f39daf837bb2ebbe639dbef9" prot="public" static="no">
+        <name>ADS1015_REG_CONFIG_CQUE_NONE</name>
+        <initializer>(0x0003)</initializer>
+        <briefdescription>
+<para>Disable comparator (DEFAULT) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="343" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="343" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>ADS1115 Bit[1-0]. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>These bits perform two functions. When set to &apos;11&apos;, they disable the comparator function and put the ALERT/RDY pin into a high state. When set to any other value, they control the number of successive conversions exceeding the upper or lower thresholds required before asserting the ALERT/RDY pin.</para>
+<para>The DEFAULT setting disables the comparator </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

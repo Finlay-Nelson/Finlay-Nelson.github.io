@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="group__group7" kind="group">
+    <compoundname>group7</compoundname>
+    <title>ADS1115: DATA RATE</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__group7_1gaff870cc204f306e3aae724e8231f8fdc" prot="public" static="no">
+        <name>ADS1115_REG_CONFIG_DR_8SPS</name>
+        <initializer>(0x0000)</initializer>
+        <briefdescription>
+<para>8 samples per second </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="268" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="268" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group7_1ga482e8bf3819885a814010acb4107f6e1" prot="public" static="no">
+        <name>ADS1115_REG_CONFIG_DR_16SPS</name>
+        <initializer>(0x0020)</initializer>
+        <briefdescription>
+<para>16 samples per second </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="269" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="269" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group7_1ga309e0ecf42b27c5a38126efa61f8a09f" prot="public" static="no">
+        <name>ADS1115_REG_CONFIG_DR_32SPS</name>
+        <initializer>(0x0040)</initializer>
+        <briefdescription>
+<para>32 samples per second </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="270" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="270" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group7_1ga0a53b32fa67a8d36b57f7aceda32efb9" prot="public" static="no">
+        <name>ADS1115_REG_CONFIG_DR_64SPS</name>
+        <initializer>(0x0060)</initializer>
+        <briefdescription>
+<para>64 samples per second </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="271" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="271" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group7_1ga4aff8d5b1b4ac9585952d26ca25385e6" prot="public" static="no">
+        <name>ADS1115_REG_CONFIG_DR_128SPS</name>
+        <initializer>(0x0080)</initializer>
+        <briefdescription>
+<para>128 samples per second </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="272" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="272" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group7_1gac533241f793b44ed72385f71dec1aa25" prot="public" static="no">
+        <name>ADS1115_REG_CONFIG_DR_250SPS</name>
+        <initializer>(0x00A0)</initializer>
+        <briefdescription>
+<para>250 samples per second (DEFAULT) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="273" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="273" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group7_1ga8eed720123d6bd52580826c2c9ad9e28" prot="public" static="no">
+        <name>ADS1115_REG_CONFIG_DR_475SPS</name>
+        <initializer>(0x00C0)</initializer>
+        <briefdescription>
+<para>475 samples per second </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="274" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="274" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group7_1ga9308f41d4c2ff024bbd201efc3b7ff69" prot="public" static="no">
+        <name>ADS1115_REG_CONFIG_DR_860SPS</name>
+        <initializer>(0x00E0)</initializer>
+        <briefdescription>
+<para>860 samples per second </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="275" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="275" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>ADS1115 Bit[7-5]. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>These bits control the data rate setting.<itemizedlist>
+<listitem><para>8 sps</para>
+</listitem><listitem><para>16 sps</para>
+</listitem><listitem><para>32 sps</para>
+</listitem><listitem><para>64 sps</para>
+</listitem><listitem><para>128 sps</para>
+</listitem><listitem><para>250 sps</para>
+</listitem><listitem><para>475 sps</para>
+</listitem><listitem><para>860 sps</para>
+</listitem></itemizedlist>
+The DEFAULT data rate is 250 samples per second. </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

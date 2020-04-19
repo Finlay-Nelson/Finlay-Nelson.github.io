@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="group__group8" kind="group">
+    <compoundname>group8</compoundname>
+    <title>ADS1115: COMPARATOR MODE</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__group8_1gafb5240325d7ec757ccad7b098a2b93c3" prot="public" static="no">
+        <name>ADS1015_REG_CONFIG_CMODE_TRAD</name>
+        <initializer>(0x0000)</initializer>
+        <briefdescription>
+<para>Traditional comparator with hysteresis (DEFAULT) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="291" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="291" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group8_1ga49d39ffb8fb66bdb877d0f2546137cce" prot="public" static="no">
+        <name>ADS1015_REG_CONFIG_CMODE_WINDOW</name>
+        <initializer>(0x0010)</initializer>
+        <briefdescription>
+<para><ref refid="class_window" kindref="compound">Window</ref> comparator. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="292" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="292" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>ADS1115 Bit[4]. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This bit controls the comparator mode of operation. It changes whether the comparator is implemented as a traditional comparator or as a window comparator.</para>
+<para>The DEFAULT setting is the window comparator </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

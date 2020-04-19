@@ -1,0 +1,64 @@
+.TH "/home/finlay/RTEP1/Rpi_end/Rpi_end_together/GPIOlis.h" 3 "Sun Apr 19 2020" "Muscle Power Gaming" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/home/finlay/RTEP1/Rpi_end/Rpi_end_together/GPIOlis.h \- A collection of useful C++ classes for use of an ADS1115 device in UDP transmission and an Android Pong game\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <GThread>\fP
+.br
+\fC#include 'ads1115\&.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBGPIOlis\fP"
+.br
+.RI "This class is responsible for the data communications and threading involved with conversion and processing of input data to the ADS1115\&. "
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "int \fBgpipinterrupt\fP"
+.br
+.RI "Stores a binary value relating to the interrupt state\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+A collection of useful C++ classes for use of an ADS1115 device in UDP transmission and an Android Pong game\&. 
+
+Listens to the Alert pin of the ADS1115 in continuous mode, interrupts every time an AD conversion is ready, then sends data and triggers processing through the signal-slot mechanism\&. \fBGPIOlis::run\fP listens to the interrupt and calls back the interrupt every time it is detected before sleeping for 1ms\&. interrupt() reads in data and sends back a readyread signal\&.
+.PP
+\fBAuthor\fP
+.RS 4
+Zonghan Gan 
+.PP
+Finlay Nelson 
+.PP
+Henry Cowan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+11 April 2020 
+.RE
+.PP
+
+.PP
+Definition in file \fBGPIOlis\&.h\fP\&.
+.SH "Variable Documentation"
+.PP 
+.SS "int gpipinterrupt"
+
+.PP
+Stores a binary value relating to the interrupt state\&. The resting value of this variable remains 0 until an interrupt is called\&. This changes the 'gpipinterrupt' value to 1, triggering the non-conditional elements of the \fBGPIOlis::run()\fP function\&. 
+.PP
+Definition at line 32 of file GPIOlis\&.cpp\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Muscle Power Gaming from the source code\&.

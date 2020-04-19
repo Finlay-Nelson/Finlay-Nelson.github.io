@@ -1,0 +1,45 @@
+.TH "group8" 3 "Sun Apr 19 2020" "Muscle Power Gaming" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+group8 \- ADS1115 Bit[4]\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBADS1015_REG_CONFIG_CMODE_TRAD\fP   (0x0000)"
+.br
+.RI "Traditional comparator with hysteresis (DEFAULT) "
+.ti -1c
+.RI "#define \fBADS1015_REG_CONFIG_CMODE_WINDOW\fP   (0x0010)"
+.br
+.RI "\fBWindow\fP comparator\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+ADS1115 Bit[4]\&. 
+
+This bit controls the comparator mode of operation\&. It changes whether the comparator is implemented as a traditional comparator or as a window comparator\&.
+.PP
+The DEFAULT setting is the window comparator 
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define ADS1015_REG_CONFIG_CMODE_TRAD   (0x0000)"
+
+.PP
+Traditional comparator with hysteresis (DEFAULT) 
+.PP
+Definition at line 292 of file ads1115\&.h\&.
+.SS "#define ADS1015_REG_CONFIG_CMODE_WINDOW   (0x0010)"
+
+.PP
+\fBWindow\fP comparator\&. 
+.PP
+Definition at line 293 of file ads1115\&.h\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Muscle Power Gaming from the source code\&.

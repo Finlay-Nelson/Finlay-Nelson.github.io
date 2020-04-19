@@ -1,0 +1,73 @@
+.TH "group2" 3 "Sun Apr 19 2020" "Muscle Power Gaming" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+group2 \- The addresses of the registers of the ADS1115\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBADS1015_REG_POINTER_CONVERT\fP   (0x00)"
+.br
+.RI "Select the conversion register\&. "
+.ti -1c
+.RI "#define \fBADS1015_REG_POINTER_CONFIG\fP   (0x01)"
+.br
+.RI "Select the config register\&. "
+.ti -1c
+.RI "#define \fBADS1015_REG_POINTER_LOWTHRESH\fP   (0x02)"
+.br
+.RI "Select the Lo_thresh register\&. "
+.ti -1c
+.RI "#define \fBADS1015_REG_POINTER_HITHRESH\fP   (0x03)"
+.br
+.RI "Select the Lo_thresh register\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+The addresses of the registers of the ADS1115\&. 
+
+The ADS1115 has four registers that are accessible via the I2C port\&. The Conversion register contains the result of the last conversion\&. The Config register allows the user the change the ADS1115 operating modes and query the status of the devices\&. The Lo_thresh and Hi_thresh registers set the threshold values used for the comparator function\&.
+.IP "\(bu" 2
+Conversion register
+.IP "\(bu" 2
+Config register
+.IP "\(bu" 2
+Lo_thresh register
+.IP "\(bu" 2
+Hi_thresh register
+.PP
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define ADS1015_REG_POINTER_CONFIG   (0x01)"
+
+.PP
+Select the config register\&. The 16-bit config register can be used to control the ADS1115 operating mode, input selection, data rate, PGA settings, and comparator modes\&. 
+.PP
+Definition at line 132 of file ads1115\&.h\&.
+.SS "#define ADS1015_REG_POINTER_CONVERT   (0x00)"
+
+.PP
+Select the conversion register\&. The 16-bit conversion register contains the result of the last conversion in binary twos complement format\&. Following reset or power-up, the Conversion register is cleared to '0', and remains '0' until the first conversion is completed\&. 
+.PP
+Definition at line 126 of file ads1115\&.h\&.
+.SS "#define ADS1015_REG_POINTER_HITHRESH   (0x03)"
+
+.PP
+Select the Lo_thresh register\&. The upper threshold value used by the comparator is stored in this 16-bit register\&. The register stores values in the same format that the output register displays values; that is, they are stored in twos complement format\&. Because it is implemented as a digital comparator, special attention should be taken to readjust values whenever PGA settings are changed\&. 
+.PP
+Definition at line 144 of file ads1115\&.h\&.
+.SS "#define ADS1015_REG_POINTER_LOWTHRESH   (0x02)"
+
+.PP
+Select the Lo_thresh register\&. The lower threshold value used by the comparator is stored in this 16-bit register\&. The register stores values in the same format that the output register displays values; that is, they are stored in twos complement format\&. Because it is implemented as a digital comparator, special attention should be taken to readjust values whenever PGA settings are changed\&. 
+.PP
+Definition at line 138 of file ads1115\&.h\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Muscle Power Gaming from the source code\&.

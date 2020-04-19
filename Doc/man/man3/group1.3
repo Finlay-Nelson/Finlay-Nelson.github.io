@@ -1,0 +1,52 @@
+.TH "group1" 3 "Sun Apr 19 2020" "Muscle Power Gaming" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+group1 \- The addresses when tying the I2C address pin\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBADS1015_ADDRESS\fP   (0x48)"
+.br
+.RI "I2C address pin low (GND)\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+The addresses when tying the I2C address pin\&. 
+
+The configurations for tying the address pin are;
+.PP
+.IP "\(bu" 2
+I2C address pin low
+.IP "  \(bu" 4
+Address pin connected to GND (0X48)
+.PP
+
+.IP "\(bu" 2
+I2C address pin high
+.IP "  \(bu" 4
+Address pin connected to VDD (0X49)
+.PP
+
+.IP "\(bu" 2
+I2C address pin tied to the SDA line (0X4A)
+.IP "\(bu" 2
+I2C address pin tied to the SCL line (0X4B)
+.PP
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define ADS1015_ADDRESS   (0x48)"
+
+.PP
+I2C address pin low (GND)\&. 
+.PP
+Definition at line 100 of file ads1115\&.h\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Muscle Power Gaming from the source code\&.

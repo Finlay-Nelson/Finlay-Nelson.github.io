@@ -1,0 +1,258 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="classads1115" kind="class" language="C++" prot="public">
+    <compoundname>ads1115</compoundname>
+    <basecompoundref refid="qobject" prot="public" virt="non-virtual">QObject</basecompoundref>
+    <includes refid="ads1115_8h" local="no">ads1115.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classads1115_1a3eac1506c2c00580e5563827d9dcd260" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ads1115::fd</definition>
+        <argsstring></argsstring>
+        <name>fd</name>
+        <briefdescription>
+<para>A reference device identifier obtained using &quot;wiringPiI2CSetup()&quot;. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>&quot;wiringPiI2CSetup(int devID)&quot; initialises the I2C system with the given device identifier (I2C number of the device). The I2C number is one of the address pin macros found in <ref refid="ads1115_8h" kindref="compound">ads1115.h</ref>. The return value, stored in fd, is -1 if any error occurs, or the standard Linux filehandle otherwise. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="394" column="9" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="394" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classads1115_1a2cf1674f5b1f77bd4b5709702aec7244" prot="public" static="no" mutable="no">
+        <type>uchar</type>
+        <definition>uchar ads1115::iicaddr</definition>
+        <argsstring></argsstring>
+        <name>iicaddr</name>
+        <briefdescription>
+<para>A reference to the I2C address pin. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The &quot;wiringPiI2CSetup()&quot; function returns a reference device ID. This address has to then be used when writing and reading to the device registers using the wiringPi library. iicaddr is an explicit reference to the I2C address pin of the device (0x48, 0x49, 0x4A, 0x4B). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="402" column="11" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="402" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classads1115_1aeacdf3467cad67cd8a186ad43cbeee53" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ads1115::ads1115</definition>
+        <argsstring>(uchar addr, QObject *parent=0)</argsstring>
+        <name>ads1115</name>
+        <param>
+          <type>uchar</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type><ref refid="qobject" kindref="compound" external="/home/finlay/Repo/doc/qtcore/qtcore.tags">QObject</ref> *</type>
+          <declname>parent</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Configures the ADS1115 into continuous conversion mode. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The I2C address of the device (see address pin macros)</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Uses the I2C address for device identification. The appropriate configuration options are applied to instantiate continuous conversion and confirms operation through use of the wiringPiI2C library </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="387" column="14" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.cpp" bodystart="65" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="classads1115_1a53a254dcd5d6d6ff6e787688c730ae4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ads1115::endads</definition>
+        <argsstring>()</argsstring>
+        <name>endads</name>
+        <briefdescription>
+<para>Attempts to exit the continuous mode of the ADS1115. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Updates the &quot;config&quot; variable to change the CONFIG_MODE setting to END_CON. The &quot;load_config()&quot; function then converts from a hexadecimal to binary representation. The &quot;rcr&quot; variable resets to 0 (success) before being set to the returned value from the "wiringPiI2CWriteReg16() function. A return value of -1 (non-zero) indicates a failure to exit continuous conversion mode.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="413" column="10" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.cpp" bodystart="186" bodyend="199"/>
+      </memberdef>
+      <memberdef kind="function" id="classads1115_1a761c3ec573fc59956d7eca446841c18d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float ads1115::readsig</definition>
+        <argsstring>()</argsstring>
+        <name>readsig</name>
+        <briefdescription>
+<para>Reads the digital conversion of the analogue EMG input. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Selects the conversion register and uses the &quot;WiringPiI2CReadReg16()&quot; function to read the data contained therein. The data is then processed before being emitted through the readyrread() signal.</para>
+<para>WiringPi doesn&apos;t include stdint so values are int32. Conversions are performed to account for this in producing the voltage output</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The read voltage converted from the raw signal input </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="425" column="11" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.cpp" bodystart="152" bodyend="183"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="signal">
+      <memberdef kind="signal" id="classads1115_1ae7c50fb698f1b87ba229929fc61f5e2f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ads1115::readyread</definition>
+        <argsstring>(float voltage)</argsstring>
+        <name>readyread</name>
+        <param>
+          <type>float</type>
+          <declname>voltage</declname>
+        </param>
+        <briefdescription>
+<para>The signal that transmits the ADS output. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>After calling <ref refid="classads1115_1a761c3ec573fc59956d7eca446841c18d" kindref="member">readsig()</ref>, the signal is emitted and transmits the ADS output.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>voltage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The output voltage from processed EMG signal </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="436" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Allows control over the ADS1115 ADC. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Handles all aspects of controlling the ADS1115 device. Responsible for configuring the device into continuous mode, gathering, handling and relaying the signals from input channels, and self abortion. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>QObject</label>
+        <link refid="qobject" external="/home/finlay/Repo/doc/qtcore/qtcore.tags"/>
+      </node>
+      <node id="1">
+        <label>ads1115</label>
+        <link refid="classads1115"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>QObject</label>
+        <link refid="qobject" external="/home/finlay/Repo/doc/qtcore/qtcore.tags"/>
+      </node>
+      <node id="1">
+        <label>ads1115</label>
+        <link refid="classads1115"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" line="374" column="1" bodyfile="/home/finlay/RTEP1/Rpi_end/Rpi_end_together/ads1115.h" bodystart="375" bodyend="438"/>
+    <listofallmembers>
+      <member refid="classads1115_1aeacdf3467cad67cd8a186ad43cbeee53" prot="public" virt="non-virtual"><scope>ads1115</scope><name>ads1115</name></member>
+      <member refid="qobject_1blockSignals" prot="public" virt="non-virtual"><scope>ads1115</scope><name>blockSignals</name></member>
+      <member refid="qobject_1childEvent" prot="protected" virt="virtual"><scope>ads1115</scope><name>childEvent</name></member>
+      <member refid="qobject_1children" prot="public" virt="non-virtual"><scope>ads1115</scope><name>children</name></member>
+      <member refid="qobject_1connect" prot="public" virt="non-virtual"><scope>ads1115</scope><name>connect</name></member>
+      <member refid="qobject_1connect-1" prot="public" virt="non-virtual"><scope>ads1115</scope><name>connect</name></member>
+      <member refid="qobject_1connect-2" prot="public" virt="non-virtual"><scope>ads1115</scope><name>connect</name></member>
+      <member refid="qobject_1connect-3" prot="public" virt="non-virtual"><scope>ads1115</scope><name>connect</name></member>
+      <member refid="qobject_1connect-4" prot="public" virt="non-virtual"><scope>ads1115</scope><name>connect</name></member>
+      <member refid="qobject_1connect-5" prot="public" virt="non-virtual"><scope>ads1115</scope><name>connect</name></member>
+      <member refid="qobject_1connectNotify" prot="protected" virt="virtual"><scope>ads1115</scope><name>connectNotify</name></member>
+      <member refid="qobject_1customEvent" prot="protected" virt="virtual"><scope>ads1115</scope><name>customEvent</name></member>
+      <member refid="qobject_1deleteLater" prot="public" virt="non-virtual"><scope>ads1115</scope><name>deleteLater</name></member>
+      <member refid="qobject_1destroyed" prot="public" virt="non-virtual"><scope>ads1115</scope><name>destroyed</name></member>
+      <member refid="qobject_1disconnect" prot="public" virt="non-virtual"><scope>ads1115</scope><name>disconnect</name></member>
+      <member refid="qobject_1disconnect-1" prot="public" virt="non-virtual"><scope>ads1115</scope><name>disconnect</name></member>
+      <member refid="qobject_1disconnect-2" prot="public" virt="non-virtual"><scope>ads1115</scope><name>disconnect</name></member>
+      <member refid="qobject_1disconnect-3" prot="public" virt="non-virtual"><scope>ads1115</scope><name>disconnect</name></member>
+      <member refid="qobject_1disconnect-4" prot="public" virt="non-virtual"><scope>ads1115</scope><name>disconnect</name></member>
+      <member refid="qobject_1disconnect-5" prot="public" virt="non-virtual"><scope>ads1115</scope><name>disconnect</name></member>
+      <member refid="qobject_1disconnectNotify" prot="protected" virt="virtual"><scope>ads1115</scope><name>disconnectNotify</name></member>
+      <member refid="qobject-obsolete_1dumpObjectInfo-1" prot="public" virt="non-virtual"><scope>ads1115</scope><name>dumpObjectInfo</name></member>
+      <member refid="qobject_1dumpObjectInfo" prot="public" virt="non-virtual"><scope>ads1115</scope><name>dumpObjectInfo</name></member>
+      <member refid="qobject-obsolete_1dumpObjectTree-1" prot="public" virt="non-virtual"><scope>ads1115</scope><name>dumpObjectTree</name></member>
+      <member refid="qobject_1dumpObjectTree" prot="public" virt="non-virtual"><scope>ads1115</scope><name>dumpObjectTree</name></member>
+      <member refid="qobject_1dynamicPropertyNames" prot="public" virt="non-virtual"><scope>ads1115</scope><name>dynamicPropertyNames</name></member>
+      <member refid="classads1115_1a53a254dcd5d6d6ff6e787688c730ae4b" prot="public" virt="non-virtual"><scope>ads1115</scope><name>endads</name></member>
+      <member refid="qobject_1event" prot="public" virt="virtual"><scope>ads1115</scope><name>event</name></member>
+      <member refid="qobject_1eventFilter" prot="public" virt="virtual"><scope>ads1115</scope><name>eventFilter</name></member>
+      <member refid="classads1115_1a3eac1506c2c00580e5563827d9dcd260" prot="public" virt="non-virtual"><scope>ads1115</scope><name>fd</name></member>
+      <member refid="qobject_1findChild" prot="public" virt="non-virtual"><scope>ads1115</scope><name>findChild</name></member>
+      <member refid="qobject_1findChildren" prot="public" virt="non-virtual"><scope>ads1115</scope><name>findChildren</name></member>
+      <member refid="qobject_1findChildren-1" prot="public" virt="non-virtual"><scope>ads1115</scope><name>findChildren</name></member>
+      <member refid="qobject_1findChildren-2" prot="public" virt="non-virtual"><scope>ads1115</scope><name>findChildren</name></member>
+      <member refid="classads1115_1a2cf1674f5b1f77bd4b5709702aec7244" prot="public" virt="non-virtual"><scope>ads1115</scope><name>iicaddr</name></member>
+      <member refid="qobject_1inherits" prot="public" virt="non-virtual"><scope>ads1115</scope><name>inherits</name></member>
+      <member refid="qobject_1installEventFilter" prot="public" virt="non-virtual"><scope>ads1115</scope><name>installEventFilter</name></member>
+      <member refid="qobject_1isSignalConnected" prot="protected" virt="non-virtual"><scope>ads1115</scope><name>isSignalConnected</name></member>
+      <member refid="qobject_1isWidgetType" prot="public" virt="non-virtual"><scope>ads1115</scope><name>isWidgetType</name></member>
+      <member refid="qobject_1isWindowType" prot="public" virt="non-virtual"><scope>ads1115</scope><name>isWindowType</name></member>
+      <member refid="qobject_1killTimer" prot="public" virt="non-virtual"><scope>ads1115</scope><name>killTimer</name></member>
+      <member refid="qobject_1metaObject" prot="public" virt="virtual"><scope>ads1115</scope><name>metaObject</name></member>
+      <member refid="qobject_1moveToThread" prot="public" virt="non-virtual"><scope>ads1115</scope><name>moveToThread</name></member>
+      <member refid="qobject_1objectName-prop" prot="public" virt="non-virtual"><scope>ads1115</scope><name>objectName</name></member>
+      <member refid="qobject_1objectName-prop" prot="public" virt="non-virtual"><scope>ads1115</scope><name>objectName</name></member>
+      <member refid="qobject_1objectNameChanged" prot="public" virt="non-virtual"><scope>ads1115</scope><name>objectNameChanged</name></member>
+      <member refid="qobject_1parent" prot="public" virt="non-virtual"><scope>ads1115</scope><name>parent</name></member>
+      <member refid="qobject_1property" prot="public" virt="non-virtual"><scope>ads1115</scope><name>property</name></member>
+      <member refid="qobject_1QObject" prot="public" virt="non-virtual"><scope>ads1115</scope><name>QObject</name></member>
+      <member refid="classads1115_1a761c3ec573fc59956d7eca446841c18d" prot="public" virt="non-virtual"><scope>ads1115</scope><name>readsig</name></member>
+      <member refid="classads1115_1ae7c50fb698f1b87ba229929fc61f5e2f" prot="public" virt="non-virtual"><scope>ads1115</scope><name>readyread</name></member>
+      <member refid="qobject_1receivers" prot="protected" virt="non-virtual"><scope>ads1115</scope><name>receivers</name></member>
+      <member refid="qobject_1removeEventFilter" prot="public" virt="non-virtual"><scope>ads1115</scope><name>removeEventFilter</name></member>
+      <member refid="qobject_1sender" prot="protected" virt="non-virtual"><scope>ads1115</scope><name>sender</name></member>
+      <member refid="qobject_1senderSignalIndex" prot="protected" virt="non-virtual"><scope>ads1115</scope><name>senderSignalIndex</name></member>
+      <member refid="qobject_1objectName-prop" prot="public" virt="non-virtual"><scope>ads1115</scope><name>setObjectName</name></member>
+      <member refid="qobject_1setParent" prot="public" virt="non-virtual"><scope>ads1115</scope><name>setParent</name></member>
+      <member refid="qobject_1setProperty" prot="public" virt="non-virtual"><scope>ads1115</scope><name>setProperty</name></member>
+      <member refid="qobject_1signalsBlocked" prot="public" virt="non-virtual"><scope>ads1115</scope><name>signalsBlocked</name></member>
+      <member refid="qobject_1startTimer" prot="public" virt="non-virtual"><scope>ads1115</scope><name>startTimer</name></member>
+      <member refid="qobject_1startTimer-1" prot="public" virt="non-virtual"><scope>ads1115</scope><name>startTimer</name></member>
+      <member refid="qobject_1thread" prot="public" virt="non-virtual"><scope>ads1115</scope><name>thread</name></member>
+      <member refid="qobject_1timerEvent" prot="protected" virt="virtual"><scope>ads1115</scope><name>timerEvent</name></member>
+      <member refid="qobject_1tr" prot="public" virt="non-virtual"><scope>ads1115</scope><name>tr</name></member>
+      <member refid="qobject-obsolete_1trUtf8" prot="public" virt="non-virtual"><scope>ads1115</scope><name>trUtf8</name></member>
+      <member refid="qobject_1dtor.QObject" prot="public" virt="virtual"><scope>ads1115</scope><name>~QObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

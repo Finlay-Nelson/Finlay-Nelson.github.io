@@ -1,0 +1,45 @@
+.TH "group10" 3 "Sun Apr 19 2020" "Muscle Power Gaming" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+group10 \- ADS1115 Bit[2]\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBADS1015_REG_CONFIG_CLAT_NONLAT\fP   (0x0000)"
+.br
+.RI "Non-latching comparator (DEFAULT) "
+.ti -1c
+.RI "#define \fBADS1015_REG_CONFIG_CLAT_LATCH\fP   (0x0004)"
+.br
+.RI "Latching comparator\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+ADS1115 Bit[2]\&. 
+
+This bit controls whether the ALERT/RDY pin latches once asserted or clears once conversions are within the margin of the upper and lower threshold values\&. When COMP_LAT = '0', the ALERT/RDY pin does not latch when asserted\&. When COMP_LAT = '1', the asserted ALERT/RDY pin remains latched until conversion data are read by the master or an appropriate SMBus alert response is sent by the master, the device responds with its address, and it is the lowest address currently asserting the ALERT/RDY bus line\&.
+.PP
+The DEFAULT setting holds the ALERT/RDY pin active low 
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define ADS1015_REG_CONFIG_CLAT_LATCH   (0x0004)"
+
+.PP
+Latching comparator\&. 
+.PP
+Definition at line 326 of file ads1115\&.h\&.
+.SS "#define ADS1015_REG_CONFIG_CLAT_NONLAT   (0x0000)"
+
+.PP
+Non-latching comparator (DEFAULT) 
+.PP
+Definition at line 325 of file ads1115\&.h\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Muscle Power Gaming from the source code\&.
